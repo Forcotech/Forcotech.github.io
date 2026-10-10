@@ -16,6 +16,8 @@
 - Noise reduction: approx. −15 dB(A) Standard, approx. −20 dB(A) Premium, higher on a project basis
 - Prices (net, excl. installation, VAT, freight): PV inverter enclosures from approx. €4,550, VRF/VRV standard enclosures from approx. €15,500
 - HSA3 acoustic meta-metal by ABSORA GmbH (Berlin, patent holder): up to 60 % lower pressure drop than conventional splitter silencers, approx. 30 % higher absorption at 125–250 Hz (tested to EN ISO 354); alternative lining Stratocell Whisper 50 mm FR
+- How HSA3 works: micro-perforated, corrugated metal top layer on a spring-mounted structure; air chambers act as resonators (Helmholtz and mass-spring principle), no mineral wool; effective at low compressor frequencies
+- HSA3 as a modular kit: compressor panels, retrofit fan cylinders against blade passing frequency, partition walls between heat pumps (also keep defrost air off the neighbouring unit), full enclosures; bolted aluminium profile system 45 x 45 mm, liftable without a crane
 - Design targets: 5–7 m/s in free openings, max. 3–5 % loss of unit capacity
 - Product lines: H series (small heat pumps), CM series (large heat pumps/chillers), V series (VRF/VRV), Wall series (noise barriers), PV inverter and BESS enclosures
 - In alliance with ABSORA GmbH, Berlin (developer and patent holder of HSA3): design by Silent Engineering, manufacturing and installation together with ABSORA

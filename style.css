@@ -84,6 +84,23 @@ ul.check li::before{content:"";position:absolute;left:4px;top:15px;width:12px;he
 .need{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
 .need ul.check li{font-size:15px}
 
+/* HSA3 einfach erklärt */
+.hsa3-h{font-size:21px;margin:40px 0 14px}
+.how{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.how{grid-template-columns:1fr}}
+.how figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.how img{width:100%;aspect-ratio:2/1;object-fit:contain;background:#fff}
+.how figcaption{padding:14px 16px 16px;font-size:14.5px;color:var(--muted);border-top:1px solid var(--line)}
+.how figcaption b{color:var(--ink)}
+.dodont{margin-top:26px}
+.dodont > div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.dodont ul li{font-size:15px}
+ul.cross{list-style:none;padding:0;margin:0}
+ul.cross li{position:relative;padding:7px 0 7px 28px;border-bottom:1px solid var(--line)}
+ul.cross li:last-child{border-bottom:0}
+ul.cross li::before,ul.cross li::after{content:"";position:absolute;left:5px;top:18px;width:14px;height:2.5px;background:var(--accent-d);transform:rotate(45deg)}
+ul.cross li::after{transform:rotate(-45deg)}
+
 /* Allianz-Hinweis, R290-Checkliste */
 .alliance{margin-top:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:12px 16px}
 .alliance b{color:var(--accent);font-size:15px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}

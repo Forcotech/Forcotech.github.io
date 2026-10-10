@@ -1,8 +1,8 @@
 /* © Silent Engineering di Romolo Vicari – ForCoTech */
 :root{
-  --accent:#0f7c80; --accent-d:#0a5b5e; --accent-l:#e3f2f2;
-  --red:#c8202f; --ink:#13232b; --muted:#56676f; --line:#d9e2e5;
-  --bg:#f5f7f7; --card:#ffffff; --r:12px;
+  --accent:#c8202f; --accent-d:#9e1724; --accent-l:#fdecee;
+  --red:#c8202f; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e6e1e1;
+  --bg:#f8f6f6; --card:#ffffff; --r:12px;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -46,7 +46,7 @@ h1{font-size:clamp(30px,4.2vw,46px);line-height:1.12;letter-spacing:-.02em;margi
 /* Abschnitte */
 section{padding:56px 0}
 section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-h2{font-size:clamp(24px,3vw,32px);line-height:1.2;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+h2{color:var(--ink);font-size:clamp(24px,3vw,32px);line-height:1.2;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
 .sub{color:var(--muted);margin:0 0 28px;max-width:70ch}
 h3{font-size:18px;margin:0 0 6px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
@@ -102,12 +102,13 @@ ul.check li::before{content:"";position:absolute;left:4px;top:15px;width:12px;he
 .faq details p{margin:0;padding:0 16px 14px;color:var(--muted)}
 
 /* Kontakt + Fuß */
-.contact{background:var(--accent);color:#fff;border-radius:16px;padding:32px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center}
+.contact{background:var(--accent-l);color:var(--ink);border:1px solid #f3c4c9;border-left:6px solid var(--accent);border-radius:16px;padding:32px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center}
 @media (max-width:760px){.contact{grid-template-columns:1fr;padding:24px}}
-.contact h2{color:#fff}.contact p{margin:0;opacity:.92}
-.contact a{color:#fff}
-.contact .btn{background:#fff;color:var(--accent-d);border-color:#fff}
-.contact .btn:hover{background:var(--accent-l)}
+.contact h2{color:var(--accent)}.contact p{margin:0}
+.contact a{color:var(--accent-d)}
+.contact .btn{color:#fff}
+.contact .btn + .btn{background:#fff;color:var(--accent);border-color:var(--accent)}
+.contact .btn + .btn:hover{background:#fff7f8}
 .contact address{font-style:normal;line-height:1.7;font-size:15px}
 footer{padding:28px 0 40px;font-size:13.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}

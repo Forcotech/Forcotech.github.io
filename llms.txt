@@ -18,4 +18,6 @@
 - HSA3 acoustic meta-metal by ABSORA GmbH (Berlin, patent holder): up to 60 % lower pressure drop than conventional splitter silencers, approx. 30 % higher absorption at 125–250 Hz (tested to EN ISO 354); alternative lining Stratocell Whisper 50 mm FR
 - Design targets: 5–7 m/s in free openings, max. 3–5 % loss of unit capacity
 - Product lines: H series (small heat pumps), CM series (large heat pumps/chillers), V series (VRF/VRV), Wall series (noise barriers), PV inverter and BESS enclosures
+- In alliance with ABSORA GmbH, Berlin (developer and patent holder of HSA3): design by Silent Engineering, manufacturing and installation together with ABSORA
+- R290 (propane) units: enclosure only with written manufacturer approval; floorless design so leaked propane flows away, no ignition sources (except explosion-proof), permanently open storm/relief openings on at least two sides, relief areas to EN 14994 if a zone lies inside, CFD check of gas outflow
 - 500+ enclosure projects since 2015; first projects 2015 in the UK; installations across Europe, smaller numbers in the USA and Australia

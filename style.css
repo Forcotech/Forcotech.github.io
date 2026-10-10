@@ -66,6 +66,24 @@ ul.check li::before{content:"";position:absolute;left:4px;top:15px;width:12px;he
 .steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;margin-bottom:10px}
 .steps p{margin:0;color:var(--muted);font-size:15px}
 
+/* HSA3-Kennzahlen, Luftführung, Zielwerte */
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.stats div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.stats b{display:block;font-size:28px;line-height:1.15;color:var(--accent-d);letter-spacing:-.01em}
+.stats span{font-size:14px;color:var(--muted)}
+.types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:t}
+@media (max-width:860px){.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.types{grid-template-columns:1fr}}
+.types div{counter-increment:t;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.types h3::before{content:counter(t) " · ";color:var(--red)}
+.types p{margin:0;color:var(--muted);font-size:15px}
+.target{margin-top:22px;background:var(--accent-l);border-radius:var(--r);padding:18px 20px}
+.target ul{margin:0 0 10px;padding-left:20px}
+.target li{margin:4px 0}
+.target p{margin:0;font-size:14.5px;color:var(--accent-d)}
+.need{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+.need ul.check li{font-size:15px}
+
 /* Galerie */
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 @media (max-width:860px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}

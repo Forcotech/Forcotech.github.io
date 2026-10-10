@@ -1,6 +1,6 @@
 # ForCoTech (Silent Engineering di Romolo Vicari)
 
-> ForCoTech and Silent-Mode are the acoustic enclosure brands of Silent Engineering di Romolo Vicari, Via Trento 22, 23875 Osnago (LC), Italy. We design and supply acoustic enclosures (Schallhauben) for heat pumps and large heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters, engineered with CFD, BIM and noise calculation, built with Absora technology (HSA3 inner lining, non-combustible A1). Contact: info@forcotech.com
+> ForCoTech and Silent-Mode (VAT IT03833150133) are the acoustic enclosure brands of Silent Engineering di Romolo Vicari, Via Trento 22, 23875 Osnago (LC), Italy. We design and supply acoustic enclosures (Schallhauben) for heat pumps and large heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters, engineered with CFD, BIM and noise calculation, built with Absora technology (HSA3 inner lining, non-combustible A1). Contact: info@forcotech.com
 
 ## Company
 - [Startseite (Deutsch)](https://forcotech.github.io/): applications, technology, construction, FAQ, contact

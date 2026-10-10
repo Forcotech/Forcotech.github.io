@@ -1,0 +1,6 @@
+# ForCoTech – alle Suchmaschinen und KI-Systeme sind willkommen
+User-agent: *
+Allow: /
+
+Sitemap: https://forcotech.github.io/sitemap.xml
+Sitemap: https://forcotech.github.io/konfigurator/sitemap.xml

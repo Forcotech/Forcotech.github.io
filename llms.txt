@@ -1,0 +1,18 @@
+# ForCoTech (Silent Engineering di Romolo Vicari)
+
+> ForCoTech and Silent-Mode are the acoustic enclosure brands of Silent Engineering di Romolo Vicari, Via Trento 22, 23875 Osnago (LC), Italy. We design and supply acoustic enclosures (Schallhauben) for heat pumps and large heat pumps, chillers, dry coolers, VRF/VRV outdoor units and PV inverters, engineered with CFD, BIM and noise calculation, built with Absora technology (HSA3 inner lining, non-combustible A1). Contact: info@forcotech.com
+
+## Company
+- [Startseite (Deutsch)](https://forcotech.github.io/): applications, technology, construction, FAQ, contact
+- [Homepage (English)](https://forcotech.github.io/en/)
+
+## Configurator and catalogues
+- [Schallhauben-Konfigurator](https://forcotech.github.io/konfigurator/): enter unit dimensions, refrigerant (incl. R290), air flow, acoustics (TA Lärm) and wind zone; returns outer dimensions, noise reduction and a budget price
+- [Standard enclosures VRF/VRV](https://forcotech.github.io/konfigurator/vrf/): models from Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier with dimensions and prices (Standard approx. −15 dB(A), Premium approx. −20 dB(A))
+- [Enclosures for PV inverters](https://forcotech.github.io/konfigurator/pv/): wall-mounted and free-standing versions for 1–5 inverters (Huawei, Sungrow, SMA, Fronius, SolarEdge and others) with prices
+- English versions: [configurator](https://forcotech.github.io/konfigurator/en/), [VRF](https://forcotech.github.io/konfigurator/en/vrf/), [PV](https://forcotech.github.io/konfigurator/en/pv/)
+
+## Key facts
+- Noise reduction: approx. −15 dB(A) Standard, approx. −20 dB(A) Premium, higher on a project basis
+- Prices (net, excl. installation, VAT, freight): PV inverter enclosures from approx. €4,550, VRF/VRV standard enclosures from approx. €15,500
+- First projects 2015 in the UK; installations across Europe, smaller numbers in the USA and Australia

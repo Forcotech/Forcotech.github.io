@@ -15,8 +15,10 @@ a{color:var(--accent)}
 
 /* Kopf */
 .top{background:#fff;border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:5}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
-.top .logo img{height:64px;width:auto}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:104px}
+.top .logo{padding:8px 0;display:block}
+.top .logo img{height:96px;width:auto}
+@media (max-width:600px){.top .wrap{min-height:84px}.top .logo img{height:76px}}
 .nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:14.5px;font-weight:600}
 .nav a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:7px}
 .nav a:hover{background:var(--accent-l);color:var(--accent-d)}

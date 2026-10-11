@@ -57,5 +57,26 @@
       1536,
       922
     ]
+  },
+  {
+    "slug": "r290-kaelteanlagen-pharma-inox-schallhauben",
+    "date": "2026-07-06",
+    "status": "online",
+    "image": "img/news/r290-pharma-inox-hauben.webp",
+    "image_full": "img/news/r290-pharma-inox-hauben.webp",
+    "image_full_size": [
+      1471,
+      827
+    ],
+    "de": {
+      "title": "Akustik-Einhausungen für zwei Kälteanlagen mit R290 in der Prozesskühlung einer Pharmaproduktion",
+      "alt": "Zwei baugleiche Schallhauben aus Edelstahl mit Luftaustritt im Dach und Rohrleitungsanschlüssen auf einem Industriegelände",
+      "teaser": "Zwei INOX-Schallhauben mit ATEX-Lüftung für R290-Kälteanlagen: Ziel −14 dB(A), in situ gemessen −15,6 dB(A)."
+    },
+    "en": {
+      "title": "Acoustic enclosures for two R290 refrigeration units in pharmaceutical process cooling",
+      "alt": "Two identical stainless steel acoustic enclosures with roof air outlets and pipe connections on an industrial site",
+      "teaser": "Two stainless steel enclosures with ATEX ventilation for R290 units: target −14 dB(A), measured in situ −15.6 dB(A)."
+    }
   }
 ]

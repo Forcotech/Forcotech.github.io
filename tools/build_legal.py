@@ -82,28 +82,32 @@ DS_DE = f"""
 <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Daten (z. B. Name, Firma, E-Mail-Adresse, Telefonnummer, Inhalt der Anfrage und übermittelte Projektunterlagen), um Ihre Anfrage zu bearbeiten und für mögliche Anschlussfragen. Unsere E-Mails werden über unseren E-Mail-Anbieter Webland verarbeitet und gespeichert.</p>
 <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind, spätestens nach Ablauf gesetzlicher Aufbewahrungsfristen.</p>
 
-<h2>5. Verarbeitung von Kundendaten</h2>
+<h2>5. Anfrageformular im Konfigurator</h2>
+<p>Der <a href="https://forcotech.github.io/konfigurator/">Schallhauben-Konfigurator</a> rechnet ausschließlich lokal in Ihrem Browser; solange Sie keine Anfrage absenden, werden keine Daten an uns übertragen. Wenn Sie über das Anfrageformular eine Anfrage senden, verarbeiten wir Ihre Kontaktdaten (Name, Firma, E-Mail, Telefon, Projektort), Ihre Nachricht und die gewählte Konfiguration, um Ihre Anfrage zu bearbeiten und ein Angebot zu erstellen.</p>
+<p>Für den technischen Versand nutzen wir den Formulardienst FormSubmit (formsubmit.co), der die Anfrage per E-Mail an info@forcotech.com weiterleitet. FormSubmit macht keine Angaben zum Ort der Datenverarbeitung; eine Verarbeitung außerhalb der EU ohne Angemessenheitsbeschluss ist daher möglich. Die Übermittlung erfolgt deshalb nur mit Ihrer ausdrücklichen Einwilligung, die Sie im Formular erteilen (Art. 6 Abs. 1 lit. a und Art. 49 Abs. 1 lit. a DSGVO), sowie zur Anbahnung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Alternativ können Sie uns Ihre Anfrage direkt per E-Mail an <a href="mailto:info@forcotech.com">info@forcotech.com</a> senden; dann wird FormSubmit nicht genutzt.</p>
+
+<h2>6. Verarbeitung von Kundendaten</h2>
 <p>Im Rahmen unserer Geschäftsbeziehung verarbeiten wir Firmendaten (Firmenname, Anschrift, Steuernummer), Kontaktdaten (Name, E-Mail, Telefon, Position), Vertragsdaten (Angebote, Aufträge, Rechnungen), projektbezogene technische Daten sowie Zahlungsinformationen.</p>
 <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) und Art. 6 Abs. 1 lit. c DSGVO (gesetzliche Pflichten, insbesondere steuer- und handelsrechtliche Aufbewahrungspflichten). Kundendaten werden für die Dauer der Geschäftsbeziehung und gemäß den gesetzlichen Aufbewahrungspflichten gespeichert.</p>
 
-<h2>6. Weitergabe von Daten</h2>
+<h2>7. Weitergabe von Daten</h2>
 <p>Eine Übermittlung Ihrer Daten an Dritte erfolgt nur, wenn Sie eingewilligt haben (Art. 6 Abs. 1 lit. a DSGVO), wenn sie zur Vertragserfüllung erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO), wenn eine gesetzliche Verpflichtung besteht (Art. 6 Abs. 1 lit. c DSGVO) oder wenn sie zur Wahrung berechtigter Interessen erforderlich ist und Ihre Interessen nicht überwiegen (Art. 6 Abs. 1 lit. f DSGVO).</p>
-<p>Mögliche Empfänger sind insbesondere Steuerberater und Wirtschaftsprüfer, IT-Dienstleister (Hosting, E-Mail), Buchhaltungsdienstleister, unsere Fertigungs- und Montagepartner im Rahmen eines Auftrags (ABSORA GmbH, Berlin) sowie Behörden bei gesetzlicher Auskunftspflicht.</p>
+<p>Mögliche Empfänger sind insbesondere Steuerberater und Wirtschaftsprüfer, IT-Dienstleister (Hosting, E-Mail, Formularversand), Buchhaltungsdienstleister, unsere Fertigungs- und Montagepartner im Rahmen eines Auftrags (ABSORA GmbH, Berlin) sowie Behörden bei gesetzlicher Auskunftspflicht.</p>
 
-<h2>7. Speicherdauer</h2>
+<h2>8. Speicherdauer</h2>
 <p>Wir speichern personenbezogene Daten nur so lange, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen: handels- und steuerrechtlich in der Regel 10 Jahre (z. B. Rechnungen, Buchungsbelege, nach italienischem Recht), Projektdokumentation für die Dauer des Projekts zuzüglich 5 Jahre. Danach werden die Daten routinemäßig gelöscht.</p>
 
-<h2>8. Ihre Rechte</h2>
+<h2>9. Ihre Rechte</h2>
 <p>Sie haben nach der DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen die Verarbeitung (Art. 21). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Wenden Sie sich dazu einfach per E-Mail an uns.</p>
 <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für uns ist:<br>Garante per la Protezione dei Dati Personali, Piazza Venezia 11, 00187 Roma, Italien – Telefon +39 06 696771 – <a href="https://www.gpdp.it">www.gpdp.it</a></p>
 
-<h2>9. Datensicherheit</h2>
+<h2>10. Datensicherheit</h2>
 <p>Die Website wird ausschließlich verschlüsselt per HTTPS (TLS) ausgeliefert. Darüber hinaus schützen wir Ihre Daten mit technischen und organisatorischen Maßnahmen, etwa regelmäßigen Datensicherungen, Zugriffsbeschränkungen, sicheren Passwörtern und laufenden Sicherheitsupdates.</p>
 
-<h2>10. Minderjährige</h2>
+<h2>11. Minderjährige</h2>
 <p>Unser Angebot richtet sich an Unternehmen und nicht an Personen unter 16 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Minderjährigen.</p>
 
-<h2>11. Änderungen</h2>
+<h2>12. Änderungen</h2>
 <p>Stand dieser Datenschutzerklärung: {STAND_DE}. Wir passen sie an, wenn sich die Website oder die rechtlichen Vorgaben ändern. Es gilt die jeweils hier veröffentlichte Fassung.</p>
 """
 
@@ -126,28 +130,32 @@ DS_EN = f"""
 <p>If you contact us by e-mail or phone, we process the data you provide (e.g. name, company, e-mail address, phone number, content of your enquiry and any project documents) in order to handle your enquiry and any follow-up questions. Our e-mails are processed and stored by our e-mail provider Webland.</p>
 <p>The legal basis is Art. 6(1)(b) GDPR (pre-contractual measures) or Art. 6(1)(f) GDPR (legitimate interest in answering enquiries). The data are deleted once they are no longer needed for this purpose, at the latest after statutory retention periods have expired.</p>
 
-<h2>5. Processing of customer data</h2>
+<h2>5. Enquiry form in the configurator</h2>
+<p>The <a href="https://forcotech.github.io/konfigurator/en/">acoustic enclosure configurator</a> calculates exclusively in your browser; no data are transmitted to us unless you send an enquiry. If you send an enquiry via the form, we process your contact details (name, company, e-mail, phone, project location), your message and the selected configuration in order to handle your enquiry and prepare a quotation.</p>
+<p>For the technical transmission we use the form service FormSubmit (formsubmit.co), which forwards the enquiry by e-mail to info@forcotech.com. FormSubmit does not state where data are processed; processing outside the EU without an adequacy decision is therefore possible. The transmission therefore only takes place with your explicit consent given in the form (Art. 6(1)(a) and Art. 49(1)(a) GDPR) and for pre-contractual measures (Art. 6(1)(b) GDPR). You can withdraw your consent at any time with effect for the future. Alternatively, you can send your enquiry directly by e-mail to <a href="mailto:info@forcotech.com">info@forcotech.com</a>; FormSubmit is then not used.</p>
+
+<h2>6. Processing of customer data</h2>
 <p>In the course of our business relationship we process company data (company name, address, tax number), contact data (name, e-mail, phone, position), contract data (quotations, orders, invoices), project-related technical data and payment information.</p>
 <p>The legal basis is Art. 6(1)(b) GDPR (performance of a contract) and Art. 6(1)(c) GDPR (legal obligations, in particular retention obligations under tax and commercial law). Customer data are stored for the duration of the business relationship and in accordance with statutory retention periods.</p>
 
-<h2>6. Disclosure of data</h2>
+<h2>7. Disclosure of data</h2>
 <p>Your data are only passed on to third parties if you have consented (Art. 6(1)(a) GDPR), if this is necessary to perform a contract (Art. 6(1)(b) GDPR), if there is a legal obligation (Art. 6(1)(c) GDPR) or if it is necessary to protect legitimate interests and your interests do not override them (Art. 6(1)(f) GDPR).</p>
-<p>Possible recipients are in particular tax advisers and auditors, IT service providers (hosting, e-mail), accounting service providers, our manufacturing and installation partner within the scope of an order (ABSORA GmbH, Berlin) and authorities where there is a legal duty to provide information.</p>
+<p>Possible recipients are in particular tax advisers and auditors, IT service providers (hosting, e-mail, form delivery), accounting service providers, our manufacturing and installation partner within the scope of an order (ABSORA GmbH, Berlin) and authorities where there is a legal duty to provide information.</p>
 
-<h2>7. Retention period</h2>
+<h2>8. Retention period</h2>
 <p>We store personal data only as long as necessary for the respective purpose or as required by statutory retention periods: generally 10 years under commercial and tax law (e.g. invoices, accounting records, under Italian law), project documentation for the duration of the project plus 5 years. After that, the data are routinely deleted.</p>
 
-<h2>8. Your rights</h2>
+<h2>9. Your rights</h2>
 <p>Under the GDPR you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing (Art. 21). You can withdraw any consent given at any time with effect for the future. Simply contact us by e-mail.</p>
 <p>You also have the right to lodge a complaint with a data protection supervisory authority. The authority responsible for us is:<br>Garante per la Protezione dei Dati Personali, Piazza Venezia 11, 00187 Rome, Italy – phone +39 06 696771 – <a href="https://www.gpdp.it">www.gpdp.it</a></p>
 
-<h2>9. Data security</h2>
+<h2>10. Data security</h2>
 <p>The website is delivered exclusively in encrypted form via HTTPS (TLS). In addition, we protect your data with technical and organisational measures such as regular backups, access restrictions, secure passwords and ongoing security updates.</p>
 
-<h2>10. Minors</h2>
+<h2>11. Minors</h2>
 <p>Our offer is aimed at businesses and not at persons under 16. We do not knowingly collect personal data from minors.</p>
 
-<h2>11. Changes</h2>
+<h2>12. Changes</h2>
 <p>Version of this privacy policy: {STAND_EN}. We update it when the website or legal requirements change. The version published here applies.</p>
 """
 

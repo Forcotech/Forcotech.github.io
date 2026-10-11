@@ -5,12 +5,14 @@
 ## Company
 - [Startseite (Deutsch)](https://forcotech.github.io/): applications, technology, construction, FAQ, contact
 - [Homepage (English)](https://forcotech.github.io/en/)
+- [Impressum](https://forcotech.github.io/impressum/) · [Datenschutz](https://forcotech.github.io/datenschutz/) · [Legal notice](https://forcotech.github.io/en/legal-notice/) · [Privacy](https://forcotech.github.io/en/privacy/)
 
 ## Configurator and catalogues
 - [Schallhauben-Konfigurator](https://forcotech.github.io/konfigurator/): enter unit dimensions, refrigerant (incl. R290), air flow, acoustics (TA Lärm) and wind zone; returns outer dimensions, noise reduction and a budget price
 - [Standard enclosures VRF/VRV](https://forcotech.github.io/konfigurator/vrf/): models from Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier with dimensions and prices (Standard approx. −15 dB(A), Premium approx. −20 dB(A))
 - [Enclosures for PV inverters](https://forcotech.github.io/konfigurator/pv/): wall-mounted and free-standing versions for 1–5 inverters (Huawei, Sungrow, SMA, Fronius, SolarEdge and others) with prices
-- English versions: [configurator](https://forcotech.github.io/konfigurator/en/), [VRF](https://forcotech.github.io/konfigurator/en/vrf/), [PV](https://forcotech.github.io/konfigurator/en/pv/)
+- [Large equipment catalogue](https://forcotech.github.io/konfigurator/grossanlagen/): enclosures for large heat pumps, chillers and commercial refrigeration by manufacturer and model
+- English versions: [configurator](https://forcotech.github.io/konfigurator/en/), [VRF](https://forcotech.github.io/konfigurator/en/vrf/), [PV](https://forcotech.github.io/konfigurator/en/pv/), [large equipment](https://forcotech.github.io/konfigurator/en/grossanlagen/)
 
 ## Key facts
 - Noise reduction: approx. −15 dB(A) Standard, approx. −20 dB(A) Premium, higher on a project basis

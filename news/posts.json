@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "haupt-laermquellen-waermepumpen-kaelteanlagen",
+    "date": "2026-09-24",
+    "status": "entwurf",
+    "image": "img/news/laermquellen.webp",
+    "de": {
+      "title": "Haupt-Lärmquellen bei luftgekühlten Wärmepumpen und Kälteanlagen",
+      "alt": "Schema einer luftgekühlten Anlage mit Ventilatoren, Verdichtern, Kältemittelkreis und Pumpen sowie deren Frequenzbereiche",
+      "teaser": ""
+    },
+    "en": {
+      "title": "Main noise sources in air-cooled heat pumps and chillers",
+      "alt": "Diagram of an air-cooled unit with fans, compressors, refrigerant circuit and pumps and their frequency ranges",
+      "teaser": ""
+    }
+  },
+  {
+    "slug": "aufbau-schallhauben-ohne-kompromisse",
+    "date": "2026-09-23",
+    "status": "entwurf",
+    "image": "img/news/aufbau-ohne-kompromisse.webp",
+    "de": {
+      "title": "Warum wir beim Aufbau unserer Schallhauben keine Kompromisse mehr machen",
+      "alt": "Wechselrichter-Einhausung mit offener Tür, Aluminium-Tragrahmen auf einem Flachdach, Dachdetail und gewelltes HSA3-Blech",
+      "teaser": ""
+    },
+    "en": {
+      "title": "Why we no longer make compromises when building our acoustic enclosures",
+      "alt": "Inverter enclosure with open door, aluminium frame on a flat roof, roof detail and corrugated HSA3 sheet",
+      "teaser": ""
+    }
+  },
+  {
+    "slug": "12-meter-schallschutz-weishaupt-kaskade",
+    "date": "2026-09-20",
+    "status": "entwurf",
+    "image": "img/news/weishaupt-kaskade-12m.webp",
+    "de": {
+      "title": "12 Meter Schallschutz – ohne Kompromisse bei der Luft: Vierer-Kaskade luftgekühlter Wärmepumpen Weishaupt WWP LA 60-AR",
+      "alt": "12 Meter lange Schallhaube für vier Wärmepumpen: Visualisierung, ausgeführte Haube im Grünen und Tragrahmen als 3D-Modell",
+      "teaser": ""
+    },
+    "en": {
+      "title": "12 metres of noise protection – no compromise on airflow: cascade of four Weishaupt WWP LA 60-AR air-source heat pumps",
+      "alt": "12-metre acoustic enclosure for four heat pumps: rendering, installed enclosure and frame as 3D model",
+      "teaser": ""
+    }
+  }
+]

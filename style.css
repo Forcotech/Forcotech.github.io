@@ -147,3 +147,32 @@ footer{padding:28px 0 40px;font-size:13.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
 footer a{color:var(--muted)}
 .hsa3-faq{max-width:860px;margin-top:8px}
+
+/* News und Analysen */
+.nh{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.02em;margin:0 0 26px}
+.nh span{color:var(--accent)}
+.nlist .nh{margin-bottom:8px}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 30px}
+@media (max-width:900px){.ngrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ngrid{grid-template-columns:1fr}}
+.ncard a{display:block;color:var(--ink);text-decoration:none}
+.ncard img{width:100%;aspect-ratio:5/3;object-fit:cover;background:#fff;transition:opacity .2s}
+.ncard time{display:block;margin:16px 0 6px;font-size:16px;color:var(--ink)}
+.ncard h2,.ncard h3{font-size:clamp(19px,1.9vw,24px);font-weight:500;line-height:1.35;letter-spacing:-.005em;margin:0;text-wrap:pretty}
+.ncard p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.ncard a:hover h2,.ncard a:hover h3{color:var(--accent)}
+.ncard a:hover img{opacity:.88}
+.nmore{margin:28px 0 0;font-weight:700}
+.nmore a{text-decoration:none}
+.npost .wrap{max-width:820px}
+.npost{padding:40px 0 8px}
+.nback{margin:0 0 18px;font-weight:600;font-size:15px}.nback a{text-decoration:none}
+.npost time{display:block;color:var(--muted);margin-bottom:6px}
+.npost h1{font-size:clamp(28px,3.6vw,40px)}
+.npost figure{margin:22px 0 26px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff}
+.npost figure img{width:100%}
+.nbody{font-size:17px}
+.nbody h2{font-size:24px;margin:32px 0 10px}
+.nbody h3{font-size:19px;margin:24px 0 8px}
+.nbody figure{margin:20px 0}
+.nbody figcaption{font-size:14px;color:var(--muted);padding:8px 12px}

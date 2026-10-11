@@ -39,7 +39,7 @@ T = {
         "desc_list": "News und Analysen von ForCoTech: Projekte, Messungen und Hintergründe zu Schallhauben für Wärmepumpen, Kälteanlagen, VRF und PV-Wechselrichter.",
         "cta_h": "Projekt anfragen",
         "cta_p": "Schicken Sie uns Gerätetyp, Anzahl und Aufstellort – oder holen Sie sich direkt einen Richtpreis im Konfigurator.",
-        "cta_b": "Zum Konfigurator", "privacy": "Datenschutz", "other_name": "English",
+        "cta_b": "Zum Konfigurator", "privacy": "Datenschutz", "privacy_url": "/datenschutz/", "imprint": "Impressum", "imprint_url": "/impressum/", "other_name": "English",
         "empty": "Hier erscheinen in Kürze unsere ersten Beiträge.",
         "months": None, "locale": "de_DE", "zoom": "Grafik in voller Größe öffnen",
     },
@@ -56,13 +56,27 @@ T = {
         "desc_list": "News and analyses from ForCoTech: projects, measurements and background on acoustic enclosures for heat pumps, chillers, VRF and PV inverters.",
         "cta_h": "Request a project",
         "cta_p": "Send us the unit type, quantity and location – or get a budget price straight from the configurator.",
-        "cta_b": "Open configurator", "privacy": "Privacy", "other_name": "Deutsch",
+        "cta_b": "Open configurator", "privacy": "Privacy", "privacy_url": "/en/privacy/", "imprint": "Legal notice", "imprint_url": "/en/legal-notice/", "other_name": "Deutsch",
         "empty": "Our first posts will appear here shortly.",
         "months": None, "locale": "en_GB", "zoom": "Open graphic in full size",
     },
 }
 LOGO_ALT = "ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"
 FOOT = "© {y} Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · {it} · P.IVA IT03833150133 · {al} ABSORA GmbH, Berlin"
+
+CTA = """<section>
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>{L[cta_h]}</h2>
+        <p>{L[cta_p]}</p>
+        <div class="btns" style="margin-top:18px"><a class="btn" href="{L[cfg][0]}">{L[cta_b]}</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+      </div>
+      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · {it}<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+    </div>
+  </div>
+</section>
+"""
 
 e = html.escape
 
@@ -114,13 +128,14 @@ def teaser_section(posts, lang):
 </section>"""
 
 
-def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head=""):
+def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head="", cta=True):
     L = T[lang]
     nav = "\n      ".join(
         f'<a class="opt" href="{h if h.startswith("/") else L["home"] + h}">{n}</a>' for h, n in L["nav"])
     other = T[L["other"]]
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""
     it, al = ("Italien", "in Allianz mit") if lang == "de" else ("Italy", "in alliance with")
+    cta_html = (CTA.format(L=L, it=it) if cta else "")
     return f"""<!doctype html>
 <!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
 <!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
@@ -160,24 +175,12 @@ def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head=""):
 
 <main id="main">
 {main}
-<section>
-  <div class="wrap">
-    <div class="contact">
-      <div>
-        <h2>{L["cta_h"]}</h2>
-        <p>{L["cta_p"]}</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="{L['cfg'][0]}">{L["cta_b"]}</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
-      </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · {it}<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
-    </div>
-  </div>
-</section>
-</main>
+{cta_html}</main>
 
 <footer>
   <div class="wrap">
     <span>{FOOT.format(y=date.today().year, it=it, al=al)}</span>
-    <span><a href="https://silent-mode.com/datenschutz">{L["privacy"]}</a> · <a href="{alt_url}" lang="{L['other']}">{L["other_name"]}</a></span>
+    <span><a href="{L['imprint_url']}">{L["imprint"]}</a> · <a href="{L['privacy_url']}">{L["privacy"]}</a> · <a href="{alt_url}" lang="{L['other']}">{L["other_name"]}</a></span>
   </div>
 </footer>
 </body>
@@ -260,7 +263,9 @@ def build():
         return (f'  <url><loc>{SITE}{loc}</loc><lastmod>{lm}</lastmod>'
                 f'<xhtml:link rel="alternate" hreflang="{alang}" href="{SITE}{alt}"/></url>')
     lines = [u("/", "/en/", "en", today), u("/en/", "/", "de", today),
-             u("/news/", "/en/news/", "en", today), u("/en/news/", "/news/", "de", today)]
+             u("/news/", "/en/news/", "en", today), u("/en/news/", "/news/", "de", today),
+             u("/impressum/", "/en/legal-notice/", "en", today), u("/en/legal-notice/", "/impressum/", "de", today),
+             u("/datenschutz/", "/en/privacy/", "en", today), u("/en/privacy/", "/datenschutz/", "de", today)]
     for p in posts:
         lm = p.get("updated", p["date"])
         lines += [u(url("de", p["slug"]), url("en", p["slug"]), "en", lm),

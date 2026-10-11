@@ -6,14 +6,20 @@
     "image": "img/news/laermquellen.webp",
     "de": {
       "title": "Haupt-Lärmquellen bei luftgekühlten Wärmepumpen und Kälteanlagen",
-      "alt": "Schema einer luftgekühlten Anlage mit Ventilatoren, Verdichtern, Kältemittelkreis und Pumpen sowie deren Frequenzbereiche",
+      "alt": "Grafik: Geräuschquellen einer luftgekühlten Wärmepumpe bzw. Kälteanlage – Ventilatoren, Verdichterverbund, Kältemittelkreis, Pumpen/Ventile und Schwingungsentkopplung – mit typischen Frequenzbereichen und wirksamen Maßnahmen",
       "teaser": "Fünf Hauptquellen, fünf Frequenzbereiche – und welche Schallschutzmaßnahme bei welcher wirkt."
     },
     "en": {
       "title": "Main noise sources in air-cooled heat pumps and chillers",
-      "alt": "Diagram of an air-cooled unit with fans, compressors, refrigerant circuit and pumps and their frequency ranges",
+      "alt": "Graphic: noise sources of an air-cooled heat pump or chiller – fans, compressor set, refrigerant circuit, pumps/valves and vibration isolation – with typical frequency ranges and effective measures",
       "teaser": "Five main sources, five frequency ranges – and which noise control measure works for which."
-    }
+    },
+    "image_full": "img/news/laermquellen-grafik.webp",
+    "image_full_size": [
+      986,
+      847
+    ],
+    "updated": "2026-10-11"
   },
   {
     "slug": "aufbau-schallhauben-ohne-kompromisse",

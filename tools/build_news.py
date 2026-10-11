@@ -4,7 +4,8 @@
 
 Neuer Beitrag:
   1. Bild nach img/news/<name>.webp legen
-  2. Eintrag in news/posts.json ergänzen (slug, date, image, de/en: title, alt, teaser)
+  2. Eintrag in news/posts.json ergänzen (slug, date, image, de/en: title, alt, teaser);
+     optional image_full + image_full_size [Breite, Höhe] für das große Bild auf der Beitragsseite
   3. Text als HTML-Fragment in news/_src/<slug>.de.html und news/_src/<slug>.en.html
   4. status auf "online" setzen und  python3 tools/build_news.py  ausführen
 
@@ -40,7 +41,7 @@ T = {
         "cta_p": "Schicken Sie uns Gerätetyp, Anzahl und Aufstellort – oder holen Sie sich direkt einen Richtpreis im Konfigurator.",
         "cta_b": "Zum Konfigurator", "privacy": "Datenschutz", "other_name": "English",
         "empty": "Hier erscheinen in Kürze unsere ersten Beiträge.",
-        "months": None, "locale": "de_DE",
+        "months": None, "locale": "de_DE", "zoom": "Grafik in voller Größe öffnen",
     },
     "en": {
         "lang": "en", "home": "/en/", "news": "/en/news/", "other": "de",
@@ -57,7 +58,7 @@ T = {
         "cta_p": "Send us the unit type, quantity and location – or get a budget price straight from the configurator.",
         "cta_b": "Open configurator", "privacy": "Privacy", "other_name": "Deutsch",
         "empty": "Our first posts will appear here shortly.",
-        "months": None, "locale": "en_GB",
+        "months": None, "locale": "en_GB", "zoom": "Open graphic in full size",
     },
 }
 LOGO_ALT = "ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"
@@ -219,18 +220,21 @@ def build():
             ld = json.dumps({
                 "@context": "https://schema.org", "@type": "BlogPosting", "headline": t["title"],
                 "datePublished": p["date"], "dateModified": p.get("updated", p["date"]),
-                "inLanguage": lang, "image": f"{SITE}/{p['image']}", "mainEntityOfPage": SITE + url(lang, p["slug"]),
+                "inLanguage": lang, "image": f"{SITE}/{p.get('image_full', p['image'])}", "mainEntityOfPage": SITE + url(lang, p["slug"]),
                 "author": {"@type": "Person", "name": "Romolo Vicari"},
                 "publisher": {"@id": f"{SITE}/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari",
                               "logo": {"@type": "ImageObject", "url": f"{SITE}/img/forcotech-logo.png"}},
             }, ensure_ascii=False)
             content = body(p["slug"], lang)
+            # optional: eigenes Bild in voller Größe für die Beitragsseite (image_full, image_full_size)
+            full = p.get("image_full", p["image"])
+            fw, fh = p.get("image_full_size", [522, 313])
             main = f"""<article class="npost">
   <div class="wrap">
     <p class="nback"><a href="{url(lang)}">← {L["back"]}</a></p>
     <time datetime="{p["date"]}">{fmt(p["date"])}</time>
     <h1>{e(t["title"])}</h1>
-    <figure><img src="/{p["image"]}" width="522" height="313" alt="{e(t["alt"])}" fetchpriority="high"></figure>
+    <figure><a href="/{full}" title="{L["zoom"]}"><img src="/{full}" width="{fw}" height="{fh}" alt="{e(t["alt"])}" fetchpriority="high"></a></figure>
     <div class="nbody">
 {content}
     </div>

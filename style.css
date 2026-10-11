@@ -180,3 +180,10 @@ footer a{color:var(--muted)}
 .nbody .target{margin:32px 0 8px}
 .nbody .target p{font-size:16.5px;color:var(--ink)}
 .npost figure a{display:block;cursor:zoom-in}
+.nbody ul.check{margin:0 0 8px}
+.nbody ul.check li{font-size:16.5px}
+.nfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:6px 0 8px}
+@media (max-width:640px){.nfacts{grid-template-columns:1fr}}
+.nfacts div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.nfacts b{display:block;font-size:22px;line-height:1.2;color:var(--accent-d);margin-bottom:4px}
+.nfacts span{font-size:14.5px;color:var(--muted);line-height:1.45;display:block}

@@ -40,17 +40,22 @@
   {
     "slug": "12-meter-schallschutz-weishaupt-kaskade",
     "date": "2026-09-20",
-    "status": "entwurf",
+    "status": "online",
     "image": "img/news/weishaupt-kaskade-12m.webp",
     "de": {
       "title": "12 Meter Schallschutz – ohne Kompromisse bei der Luft: Vierer-Kaskade luftgekühlter Wärmepumpen Weishaupt WWP LA 60-AR",
-      "alt": "12 Meter lange Schallhaube für vier Wärmepumpen: Visualisierung, ausgeführte Haube im Grünen und Tragrahmen als 3D-Modell",
-      "teaser": ""
+      "alt": "Durchgehende 12 Meter lange Schallhaube aus Aluminium-Paneelen mit Lüftungsgittern für vier Weishaupt-Wärmepumpen, auf einer Grünfläche neben einem Gehweg",
+      "teaser": "Vier Weishaupt WWP LA 60-AR in einer 12,4 m langen Schallhaube – 100.000 m³/h bei rund 2,6 m/s in Ansaug- und Druckkammer."
     },
     "en": {
       "title": "12 metres of noise protection – no compromise on airflow: cascade of four Weishaupt WWP LA 60-AR air-source heat pumps",
-      "alt": "12-metre acoustic enclosure for four heat pumps: rendering, installed enclosure and frame as 3D model",
-      "teaser": ""
-    }
+      "alt": "Continuous 12-metre acoustic enclosure of aluminium panels with ventilation grilles for four Weishaupt heat pumps, on a lawn next to a footpath",
+      "teaser": "Four Weishaupt WWP LA 60-AR in a 12.4 m acoustic enclosure – 100,000 m³/h at approx. 2.6 m/s in intake and discharge chamber."
+    },
+    "image_full": "img/news/weishaupt-kaskade-12m.webp",
+    "image_full_size": [
+      1536,
+      922
+    ]
   }
 ]

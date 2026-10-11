@@ -189,3 +189,4 @@ footer a{color:var(--muted)}
 .nfacts span{font-size:14.5px;color:var(--muted);line-height:1.45;display:block}
 .hero h1{font-size:clamp(28px,3.5vw,40px)}
 .legal .nbody h2{font-size:21px;margin:28px 0 8px}.legal .nbody p{margin:0 0 12px}
+.norig{margin-top:22px;font-size:14.5px;color:var(--muted)}

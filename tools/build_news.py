@@ -5,7 +5,9 @@
 Neuer Beitrag:
   1. Bild nach img/news/<name>.webp legen
   2. Eintrag in news/posts.json ergänzen (slug, date, image, de/en: title, alt, teaser);
-     optional image_full + image_full_size [Breite, Höhe] für das große Bild auf der Beitragsseite
+     optional image_full + image_full_size [Breite, Höhe] für das große Bild auf der Beitragsseite;
+     bei Kopien von silent-mode.com "original": <URL> setzen
+     (DE-Seite verweist per canonical auf das Original, EN bleibt eigenständig)
   3. Text als HTML-Fragment in news/_src/<slug>.de.html und news/_src/<slug>.en.html
   4. status auf "online" setzen und  python3 tools/build_news.py  ausführen
 
@@ -128,7 +130,7 @@ def teaser_section(posts, lang):
 </section>"""
 
 
-def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head="", cta=True):
+def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head="", cta=True, canon_abs=None):
     L = T[lang]
     nav = "\n      ".join(
         f'<a class="opt" href="{h if h.startswith("/") else L["home"] + h}">{n}</a>' for h, n in L["nav"])
@@ -146,7 +148,7 @@ def page(lang, title, desc, canon, alt_url, main, og_image=None, extra_head="", 
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
-<link rel="canonical" href="{SITE}{canon}">
+<link rel="canonical" href="{canon_abs or SITE + canon}">
 <link rel="alternate" hreflang="{lang}" href="{SITE}{canon}">
 <link rel="alternate" hreflang="{L['other']}" href="{SITE}{alt_url}">
 <meta property="og:type" content="{'article' if og_image else 'website'}">
@@ -223,12 +225,16 @@ def build():
             ld = json.dumps({
                 "@context": "https://schema.org", "@type": "BlogPosting", "headline": t["title"],
                 "datePublished": p["date"], "dateModified": p.get("updated", p["date"]),
-                "inLanguage": lang, "image": f"{SITE}/{p.get('image_full', p['image'])}", "mainEntityOfPage": SITE + url(lang, p["slug"]),
+                "inLanguage": lang, "image": f"{SITE}/{p.get('image_full', p['image'])}", "mainEntityOfPage": (p.get("original") if lang == "de" and p.get("original") else SITE + url(lang, p["slug"])),
                 "author": {"@type": "Person", "name": "Romolo Vicari"},
                 "publisher": {"@id": f"{SITE}/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari",
                               "logo": {"@type": "ImageObject", "url": f"{SITE}/img/forcotech-logo.png"}},
             }, ensure_ascii=False)
             content = body(p["slug"], lang)
+            orig = p.get("original") if lang == "de" else None  # DE = Kopie des Originals, EN = eigene Übersetzung
+            if p.get("original"):
+                note = ("Zuerst erschienen auf" if lang == "de" else "Originally published in German on")
+                content += f'\n<p class="norig">{note} <a href="{e(p["original"])}">silent-mode.com</a></p>'
             # optional: eigenes Bild in voller Größe für die Beitragsseite (image_full, image_full_size)
             full = p.get("image_full", p["image"])
             fw, fh = p.get("image_full_size", [522, 313])
@@ -245,7 +251,7 @@ def build():
 </article>"""
             write(url(lang, p["slug"])[1:] + "index.html",
                   page(lang, f'{t["title"]} – ForCoTech', desc, url(lang, p["slug"]),
-                       url(other_of[lang], p["slug"]), main, og_image=p["image"],
+                       url(other_of[lang], p["slug"]), main, og_image=p["image"], canon_abs=orig,
                        extra_head=f'<script type="application/ld+json">{ld}</script>'))
 
         # Startseite
@@ -268,8 +274,9 @@ def build():
              u("/datenschutz/", "/en/privacy/", "en", today), u("/en/privacy/", "/datenschutz/", "de", today)]
     for p in posts:
         lm = p.get("updated", p["date"])
-        lines += [u(url("de", p["slug"]), url("en", p["slug"]), "en", lm),
-                  u(url("en", p["slug"]), url("de", p["slug"]), "de", lm)]
+        if not p.get("original"):
+            lines.append(u(url("de", p["slug"]), url("en", p["slug"]), "en", lm))
+        lines.append(u(url("en", p["slug"]), url("de", p["slug"]), "de", lm))
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
           + "\n".join(lines) + "\n</urlset>\n")

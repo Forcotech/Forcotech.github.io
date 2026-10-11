@@ -78,5 +78,26 @@
       "alt": "Two identical stainless steel acoustic enclosures with roof air outlets and pipe connections on an industrial site",
       "teaser": "Two stainless steel enclosures with ATEX ventilation for R290 units: target −14 dB(A), measured in situ −15.6 dB(A)."
     }
+  },
+  {
+    "slug": "r290-kaelteanlage-flachdach-lueftungsflaeche-hitze",
+    "date": "2026-08-18",
+    "status": "online",
+    "image": "img/news/r290-flachdach-schallhaube.webp",
+    "image_full": "img/news/r290-flachdach-schallhaube.webp",
+    "image_full_size": [
+      1137,
+      640
+    ],
+    "de": {
+      "title": "Aufbau einer Schallhaube für eine Kälteanlage mit dem Kältemittel R290 auf einem Flachdach",
+      "alt": "Graue Schallhaube mit Lüftungsgittern und Rohrleitungsanschlüssen auf einem Flachdach, aus zwei Blickwinkeln",
+      "teaser": "Reicht die freie Lüftungsfläche auch bei 39 °C? 50.000 m³/h, 2,8 m² bei 20 °C – und warum wir 7 % Zuschlag einplanen."
+    },
+    "en": {
+      "title": "Installing an acoustic enclosure for an R290 refrigeration unit on a flat roof",
+      "alt": "Grey acoustic enclosure with ventilation grilles and pipe connections on a flat roof, seen from two angles",
+      "teaser": "Is the free ventilation area sufficient at 39 °C? 50,000 m³/h, 2.8 m² at 20 °C – and why we add a 7 % allowance."
+    }
   }
 ]

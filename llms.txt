@@ -23,3 +23,9 @@
 - In alliance with ABSORA GmbH, Berlin (developer and patent holder of HSA3): design by Silent Engineering, manufacturing and installation together with ABSORA
 - R290 (propane) units: enclosure only with written manufacturer approval; floorless design so leaked propane flows away, no ignition sources (except explosion-proof), permanently open storm/relief openings on at least two sides, relief areas to EN 14994 if a zone lies inside, CFD check of gas outflow
 - 500+ enclosure projects since 2015; first projects 2015 in the UK; installations across Europe, smaller numbers in the USA and Australia
+
+<!-- NEWS:START -->
+## News and analyses
+- [News (Deutsch)](https://forcotech.github.io/news/) · [News (English)](https://forcotech.github.io/en/news/)
+- [Main noise sources in air-cooled heat pumps and chillers](https://forcotech.github.io/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/) (2026-09-24, Deutsch: https://forcotech.github.io/news/haupt-laermquellen-waermepumpen-kaelteanlagen/)
+<!-- NEWS:END -->

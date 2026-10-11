@@ -2,17 +2,17 @@
   {
     "slug": "haupt-laermquellen-waermepumpen-kaelteanlagen",
     "date": "2026-09-24",
-    "status": "entwurf",
+    "status": "online",
     "image": "img/news/laermquellen.webp",
     "de": {
       "title": "Haupt-Lärmquellen bei luftgekühlten Wärmepumpen und Kälteanlagen",
       "alt": "Schema einer luftgekühlten Anlage mit Ventilatoren, Verdichtern, Kältemittelkreis und Pumpen sowie deren Frequenzbereiche",
-      "teaser": ""
+      "teaser": "Fünf Hauptquellen, fünf Frequenzbereiche – und welche Schallschutzmaßnahme bei welcher wirkt."
     },
     "en": {
       "title": "Main noise sources in air-cooled heat pumps and chillers",
       "alt": "Diagram of an air-cooled unit with fans, compressors, refrigerant circuit and pumps and their frequency ranges",
-      "teaser": ""
+      "teaser": "Five main sources, five frequency ranges – and which noise control measure works for which."
     }
   },
   {

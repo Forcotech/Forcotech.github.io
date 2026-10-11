@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://forcotech.github.io/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/"/></url>
-  <url><loc>https://forcotech.github.io/en/</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/"/></url>
+  <url><loc>https://forcotech.github.io/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/"/></url>
+  <url><loc>https://forcotech.github.io/en/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/"/></url>
+  <url><loc>https://forcotech.github.io/news/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/"/></url>
+  <url><loc>https://forcotech.github.io/en/news/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/"/></url>
+  <url><loc>https://forcotech.github.io/news/haupt-laermquellen-waermepumpen-kaelteanlagen/</loc><lastmod>2026-09-24</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/"/></url>
+  <url><loc>https://forcotech.github.io/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/</loc><lastmod>2026-09-24</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/haupt-laermquellen-waermepumpen-kaelteanlagen/"/></url>
 </urlset>

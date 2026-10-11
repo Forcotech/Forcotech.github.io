@@ -89,7 +89,7 @@ def body(slug, lang):
 
 def card(p, lang, h="h3", lazy=True):
     t = p[lang]
-    teaser = f'<p>{e(t["teaser"])}</p>' if t.get("teaser") else ""
+    teaser = ""  # Kurztext nur als Meta-Beschreibung, Karten zeigen wie im Vorbild Datum + Titel
     return (f'<article class="ncard"><a href="{url(lang, p["slug"])}">'
             f'<img src="/{p["image"]}" width="522" height="313" alt="{e(t["alt"])}"{' loading="lazy"' if lazy else ""}>'
             f'<time datetime="{p["date"]}">{fmt(p["date"])}</time>'

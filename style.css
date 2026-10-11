@@ -176,3 +176,6 @@ footer a{color:var(--muted)}
 .nbody h3{font-size:19px;margin:24px 0 8px}
 .nbody figure{margin:20px 0}
 .nbody figcaption{font-size:14px;color:var(--muted);padding:8px 12px}
+.nlead{font-size:19px;color:var(--ink)}
+.nbody .target{margin:32px 0 8px}
+.nbody .target p{font-size:16.5px;color:var(--ink)}

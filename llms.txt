@@ -5,7 +5,8 @@
 ## Company
 - [Startseite (Deutsch)](https://forcotech.github.io/): applications, technology, construction, FAQ, contact
 - [Homepage (English)](https://forcotech.github.io/en/)
-- [Impressum](https://forcotech.github.io/impressum/) · [Datenschutz](https://forcotech.github.io/datenschutz/) · [Legal notice](https://forcotech.github.io/en/legal-notice/) · [Privacy](https://forcotech.github.io/en/privacy/)
+- [Page d’accueil (Français)](https://forcotech.github.io/fr/)
+- [Impressum](https://forcotech.github.io/impressum/) · [Datenschutz](https://forcotech.github.io/datenschutz/) · [Legal notice](https://forcotech.github.io/en/legal-notice/) · [Privacy](https://forcotech.github.io/en/privacy/) · [Mentions légales](https://forcotech.github.io/fr/mentions-legales/) · [Confidentialité](https://forcotech.github.io/fr/confidentialite/)
 
 ## Configurator and catalogues
 - [Schallhauben-Konfigurator](https://forcotech.github.io/konfigurator/): enter unit dimensions, refrigerant (incl. R290), air flow, acoustics (TA Lärm) and wind zone; returns outer dimensions, noise reduction and a budget price
@@ -13,6 +14,7 @@
 - [Enclosures for PV inverters](https://forcotech.github.io/konfigurator/pv/): wall-mounted and free-standing versions for 1–5 inverters (Huawei, Sungrow, SMA, Fronius, SolarEdge and others) with prices
 - [Large equipment catalogue](https://forcotech.github.io/konfigurator/grossanlagen/): enclosures for large heat pumps, chillers and commercial refrigeration by manufacturer and model
 - English versions: [configurator](https://forcotech.github.io/konfigurator/en/), [VRF](https://forcotech.github.io/konfigurator/en/vrf/), [PV](https://forcotech.github.io/konfigurator/en/pv/), [large equipment](https://forcotech.github.io/konfigurator/en/grossanlagen/)
+- French versions: [configurateur](https://forcotech.github.io/konfigurator/fr/), [VRF](https://forcotech.github.io/konfigurator/fr/vrf/), [PV](https://forcotech.github.io/konfigurator/fr/pv/), [grandes installations](https://forcotech.github.io/konfigurator/fr/grossanlagen/)
 
 ## Key facts
 - Noise reduction: approx. −15 dB(A) Standard, approx. −20 dB(A) Premium, higher on a project basis
@@ -28,7 +30,7 @@
 
 <!-- NEWS:START -->
 ## News and analyses
-- [News (Deutsch)](https://forcotech.github.io/news/) · [News (English)](https://forcotech.github.io/en/news/)
+- [News (Deutsch)](https://forcotech.github.io/news/) · [News (English)](https://forcotech.github.io/en/news/) · [Actualités (Français)](https://forcotech.github.io/fr/actualites/)
 - [The heat pump as a gateway: cyber risks of connected HVAC systems](https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/) (2026-10-13, Deutsch: https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/)
 - [Main noise sources in air-cooled heat pumps and chillers](https://forcotech.github.io/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/) (2026-09-24, Deutsch: https://forcotech.github.io/news/haupt-laermquellen-waermepumpen-kaelteanlagen/)
 - [12 metres of noise protection – no compromise on airflow: cascade of four Weishaupt WWP LA 60-AR air-source heat pumps](https://forcotech.github.io/en/news/12-meter-schallschutz-weishaupt-kaskade/) (2026-09-20, Deutsch: https://forcotech.github.io/news/12-meter-schallschutz-weishaupt-kaskade/)

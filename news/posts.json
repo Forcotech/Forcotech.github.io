@@ -25,6 +25,17 @@
         1200,
         1200
       ]
+    },
+    "fr": {
+      "title": "La pompe à chaleur comme porte d’entrée : cyber-risques des installations CVC connectées",
+      "alt": "Graphique : pompe à chaleur au centre, chemins d’attaque en pointillés vers le cloud du fabricant, la télémaintenance, un routeur LTE et la GTB/BACnet",
+      "teaser": "Protocoles non sécurisés, télémaintenance comme porte d’entrée, notification sous 24 heures selon le CRA et NIS2 : les risques des pompes à chaleur et groupes froids connectés aujourd’hui – et ce qui aide.",
+      "image": "img/news/hvac-iot-cyberrisiken-karte-en.webp",
+      "image_full": "img/news/hvac-iot-cyberrisiken-en.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
     }
   },
   {
@@ -48,7 +59,12 @@
       847
     ],
     "updated": "2026-10-11",
-    "original": "https://silent-mode.com/blog/haupt-l%C3%A4rmquellen-bei-luftgek%C3%BChlten-w%C3%A4rmepumpen-und-k%C3%A4lteanlagen"
+    "original": "https://silent-mode.com/blog/haupt-l%C3%A4rmquellen-bei-luftgek%C3%BChlten-w%C3%A4rmepumpen-und-k%C3%A4lteanlagen",
+    "fr": {
+      "title": "Principales sources de bruit des pompes à chaleur et groupes froids refroidis par air",
+      "alt": "Graphique : sources de bruit d’une pompe à chaleur ou d’un groupe froid refroidi par air – ventilateurs, compresseurs, circuit frigorifique, pompes/vannes et découplage vibratoire – avec plages de fréquences typiques et mesures efficaces",
+      "teaser": "Cinq sources principales, cinq plages de fréquences – et quelle mesure d’insonorisation agit sur laquelle."
+    }
   },
   {
     "slug": "aufbau-schallhauben-ohne-kompromisse",
@@ -86,7 +102,12 @@
       1536,
       922
     ],
-    "original": "https://silent-mode.com/blog/12-meter-schallschutz-ohne-kompromisse-bei-der-luft-vierer-kaskade-luftgek%C3%BChlte-w%C3%A4rmepumpen-weishaupt-wwp-la-60-ar"
+    "original": "https://silent-mode.com/blog/12-meter-schallschutz-ohne-kompromisse-bei-der-luft-vierer-kaskade-luftgek%C3%BChlte-w%C3%A4rmepumpen-weishaupt-wwp-la-60-ar",
+    "fr": {
+      "title": "12 mètres d’insonorisation – sans compromis sur l’air : cascade de quatre pompes à chaleur air/eau Weishaupt WWP LA 60-AR",
+      "alt": "Caisson acoustique continu de 12 mètres en panneaux aluminium avec grilles de ventilation pour quatre pompes à chaleur Weishaupt, sur une pelouse à côté d’un trottoir",
+      "teaser": "Quatre Weishaupt WWP LA 60-AR dans un caisson acoustique de 12,4 m – 100 000 m³/h à environ 2,6 m/s dans les chambres d’aspiration et de soufflage."
+    }
   },
   {
     "slug": "r290-kaelteanlagen-pharma-inox-schallhauben",
@@ -108,7 +129,12 @@
       "alt": "Two identical stainless steel acoustic enclosures with roof air outlets and pipe connections on an industrial site",
       "teaser": "Two stainless steel enclosures with ATEX ventilation for R290 units: target −14 dB(A), measured in situ −15.6 dB(A)."
     },
-    "original": "https://silent-mode.com/blog/akustik-einhausungen-f%C3%BCr-zwei-k%C3%A4lteanlagen-mit-dem-k%C3%A4ltemittel-r290-in-der-prozessk%C3%BChlung-einer-pharmaproduktion"
+    "original": "https://silent-mode.com/blog/akustik-einhausungen-f%C3%BCr-zwei-k%C3%A4lteanlagen-mit-dem-k%C3%A4ltemittel-r290-in-der-prozessk%C3%BChlung-einer-pharmaproduktion",
+    "fr": {
+      "title": "Caissons acoustiques pour deux groupes froids au R290 dans le refroidissement de process pharmaceutique",
+      "alt": "Deux caissons acoustiques identiques en acier inoxydable avec sorties d’air en toiture et raccordements de tuyauteries sur un site industriel",
+      "teaser": "Deux caissons inox avec ventilation ATEX pour groupes au R290 : objectif −14 dB(A), mesuré in situ −15,6 dB(A)."
+    }
   },
   {
     "slug": "r290-kaelteanlage-flachdach-lueftungsflaeche-hitze",
@@ -130,6 +156,11 @@
       "alt": "Grey acoustic enclosure with ventilation grilles and pipe connections on a flat roof, seen from two angles",
       "teaser": "Is the free ventilation area sufficient at 39 °C? 50,000 m³/h, 2.8 m² at 20 °C – and why we add a 7 % allowance."
     },
-    "original": "https://silent-mode.com/blog/aufbau-einer-schallhaube-f%C3%BCr-eine-k%C3%A4lteanlage-mit-dem-k%C3%A4ltemittel-r290-auf-einem-flachfach"
+    "original": "https://silent-mode.com/blog/aufbau-einer-schallhaube-f%C3%BCr-eine-k%C3%A4lteanlage-mit-dem-k%C3%A4ltemittel-r290-auf-einem-flachfach",
+    "fr": {
+      "title": "Montage d’un caisson acoustique pour un groupe froid au R290 sur toiture-terrasse",
+      "alt": "Caisson acoustique gris avec grilles de ventilation et raccordements de tuyauteries sur une toiture-terrasse, vu sous deux angles",
+      "teaser": "La section de ventilation libre suffit-elle à 39 °C ? 50 000 m³/h, 2,8 m² à 20 °C – et pourquoi nous ajoutons une majoration de 7 %."
+    }
   }
 ]

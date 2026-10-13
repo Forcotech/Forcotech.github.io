@@ -273,7 +273,8 @@ def build():
     lines = [u("/", "/en/", "en", today), u("/en/", "/", "de", today),
              u("/news/", "/en/news/", "en", today), u("/en/news/", "/news/", "de", today),
              u("/impressum/", "/en/legal-notice/", "en", today), u("/en/legal-notice/", "/impressum/", "de", today),
-             u("/datenschutz/", "/en/privacy/", "en", today), u("/en/privacy/", "/datenschutz/", "de", today)]
+             u("/datenschutz/", "/en/privacy/", "en", today), u("/en/privacy/", "/datenschutz/", "de", today),
+             u("/fr/confidentialite/", "/datenschutz/", "de", today)]  # französische Fassung (Konfigurator FR), von Hand gepflegt
     for p in posts:
         lm = p.get("updated", p["date"])
         if not p.get("original"):

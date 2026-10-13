@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # © Silent Engineering di Romolo Vicari – ForCoTech
-"""Erzeugt Impressum und Datenschutzerklärung (DE/EN) im Layout der Visitenkarte.
+"""Erzeugt Impressum und Datenschutzerklärung (DE/EN/FR) im Layout der Visitenkarte.
 Texte hier ändern, dann  python3 tools/build_legal.py  ausführen."""
 import sys
 from pathlib import Path
@@ -10,6 +10,7 @@ import build_news as bn  # Seitenrahmen (Kopf, Navigation, Fuß)
 
 STAND_DE = "Oktober 2026"
 STAND_EN = "October 2026"
+STAND_FR = "octobre 2026"
 
 ADDR = """<p>Silent Engineering di Romolo Vicari<br>Inhaber: Romolo Vicari<br>Via Trento 22<br>23875 Osnago (LC)<br>Italien</p>
 <p>E-Mail: <a href="mailto:romolo@forcotech.com">romolo@forcotech.com</a><br>Telefon: <a href="tel:+393494317342">+39 349 431 73 42</a></p>"""
@@ -159,14 +160,97 @@ DS_EN = f"""
 <p>Version of this privacy policy: {STAND_EN}. We update it when the website or legal requirements change. The version published here applies.</p>
 """
 
+IMPRESSUM_FR = f"""
+<h2>Éditeur du site</h2>
+<p>Informations conformément à l’art. 5 de la directive 2000/31/CE (directive sur le commerce électronique) et à l’art. 7 du décret législatif italien 70/2003.</p>
+<p>Silent Engineering di Romolo Vicari<br>Entreprise individuelle (ditta individuale)<br>Titulaire : Romolo Vicari<br>Via Trento 22<br>23875 Osnago (LC)<br>Italie</p>
+
+<h2>Contact</h2>
+<p>E-mail : <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Téléphone : <a href="tel:+393494317342">+39 349 431 73 42</a></p>
+
+<h2>TVA</h2>
+<p>Partita IVA / N° TVA intracommunautaire : IT03833150133</p>
+
+<h2>Hébergement</h2>
+<p>GitHub Pages – GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas.</p>
+
+<h2>Marques</h2>
+<p>ForCoTech et Silent-Mode sont des marques de Silent Engineering di Romolo Vicari. Fabrication et montage en alliance avec ABSORA GmbH, Berlin.</p>
+
+<h2>Directeur de la publication</h2>
+<p>Romolo Vicari, adresse ci-dessus.</p>
+
+<h2>Responsabilité pour les contenus et les liens</h2>
+<p>Les contenus de ce site ont été élaborés avec le plus grand soin. Nous ne garantissons pas l’exactitude, l’exhaustivité ni l’actualité des contenus, en particulier des données techniques et des prix indicatifs ; seules nos offres écrites font foi. Les exploitants des sites externes vers lesquels nous renvoyons sont seuls responsables de leur contenu.</p>
+
+<h2>Droits d’auteur</h2>
+<p>L’ensemble des contenus de ce site, en particulier les textes, images, graphiques, logos et désignations de produits, est protégé par le droit d’auteur. Toute reproduction ou réutilisation sans l’autorisation écrite de Silent Engineering di Romolo Vicari est interdite.</p>
+<p>En cas de divergence, la version allemande prévaut.</p>
+"""
+
+DS_FR = f"""
+<p class="nlead">La protection de vos données personnelles nous tient à cœur. Conformément au Règlement général sur la protection des données (RGPD) et au code italien de la protection des données (décret législatif 196/2003 modifié), la présente politique explique quelles données nous traitons lorsque vous consultez ce site et dans le cadre de notre relation commerciale.</p>
+
+<h2>1. Responsable du traitement</h2>
+<p>Silent Engineering di Romolo Vicari<br>Titulaire : Romolo Vicari<br>Via Trento 22<br>23875 Osnago (LC)<br>Italie</p>
+<p>E-mail : <a href="mailto:romolo@forcotech.com">romolo@forcotech.com</a><br>Téléphone : <a href="tel:+393494317342">+39 349 431 73 42</a></p>
+
+<h2>2. Hébergement et fichiers journaux du serveur</h2>
+<p>Ce site est fourni via GitHub Pages. Les prestataires sont GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas, et GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+<p>Lorsque vous consultez le site, votre navigateur transmet aux serveurs de GitHub des données techniquement nécessaires, notamment l’adresse IP, la date et l’heure de l’accès, la page ou le fichier demandé, le volume de données transféré, le type et la version du navigateur, le système d’exploitation et la page précédemment consultée (référent). Selon GitHub, l’adresse IP est conservée à des fins de sécurité. Nous ne recevons ni n’analysons nous-mêmes ces données de journal.</p>
+<p>La base légale est l’art. 6(1)(f) RGPD. Notre intérêt légitime consiste à mettre le site à disposition de manière sûre et fiable.</p>
+<p>Des données peuvent à cette occasion être transférées aux États-Unis. GitHub participe au cadre de protection des données UE–États-Unis (Data Privacy Framework) ; le transfert repose sur la décision d’adéquation de la Commission européenne (art. 45 RGPD). Pour en savoir plus, consultez la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">déclaration de confidentialité de GitHub</a>.</p>
+
+<h2>3. Aucun cookie, aucun traçage</h2>
+<p>Ce site ne dépose aucun cookie, n’utilise aucun outil d’analyse ou de traçage et n’intègre aucun contenu tiers tel que polices externes, cartes ou vidéos. Toutes les polices, images et scripts sont chargés directement depuis ce site.</p>
+
+<h2>4. Contact par e-mail ou par téléphone</h2>
+<p>Si vous nous contactez par e-mail ou par téléphone, nous traitons les données que vous nous communiquez (p. ex. nom, société, adresse e-mail, numéro de téléphone, contenu de votre demande et éventuels documents de projet) afin de traiter votre demande et les questions qui en découlent. Nos e-mails sont traités et stockés par notre fournisseur de messagerie Webland.</p>
+<p>La base légale est l’art. 6(1)(b) RGPD (mesures précontractuelles) ou l’art. 6(1)(f) RGPD (intérêt légitime à répondre aux demandes). Les données sont supprimées dès qu’elles ne sont plus nécessaires à cette fin, au plus tard à l’expiration des délais légaux de conservation.</p>
+
+<h2>5. Formulaire de demande du configurateur</h2>
+<p>Le <a href="https://forcotech.github.io/konfigurator/fr/">configurateur de caissons acoustiques</a> calcule exclusivement dans votre navigateur ; aucune donnée ne nous est transmise tant que vous n’envoyez pas de demande. Si vous envoyez une demande via le formulaire, nous traitons vos coordonnées (nom, société, e-mail, téléphone, lieu du projet), votre message et la configuration choisie afin de traiter votre demande et d’établir une offre.</p>
+<p>Pour la transmission technique, nous utilisons le service de formulaires FormSubmit (formsubmit.co), qui transfère la demande par e-mail à info@forcotech.com. FormSubmit n’indique pas où les données sont traitées ; un traitement en dehors de l’UE sans décision d’adéquation est donc possible. La transmission n’a donc lieu qu’avec votre consentement explicite donné dans le formulaire (art. 6(1)(a) et art. 49(1)(a) RGPD) et pour des mesures précontractuelles (art. 6(1)(b) RGPD). Vous pouvez retirer votre consentement à tout moment avec effet pour l’avenir. Vous pouvez aussi envoyer votre demande directement par e-mail à <a href="mailto:info@forcotech.com">info@forcotech.com</a> ; FormSubmit n’est alors pas utilisé.</p>
+
+<h2>6. Traitement des données clients</h2>
+<p>Dans le cadre de notre relation commerciale, nous traitons des données d’entreprise (raison sociale, adresse, numéro fiscal), des données de contact (nom, e-mail, téléphone, fonction), des données contractuelles (offres, commandes, factures), des données techniques liées aux projets et des informations de paiement.</p>
+<p>La base légale est l’art. 6(1)(b) RGPD (exécution d’un contrat) et l’art. 6(1)(c) RGPD (obligations légales, notamment obligations de conservation fiscales et commerciales). Les données clients sont conservées pendant la durée de la relation commerciale et conformément aux délais légaux de conservation.</p>
+
+<h2>7. Communication des données</h2>
+<p>Vos données ne sont transmises à des tiers que si vous y avez consenti (art. 6(1)(a) RGPD), si cela est nécessaire à l’exécution d’un contrat (art. 6(1)(b) RGPD), en cas d’obligation légale (art. 6(1)(c) RGPD) ou si cela est nécessaire à la défense d’intérêts légitimes et que vos intérêts ne prévalent pas (art. 6(1)(f) RGPD).</p>
+<p>Les destinataires possibles sont notamment les conseillers fiscaux et commissaires aux comptes, les prestataires informatiques (hébergement, messagerie, transmission des formulaires), les prestataires comptables, notre partenaire de fabrication et de montage dans le cadre d’une commande (ABSORA GmbH, Berlin) et les autorités en cas d’obligation légale d’information.</p>
+
+<h2>8. Durée de conservation</h2>
+<p>Nous ne conservons les données personnelles que le temps nécessaire à la finalité concernée ou exigé par les délais légaux de conservation : en général 10 ans au titre du droit commercial et fiscal (p. ex. factures, pièces comptables, selon le droit italien), la documentation de projet pendant la durée du projet plus 5 ans. Les données sont ensuite supprimées.</p>
+
+<h2>9. Vos droits</h2>
+<p>En vertu du RGPD, vous disposez d’un droit d’accès (art. 15), de rectification (art. 16), d’effacement (art. 17), de limitation du traitement (art. 18), de portabilité (art. 20) et d’opposition au traitement (art. 21). Vous pouvez retirer à tout moment un consentement donné, avec effet pour l’avenir. Il suffit de nous écrire par e-mail.</p>
+<p>Vous avez également le droit d’introduire une réclamation auprès d’une autorité de contrôle. L’autorité compétente pour nous est :<br>Garante per la Protezione dei Dati Personali, Piazza Venezia 11, 00187 Rome, Italie – tél. +39 06 696771 – <a href="https://www.gpdp.it">www.gpdp.it</a><br>Vous pouvez aussi vous adresser à l’autorité de votre lieu de résidence, en France la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+
+<h2>10. Sécurité des données</h2>
+<p>Le site est fourni exclusivement sous forme chiffrée via HTTPS (TLS). Nous protégeons en outre vos données par des mesures techniques et organisationnelles telles que des sauvegardes régulières, des restrictions d’accès, des mots de passe sûrs et des mises à jour de sécurité continues.</p>
+
+<h2>11. Mineurs</h2>
+<p>Notre offre s’adresse aux entreprises et non aux personnes de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles de mineurs.</p>
+
+<h2>12. Modifications</h2>
+<p>Version de la présente politique : {STAND_FR}. Nous la mettons à jour lorsque le site ou les exigences légales évoluent. La version publiée ici fait foi. En cas de divergence, la version allemande prévaut.</p>
+"""
+
+IMP = {"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/"}
+DS = {"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/"}
+
 PAGES = [
-    ("de", "/impressum/", "/en/legal-notice/", "Impressum", "Impressum von ForCoTech – Silent Engineering di Romolo Vicari, Osnago (LC), Italien.", IMPRESSUM_DE),
-    ("en", "/en/legal-notice/", "/impressum/", "Legal notice", "Legal notice of ForCoTech – Silent Engineering di Romolo Vicari, Osnago (LC), Italy.", IMPRESSUM_EN),
-    ("de", "/datenschutz/", "/en/privacy/", "Datenschutzerklärung", "Datenschutzerklärung von ForCoTech – Silent Engineering di Romolo Vicari: Hosting, keine Cookies, Kontakt, Ihre Rechte.", DS_DE),
-    ("en", "/en/privacy/", "/datenschutz/", "Privacy policy", "Privacy policy of ForCoTech – Silent Engineering di Romolo Vicari: hosting, no cookies, contact, your rights.", DS_EN),
+    ("de", IMP, "Impressum", "Impressum von ForCoTech – Silent Engineering di Romolo Vicari, Osnago (LC), Italien.", IMPRESSUM_DE),
+    ("en", IMP, "Legal notice", "Legal notice of ForCoTech – Silent Engineering di Romolo Vicari, Osnago (LC), Italy.", IMPRESSUM_EN),
+    ("fr", IMP, "Mentions légales", "Mentions légales de ForCoTech – Silent Engineering di Romolo Vicari, Osnago (LC), Italie.", IMPRESSUM_FR),
+    ("de", DS, "Datenschutzerklärung", "Datenschutzerklärung von ForCoTech – Silent Engineering di Romolo Vicari: Hosting, keine Cookies, Kontakt, Ihre Rechte.", DS_DE),
+    ("en", DS, "Privacy policy", "Privacy policy of ForCoTech – Silent Engineering di Romolo Vicari: hosting, no cookies, contact, your rights.", DS_EN),
+    ("fr", DS, "Politique de confidentialité", "Politique de confidentialité de ForCoTech – Silent Engineering di Romolo Vicari : hébergement, aucun cookie, contact, vos droits.", DS_FR),
 ]
 
-for lang, path, alt, title, desc, body in PAGES:
+for lang, alts, title, desc, body in PAGES:
+    path = alts[lang]
     main = f"""<article class="npost legal">
   <div class="wrap">
     <h1>{title}</h1>
@@ -175,5 +259,5 @@ for lang, path, alt, title, desc, body in PAGES:
     </div>
   </div>
 </article>"""
-    bn.write(path[1:] + "index.html", bn.page(lang, f"{title} – ForCoTech", desc, path, alt, main, cta=False))
+    bn.write(path[1:] + "index.html", bn.page(lang, f"{title} – ForCoTech", desc, alts, main, cta=False))
 print("Impressum und Datenschutz gebaut")

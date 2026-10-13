@@ -1,0 +1,76 @@
+<p class="nlead">Pompes à chaleur, groupes froids et aéroréfrigérants sont aujourd’hui presque toujours connectés : à la GTB, aux clouds des fabricants et aux portails de télémaintenance. Cela fait gagner du temps et de l’énergie. Mais cela en fait aussi une cible sérieuse – avec des conséquences qui vont bien au-delà de la perte de données.</p>
+
+<p>Trois évolutions se rejoignent : les protocoles de l’automatisation du bâtiment sont anciens et non sécurisés, les accès à distance via les clouds et les prestataires de maintenance progressent rapidement, et depuis septembre 2026 les fabricants de produits connectés sont soumis à des obligations de notification strictes. Une attaque réussie peut arrêter des installations, endommager des équipements et rendre des bâtiments inutilisables.</p>
+
+<h2>1. Risques techniques</h2>
+
+<h3>Des protocoles non sécurisés</h3>
+<p>BACnet et Modbus, sur lesquels repose aujourd’hui l’essentiel de l’automatisation du bâtiment, ont été conçus sans tenir compte de la cybersécurité. Lors du NDSS Symposium 2026, des chercheurs ont examiné 15 implémentations BACnet et 5 implémentations KNX de grands fabricants et y ont trouvé 26 vulnérabilités. L’ASHRAE a également confirmé une faiblesse au niveau du protocole. La variante sécurisée BACnet/SC (avec TLS) y répond, mais reste encore rare sur le terrain.</p>
+
+<h3>Accès en écriture entre appareils</h3>
+<p>L’architecture pair-à-pair de BACnet permet à des appareils d’écrire dans les objets d’autres appareils. Quiconque accède au réseau peut modifier consignes, autorisations ou modes de fonctionnement.</p>
+
+<h3>Interfaces web exposées</h3>
+<p>De nombreux régulateurs intègrent un serveur web. Des chercheurs en sécurité ont montré que les fonctions de lecture et d’écriture de BACnet peuvent servir à injecter du code malveillant dans ces appareils, où il reste durablement dans la base de données de l’appareil.</p>
+
+<h3>Faiblesses courantes au quotidien</h3>
+<ul class="check">
+<li>Mots de passe par défaut et comptes de service partagés</li>
+<li>Micrologiciels non mis à jour depuis des années</li>
+<li>Routeurs et passerelles (souvent 4G/LTE) avec redirection de ports directement vers Internet</li>
+<li>GTB, informatique de bureau et Wi-Fi invités sur le même réseau, sans segmentation</li>
+</ul>
+
+<h2>2. Chaîne d’approvisionnement et télémaintenance</h2>
+<p>La chaîne d’approvisionnement est sans doute aujourd’hui la principale porte d’entrée. Les entreprises de maintenance et d’automatisation du bâtiment travaillent avec des niveaux de sécurité très variables. Un exemple connu en Allemagne : en 2021, un bureau d’études en automatisation du bâtiment a été attaqué via une vulnérabilité KNX connue mais non corrigée – le bâtiment lui-même a été pris en otage.</p>
+<p>Les portails de télémaintenance des fabricants, les clouds de pompes à chaleur et les boîtiers VPN regroupent l’accès à de nombreuses installations. Si un seul compte est compromis, toutes sont potentiellement touchées.</p>
+
+<h2>3. Conséquences d’une attaque</h2>
+<div class="tbl"><table>
+<thead><tr><th>Scénario</th><th>Conséquences</th></tr></thead>
+<tbody>
+<tr><td>Arrêt du froid ou du chauffage</td><td>Défaillance d’un centre de données, d’un hôpital ou d’un laboratoire ; des bâtiments peuvent devenir inutilisables ou devoir être évacués</td></tr>
+<tr><td>Consignes et limites manipulées</td><td>Dommages aux compresseurs, givrage, défauts haute pression</td></tr>
+<tr><td>Rançongiciel</td><td>Les bâtiments restent fermés jusqu’à la restauration des systèmes – un district scolaire américain a dû fermer des écoles pour cette raison</td></tr>
+<tr><td>Manipulation du micrologiciel</td><td>Micrologiciel ou configuration corrompus via les services de fichiers BACnet</td></tr>
+<tr><td>Mouvement latéral</td><td>La GTB devient une passerelle vers le réseau de l’entreprise</td></tr>
+<tr><td>Installations au R290</td><td>Si la logique de sécurité (ventilation, détection de gaz) est contournée, un risque de sécurité supplémentaire apparaît</td></tr>
+</tbody>
+</table></div>
+
+<h2>4. Risques réglementaires – nouveaux et pressants</h2>
+
+<h3>Cyber Resilience Act (CRA)</h3>
+<p>Depuis le 11 septembre 2026, les fabricants doivent notifier sous 24 heures les vulnérabilités activement exploitées et les incidents de sécurité graves affectant des produits comportant des éléments numériques. Cela s’applique aussi aux produits déjà sur le marché. Les amendes peuvent atteindre 15 millions d’euros ou 2,5 % du chiffre d’affaires annuel mondial. À partir du 11 décembre 2027, le CRA s’applique intégralement, y compris le marquage CE et l’évaluation de la conformité.</p>
+
+<h3>NIS2</h3>
+<p>En Allemagne, la loi de transposition de NIS2 est en vigueur depuis décembre 2025. Environ 29 500 entreprises doivent depuis remplir de nouvelles obligations, et la direction en répond personnellement. Les plus petites entreprises sont concernées indirectement par la chaîne d’approvisionnement, lorsque leurs clients sont des entités NIS2 et exigent contractuellement la cybersécurité. L’Italie a elle aussi déjà transposé NIS2.</p>
+
+<h3>Autres réglementations</h3>
+<p>Depuis août 2025, des exigences de cybersécurité au titre de la directive sur les équipements radioélectriques (RED) s’appliquent aux appareils radio. À partir de janvier 2027, le nouveau règlement Machines (UE) 2023/1230 comporte des exigences de protection contre la manipulation. Lorsque des données personnelles sont traitées, comme des données d’occupation ou d’accès, le RGPD s’applique également.</p>
+
+<h2>5. Ce que cela signifie pour les fabricants d’accessoires d’installation</h2>
+<p>Un caisson acoustique en profilés et panneaux n’est pas un produit comportant des éléments numériques. Cela change dès qu’une électronique connectée s’y ajoute – par exemple un régulateur de pré-refroidissement adiabatique avec surveillance à distance, des capteurs de température, de bruit ou d’humidité reliés au cloud ou à BACnet, ou une commande de ventilateurs et de volets via une application. Quiconque met un tel produit sur le marché sous son propre nom est fabricant au sens du CRA. L’utilisation de régulateurs et de passerelles de tiers n’y change rien.</p>
+<ul class="check">
+<li>Utiliser des régulateurs éprouvés et conformes au CRA plutôt qu’un micrologiciel maison</li>
+<li>Privilégier les interfaces locales vers la GTB du client, idéalement BACnet/SC ; ne proposer un cloud propre que si l’on peut le maintenir pendant des années</li>
+<li>Définir une période de support et un processus de signalement des vulnérabilités pour chaque produit connecté</li>
+<li>Fixer une limite claire : la sécurité du réseau et les accès à distance relèvent de l’exploitant ou de l’intégrateur GTB</li>
+<li>Tenir prête une courte description de sécurité pour les clients soumis à NIS2</li>
+</ul>
+
+<div class="target">
+<h3>Ce que les exploitants devraient faire dès maintenant</h3>
+<ul>
+<li>Segmenter les réseaux : séparer la GTB de l’informatique de bureau et du Wi-Fi invités</li>
+<li>Ne jamais exposer le port BACnet UDP/47808 sur Internet</li>
+<li>Accès à distance uniquement par VPN avec authentification multifacteur</li>
+<li>Remplacer systématiquement les mots de passe par défaut et planifier les mises à jour du micrologiciel</li>
+<li>Utiliser BACnet/SC partout où c’est possible</li>
+<li>Sécuriser les fonctions de sécurité par des verrouillages matériels – en particulier dans les installations au R290</li>
+</ul>
+<p>Dans le génie climatique, efficacité énergétique et cybersécurité vont désormais de pair. La question n’est plus de savoir si une installation est connectée, mais à quel point elle est protégée.</p>
+</div>
+
+<p class="nsrc"><b>Remarque :</b> cette publication ne constitue pas un conseil juridique. L’applicabilité du CRA dans un cas concret doit être vérifiée avec un avocat spécialisé ou un organisme notifié.</p>
+<p class="nsrc"><b>Sources :</b> <a href="https://www.ndss-symposium.org/?p=23626">NDSS 2026 – BACnet or “BADnet”?</a> · <a href="https://www.brownejacobson.com/insights/cyber-resilience-act-reporting-obligations-in-force">Browne Jacobson – CRA reporting obligations</a> · <a href="https://www.mondaq.com/unitedstates/it-and-internet/1825110/eu-cyber-resilience-act-24-hour-reporting-duties-start-september-11-2026">Jones Day – 24-hour reporting duties</a> · <a href="https://www.secjur.com/blog/nis2umsucg">SECJUR – NIS2UmsuCG</a> · <a href="https://www.automatedbuildings.com/2026/05/hackers-dont-need-your-passwords-they-just-need-your-hvac-contractor/">AutomatedBuildings – building automation as attack surface</a> · <a href="https://store.chipkin.com/articles/how-can-attacks-cause-harm">Chipkin – impact of attacks on BACnet</a> · <a href="https://www.hstoday.us/subject-matter-areas/cybersecurity/new-vulnerability-revealed-in-internet-connected-building-automation-devices/">HSToday – vulnerability in BACnet devices</a></p>

@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
+<!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The heat pump as a gateway: cyber risks of connected HVAC systems – ForCoTech</title>
+<meta name="description" content="Insecure protocols, remote maintenance as an entry point, 24-hour reporting under the CRA and NIS2: the risks connected heat pumps and chillers face today – and what helps.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/">
+<link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/">
+<link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ForCoTech">
+<meta property="og:title" content="The heat pump as a gateway: cyber risks of connected HVAC systems – ForCoTech">
+<meta property="og:description" content="Insecure protocols, remote maintenance as an entry point, 24-hour reporting under the CRA and NIS2: the risks connected heat pumps and chillers face today – and what helps.">
+<meta property="og:url" content="https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/">
+<meta property="og:image" content="https://forcotech.github.io/img/news/hvac-iot-cyberrisiken-karte-en.webp">
+<meta property="og:locale" content="en_GB">
+<link rel="icon" href="/img/forcotech-logo.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The heat pump as a gateway: cyber risks of connected HVAC systems", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "inLanguage": "en", "image": "https://forcotech.github.io/img/news/hvac-iot-cyberrisiken-en.webp", "mainEntityOfPage": "https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/", "author": {"@type": "Person", "name": "Romolo Vicari"}, "publisher": {"@id": "https://forcotech.github.io/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari", "logo": {"@type": "ImageObject", "url": "https://forcotech.github.io/img/forcotech-logo.png"}}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/en/" aria-label="ForCoTech home"><img src="/img/forcotech-logo.png" width="415" height="231" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="opt" href="/en/#services">Applications</a>
+      <a class="opt" href="/en/#hsa3">HSA3</a>
+      <a class="opt" href="/en/#technology">Technology</a>
+      <a class="opt" href="/en/news/">News</a>
+      <a class="opt" href="/en/#about">About us</a>
+      <a class="opt" href="/en/#contact">Contact</a>
+      <a class="cta" href="https://forcotech.github.io/konfigurator/en/">Configurator</a>
+      <a class="lang" href="/news/hvac-iot-cyberrisiken-waermepumpen/" lang="de" hreflang="de">DE</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="npost">
+  <div class="wrap">
+    <p class="nback"><a href="/en/news/">← All posts</a></p>
+    <time datetime="2026-10-13">13.10.2026</time>
+    <h1>The heat pump as a gateway: cyber risks of connected HVAC systems</h1>
+    <figure><a href="/img/news/hvac-iot-cyberrisiken-en.webp" title="Open graphic in full size"><img src="/img/news/hvac-iot-cyberrisiken-en.webp" width="1200" height="1200" alt="Graphic: heat pump at the centre, dashed attack paths to vendor cloud, remote service, LTE router and BMS/BACnet" fetchpriority="high"></a></figure>
+    <div class="nbody">
+<p class="nlead">Heat pumps, chillers and dry coolers are almost always connected today: to the building management system, to vendor clouds and to remote maintenance portals. That saves time and energy. It also makes these systems a serious target – with consequences that go far beyond data loss.</p>
+
+<p>Three developments come together: building automation protocols are old and unsecured, remote access via clouds and service companies is growing fast, and since September 2026 manufacturers of connected products face strict reporting duties. A successful attack can shut systems down, damage equipment and make buildings unusable.</p>
+
+<h2>1. Technical risks</h2>
+
+<h3>Insecure protocols</h3>
+<p>BACnet and Modbus, which run most of today's building automation, were designed without cybersecurity in mind. At the NDSS Symposium 2026, researchers examined 15 BACnet and 5 KNX implementations from leading manufacturers and found 26 vulnerabilities. ASHRAE also confirmed a protocol-level weakness. The secured variant BACnet/SC (with TLS) addresses this, but is still rare in the field.</p>
+
+<h3>Write access between devices</h3>
+<p>BACnet's peer-to-peer design allows devices to write to objects in other devices. Anyone who gets onto the network can change setpoints, enables or operating modes.</p>
+
+<h3>Exposed web interfaces</h3>
+<p>Many controllers have a built-in web server. Security researchers have shown that BACnet's read and write functions can be used to inject malicious code into such devices, where it stays persistently in the device database.</p>
+
+<h3>Typical everyday weaknesses</h3>
+<ul class="check">
+<li>Default passwords and shared service accounts</li>
+<li>Firmware left un-updated for years</li>
+<li>Routers and gateways (often 4G/LTE) with port forwarding straight to the internet</li>
+<li>BMS, office IT and guest Wi-Fi on the same network, without segmentation</li>
+</ul>
+
+<h2>2. Supply chain and remote maintenance</h2>
+<p>The supply chain is arguably the biggest entry point today. Maintenance and building automation contractors work with very different levels of security. A well-known example from Germany: in 2021 a building automation engineering firm was attacked through a known but unpatched KNX vulnerability – the building itself was taken hostage.</p>
+<p>Vendor remote maintenance portals, heat pump clouds and VPN boxes bundle access to many systems. If a single account is compromised, all of them are potentially affected.</p>
+
+<h2>3. Consequences of an attack</h2>
+<div class="tbl"><table>
+<thead><tr><th>Scenario</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td>Cooling or heating shut down</td><td>Data centre, hospital or laboratory fails; buildings may become unusable or need to be evacuated</td></tr>
+<tr><td>Manipulated setpoints and limits</td><td>Compressor damage, icing, high-pressure faults</td></tr>
+<tr><td>Ransomware</td><td>Buildings stay closed until the systems are restored – a US school district had to close schools for this reason</td></tr>
+<tr><td>Firmware tampering</td><td>Firmware or configuration corrupted via BACnet file services</td></tr>
+<tr><td>Lateral movement</td><td>The BMS becomes a stepping stone into the corporate network</td></tr>
+<tr><td>R290 systems</td><td>If safety logic (ventilation, gas detection) is bypassed, an additional safety risk arises</td></tr>
+</tbody>
+</table></div>
+
+<h2>4. Regulatory risks – new and pressing</h2>
+
+<h3>Cyber Resilience Act (CRA)</h3>
+<p>Since 11 September 2026, manufacturers must report actively exploited vulnerabilities and severe security incidents in products with digital elements within 24 hours. This also applies to products already on the market. Fines can reach €15 million or 2.5 % of worldwide annual turnover. From 11 December 2027 the CRA applies in full, including CE marking and conformity assessment.</p>
+
+<h3>NIS2</h3>
+<p>Germany's NIS2 Implementation Act has been in force since December 2025. Around 29,500 companies have had to meet new obligations since then, and management is personally liable. Smaller companies are affected indirectly through the supply chain, when their customers are NIS2 entities and require cybersecurity by contract. Italy has also already transposed NIS2.</p>
+
+<h3>Further regulations</h3>
+<p>Since August 2025, cybersecurity requirements under the Radio Equipment Directive (RED) apply to radio devices. From January 2027 the new Machinery Regulation (EU) 2023/1230 includes requirements for protection against tampering. Where personal data is processed, such as occupancy or access data, the GDPR also applies.</p>
+
+<h2>5. What this means for manufacturers of system accessories</h2>
+<p>An acoustic enclosure made of profiles and panels is not a product with digital elements. That changes as soon as connected electronics are added – for example a controller for adiabatic pre-cooling with remote monitoring, temperature, sound or humidity sensors with cloud or BACnet connectivity, or fan and damper control via an app. Anyone placing such a product on the market under their own name is a manufacturer under the CRA. Using third-party controllers and gateways does not change that.</p>
+<ul class="check">
+<li>Use proven, CRA-compliant controllers instead of in-house firmware</li>
+<li>Prefer local interfaces to the customer's BMS, ideally BACnet/SC; offer your own cloud only if you can maintain it for years</li>
+<li>Define a support period and a vulnerability reporting process for every connected product</li>
+<li>Draw a clear line: network security and remote access are the responsibility of the operator or BMS integrator</li>
+<li>Have a short security description ready for customers in the NIS2 environment</li>
+</ul>
+
+<div class="target">
+<h3>What operators should do now</h3>
+<ul>
+<li>Segment networks: keep the BMS separate from office IT and guest Wi-Fi</li>
+<li>Never expose BACnet port UDP/47808 to the internet</li>
+<li>Remote access only via VPN with multi-factor authentication</li>
+<li>Replace default passwords consistently and schedule firmware updates</li>
+<li>Use BACnet/SC wherever possible</li>
+<li>Back up safety functions with hardware interlocks – especially in R290 systems</li>
+</ul>
+<p>In building services, energy efficiency and cybersecurity now go hand in hand. The question is no longer whether a system is connected, but how well it is protected.</p>
+</div>
+
+<p class="nsrc"><b>Note:</b> This post is not legal advice. Whether the CRA applies in a specific case should be clarified with a specialist lawyer or a notified body.</p>
+<p class="nsrc"><b>Sources:</b> <a href="https://www.ndss-symposium.org/?p=23626">NDSS 2026 – BACnet or “BADnet”?</a> · <a href="https://www.brownejacobson.com/insights/cyber-resilience-act-reporting-obligations-in-force">Browne Jacobson – CRA reporting obligations</a> · <a href="https://www.mondaq.com/unitedstates/it-and-internet/1825110/eu-cyber-resilience-act-24-hour-reporting-duties-start-september-11-2026">Jones Day – 24-hour reporting duties</a> · <a href="https://www.secjur.com/blog/nis2umsucg">SECJUR – NIS2UmsuCG</a> · <a href="https://www.automatedbuildings.com/2026/05/hackers-dont-need-your-passwords-they-just-need-your-hvac-contractor/">AutomatedBuildings – building automation as attack surface</a> · <a href="https://store.chipkin.com/articles/how-can-attacks-cause-harm">Chipkin – impact of attacks on BACnet</a> · <a href="https://www.hstoday.us/subject-matter-areas/cybersecurity/new-vulnerability-revealed-in-internet-connected-building-automation-devices/">HSToday – vulnerability in BACnet devices</a></p>
+    </div>
+  </div>
+</article>
+<section>
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Request a project</h2>
+        <p>Send us the unit type, quantity and location – or get a budget price straight from the configurator.</p>
+        <div class="btns" style="margin-top:18px"><a class="btn" href="https://forcotech.github.io/konfigurator/en/">Open configurator</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+      </div>
+      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italy · P.IVA IT03833150133 · in alliance with ABSORA GmbH, Berlin</span>
+    <span><a href="/en/legal-notice/">Legal notice</a> · <a href="/en/privacy/">Privacy</a> · <a href="/news/hvac-iot-cyberrisiken-waermepumpen/" lang="de">Deutsch</a></span>
+  </div>
+</footer>
+</body>
+</html>

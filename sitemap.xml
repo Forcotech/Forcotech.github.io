@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://forcotech.github.io/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/"/></url>
-  <url><loc>https://forcotech.github.io/en/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/"/></url>
-  <url><loc>https://forcotech.github.io/news/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/"/></url>
-  <url><loc>https://forcotech.github.io/en/news/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/"/></url>
-  <url><loc>https://forcotech.github.io/impressum/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/legal-notice/"/></url>
-  <url><loc>https://forcotech.github.io/en/legal-notice/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/impressum/"/></url>
-  <url><loc>https://forcotech.github.io/datenschutz/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/privacy/"/></url>
-  <url><loc>https://forcotech.github.io/en/privacy/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/datenschutz/"/></url>
+  <url><loc>https://forcotech.github.io/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/"/></url>
+  <url><loc>https://forcotech.github.io/en/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/"/></url>
+  <url><loc>https://forcotech.github.io/news/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/"/></url>
+  <url><loc>https://forcotech.github.io/en/news/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/"/></url>
+  <url><loc>https://forcotech.github.io/impressum/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/legal-notice/"/></url>
+  <url><loc>https://forcotech.github.io/en/legal-notice/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/impressum/"/></url>
+  <url><loc>https://forcotech.github.io/datenschutz/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/privacy/"/></url>
+  <url><loc>https://forcotech.github.io/en/privacy/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/datenschutz/"/></url>
+  <url><loc>https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/"/></url>
+  <url><loc>https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/</loc><lastmod>2026-10-13</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/"/></url>
   <url><loc>https://forcotech.github.io/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/haupt-laermquellen-waermepumpen-kaelteanlagen/"/></url>
   <url><loc>https://forcotech.github.io/en/news/12-meter-schallschutz-weishaupt-kaskade/</loc><lastmod>2026-09-20</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/12-meter-schallschutz-weishaupt-kaskade/"/></url>
   <url><loc>https://forcotech.github.io/en/news/r290-kaelteanlage-flachdach-lueftungsflaeche-hitze/</loc><lastmod>2026-08-18</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/r290-kaelteanlage-flachdach-lueftungsflaeche-hitze/"/></url>

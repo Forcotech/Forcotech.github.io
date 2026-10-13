@@ -6,6 +6,7 @@ Neuer Beitrag:
   1. Bild nach img/news/<name>.webp legen
   2. Eintrag in news/posts.json ergänzen (slug, date, image, de/en: title, alt, teaser);
      optional image_full + image_full_size [Breite, Höhe] für das große Bild auf der Beitragsseite;
+     Grafiken mit Text: image / image_full / image_full_size auch je Sprache unter de/en möglich;
      bei Kopien von silent-mode.com "original": <URL> setzen
      (DE-Seite verweist per canonical auf das Original, EN bleibt eigenständig)
   3. Text als HTML-Fragment in news/_src/<slug>.de.html und news/_src/<slug>.en.html
@@ -108,7 +109,7 @@ def card(p, lang, h="h3", lazy=True):
     t = p[lang]
     teaser = ""  # Kurztext nur als Meta-Beschreibung, Karten zeigen wie im Vorbild Datum + Titel
     return (f'<article class="ncard"><a href="{url(lang, p["slug"])}">'
-            f'<img src="/{p["image"]}" width="522" height="313" alt="{e(t["alt"])}"{' loading="lazy"' if lazy else ""}>'
+            f'<img src="/{t.get("image", p["image"])}" width="522" height="313" alt="{e(t["alt"])}"{' loading="lazy"' if lazy else ""}>'
             f'<time datetime="{p["date"]}">{fmt(p["date"])}</time>'
             f'<{h}>{e(t["title"])}</{h}>{teaser}</a></article>')
 
@@ -225,7 +226,7 @@ def build():
             ld = json.dumps({
                 "@context": "https://schema.org", "@type": "BlogPosting", "headline": t["title"],
                 "datePublished": p["date"], "dateModified": p.get("updated", p["date"]),
-                "inLanguage": lang, "image": f"{SITE}/{p.get('image_full', p['image'])}", "mainEntityOfPage": (p.get("original") if lang == "de" and p.get("original") else SITE + url(lang, p["slug"])),
+                "inLanguage": lang, "image": f"{SITE}/{t.get('image_full', p.get('image_full', t.get('image', p['image'])))}", "mainEntityOfPage": (p.get("original") if lang == "de" and p.get("original") else SITE + url(lang, p["slug"])),
                 "author": {"@type": "Person", "name": "Romolo Vicari"},
                 "publisher": {"@id": f"{SITE}/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari",
                               "logo": {"@type": "ImageObject", "url": f"{SITE}/img/forcotech-logo.png"}},
@@ -236,8 +237,9 @@ def build():
                 note = ("Zuerst erschienen auf" if lang == "de" else "Originally published in German on")
                 content += f'\n<p class="norig">{note} <a href="{e(p["original"])}">silent-mode.com</a></p>'
             # optional: eigenes Bild in voller Größe für die Beitragsseite (image_full, image_full_size)
-            full = p.get("image_full", p["image"])
-            fw, fh = p.get("image_full_size", [522, 313])
+            # je Sprache überschreibbar: de/en.image, de/en.image_full, de/en.image_full_size (Grafiken mit Text)
+            full = t.get("image_full", p.get("image_full", t.get("image", p["image"])))
+            fw, fh = t.get("image_full_size", p.get("image_full_size", [522, 313]))
             main = f"""<article class="npost">
   <div class="wrap">
     <p class="nback"><a href="{url(lang)}">← {L["back"]}</a></p>
@@ -251,7 +253,7 @@ def build():
 </article>"""
             write(url(lang, p["slug"])[1:] + "index.html",
                   page(lang, f'{t["title"]} – ForCoTech', desc, url(lang, p["slug"]),
-                       url(other_of[lang], p["slug"]), main, og_image=p["image"], canon_abs=orig,
+                       url(other_of[lang], p["slug"]), main, og_image=t.get("image", p["image"]), canon_abs=orig,
                        extra_head=f'<script type="application/ld+json">{ld}</script>'))
 
         # Startseite

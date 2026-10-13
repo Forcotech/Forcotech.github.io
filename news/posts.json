@@ -1,5 +1,33 @@
 [
   {
+    "slug": "hvac-iot-cyberrisiken-waermepumpen",
+    "date": "2026-10-13",
+    "status": "online",
+    "image": "img/news/hvac-iot-cyberrisiken-karte-de.webp",
+    "de": {
+      "title": "Die Wärmepumpe als Einfallstor: Cyberrisiken vernetzter HVAC-Anlagen",
+      "alt": "Grafik: Wärmepumpe im Zentrum, gestrichelte Angriffswege zu Hersteller-Cloud, Fernwartung, LTE-Router und GLT/BACnet",
+      "teaser": "Unsichere Protokolle, Fernwartung als Einfallstor, 24-Stunden-Meldepflicht nach CRA und NIS2: welche Risiken vernetzte Wärmepumpen und Kälteanlagen heute haben – und was hilft.",
+      "image": "img/news/hvac-iot-cyberrisiken-karte-de.webp",
+      "image_full": "img/news/hvac-iot-cyberrisiken-de.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
+    },
+    "en": {
+      "title": "The heat pump as a gateway: cyber risks of connected HVAC systems",
+      "alt": "Graphic: heat pump at the centre, dashed attack paths to vendor cloud, remote service, LTE router and BMS/BACnet",
+      "teaser": "Insecure protocols, remote maintenance as an entry point, 24-hour reporting under the CRA and NIS2: the risks connected heat pumps and chillers face today – and what helps.",
+      "image": "img/news/hvac-iot-cyberrisiken-karte-en.webp",
+      "image_full": "img/news/hvac-iot-cyberrisiken-en.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
+    }
+  },
+  {
     "slug": "haupt-laermquellen-waermepumpen-kaelteanlagen",
     "date": "2026-09-24",
     "status": "online",

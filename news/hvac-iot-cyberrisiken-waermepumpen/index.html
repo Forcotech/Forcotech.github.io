@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
+<!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Die Wärmepumpe als Einfallstor: Cyberrisiken vernetzter HVAC-Anlagen – ForCoTech</title>
+<meta name="description" content="Unsichere Protokolle, Fernwartung als Einfallstor, 24-Stunden-Meldepflicht nach CRA und NIS2: welche Risiken vernetzte Wärmepumpen und Kälteanlagen heute haben – und was hilft.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/">
+<link rel="alternate" hreflang="de" href="https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/">
+<link rel="alternate" hreflang="en" href="https://forcotech.github.io/en/news/hvac-iot-cyberrisiken-waermepumpen/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ForCoTech">
+<meta property="og:title" content="Die Wärmepumpe als Einfallstor: Cyberrisiken vernetzter HVAC-Anlagen – ForCoTech">
+<meta property="og:description" content="Unsichere Protokolle, Fernwartung als Einfallstor, 24-Stunden-Meldepflicht nach CRA und NIS2: welche Risiken vernetzte Wärmepumpen und Kälteanlagen heute haben – und was hilft.">
+<meta property="og:url" content="https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/">
+<meta property="og:image" content="https://forcotech.github.io/img/news/hvac-iot-cyberrisiken-karte-de.webp">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/img/forcotech-logo.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Die Wärmepumpe als Einfallstor: Cyberrisiken vernetzter HVAC-Anlagen", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "inLanguage": "de", "image": "https://forcotech.github.io/img/news/hvac-iot-cyberrisiken-de.webp", "mainEntityOfPage": "https://forcotech.github.io/news/hvac-iot-cyberrisiken-waermepumpen/", "author": {"@type": "Person", "name": "Romolo Vicari"}, "publisher": {"@id": "https://forcotech.github.io/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari", "logo": {"@type": "ImageObject", "url": "https://forcotech.github.io/img/forcotech-logo.png"}}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="ForCoTech Startseite"><img src="/img/forcotech-logo.png" width="415" height="231" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="opt" href="/#leistungen">Leistungen</a>
+      <a class="opt" href="/#hsa3">HSA3</a>
+      <a class="opt" href="/#technik">Technik</a>
+      <a class="opt" href="/news/">News</a>
+      <a class="opt" href="/#ueber-uns">Über uns</a>
+      <a class="opt" href="/#kontakt">Kontakt</a>
+      <a class="cta" href="https://forcotech.github.io/konfigurator/">Konfigurator</a>
+      <a class="lang" href="/en/news/hvac-iot-cyberrisiken-waermepumpen/" lang="en" hreflang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="npost">
+  <div class="wrap">
+    <p class="nback"><a href="/news/">← Alle Beiträge</a></p>
+    <time datetime="2026-10-13">13.10.2026</time>
+    <h1>Die Wärmepumpe als Einfallstor: Cyberrisiken vernetzter HVAC-Anlagen</h1>
+    <figure><a href="/img/news/hvac-iot-cyberrisiken-de.webp" title="Grafik in voller Größe öffnen"><img src="/img/news/hvac-iot-cyberrisiken-de.webp" width="1200" height="1200" alt="Grafik: Wärmepumpe im Zentrum, gestrichelte Angriffswege zu Hersteller-Cloud, Fernwartung, LTE-Router und GLT/BACnet" fetchpriority="high"></a></figure>
+    <div class="nbody">
+<p class="nlead">Wärmepumpen, Kaltwassersätze und Rückkühler sind heute fast immer vernetzt: mit der Gebäudeleittechnik, mit Hersteller-Clouds und mit Fernwartungsportalen. Das spart Zeit und Energie. Es macht diese Anlagen aber auch zu einem ernstzunehmenden Angriffsziel – mit Folgen, die über Datenverlust weit hinausgehen.</p>
+
+<p>Drei Entwicklungen treffen dabei zusammen: Die Protokolle der Gebäudeautomation sind alt und ungesichert, Fernzugänge über Clouds und Servicefirmen nehmen stark zu, und seit September 2026 gelten für Hersteller vernetzter Produkte harte Meldepflichten. Ein erfolgreicher Angriff kann Anlagen abschalten, Geräte beschädigen und Gebäude unbenutzbar machen.</p>
+
+<h2>1. Technische Risiken</h2>
+
+<h3>Unsichere Protokolle</h3>
+<p>BACnet und Modbus, auf denen der größte Teil der Gebäudeautomation läuft, wurden ohne Rücksicht auf Cybersicherheit entwickelt. Auf der NDSS-Konferenz 2026 wurden 15 BACnet- und 5 KNX-Implementierungen führender Hersteller untersucht, dabei fanden sich 26 Schwachstellen. ASHRAE bestätigte zudem eine Schwachstelle auf Protokollebene. Die gesicherte Variante BACnet/SC (mit TLS) ist die Antwort darauf, im Feld aber noch selten.</p>
+
+<h3>Schreibzugriff zwischen Geräten</h3>
+<p>Durch das Peer-to-Peer-Design von BACnet können Geräte Objekte in anderen Geräten beschreiben. Wer einmal im Netz ist, kann Sollwerte, Freigaben oder Betriebsmodi verändern.</p>
+
+<h3>Offen erreichbare Web-Oberflächen</h3>
+<p>Viele Regler haben einen eingebauten Webserver. Sicherheitsforscher haben gezeigt, dass sich über die Lese- und Schreibfunktionen von BACnet Schadcode in solche Geräte einschleusen lässt, der dauerhaft in der Gerätedatenbank gespeichert bleibt.</p>
+
+<h3>Typische Schwachstellen im Alltag</h3>
+<ul class="check">
+<li>Standardpasswörter und gemeinsam genutzte Servicekonten</li>
+<li>Firmware, die über Jahre nicht aktualisiert wird</li>
+<li>Router und Gateways (oft 4G/LTE) mit Port-Weiterleitung direkt ins Internet</li>
+<li>GLT, Büro-IT und Gast-WLAN im selben Netz, ohne Segmentierung</li>
+</ul>
+
+<h2>2. Lieferkette und Fernwartung</h2>
+<p>Die Lieferkette ist heute wohl das größte Einfallstor. Dienstleister für Wartung und Gebäudeautomation arbeiten mit sehr unterschiedlichem Sicherheitsniveau. Ein bekanntes Beispiel aus Deutschland: 2021 wurde ein Ingenieurbüro für Gebäudeautomation über eine bekannte, aber nicht geschlossene KNX-Lücke angegriffen – das Gebäude selbst wurde zur Geisel.</p>
+<p>Fernwartungsportale der Hersteller, Wärmepumpen-Clouds und VPN-Boxen bündeln den Zugang zu vielen Anlagen. Wird ein einziger Zugang kompromittiert, sind potenziell alle betroffen.</p>
+
+<h2>3. Folgen eines Angriffs</h2>
+<div class="tbl"><table>
+<thead><tr><th>Szenario</th><th>Auswirkung</th></tr></thead>
+<tbody>
+<tr><td>Abschalten von Kälte oder Wärme</td><td>Rechenzentrum, Klinik oder Labor fällt aus; Gebäude können unbenutzbar werden oder müssen geräumt werden</td></tr>
+<tr><td>Manipulation von Sollwerten und Grenzwerten</td><td>Verdichterschäden, Vereisung, Hochdruckstörungen</td></tr>
+<tr><td>Ransomware</td><td>Gebäude bleiben geschlossen, bis die Anlagen wieder laufen – in den USA musste ein Schulbezirk deshalb Schulen schließen</td></tr>
+<tr><td>Firmware-Manipulation</td><td>Firmware oder Konfiguration wird über die Dateidienste von BACnet beschädigt</td></tr>
+<tr><td>Seitwärtsbewegung</td><td>Die GLT dient als Sprungbrett ins Firmennetz</td></tr>
+<tr><td>Anlagen mit R290</td><td>Wird Sicherheitslogik umgangen (Lüftung, Gaswarnung), entsteht ein zusätzliches Sicherheitsrisiko</td></tr>
+</tbody>
+</table></div>
+
+<h2>4. Rechtliche Risiken – neu und akut</h2>
+
+<h3>Cyber Resilience Act (CRA)</h3>
+<p>Seit dem 11. September 2026 müssen Hersteller aktiv ausgenutzte Schwachstellen und schwere Sicherheitsvorfälle bei Produkten mit digitalen Elementen innerhalb von 24 Stunden melden. Das gilt auch für Produkte, die bereits im Markt sind. Bei Verstößen drohen Bußgelder bis zu 15 Mio. € oder 2,5 % des weltweiten Jahresumsatzes. Ab dem 11. Dezember 2027 gilt der CRA vollständig, einschließlich CE-Kennzeichnung und Konformitätsbewertung.</p>
+
+<h3>NIS2</h3>
+<p>Das deutsche NIS2-Umsetzungsgesetz ist seit Dezember 2025 in Kraft. Rund 29.500 Unternehmen müssen seitdem neue Pflichten erfüllen, die Geschäftsleitung haftet persönlich. Kleinere Firmen sind indirekt betroffen: über die Lieferkette, wenn ihre Kunden NIS2-Einrichtungen sind und Cybersicherheit vertraglich einfordern. Auch Italien hat NIS2 bereits umgesetzt.</p>
+
+<h3>Weitere Regelwerke</h3>
+<p>Für Funkgeräte gelten seit August 2025 Cybersicherheitsanforderungen aus der Funkanlagenrichtlinie (RED). Die neue Maschinenverordnung (EU) 2023/1230 enthält ab Januar 2027 Anforderungen an den Schutz vor Manipulation. Fallen personenbezogene Daten an, etwa Belegungs- oder Zutrittsdaten, greift zusätzlich die DSGVO.</p>
+
+<h2>5. Was das für Hersteller von Anlagenzubehör bedeutet</h2>
+<p>Eine Schallhaube aus Profilen und Paneelen ist kein Produkt mit digitalen Elementen. Das ändert sich, sobald Elektronik mit Datenanbindung hinzukommt – etwa eine Steuerung für adiabatische Vorkühlung mit Fernüberwachung, Temperatur-, Schall- oder Feuchtesensoren mit Cloud- oder BACnet-Anbindung oder eine Lüfter- und Klappensteuerung per App. Wer so etwas unter eigenem Namen in Verkehr bringt, ist Hersteller im Sinne des CRA. Zugekaufte Regler und Gateways ändern daran nichts.</p>
+<ul class="check">
+<li>Bewährte, CRA-konforme Regler einsetzen statt eigener Firmware</li>
+<li>Lokale Schnittstellen zur Kunden-GLT bevorzugen, idealerweise BACnet/SC; eine eigene Cloud nur, wenn sie über Jahre gepflegt werden kann</li>
+<li>Für jedes vernetzte Produkt einen Supportzeitraum und einen Prozess für Schwachstellenmeldungen festlegen</li>
+<li>Klar abgrenzen: Netzsicherheit und Fernzugang liegen beim Betreiber bzw. GLT-Integrator</li>
+<li>Für Kunden aus dem NIS2-Umfeld eine kurze Sicherheitsbeschreibung bereithalten</li>
+</ul>
+
+<div class="target">
+<h3>Was Betreiber jetzt tun sollten</h3>
+<ul>
+<li>Netze segmentieren: GLT getrennt von Büro-IT und Gast-WLAN</li>
+<li>BACnet-Port UDP/47808 nie offen ins Internet stellen</li>
+<li>Fernzugriff nur über VPN mit Mehrfaktor-Authentifizierung</li>
+<li>Standardpasswörter konsequent ersetzen und Firmware-Updates fest einplanen</li>
+<li>BACnet/SC einsetzen, wo möglich</li>
+<li>Sicherheitsfunktionen zusätzlich hardwareseitig absichern – besonders bei R290-Anlagen</li>
+</ul>
+<p>Energieeffizienz und Cybersicherheit gehören in der Gebäudetechnik inzwischen zusammen. Die Frage ist nicht mehr, ob eine Anlage vernetzt ist, sondern wie gut sie geschützt ist.</p>
+</div>
+
+<p class="nsrc"><b>Hinweis:</b> Dieser Beitrag ist keine Rechtsberatung. Ob der CRA im Einzelfall greift, sollte mit einer Fachanwältin, einem Fachanwalt oder einer Prüfstelle geklärt werden.</p>
+<p class="nsrc"><b>Quellen:</b> <a href="https://www.ndss-symposium.org/?p=23626">NDSS 2026 – BACnet or „BADnet“?</a> · <a href="https://www.brownejacobson.com/insights/cyber-resilience-act-reporting-obligations-in-force">Browne Jacobson – CRA-Meldepflichten</a> · <a href="https://www.mondaq.com/unitedstates/it-and-internet/1825110/eu-cyber-resilience-act-24-hour-reporting-duties-start-september-11-2026">Jones Day – 24-Stunden-Meldepflicht</a> · <a href="https://www.secjur.com/blog/nis2umsucg">SECJUR – NIS2UmsuCG</a> · <a href="https://www.automatedbuildings.com/2026/05/hackers-dont-need-your-passwords-they-just-need-your-hvac-contractor/">AutomatedBuildings – Gebäudeautomation als Angriffsfläche</a> · <a href="https://store.chipkin.com/articles/how-can-attacks-cause-harm">Chipkin – Folgen von Angriffen auf BACnet</a> · <a href="https://www.hstoday.us/subject-matter-areas/cybersecurity/new-vulnerability-revealed-in-internet-connected-building-automation-devices/">HSToday – Schwachstelle in BACnet-Geräten</a></p>
+    </div>
+  </div>
+</article>
+<section>
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Projekt anfragen</h2>
+        <p>Schicken Sie uns Gerätetyp, Anzahl und Aufstellort – oder holen Sie sich direkt einen Richtpreis im Konfigurator.</p>
+        <div class="btns" style="margin-top:18px"><a class="btn" href="https://forcotech.github.io/konfigurator/">Zum Konfigurator</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+      </div>
+      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italien · P.IVA IT03833150133 · in Allianz mit ABSORA GmbH, Berlin</span>
+    <span><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="/en/news/hvac-iot-cyberrisiken-waermepumpen/" lang="en">English</a></span>
+  </div>
+</footer>
+</body>
+</html>

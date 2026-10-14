@@ -26,7 +26,7 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://forcotech.github.io"
+SITE = "https://www.forcotech.com"
 ALLE = "--alle" in sys.argv
 
 T = {
@@ -37,7 +37,7 @@ T = {
         "all": "Alle Beiträge", "back": "Alle Beiträge", "skip": "Zum Inhalt",
         "nav": [("#leistungen", "Leistungen"), ("#hsa3", "HSA3"), ("#technik", "Technik"),
                 ("/news/", "News"), ("#ueber-uns", "Über uns"), ("#kontakt", "Kontakt")],
-        "cfg": ("https://forcotech.github.io/konfigurator/", "Konfigurator"),
+        "cfg": ("https://www.forcotech.com/konfigurator/", "Konfigurator"),
         "nav_label": "Hauptnavigation", "home_label": "ForCoTech Startseite",
         "title_list": "News und Analysen – ForCoTech Schallhauben",
         "desc_list": "News und Analysen von ForCoTech: Projekte, Messungen und Hintergründe zu Schallhauben für Wärmepumpen, Kälteanlagen, VRF und PV-Wechselrichter.",
@@ -54,7 +54,7 @@ T = {
         "all": "All posts", "back": "All posts", "skip": "Skip to content",
         "nav": [("#services", "Applications"), ("#hsa3", "HSA3"), ("#technology", "Technology"),
                 ("/en/news/", "News"), ("#about", "About us"), ("#contact", "Contact")],
-        "cfg": ("https://forcotech.github.io/konfigurator/en/", "Configurator"),
+        "cfg": ("https://www.forcotech.com/konfigurator/en/", "Configurator"),
         "nav_label": "Main navigation", "home_label": "ForCoTech home",
         "title_list": "News and analyses – ForCoTech acoustic enclosures",
         "desc_list": "News and analyses from ForCoTech: projects, measurements and background on acoustic enclosures for heat pumps, chillers, VRF and PV inverters.",
@@ -71,7 +71,7 @@ T = {
         "all": "Toutes les publications", "back": "Toutes les publications", "skip": "Aller au contenu",
         "nav": [("#applications", "Applications"), ("#hsa3", "HSA3"), ("#technologie", "Technologie"),
                 ("/fr/actualites/", "Actualités"), ("#qui-sommes-nous", "Qui sommes-nous"), ("#contact", "Contact")],
-        "cfg": ("https://forcotech.github.io/konfigurator/fr/", "Configurateur"),
+        "cfg": ("https://www.forcotech.com/konfigurator/fr/", "Configurateur"),
         "nav_label": "Navigation principale", "home_label": "ForCoTech – accueil",
         "title_list": "Actualités et analyses – caissons acoustiques ForCoTech",
         "desc_list": "Actualités et analyses de ForCoTech : projets, mesures et contexte sur les caissons acoustiques pour pompes à chaleur, groupes froids, VRF et onduleurs PV.",

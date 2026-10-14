@@ -7,3 +7,9 @@ Konfigurator: https://www.forcotech.com/konfigurator/
 
 © Silent Engineering di Romolo Vicari. Alle Rechte vorbehalten. Texte, Bilder und Gestaltung dürfen ohne
 schriftliche Genehmigung nicht vervielfältigt oder weiterverwendet werden.
+
+## Alte Adressen der früheren forcotech.com-Website
+
+Weiterleitungsseiten für bekannte alte Adressen (z. B. /contact.html, /blog/…) und die 404-Seite mit
+Muster-Weiterleitungen erzeugt `python3 tools/build_redirects.py`. Neue alte Adressen (z. B. aus der Google
+Search Console, „Nicht gefunden (404)“) dort in `OLD` eintragen und das Skript erneut ausführen.

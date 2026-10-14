@@ -1,6 +1,8 @@
 # ForCoTech – alle Suchmaschinen und KI-Systeme sind willkommen
 User-agent: *
 Allow: /
+Disallow: /news/_src/
+Disallow: /technik/_src/
 
 Sitemap: https://www.forcotech.com/sitemap.xml
 Sitemap: https://www.forcotech.com/konfigurator/sitemap.xml

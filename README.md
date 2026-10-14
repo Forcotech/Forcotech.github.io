@@ -13,3 +13,10 @@ schriftliche Genehmigung nicht vervielfältigt oder weiterverwendet werden.
 Weiterleitungsseiten für bekannte alte Adressen (z. B. /contact.html, /blog/…) und die 404-Seite mit
 Muster-Weiterleitungen erzeugt `python3 tools/build_redirects.py`. Neue alte Adressen (z. B. aus der Google
 Search Console, „Nicht gefunden (404)“) dort in `OLD` eintragen und das Skript erneut ausführen.
+
+## Startseite und Technik-Seite
+
+Die Startseiten (index.html, en/index.html, fr/index.html) führen kurz durch Nutzen, Einsatzbereiche, Vorteile,
+Beispiele und Ablauf. Die technischen Abschnitte (HSA3, Luftführung, Auslegung, Bauweise, R290) stehen auf eigenen
+Seiten /technik/, /en/technology/, /fr/technique/: Inhalt in technik/_src/<sprache>.html bearbeiten, dann
+`python3 tools/build_technik.py`. Navigation und Sitemap kommen aus tools/build_news.py.

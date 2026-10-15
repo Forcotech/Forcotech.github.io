@@ -198,3 +198,12 @@ footer a{color:var(--muted)}
 .hero h1{font-size:clamp(28px,3.5vw,40px)}
 .legal .nbody h2{font-size:21px;margin:28px 0 8px}.legal .nbody p{margin:0 0 12px}
 .norig{margin-top:22px;font-size:14.5px;color:var(--muted)}
+
+/* H-Serie: Galerie mit zwei Querformaten links und einem Hochformat rechts */
+.hgal{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.87fr);gap:14px}
+.hgal figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.hgal img{width:100%;height:auto;display:block}
+.hgal .tall{grid-column:2;grid-row:1/3}
+.hgal .tall img{flex:1;min-height:0;height:100%;object-fit:cover}
+.hgal figcaption{font-size:13.5px;color:var(--muted);padding:10px 12px}
+@media (max-width:700px){.hgal{grid-template-columns:minmax(0,1fr)}.hgal .tall{grid-column:auto;grid-row:auto}}

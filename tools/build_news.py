@@ -35,7 +35,7 @@ T = {
         "h_pre": "News und", "h_acc": "Analysen",
         "sub": "Projekte, Messungen und Hintergründe aus der Auslegung unserer Schallhauben.",
         "all": "Alle Beiträge", "back": "Alle Beiträge", "skip": "Zum Inhalt",
-        "nav": [("#leistungen", "Leistungen"), ("/technik/", "Technik"), ("#beispiele", "Beispiele"),
+        "nav": [("#leistungen", "Leistungen"), ("/h-serie/", "H\u2011Serie"), ("/technik/", "Technik"), ("#beispiele", "Beispiele"),
                 ("/news/", "News"), ("#ueber-uns", "Über uns"), ("#kontakt", "Kontakt")],
         "cfg": ("https://www.forcotech.com/konfigurator/", "Konfigurator"),
         "nav_label": "Hauptnavigation", "home_label": "ForCoTech Startseite",
@@ -52,7 +52,7 @@ T = {
         "h_pre": "News and", "h_acc": "analyses",
         "sub": "Projects, measurements and background from the design of our acoustic enclosures.",
         "all": "All posts", "back": "All posts", "skip": "Skip to content",
-        "nav": [("#services", "Applications"), ("/en/technology/", "Technology"), ("#examples", "Examples"),
+        "nav": [("#services", "Applications"), ("/en/h-series/", "H\u2011Series"), ("/en/technology/", "Technology"), ("#examples", "Examples"),
                 ("/en/news/", "News"), ("#about", "About us"), ("#contact", "Contact")],
         "cfg": ("https://www.forcotech.com/konfigurator/en/", "Configurator"),
         "nav_label": "Main navigation", "home_label": "ForCoTech home",
@@ -302,6 +302,7 @@ def build():
     lines = []
     lines += group({"de": "/", "en": "/en/", "fr": "/fr/"}, today)
     lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}, today)
+    lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
     lines += group({k: url(k) for k in LANGS}, today)
     lines += group({"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/"}, today)
     lines += group({"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/"}, today)

@@ -29,6 +29,9 @@
 - R290 (propane) units: enclosure only with written manufacturer approval; floorless design so leaked propane flows away, no ignition sources (except explosion-proof), permanently open storm/relief openings on at least two sides, relief areas to EN 14994 if a zone lies inside, CFD check of gas outflow
 - 500+ enclosure projects since 2015; first projects 2015 in the UK; installations across Europe, smaller numbers in the USA and Australia
 
+## SilentMode H-Series (small units)
+- [H-Serie (Deutsch)](https://www.forcotech.com/h-serie/) · [H-Series (English)](https://www.forcotech.com/en/h-series/): acoustic enclosures H1–H12 for heat pumps and air-conditioning units at homes, noise reduction levels −10/−18/−25 dB(A), also custom-made; configurator https://www.forcotech.com/konfigurator/h-serie/
+
 <!-- NEWS:START -->
 ## News and analyses
 - [News (Deutsch)](https://www.forcotech.com/news/) · [News (English)](https://www.forcotech.com/en/news/) · [Actualités (Français)](https://www.forcotech.com/fr/actualites/)

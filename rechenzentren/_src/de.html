@@ -1,0 +1,106 @@
+<section class="alt" id="aufgabe">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">Die Aufgabe</span>
+      <h2>Rechenzentren stellen an Schallschutz andere Bedingungen</h2>
+      <p class="sub">Große Chiller-Felder auf Dächern laufen rund um die Uhr, nachts gelten die strengsten Immissionsrichtwerte. Gleichzeitig darf die Einhausung weder Kälteleistung kosten noch Dach und Gantry überlasten.</p>
+    </div>
+    <ul class="check">
+      <li><b>Pressung:</b> Hersteller rechnen meist nur 30–35 Pa Reserve ein. Jedes Pascal darüber kostet Ventilatorleistung und PUE.</li>
+      <li><b>Statik:</b> Konventionelle Stahl-Kulissenhauben bringen viele Tonnen zusätzlich auf Dach und Gantry.</li>
+      <li><b>Brandschutz:</b> Brennbare Dämmstoffe auf dem Dach eines Rechenzentrums erschweren das Brandschutzkonzept.</li>
+      <li><b>Tiefe Frequenzen:</b> Nach der Dämpfung bestimmt meist das 63-Hz-Band den Pegel. Klassische Kulissen dämpfen dort wenig.</li>
+      <li><b>Termine:</b> Viele gleiche Einheiten, feste Liefertakte, kurze Montagefenster pro Gerät.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="technologie">
+  <div class="wrap">
+    <span class="kicker">ABSORA-Technologie</span>
+    <h2>Drei Bausteine: Pegel runter, Luft durch</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">Innenverkleidung</span><h3>HSA3-Metallakustik</h3><p>Gewellte, mikroperforierte Metallbleche mit Resonanzhohlraum. Absorbiert ohne Mineralwolle oder Schaum, witterungsbeständig, A1 nicht brennbar.</p><a class="more" href="/technik/#technik">HSA3 im Detail →</a></div>
+      <div class="card"><span class="tag">Schalldämpfer</span><h3>Helmholtz-Röhren Ø 200</h3><p>Röhren mit inneren Resonanzkammern, abgestimmt auf 63–250 Hz. Runde Anströmkante, versetzt angeordnet: ζ ≈ 0,3 je Reihe bei ca. 1,6 kg/m.</p></div>
+      <div class="card"><span class="tag">Luftführung</span><h3>Trennebene am Ventilatordeck</h3><p>Zuluft über die Längsseiten, Abluft über den Schalldämpfer direkt über den Ventilatoren. Die Trennebene verhindert die Rezirkulation warmer Abluft.</p><a class="more" href="/technik/#luftfuehrung">Luftführung →</a></div>
+    </div>
+    <div class="dc-figs">
+      <figure class="dc-wide"><img src="/img/rechenzentren/acoustic-pack-isometrie.svg" width="800" height="505" alt="Isometrie eines Acoustic Packs um einen Kaltwassersatz mit 22 Ventilatoren: Zuluft-Schalldämpferfelder in den Längswänden, Trennebene, Abluft-Röhrenschalldämpfer über den Ventilatoren" loading="lazy"><figcaption><b>Muster-Acoustic-Pack</b> um einen Kaltwassersatz mit 22 Ventilatoren, 15,1 × 5,3 × 3,6 m (Frontwand und Schalldämpfer teilweise ausgeblendet)</figcaption></figure>
+      <figure><img src="/img/rechenzentren/acoustic-pack-querschnitt.svg" width="800" height="520" alt="Querschnitt mit Luftführung: Zuluft über Röhrenschalldämpfer in den Längswänden, Abluft über drei Reihen Helmholtz-Röhren" loading="lazy"><figcaption><b>Querschnitt</b> mit Luftführung</figcaption></figure>
+      <figure><img src="/img/rechenzentren/abluft-schalldaempfer-modul.svg" width="800" height="490" alt="Abluft-Schalldämpfermodul mit drei versetzten Reihen HSA3-Helmholtz-Röhren über den Axialventilatoren, mit Röhrenquerschnitt" loading="lazy"><figcaption><b>Abluft-Schalldämpfermodul</b> über den Ventilatorflächen</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="musterauslegung">
+  <div class="wrap">
+    <span class="kicker">Musterauslegung</span>
+    <h2>Muster-Rechenzentrum: Kaltwassersätze auf dem Dach</h2>
+    <p class="sub">Je Kaltwassersatz 22 Axialventilatoren, 380.000 m³/h Luftvolumenstrom, Aufstellung auf einer Gantry auf dem Dach.</p>
+    <div class="stats dc-stats">
+      <div><b>−18 dB(A)</b><span>92,6 → 74,3 dB(A) Schallleistung</span></div>
+      <div><b>≈ 21 Pa</b><span>Druckverlust bei 380.000 m³/h, Reserve des Geräts 30 Pa</span></div>
+      <div><b>A1</b><span>nicht brennbar, ohne Faserdämmstoff</span></div>
+      <div><b>13 kg/m²</b><span>Hüllfläche, ca. 5 t je Chiller-Pack</span></div>
+    </div>
+    <div class="dc-chart">
+      <p class="dc-legend"><span class="k1"></span>Gerät ohne Pack <span class="k2"></span>mit Acoustic Pack (Prognose)</p>
+      <svg viewBox="0 0 760 300" role="img" aria-label="Schallleistung je Oktave ohne und mit Acoustic Pack"><line x1="48" x2="752" y1="250.0" y2="250.0" stroke="#e6e1e1"/><text x="40" y="254.0" text-anchor="end" font-size="12" fill="#5c5c5c">40</text><line x1="48" x2="752" y1="208.2" y2="208.2" stroke="#e6e1e1"/><text x="40" y="212.2" text-anchor="end" font-size="12" fill="#5c5c5c">50</text><line x1="48" x2="752" y1="166.4" y2="166.4" stroke="#e6e1e1"/><text x="40" y="170.4" text-anchor="end" font-size="12" fill="#5c5c5c">60</text><line x1="48" x2="752" y1="124.5" y2="124.5" stroke="#e6e1e1"/><text x="40" y="128.5" text-anchor="end" font-size="12" fill="#5c5c5c">70</text><line x1="48" x2="752" y1="82.7" y2="82.7" stroke="#e6e1e1"/><text x="40" y="86.7" text-anchor="end" font-size="12" fill="#5c5c5c">80</text><line x1="48" x2="752" y1="40.9" y2="40.9" stroke="#e6e1e1"/><text x="40" y="44.9" text-anchor="end" font-size="12" fill="#5c5c5c">90</text><rect x="62.1" y="88.6" width="28.2" height="161.4" fill="#d9d4d4"/><rect x="93.2" y="122.0" width="28.2" height="128.0" fill="#c8202f"/><text x="107.3" y="117.0" text-anchor="middle" font-size="11" fill="#1a1a1a">70,6</text><text x="91.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">63</text><rect x="150.1" y="101.5" width="28.2" height="148.5" fill="#d9d4d4"/><rect x="181.2" y="151.7" width="28.2" height="98.3" fill="#c8202f"/><text x="195.3" y="146.7" text-anchor="middle" font-size="11" fill="#1a1a1a">63,5</text><text x="179.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">125</text><rect x="238.1" y="80.6" width="28.2" height="169.4" fill="#d9d4d4"/><rect x="269.2" y="147.5" width="28.2" height="102.5" fill="#c8202f"/><text x="283.3" y="142.5" text-anchor="middle" font-size="11" fill="#1a1a1a">64,5</text><text x="267.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">250</text><rect x="326.1" y="62.7" width="28.2" height="187.3" fill="#d9d4d4"/><rect x="357.2" y="146.3" width="28.2" height="103.7" fill="#c8202f"/><text x="371.3" y="141.3" text-anchor="middle" font-size="11" fill="#1a1a1a">64,8</text><text x="355.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">500</text><rect x="414.1" y="57.2" width="28.2" height="192.8" fill="#d9d4d4"/><rect x="445.2" y="149.2" width="28.2" height="100.8" fill="#c8202f"/><text x="459.3" y="144.2" text-anchor="middle" font-size="11" fill="#1a1a1a">64,1</text><text x="443.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">1k</text><rect x="502.1" y="59.3" width="28.2" height="190.7" fill="#d9d4d4"/><rect x="533.2" y="155.5" width="28.2" height="94.5" fill="#c8202f"/><text x="547.3" y="150.5" text-anchor="middle" font-size="11" fill="#1a1a1a">62,6</text><text x="531.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">2k</text><rect x="590.1" y="52.2" width="28.2" height="197.8" fill="#d9d4d4"/><rect x="621.2" y="148.4" width="28.2" height="101.6" fill="#c8202f"/><text x="635.3" y="143.4" text-anchor="middle" font-size="11" fill="#1a1a1a">64,3</text><text x="619.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">4k</text><rect x="678.1" y="96.9" width="28.2" height="153.1" fill="#d9d4d4"/><rect x="709.2" y="184.8" width="28.2" height="65.2" fill="#c8202f"/><text x="723.3" y="179.8" text-anchor="middle" font-size="11" fill="#1a1a1a">55,6</text><text x="707.7" y="270" text-anchor="middle" font-size="12" fill="#5c5c5c">8k</text><text x="48" y="294" font-size="11" fill="#5c5c5c">Oktavband [Hz] · Schallleistung LWA je Oktave [dB(A)]</text></svg>
+    </div>
+    <div class="dc-table">
+      <table>
+        <thead><tr><th>Oktave [Hz]</th><th>63</th><th>125</th><th>250</th><th>500</th><th>1k</th><th>2k</th><th>4k</th><th>8k</th><th>Summe dB(A)</th></tr></thead>
+        <tbody>
+          <tr><td>Gerät ohne Pack</td><td>78,6</td><td>75,5</td><td>80,5</td><td>84,8</td><td>86,1</td><td>85,6</td><td>87,3</td><td>76,6</td><td>92,6</td></tr>
+          <tr><td>Einfügungsdämpfung [dB]</td><td>8</td><td>12</td><td>16</td><td>20</td><td>22</td><td>23</td><td>23</td><td>21</td><td></td></tr>
+          <tr class="hl"><td>Mit Acoustic Pack</td><td>70,6</td><td>63,5</td><td>64,5</td><td>64,8</td><td>64,1</td><td>62,6</td><td>64,3</td><td>55,6</td><td>74,3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dc-table">
+      <table>
+        <thead><tr><th>Druckverlust je Luftweg bei 380.000 m³/h</th><th>Δp</th></tr></thead>
+        <tbody>
+          <tr><td>Zuluft-Schalldämpfer, 3 Reihen (4,0 m/s im Spalt)</td><td>10,6 Pa</td></tr>
+          <tr><td>Umlenkung Seitengang</td><td>1,4 Pa</td></tr>
+          <tr><td>Plenum über den Ventilatoren</td><td>3,3 Pa</td></tr>
+          <tr><td>Abluft-Schalldämpfer, 3 Reihen (3,2 m/s im Spalt)</td><td>5,6 Pa</td></tr>
+          <tr class="hl"><td>Summe / Reserve des Geräts</td><td>≈ 21 / 30 Pa</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Prognosewerte einer Musterauslegung. Jedes Projekt wird einzeln akustisch und per CFD ausgelegt; die Erfolgskontrolle erfolgt per In-situ-Differenzmessung nach Inbetriebnahme.</p>
+  </div>
+</section>
+
+<section id="ablauf">
+  <div class="wrap">
+    <h2>Von der Anfrage bis zur Messung</h2>
+    <ol class="steps" style="margin-top:20px">
+      <li><h3>Anfrage</h3><p>Gerätedaten, Schallziel, Druckreserve</p></li>
+      <li><h3>Auslegung</h3><p>Oktavbilanz, CFD, Statik des Haubenrahmens</p></li>
+      <li><h3>Fertigung</h3><p>ABSORA, Berlin – ca. 12 Wochen nach Freigabe</p></li>
+      <li><h3>Lieferung</h3><p>DAP Baustelle, im Takt der Gerätesetzung</p></li>
+      <li><h3>Montage</h3><p>Ca. 5 Arbeitstage je Gerät</p></li>
+      <li><h3>Nachweis</h3><p>In-situ-Differenzmessung</p></li>
+    </ol>
+    <div class="need">
+      <h3>Mit diesen Angaben antworten wir am schnellsten</h3>
+      <div class="cl" style="padding:8px 0 0">
+        <ul class="check"><li>Hersteller, Gerätetyp, Anzahl</li><li>Abmessungen L × B × H</li><li>Anzahl Ventilatoren</li></ul>
+        <ul class="check"><li>Luftvolumenstrom je Betriebsfall</li><li>Druckreserve des Geräts (Pa)</li><li>Schallleistung je Oktave (Datenblatt)</li></ul>
+        <ul class="check"><li>Schallziel (LWA oder Immissionsort)</li><li>Aufstellplan, Gantry, Abstände</li><li>Liefertermin und Leistungsumfang</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt faq" id="fragen">
+  <div class="wrap">
+    <h2>Häufige Fragen</h2>
+    <details><summary>Kostet das Acoustic Pack Kälteleistung?</summary><p>Nein, wenn der Druckverlust innerhalb der Reserve bleibt, die der Gerätehersteller bereits einrechnet (meist 30–35 Pa). Wir legen Zu- und Abluft so aus, dass das Paket darunter bleibt, und weisen das per CFD nach.</p></details>
+    <details><summary>Warum Helmholtz-Röhren statt Kulissen?</summary><p>Nach der Dämpfung bestimmt meist der Tieftonbereich um 63 Hz den Pegel. Die Resonanzkammern der HSA3-Röhren sind genau darauf abgestimmt, bei geringem Gewicht und niedrigem Druckverlust.</p></details>
+    <details><summary>Sind die Packs nicht brennbar?</summary><p>Ja. Innenverkleidung und Schalldämpfer bestehen aus HSA3-Metallakustik (A1), ohne Mineralwolle oder Schaumstoffe.</p></details>
+    <details><summary>Wer fertigt und montiert?</summary><p>Auslegung: Silent Engineering. Fertigung und Montage: gemeinsam mit der ABSORA GmbH, Berlin. Die Montage dauert ca. 5 Arbeitstage je Gerät.</p></details>
+  </div>
+</section>

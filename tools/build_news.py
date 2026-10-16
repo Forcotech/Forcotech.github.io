@@ -303,6 +303,7 @@ def build():
     lines += group({"de": "/", "en": "/en/", "fr": "/fr/"}, today)
     lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}, today)
     lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
+    lines += group({"de": "/rechenzentren/"}, today)
     lines += group({k: url(k) for k in LANGS}, today)
     lines += group({"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/"}, today)
     lines += group({"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/"}, today)

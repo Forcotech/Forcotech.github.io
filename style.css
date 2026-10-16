@@ -206,6 +206,16 @@ footer a{color:var(--muted)}
 .hrow figcaption{font-size:13.5px;color:var(--muted);padding-top:10px;text-align:center}
 @media (max-width:640px){.hrow{flex-direction:column;align-items:center;gap:22px}.hrow figure{width:78%}}
 /* Rechenzentren (/rechenzentren/) */
+.dc-acoustic{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:stretch;margin-bottom:16px}
+.dc-acoustic .dc-chart,.dc-acoustic .dc-table{margin-bottom:0}
+.dc-oct caption{caption-side:top;text-align:left;padding:12px 12px 4px;font-weight:700;font-size:14.5px;color:var(--ink)}
+.dc-oct thead th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.dc-oct tbody th,.dc-oct tfoot th{text-align:left;font-weight:600;color:var(--ink);font-size:14.5px}
+.dc-oct td:nth-child(3){color:var(--muted)}
+.dc-oct td:last-child{font-weight:700;color:var(--accent-d)}
+.dc-oct tfoot th,.dc-oct tfoot td{border-top:2px solid var(--ink);border-bottom:0;font-weight:800;font-size:15.5px}
+.dc-oct tfoot td:last-child{color:var(--accent)}
+.dc-oct tbody tr:last-child th,.dc-oct tbody tr:last-child td{border-bottom:0}
 .dc-hero{background:#fff}
 .dc-figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
 .dc-figs figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
@@ -215,17 +225,19 @@ footer a{color:var(--muted)}
 .dc-figs figcaption b{color:var(--ink)}
 .dc-stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px}
 .dc-chart{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;overflow-x:auto;margin-bottom:16px}
-.dc-chart svg{display:block;width:100%;min-width:520px;height:auto}
+.dc-chart svg{display:block;width:100%;height:auto}
 .dc-legend{margin:0 0 6px;font-size:14px;color:var(--muted)}
 .dc-legend span{display:inline-block;width:12px;height:12px;margin:0 6px 0 14px;vertical-align:-1px}
 .dc-legend .k1{background:#d9d4d4;margin-left:0}.dc-legend .k2{background:var(--accent)}
 .dc-table{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:16px}
 .dc-table table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
-.dc-table th,.dc-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+.dc-table th,.dc-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line)}
+.dc-table td{white-space:nowrap}
+.dc-table td:first-child{white-space:normal}
 .dc-table th:first-child,.dc-table td:first-child{text-align:left}
 .dc-table th{font-size:13px;color:var(--muted);font-weight:600}
 .dc-table tr:last-child td{border-bottom:0}
 .dc-table tr.hl td{font-weight:700;color:var(--accent-d)}
 .card .card-img{margin:-20px -20px 14px;border-bottom:1px solid var(--line);background:#fff}
 .card .card-img img{width:100%;aspect-ratio:7/6;object-fit:cover;border-radius:var(--r) var(--r) 0 0}
-@media (max-width:860px){.dc-figs{grid-template-columns:minmax(0,1fr)}.dc-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.dc-acoustic{grid-template-columns:minmax(0,1fr)}.dc-figs{grid-template-columns:minmax(0,1fr)}.dc-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}

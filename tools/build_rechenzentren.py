@@ -20,8 +20,8 @@ TXT = {
            "lead": "Freistehende Acoustic Packs für Chiller mit 20 und mehr Ventilatoren. Gebaut mit ABSORA-HSA3-Technologie: Metallakustik statt Mineralwolle, Helmholtz-Röhrenschalldämpfer direkt über den Ventilatoren.",
            "b1": "Projekt anfragen", "b2": "Technik im Detail",
            "mail": "mailto:info@forcotech.com?subject=Anfrage%20Acoustic%20Pack%20Rechenzentrum",
-           "img": "img/rechenzentren/acoustic-packs-rechenzentrum.webp",
-           "alt": "Acoustic Packs von ForCoTech: Rückkühler mit aufgesetztem Abluftschalldämpfer (1) und eingehauste Kälteanlagen und Container mit Dachschalldämpfern (2) – Visualisierung"},
+           "img": "img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp",
+           "alt": "Acoustic Packs von ForCoTech: zwei freistehende Schallhauben aus Metallpaneelen mit Dachschalldämpfern über den Kaltwassersätzen eines Rechenzentrums – Visualisierung"},
 }
 
 
@@ -37,7 +37,7 @@ def build():
       <p class="lead">{t["lead"]}</p>
       <div class="btns"><a class="btn" href="{t["mail"]}">{t["b1"]}</a><a class="btn ghost" href="/technik/">{t["b2"]}</a></div>
     </div>
-    <figure class="dc-hero"><img src="/{t["img"]}" width="718" height="615" alt="{t["alt"]}" fetchpriority="high"></figure>
+    <figure class="dc-hero"><img src="/{t["img"]}" width="1500" height="695" alt="{t["alt"]}" fetchpriority="high"></figure>
   </div>
 </div>
 {frag}"""

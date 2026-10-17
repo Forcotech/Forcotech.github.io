@@ -26,3 +26,9 @@ Seiten /technik/, /en/technology/, /fr/technique/: Inhalt in technik/_src/<sprac
 /h-serie/ und /en/h-series/ (keine französische Fassung): Inhalt in hserie/_src/de.html bzw. en.html bearbeiten,
 dann `python3 tools/build_hserie.py`. Die FAQ-Daten (FAQPage) werden aus den <details>-Fragen erzeugt.
 Menüpunkt „H‑Serie“ in DE/EN steht in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.
+
+## Data-Center-Lösungen
+
+/rechenzentren/, /en/data-centres/, /fr/centres-de-donnees/: Inhalt in rechenzentren/_src/de.html, en.html bzw. fr.html
+bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und französischen Zeichnungen
+(img/rechenzentren/*-en.svg, *-fr.svg) erzeugt das Skript aus den deutschen SVGs über die Tabelle SVG_TXT.

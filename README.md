@@ -32,3 +32,16 @@ Menüpunkt „H‑Serie“ in DE/EN steht in tools/build_news.py (nav) und auf d
 /rechenzentren/, /en/data-centres/, /fr/centres-de-donnees/: Inhalt in rechenzentren/_src/de.html, en.html bzw. fr.html
 bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und französischen Zeichnungen
 (img/rechenzentren/*-en.svg, *-fr.svg) erzeugt das Skript aus den deutschen SVGs über die Tabelle SVG_TXT.
+
+## Lösungsseiten und HSA3-Seite
+
+Übersicht /loesungen/ (EN /en/solutions/), je eine Seite pro Anwendung – Wärmepumpen & Klimaanlagen, VRF/VRV,
+Chiller & Groß-Wärmepumpen, Wechselrichter & BESS, Schallwände – jeweils direkt mit dem passenden Teil des
+Konfigurators verlinkt, dazu /hsa3/ (EN /en/hsa3/) mit Aufbau, Wirkprinzip, Kennwerten und Vergleich. Keine FR-Fassung.
+
+- Kopf (Titel, Beschreibung, Einleitung, Bild, Kennzahlen, Konfigurator-Link): Tabelle `PAGES` / `HSA3` in tools/build_loesungen.py
+- Hauptteil: loesungen/_src/<id>.de.html / .en.html, Übersicht loesungen/_src/uebersicht.<sprache>.html, HSA3 hsa3/_src/<sprache>.html
+- Zeichnungen img/loesungen/*.svg (DE und -en) erzeugt `python3 tools/svg_loesungen.py`
+
+Danach `python3 tools/build_loesungen.py` und zuletzt `python3 tools/build_news.py` (Navigation, Sitemap).
+Menüpunkte „Lösungen“ und „HSA3“ stehen in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.

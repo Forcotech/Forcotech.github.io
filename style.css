@@ -239,3 +239,48 @@ footer a{color:var(--muted)}
 .dc-table tr:last-child td{border-bottom:0}
 .dc-table tr.hl td{font-weight:700;color:var(--accent-d)}
 @media (max-width:860px){.dc-acoustic{grid-template-columns:minmax(0,1fr)}.dc-figs{grid-template-columns:minmax(0,1fr)}.dc-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Lösungsseiten und HSA3 (tools/build_loesungen.py) */
+.crumbs{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.crumbs a{color:var(--muted);text-decoration:none}.crumbs a:hover{color:var(--accent-d);text-decoration:underline}
+.crumbs span[aria-current]{color:var(--ink)}
+.sol-hero{padding-top:22px}
+.sol-hero figure{background:#fff}
+.sol-hero figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.sol-hero figure img[src$=".svg"]{object-fit:contain;padding:8px}
+.solgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+@media (max-width:900px){.solgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.solgrid{grid-template-columns:1fr}}
+.solcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+section.alt .solcard{background:var(--bg)}
+.solcard:hover{border-color:var(--accent);box-shadow:0 10px 26px -16px rgba(0,0,0,.35)}
+.solcard img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#fff;border-bottom:1px solid var(--line)}
+.solcard img[src$=".svg"]{object-fit:contain;padding:6px}
+.solcard .tag{align-self:flex-start;margin:14px 18px 6px;font-size:12px;font-weight:700;color:var(--accent-d);background:var(--accent-l);border-radius:5px;padding:2px 7px}
+.solcard h2,.solcard h3{font-size:19px;line-height:1.25;margin:0 18px 6px}
+.solcard p{margin:0 18px;color:var(--muted);font-size:15px;flex:1}
+.solcard .more{margin:12px 18px 18px;font-weight:700;font-size:14.5px;color:var(--accent)}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+@media (max-width:760px){.figs{grid-template-columns:1fr}}
+.figs figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.figs img{width:100%}
+.figs figcaption{font-size:14px;color:var(--muted);padding:10px 14px}
+.figs figcaption b{color:var(--ink)}
+.cmp{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-top:20px}
+.cmp table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
+.cmp th,.cmp td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp thead th{background:var(--bg);font-size:13.5px}
+.cmp tbody th{font-weight:600;width:22%}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp .hl{background:var(--accent-l)}
+.cmp caption{text-align:left;padding:12px 14px 0;font-weight:700}
+.cfgband{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;background:#1a1a1a;color:#fff;border-radius:var(--r);padding:22px 24px;border-left:6px solid var(--accent)}
+.cfgband h3{margin:0 0 4px;color:#fff}
+.cfgband p{margin:0;color:#d8d8d8;font-size:15px;max-width:60ch}
+.cfgband .btn{background:var(--accent);color:#fff}
+.cfgband .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.stats.s4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:860px){.stats.s4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.stats b{font-size:24px}}
+.figs img{aspect-ratio:16/10;object-fit:cover;background:#fff}
+.figs img[src$=".svg"]{object-fit:contain;padding:6px}

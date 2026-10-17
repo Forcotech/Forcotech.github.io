@@ -19,7 +19,7 @@
 
 ## Key facts
 - Noise reduction: approx. −15 dB(A) Standard, approx. −20 dB(A) Premium, higher on a project basis
-- Prices (net, excl. installation, VAT, freight): PV inverter enclosures from approx. €4,550, VRF/VRV standard enclosures from approx. €15,500
+- Prices (net, excl. installation, VAT, freight): PV inverter enclosures from approx. €4,400, VRF/VRV standard enclosures from approx. €15,500
 - HSA3 acoustic meta-metal by ABSORA GmbH (Berlin, patent holder): up to 60 % lower pressure drop than conventional splitter silencers, approx. 30 % higher absorption at 125–250 Hz (tested to EN ISO 354); alternative lining Stratocell Whisper 50 mm FR
 - How HSA3 works: micro-perforated, corrugated metal top layer on a spring-mounted structure; air chambers act as resonators (Helmholtz and mass-spring principle), no mineral wool; effective at low compressor frequencies
 - HSA3 as a modular kit: compressor panels, retrofit fan cylinders against blade passing frequency, partition walls between heat pumps (also keep defrost air off the neighbouring unit), full enclosures; bolted aluminium profile system 45 x 45 mm, liftable without a crane
@@ -31,6 +31,15 @@
 
 ## SilentMode H-Series (small units)
 - [H-Serie (Deutsch)](https://www.forcotech.com/h-serie/) · [H-Series (English)](https://www.forcotech.com/en/h-series/): acoustic enclosures H1–H12 for heat pumps and air-conditioning units at homes, noise reduction levels −10/−18/−25 dB(A), also custom-made; configurator https://www.forcotech.com/konfigurator/h-serie/
+
+## Solutions by application
+- [Lösungen (Deutsch)](https://www.forcotech.com/loesungen/) · [Solutions (English)](https://www.forcotech.com/en/solutions/): overview and quick selection, each linked to the matching configurator section
+- Heat pumps and AC at homes, H-Series: [DE](https://www.forcotech.com/loesungen/waermepumpen-klimaanlagen/) · [EN](https://www.forcotech.com/en/solutions/heat-pumps-air-conditioning/) – TA Lärm night limits, worked example, −10/−18/−25 dB(A), max. 4 m/s
+- VRF/VRV outdoor units, V-Series: [DE](https://www.forcotech.com/loesungen/vrf-vrv/) · [EN](https://www.forcotech.com/en/solutions/vrf-vrv/) – standard enclosure per model for Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier; module combinations up to 4; base frame by others
+- Chillers and large heat pumps, CM-Series: [DE](https://www.forcotech.com/loesungen/chiller-grosswaermepumpen/) · [EN](https://www.forcotech.com/en/solutions/chillers-large-heat-pumps/) – tube silencers Ø 200 mm, separate air paths, targets 5–7 m/s and max. 3–5 % capacity loss, catalogue of 19 manufacturers
+- PV inverters and battery storage (BESS): [DE](https://www.forcotech.com/loesungen/wechselrichter-bess/) · [EN](https://www.forcotech.com/en/solutions/inverters-bess/) – wall-mounted and free-standing for 1–5 inverters from approx. €4,400 net, BESS per project
+- Noise barriers, Wall-Series: [DE](https://www.forcotech.com/loesungen/schallwaende/) · [EN](https://www.forcotech.com/en/solutions/noise-barriers/) – barrier vs. enclosure, typically 6–10 dB(A), screening to ISO 9613-2
+- [HSA3 (Deutsch)](https://www.forcotech.com/hsa3/) · [HSA3 (English)](https://www.forcotech.com/en/hsa3/): structure, working principle (Helmholtz resonators, mass-spring system, impedance step), key data and evidence, comparison with mineral wool and foam
 
 <!-- NEWS:START -->
 ## News and analyses

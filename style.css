@@ -295,3 +295,16 @@ section.alt .solcard{background:var(--bg)}
 .card .price{margin:6px 0 10px;font-weight:700;color:var(--accent-d);font-size:15px}
 .facts.five b{font-size:19px}
 .hero .eta{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.hero h1{max-width:16ch}
+.hero .eta{font-size:13px}
+.who{margin-top:14px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:14px 18px}
+.who-t{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.who-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.who-flow li{display:flex;gap:10px;align-items:flex-start;position:relative}
+.who-flow li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:2px;color:var(--accent);font-weight:700}
+.who-flow .n{flex:none;width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.who-flow b{display:block;font-size:15px}
+.who-flow em{display:block;font-style:normal;font-size:14px;color:var(--accent-d);font-weight:600}
+.who-flow li span:not(.n){display:block;font-size:13px;color:var(--muted);line-height:1.4}
+@media (max-width:720px){.who-flow{grid-template-columns:1fr}.who-flow li::after{display:none}}
+@media (max-width:720px){.facts.five div:last-child{grid-column:1/-1}}

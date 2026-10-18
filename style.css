@@ -294,3 +294,4 @@ section.alt .solcard{background:var(--bg)}
 @media (max-width:720px){.facts.five{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .card .price{margin:6px 0 10px;font-weight:700;color:var(--accent-d);font-size:15px}
 .facts.five b{font-size:19px}
+.hero .eta{margin:12px 0 0;font-size:14px;color:var(--muted)}

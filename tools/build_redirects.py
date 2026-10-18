@@ -19,6 +19,9 @@ BASE = "https://www.forcotech.com"
 # alte Adresse (ohne führenden Schrägstrich) -> neue Adresse (Pfad)
 OLD = {
     "contact.html": "/en/#contact",
+    "kontakt/": "/#kontakt",
+    "en/contact/": "/en/#contact",
+    "fr/contact/": "/fr/#contact",
     "about-us.html": "/en/#about",
     "schallschutzhauben.html": "/konfigurator/",
     "district-heat-pumps.html": "/konfigurator/en/grossanlagen/",
@@ -35,7 +38,9 @@ OLD = {
 PATTERNS = [
     ["^/blog", "/en/news/"],
     ["^/(store|shop|products?|produkte)", "/konfigurator/en/"],
-    ["(kontakt|contact)", "/en/#contact"],
+    ["kontakt", "/#kontakt"],
+    ["^/fr/.*contact", "/fr/#contact"],
+    ["contact", "/en/#contact"],
     ["(about|ueber-uns|uber-uns)", "/en/#about"],
     ["(inverter|wechselrichter|solar|pv)", "/konfigurator/en/pv/"],
     ["(vrf|vrv)", "/konfigurator/en/vrf/"],

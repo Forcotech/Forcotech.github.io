@@ -62,7 +62,7 @@
       </div>
       <p class="eta">Richtpreis sofort im Konfigurator · verbindliches Angebot für komplexe Projekte in der Regel in 2–3 Tagen</p>
     </div>
-    <figure><img src="img/dach-gruen-doppelhaube.webp" width="1400" height="786" alt="Zwei Schallhauben in Pastellgrün auf einem begrünten Flachdach zwischen Wohngebäuden, mit Rohrleitungen (Visualisierung)" fetchpriority="high"></figure>
+    <figure class="hero-video"><video autoplay muted loop playsinline preload="auto" poster="/img/hero-loop-poster.webp" width="1280" height="720" aria-label="Drohnenflug über Schallhauben auf Flachdächern (Video ohne Ton)"><source src="/img/hero-loop.webm" type="video/webm"><source src="/img/hero-loop.mp4" type="video/mp4"></video></figure>
   </div>
   <div class="wrap">
     <div class="facts five">
@@ -212,5 +212,6 @@
   </div>
 </footer>
 <script>document.querySelectorAll('.yt').forEach(function(f){f.querySelector('.yt-play').addEventListener('click',function(){var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+f.dataset.id+'?autoplay=1&rel=0';i.title=this.getAttribute('aria-label');i.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';i.allowFullscreen=true;this.replaceWith(i);});});</script>
+<script>(function(){var v=document.querySelector('.hero-video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}})();</script>
 </body>
 </html>

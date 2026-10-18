@@ -322,3 +322,4 @@ section.alt .solcard{background:var(--bg)}
 .yt figcaption{font-size:13px;margin-top:6px}
 .yt-main{margin-bottom:16px}
 .yt-row .yt-cap{font-size:clamp(14px,1.4vw,17px)}
+.hero-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#ddd}

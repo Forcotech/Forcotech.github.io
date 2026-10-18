@@ -346,3 +346,9 @@ section.alt .solcard{background:var(--bg)}
 .ab-bar i{height:6px;border-radius:3px;background:#d9d9d9}
 .ab-bar i:nth-child(even){background:#f3b9be}
 .ab-bar i.cur{background:#222}.ab-bar i:nth-child(even).cur{background:var(--accent)}
+.adl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:18px;align-items:start;margin-top:8px}
+.adl figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px}
+.adl img{width:100%;height:auto;display:block;border-radius:6px}
+.adl figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.adl-list{margin-top:18px}
+@media (max-width:820px){.adl{grid-template-columns:1fr}.adl-photo{max-width:420px}}

@@ -162,5 +162,59 @@
       "alt": "Caisson acoustique gris avec grilles de ventilation et raccordements de tuyauteries sur une toiture-terrasse, vu sous deux angles",
       "teaser": "La section de ventilation libre suffit-elle à 39 °C ? 50 000 m³/h, 2,8 m² à 20 °C – et pourquoi nous ajoutons une majoration de 7 %."
     }
+  },
+  {
+    "slug": "schallschutz-pv-wechselrichter",
+    "date": "2026-06-18",
+    "status": "online",
+    "image": "img/news/pv-wechselrichter-schallhaube.webp",
+    "image_full": "img/news/pv-wechselrichter-schallhaube.webp",
+    "image_full_size": [
+      1601,
+      766
+    ],
+    "original": "https://silent-mode.com/blog/schallschutz-f%C3%BCr-pv-wechselrichter-probleme-der-schallemissionen-von-wechselrichtern-und-l%C3%B6sungen",
+    "de": {
+      "title": "Schallschutz für PV-Wechselrichter: Probleme der Schallemissionen von Wechselrichtern und Lösungen",
+      "alt": "Schallhaube aus Edelstahl mit Lüftungsgittern und Servicetüren auf einem Flachdach zwischen PV-Modulen (Visualisierung)",
+      "teaser": "Lüfter, Induktivitäten, Körperschall: woher der Lärm von Wechselrichtern kommt, was der Immissionsschutz verlangt – und wie Schallhaube, Standort und Entkopplung helfen."
+    },
+    "en": {
+      "title": "Noise control for PV inverters: noise emission problems and solutions",
+      "alt": "Stainless steel acoustic enclosure with ventilation grilles and service doors on a flat roof between PV modules (visualisation)",
+      "teaser": "Fans, inductors, structure-borne sound: where inverter noise comes from, what noise regulations require – and how enclosures, location and isolation help."
+    },
+    "fr": {
+      "title": "Protection acoustique des onduleurs PV : problèmes d’émissions sonores et solutions",
+      "alt": "Caisson acoustique en inox avec grilles de ventilation et portes de service sur une toiture-terrasse entre des modules PV (visualisation)",
+      "teaser": "Ventilateurs, inductances, bruits solidiens : d’où vient le bruit des onduleurs, ce qu’exige la protection contre le bruit – et comment caisson, emplacement et découplage aident."
+    }
+  },
+  {
+    "slug": "schallhauben-grosse-kaelteanlagen-waermepumpen",
+    "date": "2026-06-04",
+    "status": "online",
+    "image": "img/news/grosse-kaelteanlagen-schallhaube.webp",
+    "image_full": "img/news/grosse-kaelteanlagen-schallhaube.webp",
+    "image_full_size": [
+      1577,
+      732
+    ],
+    "original": "https://silent-mode.com/blog/planung-und-auslegung-von-schallhauben-f%C3%BCr-gro%C3%9Fe-k%C3%A4lteanlagen-und-w%C3%A4rmepumpen-mit-luftvolumen-100000-mh",
+    "de": {
+      "title": "Planung und Auslegung von Schallhauben für große Kälteanlagen und Wärmepumpen mit Luftvolumen über 100.000 m³/h",
+      "alt": "Lange hellgraue Schallhaube mit Lüftungsgittern und Servicetüren auf einem Flachdach neben Rohrleitungen (Visualisierung)",
+      "teaser": "5–7 m/s in den freien Flächen, 10–15 dB(A) am Immissionsort, unter 3–5 % Leistungseinbuße: welche Zielwerte vor der Detailgeometrie feststehen sollten."
+    },
+    "en": {
+      "title": "Planning and designing acoustic enclosures for large chillers and heat pumps with airflows above 100,000 m³/h",
+      "alt": "Long light grey acoustic enclosure with ventilation grilles and service doors on a flat roof next to pipework (visualisation)",
+      "teaser": "5–7 m/s in the free areas, 10–15 dB(A) at the receiver point, less than 3–5 % capacity loss: which targets to fix before the detailed geometry."
+    },
+    "fr": {
+      "title": "Conception et dimensionnement de caissons acoustiques pour grands groupes froids et pompes à chaleur au-delà de 100 000 m³/h",
+      "alt": "Long caisson acoustique gris clair avec grilles de ventilation et portes de service sur une toiture-terrasse à côté de tuyauteries (visualisation)",
+      "teaser": "5 à 7 m/s dans les sections libres, 10 à 15 dB(A) au point récepteur, moins de 3 à 5 % de perte de puissance : les valeurs cibles à fixer avant la géométrie de détail."
+    }
   }
 ]

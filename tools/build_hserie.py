@@ -14,18 +14,18 @@ ROOT = Path(__file__).resolve().parent.parent
 URL = {"de": "/h-serie/", "en": "/en/h-series/"}
 CFG = {"de": "https://www.forcotech.com/konfigurator/h-serie/", "en": "https://www.forcotech.com/konfigurator/en/h-serie/"}
 TXT = {
-    "de": {"title": "SilentMode H-Serie – Schallhauben für Wärmepumpen am Haus, Standard und nach Maß | ForCoTech",
+    "de": {"title": "SilentMode H-Serie – Schallhauben für Wärmepumpen in Wohngebäuden, Standard und nach Maß | ForCoTech",
            "desc": "Schallschutzhauben H1–H12 für Wärmepumpen und Klimageräte im Ein- und Mehrfamilienhaus: −10, −18 oder −25 dB(A), max. 4 m/s, R290-tauglich, Alu in RAL nach Wahl – auch als Maßanfertigung. Richtpreis im Konfigurator.",
            "kicker": "Kleinanlagen · SilentMode H-Serie",
-           "h1": "Schallhauben für Wärmepumpen am Haus – Standard H1–H12 und nach Maß",
-           "lead": "Für Wärmepumpen und Klimageräte im Ein- und Mehrfamilienhaus. Bis zu −25 dB(A) leiser, ohne die Anlage auszubremsen – für Hausbesitzer, Verwalter und Anlagenbauer.",
+           "h1": "Schallhauben für Wärmepumpen in Wohngebäuden – Standard H1–H12 und nach Maß",
+           "lead": "Für Wärmepumpen und Klimageräte im Ein- und Mehrfamilienhaus. Bis zu −25 dB(A) leiser, ohne die Anlage auszubremsen – für Fachbetriebe, Anlagenbauer und Verwalter.",
            "b1": "Haube konfigurieren – mit Richtpreis", "b2": "Maßanfertigung anfragen",
            "mail": "mailto:info@forcotech.com?subject=Ma%C3%9Fanfertigung%20Schallhaube"},
-    "en": {"title": "SilentMode H-Series – acoustic enclosures for heat pumps at homes, standard and custom-made | ForCoTech",
+    "en": {"title": "SilentMode H-Series – acoustic enclosures for heat pumps in residential buildings, standard and custom-made | ForCoTech",
            "desc": "Acoustic enclosures H1–H12 for heat pumps and air-conditioning units at single and multi-family homes: −10, −18 or −25 dB(A), max. 4 m/s, R290-ready, aluminium in any RAL colour – also custom-made. Guide price in the configurator.",
            "kicker": "Small units · SilentMode H-Series",
-           "h1": "Acoustic enclosures for heat pumps at home – standard H1–H12 and custom-made",
-           "lead": "For heat pumps and air-conditioning units at single and multi-family homes. Up to −25 dB(A) quieter without holding the unit back – for homeowners, property managers and installers.",
+           "h1": "Acoustic enclosures for heat pumps in residential buildings – standard H1–H12 and custom-made",
+           "lead": "For heat pumps and air-conditioning units at single and multi-family homes. Up to −25 dB(A) quieter without holding the unit back – for installers, contractors and property managers.",
            "b1": "Configure an enclosure – with guide price", "b2": "Request a custom enclosure",
            "mail": "mailto:info@forcotech.com?subject=Custom-made%20acoustic%20enclosure"},
 }

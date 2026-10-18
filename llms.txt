@@ -30,11 +30,11 @@
 - 500+ enclosure projects since 2015; first projects 2015 in the UK; installations across Europe, smaller numbers in the USA and Australia
 
 ## SilentMode H-Series (small units)
-- [H-Serie (Deutsch)](https://www.forcotech.com/h-serie/) · [H-Series (English)](https://www.forcotech.com/en/h-series/): acoustic enclosures H1–H12 for heat pumps and air-conditioning units at homes, noise reduction levels −10/−18/−25 dB(A), also custom-made; configurator https://www.forcotech.com/konfigurator/h-serie/
+- [H-Serie (Deutsch)](https://www.forcotech.com/h-serie/) · [H-Series (English)](https://www.forcotech.com/en/h-series/): acoustic enclosures H1–H12 for heat pumps and air-conditioning units in residential buildings (for installers, contractors and property managers), noise reduction levels −10/−18/−25 dB(A), also custom-made; configurator https://www.forcotech.com/konfigurator/h-serie/
 
 ## Solutions by application
 - [Lösungen (Deutsch)](https://www.forcotech.com/loesungen/) · [Solutions (English)](https://www.forcotech.com/en/solutions/): overview and quick selection, each linked to the matching configurator section
-- Heat pumps and AC at homes, H-Series: [DE](https://www.forcotech.com/loesungen/waermepumpen-klimaanlagen/) · [EN](https://www.forcotech.com/en/solutions/heat-pumps-air-conditioning/) – TA Lärm night limits, worked example, −10/−18/−25 dB(A), max. 4 m/s
+- Heat pumps and AC in residential buildings, H-Series: [DE](https://www.forcotech.com/loesungen/waermepumpen-klimaanlagen/) · [EN](https://www.forcotech.com/en/solutions/heat-pumps-air-conditioning/) – TA Lärm night limits, worked example, −10/−18/−25 dB(A), max. 4 m/s
 - VRF/VRV outdoor units, V-Series: [DE](https://www.forcotech.com/loesungen/vrf-vrv/) · [EN](https://www.forcotech.com/en/solutions/vrf-vrv/) – standard enclosure per model for Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier; module combinations up to 4; base frame by others
 - Chillers and large heat pumps, CM-Series: [DE](https://www.forcotech.com/loesungen/chiller-grosswaermepumpen/) · [EN](https://www.forcotech.com/en/solutions/chillers-large-heat-pumps/) – tube silencers Ø 200 mm, separate air paths, targets 5–7 m/s and max. 3–5 % capacity loss, catalogue of 19 manufacturers
 - PV inverters and battery storage (BESS): [DE](https://www.forcotech.com/loesungen/wechselrichter-bess/) · [EN](https://www.forcotech.com/en/solutions/inverters-bess/) – wall-mounted and free-standing for 1–5 inverters from approx. €4,400 net, BESS per project

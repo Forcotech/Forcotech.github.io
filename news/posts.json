@@ -216,5 +216,32 @@
       "alt": "Long caisson acoustique gris clair avec grilles de ventilation et portes de service sur une toiture-terrasse à côté de tuyauteries (visualisation)",
       "teaser": "5 à 7 m/s dans les sections libres, 10 à 15 dB(A) au point récepteur, moins de 3 à 5 % de perte de puissance : les valeurs cibles à fixer avant la géométrie de détail."
     }
+  },
+  {
+    "slug": "ventilatorverordnung-eu-2024-1834-erp2026",
+    "date": "2026-06-18",
+    "status": "online",
+    "image": "img/news/ventilatorverordnung-erp2026.webp",
+    "image_full": "img/news/ventilatorverordnung-erp2026.webp",
+    "image_full_size": [
+      1572,
+      782
+    ],
+    "original": "https://silent-mode.com/blog/die-neue-ventilatorverordnung-eu-20241834-erp2026-versch%C3%A4rft-ab-juli-2026-beziehungsweise-ab-2027-die-mindesteffizienzanforderungen-f%C3%BCr-ventilatoren-im-leistungsbereich-von-125-w-bis-500-kw",
+    "de": {
+      "title": "Neue Ventilatorverordnung (EU) 2024/1834 („ErP2026“): strengere Effizienzanforderungen ab 2026",
+      "alt": "Reihe großer Axialventilatoren in einer Einhausung, Luftströmung blau dargestellt (Illustration)",
+      "teaser": "Ab 24.07.2026 gelten strengere Mindesteffizienzen für Ventilatoren von 125 W bis 500 kW, für integrierte Ventilatoren ab 2027 – was das für HVAC-Geräte bedeutet."
+    },
+    "en": {
+      "title": "New fan regulation (EU) 2024/1834 (\"ErP2026\"): stricter efficiency requirements from 2026",
+      "alt": "Row of large axial fans in an enclosure, airflow shown in blue (illustration)",
+      "teaser": "From 24 July 2026, stricter minimum efficiencies apply to fans from 125 W to 500 kW, for integrated fans from 2027 – what this means for HVAC equipment."
+    },
+    "fr": {
+      "title": "Nouveau règlement ventilateurs (UE) 2024/1834 (« ErP2026 ») : des exigences d’efficacité renforcées dès 2026",
+      "alt": "Rangée de grands ventilateurs axiaux dans un caisson, flux d’air représenté en bleu (illustration)",
+      "teaser": "À partir du 24 juillet 2026, des rendements minimaux plus stricts s’appliquent aux ventilateurs de 125 W à 500 kW, dès 2027 pour les ventilateurs intégrés – ce que cela implique pour les équipements CVC."
+    }
   }
 ]

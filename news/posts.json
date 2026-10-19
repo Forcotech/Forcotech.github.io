@@ -1,5 +1,44 @@
 [
   {
+    "slug": "meta-akustik-hsa3-hvac",
+    "date": "2026-10-19",
+    "status": "online",
+    "image": "img/news/meta-akustik-hsa3-karte-de.webp",
+    "de": {
+      "title": "Warum die HVAC-Akustik ihr Material wechselt: Meta-Akustik mit HSA3",
+      "alt": "Grafik: Wandschnitt klassischer poröser Absorber (Bautiefe ≥ λ/4, Tiefton geht durch) im Vergleich zu HSA3 mit 44 mm Resonanzhohlraum, schematische Einfügungsdämpfung und Haubenschnitt mit HSA3-Röhrenschalldämpfer",
+      "teaser": "Mehr Masse hilft kaum gegen tieffrequentes Brummen. Mit HSA3 und definiertem Resonanzhohlraum dämpfen wir gezielt die kritischen Frequenzen – schlanker, nicht brennbar, mit weniger Druckverlust.",
+      "image": "img/news/meta-akustik-hsa3-karte-de.webp",
+      "image_full": "img/news/meta-akustik-hsa3-de.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
+    },
+    "en": {
+      "title": "Why HVAC acoustics is changing its material: meta-acoustics with HSA3",
+      "alt": "Graphic: wall section of a conventional porous absorber (build depth ≥ λ/4, low frequencies pass) compared with HSA3 and a 44 mm resonance cavity, schematic insertion loss and hood section with HSA3 tube silencer",
+      "teaser": "More mass barely helps against low-frequency hum. With HSA3 and a defined resonance cavity we damp the critical frequencies in a targeted way – slimmer, non-combustible, with lower pressure drop.",
+      "image": "img/news/meta-akustik-hsa3-karte-en.webp",
+      "image_full": "img/news/meta-akustik-hsa3-en.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
+    },
+    "fr": {
+      "title": "Pourquoi l’acoustique CVC change de matériau : la méta-acoustique avec HSA3",
+      "alt": "Graphique : coupe de paroi d’un absorbant poreux classique (épaisseur ≥ λ/4, les basses fréquences passent) comparée à HSA3 avec une cavité de résonance de 44 mm, perte d’insertion schématique et coupe de caisson avec silencieux à tubes HSA3",
+      "teaser": "Plus de masse n’aide guère contre le bourdonnement basse fréquence. Avec HSA3 et une cavité de résonance définie, nous amortissons de manière ciblée les fréquences critiques – plus fin, incombustible, avec moins de perte de charge.",
+      "image": "img/news/meta-akustik-hsa3-karte-en.webp",
+      "image_full": "img/news/meta-akustik-hsa3-en.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
+    }
+  },
+  {
     "slug": "hvac-iot-cyberrisiken-waermepumpen",
     "date": "2026-10-13",
     "status": "online",

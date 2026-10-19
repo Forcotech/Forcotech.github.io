@@ -44,6 +44,7 @@
 <!-- NEWS:START -->
 ## News and analyses
 - [News (Deutsch)](https://www.forcotech.com/news/) · [News (English)](https://www.forcotech.com/en/news/) · [Actualités (Français)](https://www.forcotech.com/fr/actualites/)
+- [Why HVAC acoustics is changing its material: meta-acoustics with HSA3](https://www.forcotech.com/en/news/meta-akustik-hsa3-hvac/) (2026-10-19, Deutsch: https://www.forcotech.com/news/meta-akustik-hsa3-hvac/)
 - [The heat pump as a gateway: cyber risks of connected HVAC systems](https://www.forcotech.com/en/news/hvac-iot-cyberrisiken-waermepumpen/) (2026-10-13, Deutsch: https://www.forcotech.com/news/hvac-iot-cyberrisiken-waermepumpen/)
 - [Main noise sources in air-cooled heat pumps and chillers](https://www.forcotech.com/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/) (2026-09-24, Deutsch: https://www.forcotech.com/news/haupt-laermquellen-waermepumpen-kaelteanlagen/)
 - [12 metres of noise protection – no compromise on airflow: cascade of four Weishaupt WWP LA 60-AR air-source heat pumps](https://www.forcotech.com/en/news/12-meter-schallschutz-weishaupt-kaskade/) (2026-09-20, Deutsch: https://www.forcotech.com/news/12-meter-schallschutz-weishaupt-kaskade/)

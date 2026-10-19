@@ -304,6 +304,7 @@ def build():
     lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}, today)
     lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
     lines += group({"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}, today)
+    lines += group({"de": "/leitfaden/"}, today)  # Praxisleitfaden (Handseite leitfaden/index.html, PDF in downloads/)
     # Lösungsseiten und HSA3 (tools/build_loesungen.py)
     import build_loesungen as bl
     lines += group({"de": "/loesungen/", "en": "/en/solutions/"}, today)

@@ -352,3 +352,17 @@ section.alt .solcard{background:var(--bg)}
 .adl figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .adl-list{margin-top:18px}
 @media (max-width:820px){.adl{grid-template-columns:1fr}.adl-photo{max-width:420px}}
+
+/* Praxisleitfaden */
+.lf-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:center}
+@media (max-width:820px){.lf-grid{grid-template-columns:1fr}.lf-cover{max-width:300px}}
+.lf-cover{margin:0}.lf-cover img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 18px 40px -18px rgba(0,0,0,.45)}
+.lf-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+@media (max-width:760px){.lf-list{grid-template-columns:1fr}}
+.lf-list li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.lf-n{flex:none;min-width:34px;height:28px;padding:0 6px;border-radius:6px;background:#111;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.lf-list b{display:block;font-size:15px}.lf-list span:not(.lf-n){display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.lf-pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.lf-pages{grid-template-columns:1fr 1fr}}
+.lf-pages figure{margin:0}.lf-pages img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 24px -14px rgba(0,0,0,.35)}
+.lf-pages figcaption{font-size:13px;color:var(--muted);margin-top:6px}

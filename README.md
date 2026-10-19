@@ -45,3 +45,9 @@ Konfigurators verlinkt, dazu /hsa3/ (EN /en/hsa3/) mit Aufbau, Wirkprinzip, Kenn
 
 Danach `python3 tools/build_loesungen.py` und zuletzt `python3 tools/build_news.py` (Navigation, Sitemap).
 Menüpunkte „Lösungen“ und „HSA3“ stehen in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.
+
+## Praxisleitfaden (PDF)
+
+/leitfaden/ (nur Deutsch, handgeschriebene Seite) mit Download `downloads/forcotech-leitfaden-schallschutz-hvac.pdf`.
+Das PDF ist die auf das ForCoTech-Layout (schwarz/rot, Logo, forcotech.com) umgestellte Fassung des Leitfadens
+von Silent Engineering; Umstellskript liegt außerhalb des Repositorys.

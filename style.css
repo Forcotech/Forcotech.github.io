@@ -366,3 +366,4 @@ section.alt .solcard{background:var(--bg)}
 @media (max-width:760px){.lf-pages{grid-template-columns:1fr 1fr}}
 .lf-pages figure{margin:0}.lf-pages img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 24px -14px rgba(0,0,0,.35)}
 .lf-pages figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.onsite{margin:24px 0}.onsite img{width:100%;height:auto;display:block;border-radius:var(--r,12px)}.onsite figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}

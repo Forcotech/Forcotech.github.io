@@ -33,6 +33,12 @@ Menüpunkt „H‑Serie“ in DE/EN steht in tools/build_news.py (nav) und auf d
 bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und französischen Zeichnungen
 (img/rechenzentren/*-en.svg, *-fr.svg) erzeugt das Skript aus den deutschen SVGs über die Tabelle SVG_TXT.
 
+## Adiabatik-Modul
+
+/adiabatik/, /en/adiabatic-precooling/, /fr/pre-refroidissement-adiabatique/: Inhalt in adiabatik/_src/de.html, en.html bzw. fr.html
+bearbeiten, dann `python3 tools/build_adiabatik.py`. Die Prinzipskizze img/adiabatik/*.svg erzeugt das Skript (Beschriftungen in LBL).
+Karte auf den Startseiten index.html, en/index.html, fr/index.html; Sitemap-Eintrag in tools/build_news.py.
+
 ## Lösungsseiten und HSA3-Seite
 
 Übersicht /loesungen/ (EN /en/solutions/), je eine Seite pro Anwendung – Wärmepumpen & Klimaanlagen, VRF/VRV,

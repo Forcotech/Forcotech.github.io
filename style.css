@@ -367,3 +367,6 @@ section.alt .solcard{background:var(--bg)}
 .lf-pages figure{margin:0}.lf-pages img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 24px -14px rgba(0,0,0,.35)}
 .lf-pages figcaption{font-size:13px;color:var(--muted);margin-top:6px}
 .onsite{margin:24px 0}.onsite img{width:100%;height:auto;display:block;border-radius:var(--r,12px)}.onsite figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+/* Adiabatik-Modul (/adiabatik/) */
+.ad-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.ad-tags span{background:var(--accent-l);color:var(--accent-d);font-weight:600;font-size:14.5px;border-radius:999px;padding:5px 14px}

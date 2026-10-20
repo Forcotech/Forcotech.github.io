@@ -13,6 +13,7 @@ aus der Tabelle LBL – Beschriftungen dort ändern.
 """
 from pathlib import Path
 import build_news as bn
+import svg_adiabatik_iso as iso
 from build_hserie import faq_ld
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -20,6 +21,7 @@ URL = {"de": "/adiabatik/", "en": "/en/adiabatic-precooling/", "fr": "/fr/pre-re
 TECH = {"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}
 SVG = {"de": "img/adiabatik/adiabatik-prinzip.svg", "en": "img/adiabatik/adiabatik-prinzip-en.svg",
        "fr": "img/adiabatik/adiabatik-prinzip-fr.svg"}
+ISO = {k: v.replace("prinzip", "isometrie") for k, v in SVG.items()}
 TXT = {
     "de": {"title": "Adiabatische Vorkühlung in der Schallhaube – Adiabatik-Modul für Kälteanlagen | ForCoTech",
            "desc": "Schallschutz, der mitkühlt: Adiabatik-Modul in der Schallhaube kühlt die Ansaugluft von Kaltwassersätzen und Rückkühlern um ca. 6–9 K vor – Einweg, ohne Sprühdüsen, Zielwert < 25 Pa Druckverlust. Pilotanwender gesucht.",
@@ -125,6 +127,7 @@ def build():
     for lang in URL:
         (ROOT / SVG[lang]).parent.mkdir(parents=True, exist_ok=True)
         (ROOT / SVG[lang]).write_text(svg(lang), encoding="utf-8")
+        (ROOT / ISO[lang]).write_text(iso.svg(lang), encoding="utf-8")
         t = TXT[lang]
         frag = (ROOT / "adiabatik" / "_src" / f"{lang}.html").read_text(encoding="utf-8")
         facts = "".join(f"<div><b>{bn.e(b)}</b><span>{bn.e(s)}</span></div>" for b, s in t["facts"])

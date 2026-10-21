@@ -21,7 +21,7 @@
 <rect x="132" y="160" width="68" height="210" fill="#eaf2f8" stroke="#2f6f9f" stroke-width="2.5"/><path d="M140 168 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14" fill="none" stroke="#2f6f9f" stroke-width="2"/><path d="M152 168 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14" fill="none" stroke="#2f6f9f" stroke-width="2"/><path d="M164 168 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14" fill="none" stroke="#2f6f9f" stroke-width="2"/><path d="M176 168 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14" fill="none" stroke="#2f6f9f" stroke-width="2"/><path d="M188 168 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14 l-8 14 l8 14" fill="none" stroke="#2f6f9f" stroke-width="2"/>
 <text x="178" y="150" text-anchor="end" font-size="14.5" font-weight="700" fill="#2f6f9f">Adiabatik-Modul</text>
 <path d="M188 66 V158" stroke="#2f6f9f" stroke-width="3" marker-end="url(#b)"/>
-<text x="20" y="72" font-size="13.5" font-weight="700" fill="#2f6f9f">Wasser, enthärtet</text>
+<text x="20" y="72" font-size="13.5" font-weight="700" fill="#2f6f9f">Osmosewasser</text>
 <text x="20" y="90" font-size="12.5" fill="#5c5c5c">Systemtrenner EN 1717</text>
 <path d="M166 370 V392 H120" fill="none" stroke="#2f6f9f" stroke-width="3" marker-end="url(#b)"/>
 <text x="20" y="412" font-size="13" fill="#5c5c5c">Ablauf · Einweg, ohne Umwälzung</text>

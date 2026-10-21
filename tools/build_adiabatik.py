@@ -27,44 +27,44 @@ TXT = {
            "desc": "Schallschutz, der mitkühlt: Adiabatik-Modul in der Schallhaube kühlt die Ansaugluft von Kaltwassersätzen und Rückkühlern um ca. 6–9 K vor – Einweg, ohne Sprühdüsen, Zielwert < 25 Pa Druckverlust. Pilotanwender gesucht.",
            "kicker": "Neu · in Erprobung · Adiabatik-Modul",
            "h1": "Schallschutz, der mitkühlt – adiabatische Vorkühlung in der Schall&shy;haube",
-           "lead": "Das Adiabatik-Modul kühlt die Ansaugluft von Kälteanlagen an Hitzetagen um ca. 6–9 K vor. Weniger Hochdruckstörungen, mehr Leistung – und leiser, weil die Ventilatoren langsamer drehen dürfen.",
-           "b1": "Pilotanwender werden", "b2": "Technik im Detail",
-           "mail": "mailto:info@forcotech.com?subject=Pilotanwender%20Adiabatik-Modul",
+           "lead": "Kälteanlagen an Hitzetagen stabiler, effizienter und leiser betreiben – ohne zusätzliche Stellfläche. Das Adiabatik-Modul in der Schallhaube kühlt die Ansaugluft um ca. 6–9 K vor, die Ventilatoren müssen nicht hochdrehen.",
+           "b1": "Eignung meiner Anlage prüfen", "b2": "Technik im Detail",
+           "mail": "mailto:info@forcotech.com?subject=Eignungspr%C3%BCfung%20Adiabatik-Modul&amp;body=Hersteller%20/%20Ger%C3%A4tetyp%20/%20Anzahl%3A%0ALuftvolumenstrom%20oder%20K%C3%A4lteleistung%3A%0ANeue%20Haube%20oder%20Nachr%C3%BCstung%3A%0AProbleme%20an%20Hitzetagen%20%28Hochdruck%2C%20Leistung%2C%20L%C3%A4rm%29%3A%0AStandort%20%28PLZ%29%3A%0AName%2C%20Firma%2C%20Telefon%3A%0A",
            "facts": [("6–9 K", "Abkühlung bei 35 °C / 30 % r. F."), ("< 25 Pa", "zusätzlicher Druckverlust (Zielwert)"),
                      ("Einweg", "ohne Umwälzung und Sprühdüsen"), ("A1", "HSA3, nicht brennbar")]},
     "en": {"title": "Adiabatic pre-cooling in the acoustic enclosure – adiabatic module for chillers | ForCoTech",
            "desc": "Noise control that also cools: an adiabatic module in the acoustic enclosure pre-cools the intake air of chillers and dry coolers by approx. 6–9 K – once-through, no spray nozzles, target < 25 Pa pressure drop. Pilot users wanted.",
            "kicker": "New · under test · Adiabatic module",
            "h1": "Noise control that also cools – adiabatic pre-cooling in the acoustic enclosure",
-           "lead": "On hot days, the adiabatic module pre-cools the intake air of chillers by approx. 6–9 K. Fewer high-pressure trips, more capacity – and quieter, because the fans can run slower.",
-           "b1": "Become a pilot user", "b2": "Technology in detail",
-           "mail": "mailto:info@forcotech.com?subject=Pilot%20user%20adiabatic%20module",
+           "lead": "Run chillers more reliably, more efficiently and more quietly on hot days – without extra floor space. The adiabatic module in the acoustic enclosure pre-cools the intake air by approx. 6–9 K, so the fans do not have to ramp up.",
+           "b1": "Check my installation", "b2": "Technology in detail",
+           "mail": "mailto:info@forcotech.com?subject=Suitability%20check%20adiabatic%20module&amp;body=Manufacturer%20/%20model%20/%20quantity%3A%0AAir%20flow%20or%20cooling%20capacity%3A%0ANew%20enclosure%20or%20retrofit%3A%0AProblems%20on%20hot%20days%20%28high%20pressure%2C%20capacity%2C%20noise%29%3A%0ALocation%20%28postcode%2C%20country%29%3A%0AName%2C%20company%2C%20phone%3A%0A",
            "facts": [("6–9 K", "cooling at 35 °C / 30 % RH"), ("< 25 Pa", "additional pressure drop (target)"),
                      ("Once-through", "no recirculation, no spray nozzles"), ("A1", "HSA3, non-combustible")]},
     "fr": {"title": "Pré-refroidissement adiabatique dans le caisson acoustique – module adiabatique pour groupes froids | ForCoTech",
            "desc": "Une protection acoustique qui rafraîchit : le module adiabatique intégré au caisson pré-refroidit l’air aspiré des groupes froids et aéroréfrigérants d’environ 6 à 9 K – eau perdue, sans buses, objectif < 25 Pa de perte de charge. Utilisateurs pilotes recherchés.",
            "kicker": "Nouveau · en essai · Module adiabatique",
            "h1": "Une protection acoustique qui rafraîchit – pré-refroidissement adiabatique dans le caisson",
-           "lead": "Par forte chaleur, le module adiabatique pré-refroidit l’air aspiré des groupes froids d’environ 6 à 9 K. Moins de coupures haute pression, plus de puissance – et moins de bruit, car les ventilateurs peuvent tourner moins vite.",
-           "b1": "Devenir utilisateur pilote", "b2": "La technique en détail",
-           "mail": "mailto:info@forcotech.com?subject=Utilisateur%20pilote%20module%20adiabatique",
+           "lead": "Des groupes froids plus fiables, plus efficaces et plus silencieux par forte chaleur – sans surface au sol supplémentaire. Le module adiabatique intégré au caisson pré-refroidit l’air aspiré d’environ 6 à 9 K : les ventilateurs n’ont pas à accélérer.",
+           "b1": "Vérifier mon installation", "b2": "La technique en détail",
+           "mail": "mailto:info@forcotech.com?subject=%C3%89tude%20d%E2%80%99ad%C3%A9quation%20module%20adiabatique&amp;body=Fabricant%20/%20mod%C3%A8le%20/%20quantit%C3%A9%20%3A%0AD%C3%A9bit%20d%E2%80%99air%20ou%20puissance%20frigorifique%20%3A%0ACaisson%20neuf%20ou%20r%C3%A9novation%20%3A%0AProbl%C3%A8mes%20par%20forte%20chaleur%20%28haute%20pression%2C%20puissance%2C%20bruit%29%20%3A%0ALocalisation%20%28code%20postal%2C%20pays%29%20%3A%0ANom%2C%20soci%C3%A9t%C3%A9%2C%20t%C3%A9l%C3%A9phone%20%3A%0A",
            "facts": [("6–9 K", "de refroidissement à 35 °C / 30 % HR"), ("< 25 Pa", "perte de charge supplémentaire (objectif)"),
                      ("Eau perdue", "sans recirculation ni buses"), ("A1", "HSA3, incombustible")]},
 }
 
 # Beschriftungen der Prinzipskizze
 LBL = {
-    "de": {"out": "Außenluft", "out2": "35 °C · 30 % r. F.", "mod": "Adiabatik-Modul", "water": "Wasser, enthärtet",
+    "de": {"out": "Außenluft", "out2": "35 °C · 30 % r. F.", "mod": "Adiabatik-Modul", "water": "Osmosewasser",
            "water2": "Systemtrenner EN 1717", "drain": "Ablauf · Einweg, ohne Umwälzung", "pre": "vorgekühlt",
            "pre2": "≈ 26–29 °C", "hood": "Schallhaube mit HSA3-Innenverkleidung", "coil": "Register",
            "unit": "Kaltwassersatz", "sil": "Abluft-Schalldämpfer", "exh": "Abluft",
            "key": "6–9 K Abkühlung · < 25 Pa zusätzlich (Zielwert)", "title": "Prinzipschnitt Schallhaube mit Adiabatik-Modul"},
-    "en": {"out": "Outdoor air", "out2": "35 °C · 30 % RH", "mod": "Adiabatic module", "water": "Water, softened",
+    "en": {"out": "Outdoor air", "out2": "35 °C · 30 % RH", "mod": "Adiabatic module", "water": "RO water",
            "water2": "Backflow preventer EN 1717", "drain": "Drain · once-through, no recirculation", "pre": "pre-cooled",
            "pre2": "≈ 26–29 °C", "hood": "Acoustic enclosure with HSA3 lining", "coil": "Coil",
            "unit": "Chiller", "sil": "Exhaust silencer", "exh": "Exhaust air",
            "key": "6–9 K cooling · < 25 Pa additional (target)", "title": "Schematic section of an acoustic enclosure with adiabatic module"},
-    "fr": {"out": "Air extérieur", "out2": "35 °C · 30 % HR", "mod": "Module adiabatique", "water": "Eau adoucie",
+    "fr": {"out": "Air extérieur", "out2": "35 °C · 30 % HR", "mod": "Module adiabatique", "water": "Eau osmosée",
            "water2": "Disconnecteur EN 1717", "drain": "Évacuation · eau perdue, sans recirculation", "pre": "pré-refroidi",
            "pre2": "≈ 26–29 °C", "hood": "Caisson acoustique avec revêtement HSA3", "coil": "Batterie",
            "unit": "Groupe froid", "sil": "Silencieux d’air rejeté", "exh": "Air rejeté",
@@ -129,7 +129,7 @@ def build():
         (ROOT / SVG[lang]).write_text(svg(lang), encoding="utf-8")
         (ROOT / ISO[lang]).write_text(iso.svg(lang), encoding="utf-8")
         t = TXT[lang]
-        frag = (ROOT / "adiabatik" / "_src" / f"{lang}.html").read_text(encoding="utf-8")
+        frag = (ROOT / "adiabatik" / "_src" / f"{lang}.html").read_text(encoding="utf-8").replace("{{MAIL}}", t["mail"])
         facts = "".join(f"<div><b>{bn.e(b)}</b><span>{bn.e(s)}</span></div>" for b, s in t["facts"])
         main = f"""<div class="hero">
   <div class="wrap hg">

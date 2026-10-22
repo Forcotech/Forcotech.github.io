@@ -49,8 +49,8 @@
   <div class="wrap hg">
     <div>
       <span class="kicker">ForCoTech · Silent-Mode</span>
-      <h1>Acoustic enclosures for heat pumps and HVAC systems</h1>
-      <p class="lead">Quiet for the neighbours – without throttling the unit. For heat pumps, chillers, VRF, PV inverters and BESS, individually engineered.</p>
+      <h1><span class="claim"><span>Quiet for the neighbours.</span><em>Performance for the unit.</em></span><span class="what">Acoustic enclosures for heat pumps and HVAC systems</span></h1>
+      <p class="lead">For heat pumps, chillers, VRF, PV inverters and BESS – individually engineered, built with Absora technology.</p>
       <ul class="proof">
         <li><b>Proof before you order:</b> level at the receiver point calculated in advance (TA Lärm)</li>
         <li><b>Max. 3–5 % performance loss:</b> airflow engineered with CFD</li>
@@ -208,13 +208,44 @@
 
 <section id="contact">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact has-form">
       <div>
-        <h2>Start your project</h2>
-        <p>Send us the unit type, quantity and location – or size your enclosure straight away in the configurator. For complex projects you will usually receive a binding quotation within 2–3 days.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/">Open the configurator</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Enquiry%20acoustic%20enclosure">info@forcotech.com</a></div>
+        <div class="intro"><h2>Start your project</h2><p>Unit, quantity and location are enough to start – with a data sheet we can check dimensions, air volume and sound power straight away. For complex projects you will usually receive a binding quotation within 2–3 days.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Company<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Phone<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <div class="row">
+            <label class="f">Unit (manufacturer / model)<input id="q_unit" placeholder="e.g. York YMAE0260"></label>
+            <label class="f">Number of units<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Project location (postcode / town)<input id="q_place"></label>
+          <label class="f">Message<textarea id="q_msg" rows="3" placeholder="e.g. night-time limit, distance to neighbours, rooftop installation, schedule …"></textarea></label>
+          <label class="f">Data sheet, drawing or photo (optional · PDF or image, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Privacy information for this enquiry</summary><p><b>Controller:</b> Silent Engineering di Romolo Vicari (brand ForCoTech), Via Trento 22, 23875 Osnago (LC), Italy · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Purpose:</b> we use your details and any attached data sheet solely to handle your enquiry and prepare a quotation. Where necessary, we pass the technical project data to our manufacturing partner; no disclosure for advertising.</p><p><b>Transmission:</b> via the form service FormSubmit (formsubmit.co), which forwards the enquiry by e-mail to info@forcotech.com; processing outside the EU is possible. Legal basis: Art. 6(1)(b) GDPR and your consent (Art. 6(1)(a), Art. 49(1)(a) GDPR), revocable at any time. Alternatively, contact us directly by e-mail.</p><p><b>Retention and rights:</b> deletion once the enquiry is closed, or after the statutory periods if a contract is concluded. Access, rectification, erasure, objection and withdrawal informally to info@forcotech.com. More in the <a href="/en/privacy/">privacy policy</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>I agree that my details are stored and processed to handle the enquiry and transmitted for this purpose via FormSubmit (see <a href="/en/privacy/">privacy policy</a>). I can withdraw my consent at any time. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Send enquiry</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Thank you for your enquiry!</b><br>We usually get back to you within 2–3 working days.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Copy text</button><a class="btn ghost" id="qMail" href="#">Open in e-mail program</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
       </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>Brands ForCoTech and Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>Email: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+      <div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Brands ForCoTech and Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>Email: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Prefer to size it yourself?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/">Open the configurator</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -229,5 +260,6 @@
 <script>document.querySelectorAll('.yt').forEach(function(f){f.querySelector('.yt-play').addEventListener('click',function(){var i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+f.dataset.id+'?autoplay=1&rel=0';i.title=this.getAttribute('aria-label');i.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';i.allowFullscreen=true;this.replaceWith(i);});});</script>
 <script>(function(){var v=document.querySelector('.hero-video video');if(v&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}})();</script>
 <script>document.querySelectorAll('.ab').forEach(function(c){var a=c.querySelector('audio'),st=c.querySelector('.ab-state'),bars=c.querySelectorAll('.ab-bar i');function u(){var seg=Math.floor(a.currentTime/3),on=seg%2===1;st.textContent=on?st.dataset.on:st.dataset.off;st.classList.toggle('on',on);bars.forEach(function(b,i){b.classList.toggle('cur',i===seg&&!a.paused);});}a.addEventListener('timeupdate',u);a.addEventListener('pause',u);a.addEventListener('play',function(){document.querySelectorAll('.ab audio').forEach(function(o){if(o!==a)o.pause();});});});</script>
+<script src="/anfrage.js" defer></script>
 </body>
 </html>

@@ -57,3 +57,10 @@ Menüpunkte „Lösungen“ und „HSA3“ stehen in tools/build_news.py (nav) u
 /leitfaden/ (nur Deutsch, handgeschriebene Seite) mit Download `downloads/forcotech-leitfaden-schallschutz-hvac.pdf`.
 Das PDF ist die auf das ForCoTech-Layout (schwarz/rot, Logo, forcotech.com) umgestellte Fassung des Leitfadens
 von Silent Engineering; Umstellskript liegt außerhalb des Repositorys.
+
+## Startseite: Claim und Anfrageformular
+
+Claim im Kopf („Ruhe für die Nachbarn. Leistung für die Anlage.“, mit Suchbegriff-Zeile im selben <h1>) und das
+Anfrageformular im Kontaktbereich der Startseiten DE/EN/FR setzt `python3 tools/startseite_anfrage.py` (Texte im Skript,
+wiederholbar). Versandlogik `anfrage.js` (FormSubmit, gleicher Zugang wie der Konfigurator, Empfänger info@forcotech.com;
+bei Fehler Text zum Kopieren bzw. als E-Mail), Gestaltung am Ende von `style.css`.

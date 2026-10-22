@@ -370,3 +370,36 @@ section.alt .solcard{background:var(--bg)}
 /* Adiabatik-Modul (/adiabatik/) */
 .ad-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0}
 .ad-tags span{background:var(--accent-l);color:var(--accent-d);font-weight:600;font-size:14.5px;border-radius:999px;padding:5px 14px}
+
+/* Startseite: Claim im Kopf */
+h1 .claim{display:block;font-size:clamp(34px,3.6vw,50px);line-height:1.04;letter-spacing:-.03em}
+h1 .claim span,h1 .claim em{display:block;text-wrap:balance}
+h1 .claim em{font-style:normal;color:var(--accent)}
+h1 .what{display:block;margin-top:14px;font-size:clamp(17px,1.7vw,20px);line-height:1.35;letter-spacing:0;font-weight:700;color:var(--muted)}
+
+/* Startseite: Anfrageformular */
+.contact.has-form{align-items:start;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.contact.has-form .intro{margin-bottom:18px}
+.qf{display:grid;gap:12px}
+.qf .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:600px){.qf .row{grid-template-columns:1fr}}
+.qf label.f{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600;color:var(--ink)}
+.qf input,.qf textarea,.qf select{font:inherit;font-weight:400;font-size:15px;color:var(--ink);background:#fff;border:1px solid #e3b9be;border-radius:8px;padding:10px 12px;width:100%}
+.qf input:focus,.qf textarea:focus,.qf select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.qf input[type=file]{padding:8px;font-size:14px}
+.qf .hint{font-size:13px;font-weight:400;color:var(--muted)}
+.qf details.privacy{font-size:13.5px;color:var(--muted);background:#fff;border:1px solid #f0d2d5;border-radius:8px;padding:8px 12px}
+.qf details.privacy summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.qf details.privacy p{margin:8px 0 0}
+.qf .chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:400}
+.qf .chk input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--accent)}
+.qf .err{display:none;color:var(--accent-d);font-weight:600;font-size:14px}
+.qf button.btn{cursor:pointer;font:inherit;font-weight:700}
+.qf button.btn[disabled]{opacity:.6;cursor:wait}
+.qf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.qthanks{display:none;background:#fff;border:1px solid #f0d2d5;border-radius:10px;padding:18px}
+.qready{background:#fff;border:1px solid #f0d2d5;border-radius:10px;padding:16px;display:grid;gap:10px}
+.qready[hidden]{display:none}
+.qready textarea{font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;width:100%;border:1px solid var(--line);border-radius:8px;padding:10px}
+.contact.has-form address{border-top:0}
+@media (max-width:760px){.contact.has-form{grid-template-columns:1fr}}

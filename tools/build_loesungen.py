@@ -191,11 +191,11 @@ HSA3 = {
 
 OVERVIEW = {
     "de": {"title": "Lösungen – Schallschutz für Wärmepumpen, VRF, Chiller, Wechselrichter, BESS und Schallwände | ForCoTech",
-           "desc": "Schallhauben und Schallwände nach Anwendung: Wärmepumpen und Klimaanlagen, VRF/VRV, Kaltwassersätze und Großwärmepumpen, PV-Wechselrichter und Batteriespeicher – jeweils direkt mit Richtpreis im Konfigurator.",
+           "desc": "Schallhauben und Schallwände nach Anwendung: Wärmepumpen und Klimaanlagen, VRF/VRV, Kaltwassersätze und Großwärmepumpen, PV-Wechselrichter und Batteriespeicher – jeweils direkt mit dem passenden Konfigurator verknüpft.",
            "kicker": "Lösungen", "h1": "Schallschutz nach Anwendung",
            "lead": "Jede Anlage klingt anders – ein Verdichter brummt, ein Wechselrichter pfeift, ein Chiller rauscht mit 300.000 m³/h. Wählen Sie Ihre Anwendung: Sie finden die passende Bauweise und kommen direkt in den richtigen Teil des Konfigurators."},
     "en": {"title": "Solutions – noise control for heat pumps, VRF, chillers, inverters, BESS and noise barriers | ForCoTech",
-           "desc": "Acoustic enclosures and noise barriers by application: heat pumps and AC, VRF/VRV, chillers and large heat pumps, PV inverters and battery storage – each linked straight to a guide price in the configurator.",
+           "desc": "Acoustic enclosures and noise barriers by application: heat pumps and AC, VRF/VRV, chillers and large heat pumps, PV inverters and battery storage – each linked straight to the matching configurator.",
            "kicker": "Solutions", "h1": "Noise control by application",
            "lead": "Every unit sounds different – a compressor hums, an inverter whines, a chiller roars with 300,000 m³/h. Choose your application: you will find the right construction and go straight to the matching part of the configurator."},
 }

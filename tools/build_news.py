@@ -21,6 +21,7 @@ Erzeugt bzw. aktualisiert:
 
 Option --alle nimmt auch Entwürfe mit (nur für lokale Vorschau, nicht veröffentlichen).
 """
+from startseite_anfrage import form_section  # Anfrageformular (gleich wie Startseite)
 import html, json, re, sys
 from datetime import date
 from pathlib import Path
@@ -152,7 +153,7 @@ def teaser_section(posts, lang):
 </section>"""
 
 
-def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, canon_abs=None):
+def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, canon_abs=None, typ=None):
     """alts: {Sprache: Pfad} aller Fassungen dieser Seite, inkl. der eigenen."""
     L = T[lang]
     canon = alts[lang]
@@ -164,7 +165,9 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
         f'<a class="opt" href="{h if h.startswith("/") else L["home"] + h}">{n}</a>' for h, n in L["nav"])
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""
     it, al = COUNTRY[lang]
-    cta_html = (CTA.format(L=L, it=it, mail="E-mail" if lang == "fr" else "E-Mail") if cta else "")
+    cta_html = (form_section(lang) + "\n" if cta else "")
+    body_typ = f' data-anfrage-typ="{typ}"' if typ else ""
+    form_js = '<script src="/anfrage.js" defer></script>\n' if cta else ""
     return f"""<!doctype html>
 <!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
 <!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
@@ -188,7 +191,7 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
 <link rel="stylesheet" href="/style.css">
 {extra_head}
 </head>
-<body>
+<body{body_typ}>
 <a class="skip" href="#main">{L["skip"]}</a>
 <header class="top">
   <div class="wrap">
@@ -211,7 +214,7 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
     <span><a href="{L['imprint_url']}">{L["imprint"]}</a> · <a href="{L['privacy_url']}">{L["privacy"]}</a> · {foot_lang}</span>
   </div>
 </footer>
-</body>
+{form_js}</body>
 </html>
 """
 

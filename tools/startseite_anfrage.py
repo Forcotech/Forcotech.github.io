@@ -11,6 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 L = {
  "index.html": dict(
+  typ_l="Anlagentyp", typ_o='<option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option>',
   sec="kontakt",
   claim="<span>Ruhe für die Nachbarn.</span><em>Leistung für die Anlage.</em>",
   what="Schallhauben für Wärmepumpen und HVAC-Anlagen",
@@ -34,6 +35,7 @@ L = {
   addr="<b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a><br>Web: <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
  ),
  "en/index.html": dict(
+  typ_l="Equipment type", typ_o='<option value="">please select</option><option value="wp">Heat pump / AC unit</option><option value="gross">Chiller / large heat pump / dry cooler</option><option value="vrf">VRF/VRV outdoor unit</option><option value="pv">PV inverter</option><option value="bess">Battery storage (BESS)</option><option value="dc">Data centre</option><option value="wand">Noise barrier</option><option value="sonst">Other</option>',
   sec="contact",
   claim="<span>Quiet for the neighbours.</span><em>Performance for the unit.</em>",
   what="Acoustic enclosures for heat pumps and HVAC systems",
@@ -57,6 +59,7 @@ L = {
   addr="<b>Silent Engineering di Romolo Vicari</b><br>Brands ForCoTech and Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>Email: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a><br>Web: <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
  ),
  "fr/index.html": dict(
+  typ_l="Type d’installation", typ_o='<option value="">veuillez choisir</option><option value="wp">Pompe à chaleur / climatiseur</option><option value="gross">Groupe froid / grande PAC / aéroréfrigérant</option><option value="vrf">Unité extérieure VRF/VRV</option><option value="pv">Onduleur PV</option><option value="bess">Stockage par batteries (BESS)</option><option value="dc">Centre de données</option><option value="wand">Écran acoustique</option><option value="sonst">Autre</option>',
   sec="contact",
   claim="<span>Le calme pour les voisins.</span><em>La performance pour l’appareil.</em>",
   what="Caissons acoustiques pour pompes à chaleur et installations CVC",
@@ -95,6 +98,7 @@ FORM = """<section id="{sec}">
             <label class="f">{email}<input id="q_email" type="email" required autocomplete="email"></label>
             <label class="f">{phone}<input id="q_phone" type="tel" autocomplete="tel"></label>
           </div>
+          <label class="f">{typ_l}<select id="q_typ">{typ_o}</select></label>
           <div class="row">
             <label class="f">{unit}<input id="q_unit" placeholder="{unit_ph}"></label>
             <label class="f">{count}<input id="q_count" inputmode="numeric"></label>
@@ -125,14 +129,35 @@ FORM = """<section id="{sec}">
   </div>
 </section>"""
 
-for f, t in L.items():
-    p = ROOT / f
-    s = p.read_text(encoding="utf-8")
-    h1 = f'<h1><span class="claim">{t["claim"]}</span><span class="what">{t["what"]}</span></h1>\n      <p class="lead">{t["lead"]}</p>'
-    s, n1 = re.subn(r'<h1>.*?</h1>\s*<p class="lead">.*?</p>', h1, s, count=1, flags=re.S)
-    s, n2 = re.subn(r'<section id="' + t["sec"] + r'">.*?</section>', FORM.format(**t), s, count=1, flags=re.S)
-    if 'src="/anfrage.js"' not in s:
-        s = s.replace("</body>", '<script src="/anfrage.js" defer></script>\n</body>', 1)
-    assert n1 == 1 and n2 == 1, (f, n1, n2)
-    p.write_text(s, encoding="utf-8")
-    print("ok", f)
+LANGFILE = {"de": "index.html", "en": "en/index.html", "fr": "fr/index.html"}
+SUBTXT = {
+ "de": ("Projekt anfragen", "Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen; Sonderanfertigungen liefern wir meist 40–60 Tage nach Bestellung."),
+ "en": ("Request a project", "Unit, quantity and location are enough to start – with a data sheet we can check dimensions, air volume and sound power straight away. For complex projects you will usually receive a binding quotation within 2–3 days; custom enclosures are usually delivered 40–60 days after order."),
+ "fr": ("Demander un projet", "L’appareil, le nombre et le lieu d’implantation suffisent pour commencer – avec la fiche technique, nous vérifions directement dimensions, débit d’air et puissance acoustique. Pour les projets complexes, vous recevez en général une offre ferme sous 2 à 3 jours ; les caissons sur mesure sont livrés en général 40 à 60 jours après la commande."),
+}
+
+
+def form_section(lang, sec="anfrage"):
+    """Formular-Abschnitt für Unterseiten (tools/build_news.py → page())."""
+    t = dict(L[LANGFILE[lang]])
+    t["sec"] = sec
+    t["h2"], t["intro"] = SUBTXT[lang]
+    return FORM.format(**t)
+
+
+def main():
+  for f, t in L.items():
+      p = ROOT / f
+      s = p.read_text(encoding="utf-8")
+      h1 = f'<h1><span class="claim">{t["claim"]}</span><span class="what">{t["what"]}</span></h1>\n      <p class="lead">{t["lead"]}</p>'
+      s, n1 = re.subn(r'<h1>.*?</h1>\s*<p class="lead">.*?</p>', h1, s, count=1, flags=re.S)
+      s, n2 = re.subn(r'<section id="' + t["sec"] + r'">.*?</section>', FORM.format(**t), s, count=1, flags=re.S)
+      if 'src="/anfrage.js"' not in s:
+          s = s.replace("</body>", '<script src="/anfrage.js" defer></script>\n</body>', 1)
+      assert n1 == 1 and n2 == 1, (f, n1, n2)
+      p.write_text(s, encoding="utf-8")
+      print("ok", f)
+
+
+if __name__ == "__main__":
+    main()

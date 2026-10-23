@@ -20,14 +20,14 @@ TXT = {
            "h1": "Schallhauben für Wärmepumpen in Wohngebäuden – Standard H1–H12 und nach Maß",
            "lead": "Für Wärmepumpen und Klimageräte im Ein- und Mehrfamilienhaus. Bis zu −25 dB(A) leiser, ohne die Anlage auszubremsen – für Fachbetriebe, Anlagenbauer und Verwalter.",
            "b1": "Haube konfigurieren – mit Richtpreis", "b2": "Maßanfertigung anfragen",
-           "mail": "mailto:info@forcotech.com?subject=Ma%C3%9Fanfertigung%20Schallhaube"},
+           "mail": "#anfrage"},
     "en": {"title": "SilentMode H-Series – acoustic enclosures for heat pumps in residential buildings, standard and custom-made | ForCoTech",
            "desc": "Acoustic enclosures H1–H12 for heat pumps and air-conditioning units at single and multi-family homes: −10, −18 or −25 dB(A), max. 4 m/s, R290-ready, aluminium in any RAL colour – also custom-made. Guide price in the configurator.",
            "kicker": "Small units · SilentMode H-Series",
            "h1": "Acoustic enclosures for heat pumps in residential buildings – standard H1–H12 and custom-made",
            "lead": "For heat pumps and air-conditioning units at single and multi-family homes. Up to −25 dB(A) quieter without holding the unit back – for installers, contractors and property managers.",
            "b1": "Configure an enclosure – with guide price", "b2": "Request a custom enclosure",
-           "mail": "mailto:info@forcotech.com?subject=Custom-made%20acoustic%20enclosure"},
+           "mail": "#anfrage"},
 }
 
 
@@ -55,7 +55,7 @@ def build():
 {frag}"""
         head = f'<script type="application/ld+json">{faq_ld(frag, lang)}</script>'
         bn.write(URL[lang][1:] + "index.html",
-                 bn.page(lang, t["title"], t["desc"], dict(URL), main, extra_head=head))
+                 bn.page(lang, t["title"], t["desc"], dict(URL), main, extra_head=head, typ="wp"))
     print("H-Serie-Seiten gebaut")
 
 

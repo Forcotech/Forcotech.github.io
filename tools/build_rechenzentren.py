@@ -28,7 +28,7 @@ TXT = {
            "h1": "Schallschutz für Kalt&shy;wasser&shy;sätze auf dem Rechen&shy;zentrums&shy;dach – ultraleicht, A1, innerhalb der Druckreserve",
            "lead": "Freistehende Acoustic Packs für Chiller mit 20 und mehr Ventilatoren. Gebaut mit ABSORA-HSA3-Technologie: Metallakustik statt Mineralwolle, Helmholtz-Röhrenschalldämpfer direkt über den Ventilatoren.",
            "b1": "Projekt anfragen", "b2": "Technik im Detail",
-           "mail": "mailto:info@forcotech.com?subject=Anfrage%20Acoustic%20Pack%20Rechenzentrum",
+           "mail": "#anfrage",
            "alt": "Acoustic Packs von ForCoTech: zwei freistehende Schallhauben aus Metallpaneelen mit Dachschalldämpfern über den Kaltwassersätzen eines Rechenzentrums – Visualisierung"},
     "en": {"title": "Noise control for data centres – acoustic packs for chillers and dry coolers | ForCoTech",
            "desc": "Free-standing acoustic packs for chillers on data-centre roofs: Helmholtz tube silencers above the fans, HSA3 inner lining A1, pressure drop within the unit reserve, approx. 13 kg/m².",
@@ -36,7 +36,7 @@ TXT = {
            "h1": "Noise control for chillers on the data&shy;centre roof – ultra-light, A1, within the pressure reserve",
            "lead": "Free-standing acoustic packs for chillers with 20 or more fans. Built with ABSORA HSA3 technology: metal acoustics instead of mineral wool, Helmholtz tube silencers directly above the fans.",
            "b1": "Request a project", "b2": "Technology in detail",
-           "mail": "mailto:info@forcotech.com?subject=Enquiry%20acoustic%20pack%20data%20centre",
+           "mail": "#anfrage",
            "alt": "ForCoTech acoustic packs: two free-standing metal-panel enclosures with roof silencers over the chillers of a data centre – visualisation"},
     "fr": {"title": "Protection acoustique pour centres de données – acoustic packs pour groupes froids et aéroréfrigérants | ForCoTech",
            "desc": "Acoustic packs autoportants pour groupes froids en toiture de centres de données : silencieux tubulaires de Helmholtz au-dessus des ventilateurs, revêtement intérieur HSA3 A1, perte de charge dans la réserve de l’appareil, environ 13 kg/m².",
@@ -44,7 +44,7 @@ TXT = {
            "h1": "Protection acoustique des groupes froids sur le toit des centres de données – ultra&shy;léger, A1, dans la réserve de pression",
            "lead": "Acoustic packs autoportants pour groupes froids de 20 ventilateurs et plus. Réalisés avec la technologie ABSORA HSA3&nbsp;: acoustique métallique au lieu de laine minérale, silencieux tubulaires de Helmholtz directement au-dessus des ventilateurs.",
            "b1": "Demander un projet", "b2": "La technique en détail",
-           "mail": "mailto:info@forcotech.com?subject=Demande%20acoustic%20pack%20centre%20de%20donn%C3%A9es",
+           "mail": "#anfrage",
            "alt": "Acoustic packs ForCoTech : deux caissons autoportants en panneaux métalliques avec silencieux en toiture au-dessus des groupes froids d’un centre de données – visualisation"},
 }
 
@@ -124,7 +124,7 @@ def build():
 {frag}"""
         head = f'<script type="application/ld+json">{faq_ld(frag, lang)}</script>'
         bn.write(URL[lang][1:] + "index.html",
-                 bn.page(lang, t["title"], t["desc"], dict(URL), main, og_image=IMG, extra_head=head))
+                 bn.page(lang, t["title"], t["desc"], dict(URL), main, og_image=IMG, extra_head=head, typ="dc"))
     print("Rechenzentren-Seiten gebaut (de, en, fr)")
 
 

@@ -64,3 +64,7 @@ Claim im Kopf („Ruhe für die Nachbarn. Leistung für die Anlage.“, mit Such
 Anfrageformular im Kontaktbereich der Startseiten DE/EN/FR setzt `python3 tools/startseite_anfrage.py` (Texte im Skript,
 wiederholbar). Versandlogik `anfrage.js` (FormSubmit, gleicher Zugang wie der Konfigurator, Empfänger info@forcotech.com;
 bei Fehler Text zum Kopieren bzw. als E-Mail), Gestaltung am Ende von `style.css`.
+Dasselbe Formular steht seit 23.10.2026 als Abschluss auf allen Unterseiten (Abschnitt `#anfrage`, aus `form_section()` in
+`tools/startseite_anfrage.py`, eingebunden über `page()` in tools/build_news.py). Vorauswahl „Anlagentyp“: `page(..., typ="pv")`
+setzt `data-anfrage-typ` am <body>; Knöpfe mit `href="#anfrage" data-typ="bess"` wählen beim Klick um.
+Hinweis: tools/build_legal.py ist älter als die live Datenschutzerklärung (YouTube-Absatz) – vor erneutem Ausführen abgleichen.

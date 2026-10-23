@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How loud may my heat pump be at the neighbour's window at night?", "acceptedAnswer": {"@type": "Answer", "text": "In Germany the TA Lärm applies. At night the limits at the neighbour's window are 35 dB(A) in purely residential areas, 40 dB(A) in general residential areas and 45 dB(A) in mixed or village areas. For heat pumps it is recommended to stay at least 6 dB below that. Other countries have their own rules; the configurator calculates the level at the neighbour's window with and without the enclosure."}}, {"@type": "Question", "name": "Does the heat pump lose performance inside the enclosure?", "acceptedAnswer": {"@type": "Answer", "text": "Not if the air routing is right. All grilles are designed for a maximum of 4 m/s and the suction and pressure chambers are separated. The configurator shows the pressure drop of the enclosure and compares it with the fan's pressure reserve. If it is close to the limit, please check with the unit manufacturer."}}, {"@type": "Question", "name": "What if no standard size fits?", "acceptedAnswer": {"@type": "Answer", "text": "Then we build the enclosure to measure. The configurator detects this automatically and sends us everything we need for the design with your enquiry: unit, air flow, sound power, location and required level reduction."}}, {"@type": "Question", "name": "Is the enclosure suitable for heat pumps with R290 (propane)?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The enclosure has no floor and the base profiles have through-flow openings. In case of a leak the heavy refrigerant flows away at ground level instead of building up inside the enclosure. Keep the protection zone specified by the unit manufacturer as usual."}}, {"@type": "Question", "name": "Can I reach the unit for maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every enclosure has removable service doors, the twin enclosure one per unit. The enclosure does not have to be dismantled for maintenance or repairs."}}, {"@type": "Question", "name": "Do two heat pumps fit into one enclosure?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, as a twin enclosure for two units side by side, 800 mm apart. The configurator then uses the air flow and sound power of both units."}}, {"@type": "Question", "name": "Which colours are available?", "acceptedAnswer": {"@type": "Answer", "text": "The panels are powder-coated in any RAL colour. The frame is anodised as standard and can also be RAL-coated for a surcharge."}}]}</script>
 </head>
-<body>
+<body data-anfrage-typ="wp">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
@@ -48,7 +48,7 @@
     <span class="kicker">Small units · SilentMode H-Series</span>
     <h1 class="nh">Acoustic enclosures for heat pumps in residential buildings – standard H1–H12 and custom-made</h1>
     <p class="sub">For heat pumps and air-conditioning units at single and multi-family homes. Up to −25 dB(A) quieter without holding the unit back – for installers, contractors and property managers.</p>
-    <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/h-serie/">Configure an enclosure – with guide price</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Custom-made%20acoustic%20enclosure">Request a custom enclosure</a></div>
+    <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/h-serie/">Configure an enclosure – with guide price</a><a class="btn ghost" href="#anfrage">Request a custom enclosure</a></div>
   </div>
 </section>
 <section class="gallery-sec">
@@ -86,7 +86,7 @@
       <h2>H1–H12 – or made to fit your unit exactly</h2>
       <p class="sub">Twelve standard sizes cover the usual outdoor units of heat pumps and air-conditioning systems at single and multi-family homes. You get the guide price straight away, plus sketch, BIM model and specification text.</p>
       <p>If no standard size fits – because the unit is larger, needs more air or more reduction is required – we build the enclosure to measure. The configurator shows this directly and sends us your unit data, the required level reduction and the installation situation. We review it and come back with a quotation.</p>
-      <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/h-serie/">Configure the H&#8209;Series</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Custom-made%20acoustic%20enclosure">Request a custom enclosure</a></div>
+      <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/h-serie/">Configure the H&#8209;Series</a><a class="btn ghost" href="#anfrage" data-typ="wp">Request a custom enclosure</a></div>
     </div>
     <div class="stats">
       <div><b>H1–H12</b><span>standard sizes for units up to approx. 1,150 × 1,650 mm</span></div>
@@ -150,15 +150,47 @@
   </div>
 </section>
 
-<section>
+<section id="anfrage">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact has-form">
       <div>
-        <h2>Request a project</h2>
-        <p>Send us the unit type, quantity and location – or size your enclosure straight away in the configurator.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/">Open configurator</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+        <div class="intro"><h2>Request a project</h2><p>Unit, quantity and location are enough to start – with a data sheet we can check dimensions, air volume and sound power straight away. For complex projects you will usually receive a binding quotation within 2–3 days; custom enclosures are usually delivered 40–60 days after order.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Company<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Phone<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Equipment type<select id="q_typ"><option value="">please select</option><option value="wp">Heat pump / AC unit</option><option value="gross">Chiller / large heat pump / dry cooler</option><option value="vrf">VRF/VRV outdoor unit</option><option value="pv">PV inverter</option><option value="bess">Battery storage (BESS)</option><option value="dc">Data centre</option><option value="wand">Noise barrier</option><option value="sonst">Other</option></select></label>
+          <div class="row">
+            <label class="f">Unit (manufacturer / model)<input id="q_unit" placeholder="e.g. York YMAE0260"></label>
+            <label class="f">Number of units<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Project location (postcode / town)<input id="q_place"></label>
+          <label class="f">Message<textarea id="q_msg" rows="3" placeholder="e.g. night-time limit, distance to neighbours, rooftop installation, schedule …"></textarea></label>
+          <label class="f">Data sheet, drawing or photo (optional · PDF or image, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Privacy information for this enquiry</summary><p><b>Controller:</b> Silent Engineering di Romolo Vicari (brand ForCoTech), Via Trento 22, 23875 Osnago (LC), Italy · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Purpose:</b> we use your details and any attached data sheet solely to handle your enquiry and prepare a quotation. Where necessary, we pass the technical project data to our manufacturing partner; no disclosure for advertising.</p><p><b>Transmission:</b> via the form service FormSubmit (formsubmit.co), which forwards the enquiry by e-mail to info@forcotech.com; processing outside the EU is possible. Legal basis: Art. 6(1)(b) GDPR and your consent (Art. 6(1)(a), Art. 49(1)(a) GDPR), revocable at any time. Alternatively, contact us directly by e-mail.</p><p><b>Retention and rights:</b> deletion once the enquiry is closed, or after the statutory periods if a contract is concluded. Access, rectification, erasure, objection and withdrawal informally to info@forcotech.com. More in the <a href="/en/privacy/">privacy policy</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>I agree that my details are stored and processed to handle the enquiry and transmitted for this purpose via FormSubmit (see <a href="/en/privacy/">privacy policy</a>). I can withdraw my consent at any time. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Send enquiry</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Thank you for your enquiry!</b><br>We usually get back to you within 2–3 working days.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Copy text</button><a class="btn ghost" id="qMail" href="#">Open in e-mail program</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
       </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+      <div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Brands ForCoTech and Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>Email: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Prefer to size it yourself?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/">Open the configurator</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -170,5 +202,6 @@
     <span><a href="/en/legal-notice/">Legal notice</a> · <a href="/en/privacy/">Privacy</a> · <a href="/h-serie/" lang="de">Deutsch</a></span>
   </div>
 </footer>
+<script src="/anfrage.js" defer></script>
 </body>
 </html>

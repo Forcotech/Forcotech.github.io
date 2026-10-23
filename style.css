@@ -427,3 +427,9 @@ section.dark .gallery figcaption{color:var(--d-muted)}
 .tech-peek.dark .tag{background:#3a1519;color:#ff8a93}
 .tech-peek.dark .more{color:var(--d-link)}
 .tech-peek.dark img{border-radius:8px}
+figure.ph{margin:0}
+figure.ph img{width:100%;height:auto;display:block;border-radius:12px}
+figure.ph figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+section.dark figure.ph figcaption{color:var(--d-muted)}
+section.dark .ab .note{margin-top:12px}
+.qf select{appearance:auto}

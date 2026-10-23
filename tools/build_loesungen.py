@@ -27,15 +27,17 @@ E = html.escape
 UI = {
     "de": {"home": "/", "home_n": "Start", "sol": "/loesungen/", "sol_n": "Lösungen", "crumb": "Brotkrumen-Navigation",
            "rel_h": "Weitere Lösungen", "rel_more": "Zur Lösung →", "hsa3_more": "HSA3 im Detail →",
-           "ask": "mailto:info@forcotech.com?subject=", "ask_b": "Projekt anfragen",
+           "ask": "#anfrage", "ask_b": "Projekt anfragen",
            "hsa3_tag": "Material", "hsa3_h": "HSA3 – das Material in jeder Haube",
            "hsa3_p": "Meta-Akustik-Metall statt Mineralwolle: nicht brennbar A1, witterungsfest, stark bei tiefen Tönen."},
     "en": {"home": "/en/", "home_n": "Home", "sol": "/en/solutions/", "sol_n": "Solutions", "crumb": "Breadcrumb",
            "rel_h": "More solutions", "rel_more": "View solution →", "hsa3_more": "HSA3 in detail →",
-           "ask": "mailto:info@forcotech.com?subject=", "ask_b": "Request a project",
+           "ask": "#anfrage", "ask_b": "Request a project",
            "hsa3_tag": "Material", "hsa3_h": "HSA3 – the material in every enclosure",
            "hsa3_p": "Acoustic meta-metal instead of mineral wool: non-combustible A1, weatherproof, strong at low frequencies."},
 }
+
+TYP = {"waermepumpen": "wp", "vrf": "vrf", "grossanlagen": "gross", "wechselrichter": "pv", "schallwand": "wand"}  # Vorauswahl Anlagentyp im Formular
 
 # Reihenfolge = Reihenfolge in Übersicht und „Weitere Lösungen“
 PAGES = {
@@ -70,20 +72,20 @@ PAGES = {
         "cfg": {"de": K + "vrf/", "en": K + "en/vrf/"},
         "de": {"nav": "VRF/VRV-Anlagen", "tag": "V-Serie · Standardprodukt",
                "title": "Schallhauben für VRF/VRV-Außengeräte – Daikin, Mitsubishi Electric, Panasonic, LG u. a. | ForCoTech",
-               "desc": "Standard-Schallhauben passend zum VRF/VRV-Außengerät: Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier. Ca. −15 bzw. −20 dB(A), Festpreise im Katalog, auch für Modulkombinationen.",
+               "desc": "Standard-Schallhauben passend zum VRF/VRV-Außengerät: Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier. Ca. −15 bzw. −20 dB(A), Listenpreise im Katalog, auch für Modulkombinationen.",
                "h1": "Schallhauben für VRF/VRV-Außengeräte – passend zum Gerätemodell",
-               "lead": "VRF-Systeme stehen oft auf dem Dach von Büros, Hotels und Praxen – mitten zwischen Fenstern. Unsere V-Serie gibt es als Standardhaube zum jeweiligen Außengerät, mit Maßen und Festpreis direkt im Katalog.",
-               "teaser": "Standardhauben nach Gerätemodell für Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba und Haier – mit Festpreis.",
+               "lead": "VRF-Systeme stehen oft auf dem Dach von Büros, Hotels und Praxen – mitten zwischen Fenstern. Unsere V-Serie gibt es als Standardhaube zum jeweiligen Außengerät, mit Maßen und Listenpreis direkt im Katalog.",
+               "teaser": "Standardhauben nach Gerätemodell für Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba und Haier – mit Listenpreis.",
                "alt": "Lange Schallhaube in Braun mit Wartungstüren auf einem Bürodach",
                "b1": "Haube zum Gerätemodell wählen", "subj": "Schallhaube VRF/VRV",
                "facts": [("ca. −15 / −20 dB(A)", "Standard / Premium"), ("7 Hersteller", "Hauben nach Modellnummer"),
-                         ("ab ca. 15.500 €", "netto, Festpreis im Katalog"), ("auch kombiniert", "Haube für Modulkombinationen")]},
+                         ("ab ca. 15.500 €", "netto, Listenpreis im Katalog"), ("auch kombiniert", "Haube für Modulkombinationen")]},
         "en": {"nav": "VRF/VRV systems", "tag": "V-Series · standard product",
                "title": "Acoustic enclosures for VRF/VRV outdoor units – Daikin, Mitsubishi Electric, Panasonic, LG and more | ForCoTech",
-               "desc": "Standard acoustic enclosures matched to the VRF/VRV outdoor unit: Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier. Approx. −15 or −20 dB(A), fixed prices in the catalogue, also for module combinations.",
+               "desc": "Standard acoustic enclosures matched to the VRF/VRV outdoor unit: Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba, Haier. Approx. −15 or −20 dB(A), list prices in the catalogue, also for module combinations.",
                "h1": "Acoustic enclosures for VRF/VRV outdoor units – matched to the model",
-               "lead": "VRF systems often sit on the roofs of offices, hotels and clinics – right between windows. Our V-Series comes as a standard enclosure for each outdoor unit, with dimensions and a fixed price straight from the catalogue.",
-               "teaser": "Standard enclosures by model for Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba and Haier – at fixed prices.",
+               "lead": "VRF systems often sit on the roofs of offices, hotels and clinics – right between windows. Our V-Series comes as a standard enclosure for each outdoor unit, with dimensions and a list price straight from the catalogue.",
+               "teaser": "Standard enclosures by model for Daikin, Mitsubishi Electric, Panasonic, LG, Samsung, Toshiba and Haier – at list prices.",
                "alt": "Long brown acoustic enclosure with service doors on an office roof",
                "b1": "Choose the enclosure for your model", "subj": "Acoustic enclosure VRF/VRV",
                "facts": [("approx. −15 / −20 dB(A)", "Standard / Premium"), ("7 manufacturers", "enclosures by model number"),
@@ -120,24 +122,24 @@ PAGES = {
         "cfg": {"de": K + "pv/", "en": K + "en/pv/"},
         "de": {"nav": "Wechselrichter & BESS", "tag": "PV · Batteriespeicher",
                "title": "Schallschutz für PV-Wechselrichter und Batteriespeicher (BESS) – Schallhauben | ForCoTech",
-               "desc": "Wechselrichter pfeift, Batteriespeicher brummt? Schallhauben für PV-Wechselrichter (Huawei, SMA, Fronius, Sungrow u. a.) als Vorbau oder freistehend für 1–5 Geräte, dazu Einhausungen für BESS – HSA3 nicht brennbar A1.",
+               "desc": "Wechselrichter pfeift, Batteriespeicher brummt? Schallhauben für PV-Wechselrichter (Huawei, SMA, Fronius, Sungrow u. a.) als Vorbau oder freistehend für 1–5 Geräte, dazu Wechselrichter-Einhausungen und Lärmschutz für Batteriespeicher (BESS) – HSA3 nicht brennbar A1.",
                "h1": "PV-Wechselrichter und Batteriespeicher leise machen – und vor Hitze schützen",
-               "lead": "Wechselrichter pfeifen hochfrequent, die Kühlung von Batteriespeichern läuft Tag und Nacht. Unsere Hauben dämpfen genau diese Töne und schützen die Geräte zugleich vor Sonne, Regen und Hagel.",
+               "lead": "Bis zu 20 dB(A) leiser – ohne Hitzestau und mit nicht brennbarem Material. Unsere Hauben dämpfen das hohe Pfeifen der Wechselrichter und das Dauerrauschen der Speicherkühlung und schützen die Geräte zugleich vor Sonne, Regen und Hagel.",
                "teaser": "Vorbau- und freistehende Hauben für 1–5 Wechselrichter, Einhausungen für BESS. Ausgelegt auf 16–18 kHz, A1 nicht brennbar.",
                "alt": "Schematische Darstellung: Vorbau-Schallhaube vor einem Wechselrichter an der Wand mit Zuluft unten und Abluft oben",
-               "b1": "Haube für Wechselrichter wählen", "subj": "Schallhaube Wechselrichter/BESS",
+               "b1": "Haube wählen – Listenpreis sofort", "subj": "Schallhaube Wechselrichter/BESS",
                "facts": [("16–18 kHz", "typische Pegelspitzen – gezielt gedämpft"), ("1 bis 5 Geräte", "Wandmontage oder freistehend"),
-                         ("ab ca. 4.400 €", "netto, Festpreis im Katalog"), ("A1", "nicht brennbar – wichtig am Batteriespeicher")]},
+                         ("ab ca. 4.400 €", "netto, Listenpreis im Katalog"), ("A1", "nicht brennbar – wichtig am Batteriespeicher")]},
         "en": {"nav": "Inverters & BESS", "tag": "PV · battery storage",
                "title": "Noise control for PV inverters and battery storage (BESS) – acoustic enclosures | ForCoTech",
                "desc": "Inverter whining, battery storage humming? Acoustic enclosures for PV inverters (Huawei, SMA, Fronius, Sungrow and more), wall-mounted or free-standing for 1–5 units, plus enclosures for BESS – HSA3 non-combustible A1.",
                "h1": "Quiet PV inverters and battery storage – and protect them from heat",
-               "lead": "Inverters whine at high frequencies, battery storage cooling runs day and night. Our enclosures damp exactly these tones and protect the units from sun, rain and hail at the same time.",
+               "lead": "Up to 20 dB(A) quieter – without heat build-up and with non-combustible material. Our enclosures damp the high whine of inverters and the constant noise of battery storage cooling, and protect the units from sun, rain and hail at the same time.",
                "teaser": "Wall-mounted and free-standing enclosures for 1–5 inverters, enclosures for BESS. Designed for 16–18 kHz, A1 non-combustible.",
                "alt": "Schematic: wall-mounted acoustic enclosure in front of an inverter with air inlet at the bottom and outlet at the top",
-               "b1": "Choose an inverter enclosure", "subj": "Acoustic enclosure inverter/BESS",
+               "b1": "Choose an enclosure – list price instantly", "subj": "Acoustic enclosure inverter/BESS",
                "facts": [("16–18 kHz", "typical peaks – damped specifically"), ("1 to 5 units", "wall-mounted or free-standing"),
-                         ("from approx. €4,400", "net, fixed catalogue price"), ("A1", "non-combustible – key at battery storage")]},
+                         ("from approx. €4,400", "net, catalogue list price"), ("A1", "non-combustible – key at battery storage")]},
     },
     "schallwand": {
         "url": {"de": "/loesungen/schallwaende/", "en": "/en/solutions/noise-barriers/"},
@@ -282,18 +284,18 @@ def build():
             frag = (ROOT / "loesungen" / "_src" / f"{pid}.{lang}.html").read_text(encoding="utf-8")
             ch, cl = crumbs(lang, [(u["sol_n"], u["sol"]), (t["nav"], p["url"][lang])])
             main = hero(lang, t["tag"], t["h1"], t["lead"], t["b1"], p["cfg"][lang], u["ask_b"],
-                        u["ask"] + t["subj"].replace(" ", "%20").replace("/", "%2F"),
+                        u["ask"],
                         pic(p, lang), p["w"], p["h"], t["alt"], t["facts"], ch) + "\n" + frag + "\n" + related(lang, pid)
             fl = faq_ld(frag, lang)
             head = cl + (f'\n<script type="application/ld+json">{fl}</script>' if fl else "")
             bn.write(p["url"][lang][1:] + "index.html",
-                     bn.page(lang, t["title"], t["desc"], dict(p["url"]), main, extra_head=head))
+                     bn.page(lang, t["title"], t["desc"], dict(p["url"]), main, extra_head=head, typ=TYP.get(pid)))
         # HSA3
         t = HSA3[lang]
         frag = (ROOT / "hsa3" / "_src" / f"{lang}.html").read_text(encoding="utf-8")
         ch, cl = crumbs(lang, [(t["nav"], HSA3["url"][lang])])
         cfg = K if lang == "de" else K + "en/"
-        main = hero(lang, t["kicker"], t["h1"], t["lead"], t["b1"], cfg, t["b2"], u["ask"] + t["subj"],
+        main = hero(lang, t["kicker"], t["h1"], t["lead"], t["b1"], cfg, t["b2"], u["ask"],
                     pic(HSA3, lang), HSA3["w"], HSA3["h"], t["alt"], t["facts"], ch) + "\n" + frag + "\n" + related(lang, "hsa3")
         fl = faq_ld(frag, lang)
         head = cl + (f'\n<script type="application/ld+json">{fl}</script>' if fl else "")

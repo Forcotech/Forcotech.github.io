@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Wie laut darf meine Wärmepumpe nachts beim Nachbarn sein?", "acceptedAnswer": {"@type": "Answer", "text": "Maßgeblich ist die TA Lärm. Nachts gelten am Fenster des Nachbarn 35 dB(A) im reinen Wohngebiet, 40 dB(A) im allgemeinen Wohngebiet und 45 dB(A) im Misch- oder Dorfgebiet. Für Wärmepumpen wird empfohlen, mindestens 6 dB unter diesem Wert zu bleiben. Der Konfigurator rechnet den Pegel am Nachbarfenster mit und ohne Haube."}}, {"@type": "Question", "name": "Verliert die Wärmepumpe mit Haube an Leistung?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht, wenn die Luftführung stimmt. Alle Gitter sind auf höchstens 4 m/s ausgelegt, Saug- und Druckraum sind getrennt. Der Konfigurator zeigt den Druckverlust der Haube und vergleicht ihn mit der Druckreserve des Ventilators. Liegt er nah an der Grenze, stimmen Sie das bitte mit dem Gerätehersteller ab."}}, {"@type": "Question", "name": "Was ist, wenn keine Standardgröße passt?", "acceptedAnswer": {"@type": "Answer", "text": "Dann fertigen wir die Haube nach Maß. Der Konfigurator erkennt das automatisch und schickt uns mit der Anfrage alle Daten, die wir für die Auslegung brauchen: Gerät, Luftmenge, Schallleistung, Aufstellort und erforderliche Pegelminderung."}}, {"@type": "Question", "name": "Passt die Haube auch für Wärmepumpen mit R290 (Propan)?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Die Haube hat keinen Boden, und die Bodenprofile haben Durchströmöffnungen. Bei einem Leck fließt das schwere Kältemittel bodennah ab, statt sich in der Haube zu sammeln. Den Schutzbereich nach Angaben des Geräteherstellers halten Sie wie gewohnt ein."}}, {"@type": "Question", "name": "Komme ich für die Wartung an das Gerät?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Jede Haube hat abnehmbare Servicetüren, bei der Doppelhaube eine je Gerät. Die Haube muss für Wartung oder Reparatur nicht demontiert werden."}}, {"@type": "Question", "name": "Passen zwei Wärmepumpen in eine Haube?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, als Doppelhaube für zwei Geräte nebeneinander mit 800 mm Abstand. Der Konfigurator rechnet dann mit der Luftmenge und der Schallleistung beider Geräte."}}, {"@type": "Question", "name": "In welchen Farben gibt es die Haube?", "acceptedAnswer": {"@type": "Answer", "text": "Die Paneele werden in jeder RAL-Farbe pulverbeschichtet. Der Rahmen ist standardmäßig eloxiert und kann gegen Aufpreis ebenfalls in RAL beschichtet werden."}}]}</script>
 </head>
-<body>
+<body data-anfrage-typ="wp">
 <a class="skip" href="#main">Zum Inhalt</a>
 <header class="top">
   <div class="wrap">
@@ -48,7 +48,7 @@
     <span class="kicker">Kleinanlagen · SilentMode H-Serie</span>
     <h1 class="nh">Schallhauben für Wärmepumpen in Wohngebäuden – Standard H1–H12 und nach Maß</h1>
     <p class="sub">Für Wärmepumpen und Klimageräte im Ein- und Mehrfamilienhaus. Bis zu −25 dB(A) leiser, ohne die Anlage auszubremsen – für Fachbetriebe, Anlagenbauer und Verwalter.</p>
-    <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/h-serie/">Haube konfigurieren – mit Richtpreis</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Ma%C3%9Fanfertigung%20Schallhaube">Maßanfertigung anfragen</a></div>
+    <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/h-serie/">Haube konfigurieren – mit Richtpreis</a><a class="btn ghost" href="#anfrage">Maßanfertigung anfragen</a></div>
   </div>
 </section>
 <section class="gallery-sec">
@@ -86,7 +86,7 @@
       <h2>H1–H12 – oder genau passend zu Ihrem Gerät</h2>
       <p class="sub">Zwölf Standardgrößen decken die üblichen Außengeräte von Wärmepumpen und Klimaanlagen im Ein- und Mehrfamilienhaus ab. Dafür gibt es den Richtpreis sofort, dazu Skizze, BIM-Modell und Ausschreibungstext.</p>
       <p>Passt keine Standardgröße – weil das Gerät größer ist, mehr Luft braucht oder mehr Minderung gefordert ist – fertigen wir die Haube nach Maß. Der Konfigurator zeigt das direkt an und schickt uns Ihre Gerätedaten, die erforderliche Pegelminderung und die Aufstellsituation. Wir prüfen und melden uns mit einem Angebot.</p>
-      <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/h-serie/">H&#8209;Serie konfigurieren</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Ma%C3%9Fanfertigung%20Schallhaube">Maßanfertigung anfragen</a></div>
+      <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/h-serie/">H&#8209;Serie konfigurieren</a><a class="btn ghost" href="#anfrage" data-typ="wp">Maßanfertigung anfragen</a></div>
     </div>
     <div class="stats">
       <div><b>H1–H12</b><span>Standardgrößen für Geräte bis ca. 1.150 × 1.650 mm</span></div>
@@ -150,15 +150,47 @@
   </div>
 </section>
 
-<section>
+<section id="anfrage">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact has-form">
       <div>
-        <h2>Projekt anfragen</h2>
-        <p>Schicken Sie uns Gerätetyp, Anzahl und Aufstellort – oder dimensionieren Sie Ihre Haube direkt im Konfigurator vor.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+        <div class="intro"><h2>Projekt anfragen</h2><p>Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen; Sonderanfertigungen liefern wir meist 40–60 Tage nach Bestellung.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Firma<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-Mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Telefon<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option></select></label>
+          <div class="row">
+            <label class="f">Anlage (Hersteller / Modell)<input id="q_unit" placeholder="z. B. York YMAE0260"></label>
+            <label class="f">Anzahl Geräte<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Projektort (PLZ / Ort)<input id="q_place"></label>
+          <label class="f">Nachricht<textarea id="q_msg" rows="3" placeholder="z. B. Richtwert nachts, Abstand zum Nachbarn, Dachaufstellung, Termin …"></textarea></label>
+          <label class="f">Datenblatt, Plan oder Foto (optional · PDF oder Bild, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Datenschutzhinweise zu dieser Anfrage</summary><p><b>Verantwortlicher:</b> Silent Engineering di Romolo Vicari (Marke ForCoTech), Via Trento 22, 23875 Osnago (LC), Italien · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Zweck:</b> Ihre Angaben und ein ggf. beigefügtes Datenblatt verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und zur Erstellung eines Angebots. Soweit dafür nötig, geben wir die technischen Projektangaben an unseren Fertigungspartner weiter; keine Weitergabe zu Werbezwecken.</p><p><b>Versand:</b> über den Formulardienst FormSubmit (formsubmit.co), der die Anfrage per E-Mail an info@forcotech.com weiterleitet; dabei ist eine Verarbeitung außerhalb der EU möglich. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Ihre Einwilligung (Art. 6 Abs. 1 lit. a, Art. 49 Abs. 1 lit. a DSGVO), jederzeit widerruflich. Alternativ erreichen Sie uns direkt per E-Mail.</p><p><b>Speicherdauer und Rechte:</b> Löschung nach Abschluss der Anfrage, bei Vertrag nach den gesetzlichen Fristen. Auskunft, Berichtigung, Löschung, Widerspruch und Widerruf formlos an info@forcotech.com. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert und verarbeitet und dafür über FormSubmit übermittelt werden (siehe <a href="/datenschutz/">Datenschutzerklärung</a>). Die Einwilligung kann ich jederzeit widerrufen. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Anfrage senden</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Vielen Dank für Ihre Anfrage!</b><br>Wir melden uns in der Regel innerhalb von 2–3 Werktagen.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Text kopieren</button><a class="btn ghost" id="qMail" href="#">Im E-Mail-Programm öffnen</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
       </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+      <div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Lieber selbst vordimensionieren?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -170,5 +202,6 @@
     <span><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="/en/h-series/" lang="en">English</a></span>
   </div>
 </footer>
+<script src="/anfrage.js" defer></script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "L’acoustic pack coûte-t-il de la puissance frigorifique ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, tant que la perte de charge reste dans la réserve que le fabricant de l’appareil prévoit déjà (généralement 30 à 35 Pa). Nous dimensionnons l’air neuf et l’air rejeté pour rester en dessous, et le démontrons par CFD."}}, {"@type": "Question", "name": "Pourquoi des tubes de Helmholtz plutôt que des baffles ?", "acceptedAnswer": {"@type": "Answer", "text": "Après atténuation, ce sont généralement les basses fréquences autour de 63 Hz qui déterminent le niveau. Les chambres de résonance des tubes HSA3 sont accordées précisément sur cette plage, pour un faible poids et une faible perte de charge."}}, {"@type": "Question", "name": "Les packs sont-ils incombustibles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le revêtement intérieur et les silencieux sont en acoustique métallique HSA3 (A1), sans laine minérale ni mousse."}}, {"@type": "Question", "name": "Qui fabrique et qui monte ?", "acceptedAnswer": {"@type": "Answer", "text": "Conception : Silent Engineering. Fabrication et montage : avec ABSORA GmbH, Berlin. Le montage dure environ 5 jours ouvrés par appareil."}}]}</script>
 </head>
-<body>
+<body data-anfrage-typ="dc">
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="top">
   <div class="wrap">
@@ -49,7 +49,7 @@
       <span class="kicker">Solutions pour centres de données · Acoustic packs</span>
       <h1>Protection acoustique des groupes froids sur le toit des centres de données – ultra&shy;léger, A1, dans la réserve de pression</h1>
       <p class="lead">Acoustic packs autoportants pour groupes froids de 20 ventilateurs et plus. Réalisés avec la technologie ABSORA HSA3&nbsp;: acoustique métallique au lieu de laine minérale, silencieux tubulaires de Helmholtz directement au-dessus des ventilateurs.</p>
-      <div class="btns"><a class="btn" href="mailto:info@forcotech.com?subject=Demande%20acoustic%20pack%20centre%20de%20donn%C3%A9es">Demander un projet</a><a class="btn ghost" href="/fr/technique/">La technique en détail</a></div>
+      <div class="btns"><a class="btn" href="#anfrage">Demander un projet</a><a class="btn ghost" href="/fr/technique/">La technique en détail</a></div>
     </div>
     <figure class="dc-hero"><img src="/img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp" width="1500" height="695" alt="Acoustic packs ForCoTech : deux caissons autoportants en panneaux métalliques avec silencieux en toiture au-dessus des groupes froids d’un centre de données – visualisation" fetchpriority="high"></figure>
   </div>
@@ -161,15 +161,47 @@
   </div>
 </section>
 
-<section>
+<section id="anfrage">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact has-form">
       <div>
-        <h2>Demander un projet</h2>
-        <p>Envoyez-nous le type d’appareil, le nombre et le lieu d’implantation – ou prédimensionnez votre caisson directement dans le configurateur.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/fr/">Ouvrir le configurateur</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+        <div class="intro"><h2>Demander un projet</h2><p>L’appareil, le nombre et le lieu d’implantation suffisent pour commencer – avec la fiche technique, nous vérifions directement dimensions, débit d’air et puissance acoustique. Pour les projets complexes, vous recevez en général une offre ferme sous 2 à 3 jours ; les caissons sur mesure sont livrés en général 40 à 60 jours après la commande.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Nom *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Société<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Téléphone<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Type d’installation<select id="q_typ"><option value="">veuillez choisir</option><option value="wp">Pompe à chaleur / climatiseur</option><option value="gross">Groupe froid / grande PAC / aéroréfrigérant</option><option value="vrf">Unité extérieure VRF/VRV</option><option value="pv">Onduleur PV</option><option value="bess">Stockage par batteries (BESS)</option><option value="dc">Centre de données</option><option value="wand">Écran acoustique</option><option value="sonst">Autre</option></select></label>
+          <div class="row">
+            <label class="f">Appareil (fabricant / modèle)<input id="q_unit" placeholder="p. ex. York YMAE0260"></label>
+            <label class="f">Nombre d’appareils<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Lieu du projet (code postal / ville)<input id="q_place"></label>
+          <label class="f">Message<textarea id="q_msg" rows="3" placeholder="p. ex. limite de nuit, distance aux voisins, installation en toiture, délai …"></textarea></label>
+          <label class="f">Fiche technique, plan ou photo (facultatif · PDF ou image, max. 10 Mo)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Informations sur la protection des données</summary><p><b>Responsable :</b> Silent Engineering di Romolo Vicari (marque ForCoTech), Via Trento 22, 23875 Osnago (LC), Italie · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Finalité :</b> vos données et une éventuelle fiche technique servent uniquement au traitement de votre demande et à l’établissement d’une offre. Si nécessaire, nous transmettons les données techniques du projet à notre partenaire de fabrication ; aucune transmission à des fins publicitaires.</p><p><b>Transmission :</b> via le service de formulaires FormSubmit (formsubmit.co), qui transfère la demande par e-mail à info@forcotech.com ; un traitement en dehors de l’UE est possible. Base juridique : art. 6(1)(b) RGPD et votre consentement (art. 6(1)(a), art. 49(1)(a) RGPD), révocable à tout moment. Vous pouvez aussi nous écrire directement par e-mail.</p><p><b>Durée et droits :</b> suppression après clôture de la demande, ou à l’issue des délais légaux en cas de contrat. Accès, rectification, effacement, opposition et retrait sans formalité à info@forcotech.com. Plus d’informations dans la <a href="/fr/confidentialite/">politique de confidentialité</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>J’accepte que mes données soient enregistrées et traitées pour le traitement de la demande et transmises à cette fin via FormSubmit (voir la <a href="/fr/confidentialite/">politique de confidentialité</a>). Je peux retirer mon consentement à tout moment. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Envoyer la demande</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Merci pour votre demande !</b><br>Nous revenons généralement vers vous sous 2 à 3 jours ouvrés.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Copier le texte</button><a class="btn ghost" id="qMail" href="#">Ouvrir dans le logiciel de messagerie</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
       </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italie<br>E-mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+      <div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Marques ForCoTech et Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italie<br>E-mail : <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web : <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Vous préférez prédimensionner vous-même ?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/fr/">Ouvrir le configurateur</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -181,5 +213,6 @@
     <span><a href="/fr/mentions-legales/">Mentions légales</a> · <a href="/fr/confidentialite/">Confidentialité</a> · <a href="/rechenzentren/" lang="de">Deutsch</a> · <a href="/en/data-centres/" lang="en">English</a></span>
   </div>
 </footer>
+<script src="/anfrage.js" defer></script>
 </body>
 </html>

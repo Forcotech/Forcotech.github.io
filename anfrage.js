@@ -12,21 +12,21 @@
       fail: 'Der automatische Versand hat nicht geklappt. Bitte senden Sie den folgenden Text per E-Mail an ' + MAIL + '.',
       attach: ' Die Datei bitte an die E-Mail anhängen.', copied: 'Kopiert – jetzt in eine E-Mail einfügen.', subj: 'Anfrage Startseite – ',
       none: 'nicht beigefügt',
-      k: { name: 'Name', company: 'Firma', email: 'E-Mail', phone: 'Telefon', place: 'Projektort', unit: 'Anlage (Hersteller / Modell)', count: 'Anzahl Geräte', msg: 'Nachricht', file: 'Datenblatt' } },
+      k: { typ: 'Anlagentyp', name: 'Name', company: 'Firma', email: 'E-Mail', phone: 'Telefon', place: 'Projektort', unit: 'Anlage (Hersteller / Modell)', count: 'Anzahl Geräte', msg: 'Nachricht', file: 'Datenblatt' } },
     en: { consent: 'Please agree to the processing of your details.', req: 'Please enter your name and a valid e-mail address.',
       big: 'The file is too large (max. 10 MB). Please choose a smaller file or send it by e-mail after submitting.',
       type: 'Please choose a PDF or an image.', sending: 'Sending …', send: 'Send enquiry',
       fail: 'Automatic sending did not work. Please send the following text by e-mail to ' + MAIL + '.',
       attach: ' Please attach the file to the e-mail.', copied: 'Copied – now paste it into an e-mail.', subj: 'Enquiry homepage – ',
       none: 'not attached',
-      k: { name: 'Name', company: 'Company', email: 'E-mail', phone: 'Phone', place: 'Project location', unit: 'Unit (manufacturer / model)', count: 'Number of units', msg: 'Message', file: 'Data sheet' } },
+      k: { typ: 'Equipment type', name: 'Name', company: 'Company', email: 'E-mail', phone: 'Phone', place: 'Project location', unit: 'Unit (manufacturer / model)', count: 'Number of units', msg: 'Message', file: 'Data sheet' } },
     fr: { consent: 'Veuillez accepter le traitement de vos données.', req: 'Veuillez indiquer votre nom et une adresse e-mail valide.',
       big: 'Le fichier est trop volumineux (max. 10 Mo). Choisissez un fichier plus petit ou envoyez-le par e-mail après l’envoi.',
       type: 'Veuillez choisir un PDF ou une image.', sending: 'Envoi en cours …', send: 'Envoyer la demande',
       fail: 'L’envoi automatique n’a pas fonctionné. Veuillez envoyer le texte suivant par e-mail à ' + MAIL + '.',
       attach: ' Merci de joindre le fichier à l’e-mail.', copied: 'Copié – collez-le maintenant dans un e-mail.', subj: 'Demande page d’accueil – ',
       none: 'non joint',
-      k: { name: 'Nom', company: 'Société', email: 'E-mail', phone: 'Téléphone', place: 'Lieu du projet', unit: 'Appareil (fabricant / modèle)', count: 'Nombre d’appareils', msg: 'Message', file: 'Fiche technique' } }
+      k: { typ: 'Type d’installation', name: 'Nom', company: 'Société', email: 'E-mail', phone: 'Téléphone', place: 'Lieu du projet', unit: 'Appareil (fabricant / modèle)', count: 'Nombre d’appareils', msg: 'Message', file: 'Fiche technique' } }
   };
   var L = T[(document.documentElement.lang || 'de').slice(0, 2)] || T.de;
   var $ = function (id) { return document.getElementById(id); };
@@ -39,6 +39,7 @@
     if ($('qHp').value) return; // Spam-Falle
     var v = {};
     ['name', 'company', 'email', 'phone', 'place', 'unit', 'count', 'msg'].forEach(function (k) { v[k] = ($('q_' + k).value || '').trim(); });
+    var ts = $('q_typ'); v.typ = ts && ts.value ? ts.options[ts.selectedIndex].text : '';
     if (!v.name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email)) return show(L.req);
     if (!$('qConsent').checked) return show(L.consent);
     var fl = $('q_file').files && $('q_file').files[0] ? $('q_file').files[0] : null;
@@ -75,6 +76,14 @@
       box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }).then(function () { btn.disabled = false; btn.textContent = L.send; });
   });
+
+  // Knöpfe „… anfragen“ mit data-typ wählen den Anlagentyp vor
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-typ],button[data-typ]');
+    if (a && $('q_typ')) $('q_typ').value = a.getAttribute('data-typ');
+  });
+  var pre = document.body.getAttribute('data-anfrage-typ');
+  if (pre && $('q_typ')) $('q_typ').value = pre;
 
   $('qCopy').addEventListener('click', function () {
     var t = $('qReadyText');

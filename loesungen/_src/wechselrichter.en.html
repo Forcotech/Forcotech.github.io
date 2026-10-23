@@ -4,7 +4,7 @@
       <span class="kicker">The problem</span>
       <h2>A whine you cannot ignore</h2>
       <p class="sub">PV inverters are quieter than a heat pump – but they sound different. The power electronics switch in the kilohertz range, and the fans add to it. The high, tonal whine is especially noticeable when the inverter hangs on the house wall next to a terrace or bedroom.</p>
-      <p>Battery energy storage systems (BESS) run around the clock. Here it is mainly the air-conditioning and ventilation units of the containers that set the tone at night, plus converters and transformers with their typical hum.</p>
+      <p>Battery energy storage systems (BESS) run around the clock. Here it is mainly the air-conditioning and ventilation units of the containers that are loudest at night, plus converters and transformers with their typical hum.</p>
     </div>
     <ul class="check">
       <li><b>High frequencies:</b> Typical inverter noise peaks lie at 16–18 kHz – clearly audible and annoying for many people.</li>
@@ -20,11 +20,11 @@
   <div class="wrap">
     <span class="kicker">PV inverters</span>
     <h2>Two designs – for 1 to 5 inverters</h2>
-    <p class="sub">For every inverter range in the catalogue there is a wall-mounted enclosure and a free-standing housing with a built-in mounting shelter.</p>
+    <p class="sub">For every inverter range in the catalogue there is a wall-mounted enclosure and a free-standing housing with a built-in mounting shelter – a mounting frame on which the inverters hang inside the housing.</p>
     <div class="cards" style="margin-top:8px">
       <div class="card"><span class="tag">Wall-mounted</span><h3>Front enclosure</h3><p>The enclosure is built in front of the wall-mounted inverter. Clearances to the outer edge: 500 mm left and right, 800 mm above (Premium 900 mm).</p></div>
       <div class="card"><span class="tag">Free-standing</span><h3>Housing with mounting shelter</h3><p>For systems without a suitable wall, e.g. on open ground or roofs. The inverters hang on the shelter inside the housing, 600 mm apart.</p></div>
-      <div class="card"><span class="tag">Cooling</span><h3>Cool air in front, exhaust on top</h3><p>Cool air is drawn in at the front bottom, flows past the inverter and leaves through HSA3 tubes in the roof (see section above). The front opens fully for service.</p></div>
+      <div class="card"><span class="tag">Cooling</span><h3>Cool air in front, exhaust on top</h3><p>Cool air is drawn in at the front bottom, flows past the inverter and leaves through tubular silencers in the roof – tubes made of HSA3, our non-combustible acoustic meta-metal sheet, which absorb the sound while letting the air pass almost unhindered (see section above). The front opens fully for service.</p></div>
     </div>
     <div class="facts">
       <div><b>approx. −15 dB(A)</b><span>Standard</span></div>
@@ -32,11 +32,38 @@
       <div><b>10 manufacturers</b><span>enclosures by range in the catalogue</span></div>
       <div><b>Shade</b><span>protection from sun, rain, hail and dust</span></div>
     </div>
-    <p class="sub" style="margin-top:20px">In the catalogue: Huawei, SMA, Fronius, Sungrow, SolarEdge, Kostal, GoodWe, Growatt, FoxESS and Victron – with enclosure dimensions, weight and fixed prices for 1 to 5 units, from approx. €4,400 net. For other inverters, enter the dimensions; the enclosure is designed live.</p>
+    <p class="sub" style="margin-top:20px">In the catalogue: Huawei, SMA, Fronius, Sungrow, SolarEdge, Kostal, GoodWe, Growatt, FoxESS and Victron – with enclosure dimensions, weight and list prices for 1 to 5 units, from approx. €4,400 net. For other inverters, enter the dimensions; the enclosure is designed live.</p>
     <div class="cfgband">
-      <div><h3>The enclosure for your inverter</h3><p>Choose manufacturer and range, set quantity and design – dimensions, fixed price, specification text and BIM model instantly.</p></div>
-      <div class="btns"><a class="btn" href="https://www.forcotech.com/konfigurator/en/pv/">Open the PV catalogue</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Acoustic%20enclosure%20inverter">Request a project</a></div>
+      <div><h3>The enclosure for your inverter</h3><p>Choose manufacturer and range, set quantity and design – dimensions, list price, specification text and BIM model instantly.</p></div>
+      <div class="btns"><a class="btn" href="https://www.forcotech.com/konfigurator/en/pv/">Choose an enclosure – list price instantly</a><a class="btn ghost" href="#anfrage" data-typ="pv">Request a project</a></div>
     </div>
+  </div>
+</section>
+
+<section class="dark" id="proof">
+  <div class="wrap">
+    <span class="kicker">Proof</span>
+    <h2>Hear the difference</h2>
+    <p class="sub">Original recording at an inverter enclosure, alternating every 3 seconds: first without, then with the enclosure – headphones recommended. The high whine of the power electronics almost disappears.</p>
+    <div class="two" style="align-items:start">
+      <div class="ab"><div class="ab-head"><b>PV inverter</b><span class="ab-state" aria-live="off" data-off="without enclosure" data-on="with enclosure">without enclosure</span></div><p>Recording at an inverter enclosure</p><audio controls preload="none" src="/audio/vorher-nachher-wechselrichter.mp3"></audio><div class="ab-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="note">Recording: ABSORA GmbH. The loudness of a recording is not a measured value; the level calculation or measurement at the receiver point is what counts.</p></div>
+      <figure class="ph"><img src="/img/hero-loop-poster.webp" width="1280" height="720" alt="Installed aluminium acoustic enclosure on a flat roof next to a PV system" loading="lazy"><figcaption>Installed acoustic enclosure on a flat roof with a PV system. On request we measure the level before and after installation and document the reduction achieved.</figcaption></figure>
+    </div>
+  </div>
+</section>
+<script>document.querySelectorAll('.ab').forEach(function(c){var a=c.querySelector('audio'),st=c.querySelector('.ab-state'),bars=c.querySelectorAll('.ab-bar i');function u(){var seg=Math.floor(a.currentTime/3),on=seg%2===1;st.textContent=on?st.dataset.on:st.dataset.off;st.classList.toggle('on',on);bars.forEach(function(b,i){b.classList.toggle('cur',i===seg&&!a.paused);});}a.addEventListener('timeupdate',u);a.addEventListener('pause',u);a.addEventListener('play',function(){document.querySelectorAll('.ab audio').forEach(function(o){if(o!==a)o.pause();});});});</script>
+
+<section id="process">
+  <div class="wrap">
+    <span class="kicker">Process</span>
+    <h2>From the catalogue to the installed enclosure</h2>
+    <ol class="steps">
+      <li><h3>Select or enquire</h3><p>Inverters: choose the enclosure in the PV catalogue, list price and documents instantly. Battery storage: send your data via the form below.</p></li>
+      <li><h3>Check and engineer</h3><p>We check acoustics, airflow and installation – for BESS per project, including CFD.</p></li>
+      <li><h3>Quotation</h3><p>Binding quotation with drawing and delivery date, for complex projects usually within 2–3 days.</p></li>
+      <li><h3>Delivery and installation</h3><p>Delivery usually 40–60 days after order, installation on site on request.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -64,9 +91,9 @@
           <li>Sound power (data sheet or measurement), operating hours</li>
           <li>Site plan with distance to the nearest residential building</li>
         </ul>
-        <p>There is no fixed-price catalogue for BESS: we design per project. The free configurator gives outer dimensions, noise reduction and airflow check up front; you receive the price with the quotation.</p>
+        <p>There is no list-price catalogue for BESS: we design per project. The free configurator gives outer dimensions, noise reduction and airflow check up front; you receive the price with the quotation.</p>
       </div>
-      <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/en/">Free configurator</a><a class="btn ghost" href="mailto:info@forcotech.com?subject=Noise%20control%20battery%20storage%20(BESS)">Request a BESS project</a></div>
+      <div class="btns" style="margin-top:18px"><a class="btn" href="#anfrage" data-typ="bess">Have your BESS noise control engineered</a><a class="btn ghost" href="https://www.forcotech.com/konfigurator/en/">Free configurator</a></div>
     </div>
   </div>
   <div class="wrap" style="margin-top:48px">
@@ -94,6 +121,7 @@
       <details><summary>Does the enclosure help against output loss in summer?</summary><p>It can. Many inverters reduce their output when they get too hot. If yours currently hangs in full sun, it benefits from the shade of the enclosure. The effect depends on the unit and the site.</p></details>
       <details><summary>Can I reach the display and connections?</summary><p>Yes. The front opens fully. Cables are routed from below or the side as usual.</p></details>
       <details><summary>How many inverters fit in one enclosure?</summary><p>One to five units side by side, in both designs. Larger systems are split across several enclosures or engineered per project.</p></details>
+      <details><summary>How long do quotation and delivery take?</summary><p>For complex projects you usually receive the binding quotation within 2–3 days; for catalogue enclosures you see dimensions and list price instantly. Delivery is usually 40–60 days after order; the delivery date is stated in the quotation.</p></details>
       <details><summary>Why is A1 so important at battery storage?</summary><p>Because no insulation may burn along in a fire. HSA3 is non-combustible to class A1 (EN 13501-1) and contains neither mineral wool nor foam.</p></details>
     </div>
   </div>

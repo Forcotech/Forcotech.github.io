@@ -63,15 +63,47 @@
     </div>
   </div>
 </section>
-<section>
+<section id="anfrage">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact has-form">
       <div>
-        <h2>Projekt anfragen</h2>
-        <p>Schicken Sie uns Gerätetyp, Anzahl und Aufstellort – oder dimensionieren Sie Ihre Haube direkt im Konfigurator vor.</p>
-        <div class="btns" style="margin-top:18px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a><a class="btn" href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+        <div class="intro"><h2>Projekt anfragen</h2><p>Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen; Sonderanfertigungen liefern wir meist 40–60 Tage nach Bestellung.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Firma<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-Mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Telefon<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option></select></label>
+          <div class="row">
+            <label class="f">Anlage (Hersteller / Modell)<input id="q_unit" placeholder="z. B. York YMAE0260"></label>
+            <label class="f">Anzahl Geräte<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Projektort (PLZ / Ort)<input id="q_place"></label>
+          <label class="f">Nachricht<textarea id="q_msg" rows="3" placeholder="z. B. Richtwert nachts, Abstand zum Nachbarn, Dachaufstellung, Termin …"></textarea></label>
+          <label class="f">Datenblatt, Plan oder Foto (optional · PDF oder Bild, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Datenschutzhinweise zu dieser Anfrage</summary><p><b>Verantwortlicher:</b> Silent Engineering di Romolo Vicari (Marke ForCoTech), Via Trento 22, 23875 Osnago (LC), Italien · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Zweck:</b> Ihre Angaben und ein ggf. beigefügtes Datenblatt verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und zur Erstellung eines Angebots. Soweit dafür nötig, geben wir die technischen Projektangaben an unseren Fertigungspartner weiter; keine Weitergabe zu Werbezwecken.</p><p><b>Versand:</b> über den Formulardienst FormSubmit (formsubmit.co), der die Anfrage per E-Mail an info@forcotech.com weiterleitet; dabei ist eine Verarbeitung außerhalb der EU möglich. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Ihre Einwilligung (Art. 6 Abs. 1 lit. a, Art. 49 Abs. 1 lit. a DSGVO), jederzeit widerruflich. Alternativ erreichen Sie uns direkt per E-Mail.</p><p><b>Speicherdauer und Rechte:</b> Löschung nach Abschluss der Anfrage, bei Vertrag nach den gesetzlichen Fristen. Auskunft, Berichtigung, Löschung, Widerspruch und Widerruf formlos an info@forcotech.com. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert und verarbeitet und dafür über FormSubmit übermittelt werden (siehe <a href="/datenschutz/">Datenschutzerklärung</a>). Die Einwilligung kann ich jederzeit widerrufen. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Anfrage senden</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Vielen Dank für Ihre Anfrage!</b><br>Wir melden uns in der Regel innerhalb von 2–3 Werktagen.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Text kopieren</button><a class="btn ghost" id="qMail" href="#">Im E-Mail-Programm öffnen</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
       </div>
-      <address><b>Silent Engineering di Romolo Vicari</b><br>ForCoTech · Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a></address>
+      <div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Lieber selbst vordimensionieren?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -83,5 +115,6 @@
     <span><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="/en/news/" lang="en">English</a> · <a href="/fr/actualites/" lang="fr">Français</a></span>
   </div>
 </footer>
+<script src="/anfrage.js" defer></script>
 </body>
 </html>

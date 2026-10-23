@@ -14,14 +14,26 @@ T = {
         "shadow": "Schallschatten", "direct": "direkter Weg – blockiert",
         "core": "HSA3-Aufbau (Schnitt)", "l1": "gewellte, mikroperforierte Deckschicht", "l2": "Luftkammern (Resonatoren)",
         "l3": "federnd gelagerte Zwischenlage", "l4": "Resonanzhohlraum", "l5": "Trägerplatte / Paneel", "snd": "Schall",
-        "heat": "Schallenergie → Wärme"},
+        "heat": "Schallenergie → Wärme",
+        "b_grid": "Netz", "b_tr": "Transformator", "b_wr": "Wechselrichter", "b_cont": "BESS-Container",
+        "b_hvac": "Klimagerät", "b_racks": "Batterie-Racks",
+        "b_n1": "Brummen 100/200 Hz", "b_n2": "Lüfter, Schaltfrequenz", "b_n3": "Verdichter, Ventilatoren",
+        "b_s1": "HSA3-Einhausung", "b_s2": "HSA3-Schallhaube", "b_s3": "HSA3-Kulisse",
+        "b_aria0": "BESS-Anlage ohne Schallschutz: Transformator, Wechselrichter und Klimagerät des Containers strahlen Schall frei ab",
+        "b_aria1": "BESS-Anlage mit ForCoTech-Lösung: Trafo-Einhausung, Schallhaube am Wechselrichter und Kulisse vor dem Klimagerät aus HSA3"},
  "en": {"wall": "Building wall", "wr": "Inverter", "in": "Cool supply air", "out": "Exhaust via HSA3 tubes",
         "lin": "HSA3 inner lining", "front": "Front opens fully", "gap": "500 / 800 mm clearance",
         "src": "Unit", "bar": "Noise barrier with HSA3", "diff": "Diffraction at the top edge", "imm": "Neighbour's window",
         "shadow": "Acoustic shadow", "direct": "direct path – blocked",
         "core": "HSA3 build-up (section)", "l1": "corrugated, micro-perforated face layer", "l2": "air chambers (resonators)",
         "l3": "spring-mounted intermediate layer", "l4": "resonance cavity", "l5": "carrier plate / panel", "snd": "Sound",
-        "heat": "sound energy → heat"},
+        "heat": "sound energy → heat",
+        "b_grid": "Grid", "b_tr": "Transformer", "b_wr": "Inverter (PCS)", "b_cont": "BESS container",
+        "b_hvac": "HVAC unit", "b_racks": "Battery racks",
+        "b_n1": "Hum 100/200 Hz", "b_n2": "Fans, switching freq.", "b_n3": "Compressors, fans",
+        "b_s1": "HSA3 enclosure", "b_s2": "HSA3 acoustic hood", "b_s3": "HSA3 silencer",
+        "b_aria0": "BESS site without noise control: transformer, inverter and the container's HVAC unit radiate noise freely",
+        "b_aria1": "BESS site with ForCoTech solution: transformer enclosure, acoustic hood on the inverter and silencer in front of the HVAC unit, all in HSA3"},
 }
 
 DEFS = f'''<defs>
@@ -159,6 +171,84 @@ def hsa3(L):
     return "".join(s)
 
 
+def bess(L, mit):
+    """BESS-Anlage im Seitenschnitt: Netz, Trafo, Wechselrichter, Container mit Klimagerät – ohne bzw. mit HSA3-Lösung."""
+    U = 'fill="#ece8e8" stroke="#9c9494" stroke-width="2"'
+    H = f'fill="url(#hsa)" stroke="{INK}" stroke-width="3"'
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 390" role="img" aria-label="{L["b_aria1" if mit else "b_aria0"]}">', DEFS,
+         '<pattern id="cor" width="23" height="10" patternUnits="userSpaceOnUse"><line x1="11" y1="0" x2="11" y2="10" stroke="#9c9494" stroke-opacity=".5"/></pattern>',
+         '<rect width="1300" height="390" fill="#fff"/>',
+         f'<line x1="0" y1="300" x2="1300" y2="300" stroke="{INK}" stroke-width="3"/>',
+         '<rect x="0" y="301" width="1300" height="12" fill="url(#hatch)"/>',
+         # Netz / Mittelspannung
+         f'<path d="M0 120 H85 V190" fill="none" stroke="{MUT}" stroke-width="2"/>',
+         f'<rect x="40" y="190" width="90" height="110" rx="3" {U}/>',
+         '<line x1="85" y1="196" x2="85" y2="294" stroke="#9c9494"/>',
+         '<rect x="55" y="205" width="20" height="14" fill="none" stroke="#9c9494"/>',
+         f'<path d="M130 215 H{158 if mit else 180}" fill="none" stroke="#9c9494" stroke-width="2"/>',
+         # Transformator
+         f'<rect x="215" y="158" width="120" height="16" rx="8" {U}/>']
+    for x in (232, 270, 308):
+        s.append(f'<rect x="{x}" y="176" width="10" height="24" {U}/>')
+    s += [f'<rect x="200" y="200" width="150" height="100" rx="3" {U}/>',
+          f'<rect x="180" y="210" width="20" height="80" {U}/>', f'<rect x="350" y="210" width="20" height="80" {U}/>',
+          '<path d="M185 214V286M190 214V286M195 214V286M355 214V286M360 214V286M365 214V286" stroke="#9c9494"/>',
+          # Wechselrichter / PCS
+          f'<rect x="440" y="160" width="180" height="140" rx="3" {U}/>',
+          f'<rect x="470" y="140" width="120" height="20" rx="3" {U}/>',
+          '<path d="M485 150H515M545 150H575" stroke="#9c9494" stroke-width="2"/>',
+          '<circle cx="500" cy="150" r="3" fill="#9c9494"/><circle cx="560" cy="150" r="3" fill="#9c9494"/>',
+          '<rect x="490" y="185" width="110" height="30" fill="none" stroke="#9c9494" stroke-width="1.5"/>',
+          '<rect x="490" y="225" width="110" height="30" fill="none" stroke="#9c9494" stroke-width="1.5"/>',
+          '<path d="M446 240H466M446 250H466M446 260H466M446 270H466M446 280H466" stroke="#9c9494" stroke-width="1.5"/>',
+          f'<path d="M{392 if mit else 370} 290H{418 if mit else 440}M{642 if mit else 620} 290H680" fill="none" stroke="#9c9494" stroke-width="2"/>',
+          # Container mit Klimagerät
+          f'<rect x="680" y="150" width="460" height="150" rx="3" {U}/>',
+          '<rect x="681" y="151" width="458" height="148" fill="url(#cor)"/>',
+          f'<rect x="700" y="180" width="56" height="112" {U}/>',
+          txt(940, 235, L["b_racks"], 22, MUT, "middle", "700"),
+          f'<rect x="1140" y="180" width="60" height="95" rx="3" {U}/>',
+          '<circle cx="1170" cy="212" r="18" fill="none" stroke="#9c9494" stroke-width="2"/>',
+          '<path d="M1152 212H1188M1170 194V230M1148 245H1192M1148 252H1192M1148 259H1192M1148 266H1192" stroke="#9c9494" stroke-width="1.5"/>']
+    if mit:
+        s += [  # HSA3: Trafo-Einhausung, Wechselrichter-Haube, Kulisse vor dem Klimagerät
+            f'<rect x="158" y="140" width="14" height="160" {H}/>', f'<rect x="378" y="140" width="14" height="160" {H}/>',
+            f'<rect x="158" y="112" width="234" height="28" {H}/>',
+            f'<rect x="418" y="120" width="14" height="180" {H}/>', f'<rect x="628" y="120" width="14" height="180" {H}/>',
+            f'<rect x="418" y="92" width="224" height="28" {H}/>',
+            f'<rect x="1205" y="176" width="44" height="103" {H}/>']
+        air = [("M136 278H194", ""), ("M275 154V66", ""), ("M384 266H446", ""), ("M530 136V48", ""),
+               ("M1185 112V176", ' stroke-dasharray="7 6"'), ("M1200 228H1294", "")]
+        snd = ["M398 222Q406 230 398 238", "M337 100Q345 92 353 100", "M592 82Q600 74 608 82",
+               "M650 192Q658 200 650 208", "M1262 254Q1270 262 1262 270"]
+        badges = [(136, 124, 1), (396, 74, 2), (1148, 138, 3)]
+        sub, subc = [(275, L["b_s1"]), (530, L["b_s2"]), (1185, L["b_s3"])], INK
+    else:
+        air = [("M190 205V150", ""), ("M360 205V150", ""), ("M396 272H438", ""), ("M530 136V78", ""),
+               ("M1185 112V176", ' stroke-dasharray="7 6"'), ("M1205 222H1292", "")]
+        snd = ["M172 232Q164 240 172 248M164 226Q152 240 164 254M156 220Q140 240 156 260",
+               "M378 232Q386 240 378 248M386 226Q398 240 386 254M394 220Q410 240 394 260",
+               "M267 140Q275 132 283 140M261 132Q275 120 289 132M255 124Q275 108 295 124",
+               "M582 128Q590 120 598 128M576 120Q590 108 604 120M570 112Q590 96 610 112",
+               "M432 182Q424 190 432 198M424 176Q412 190 424 204M416 170Q400 190 416 210",
+               "M1210 254Q1218 262 1210 270M1218 248Q1230 262 1218 276M1226 242Q1242 262 1226 282M1234 236Q1254 262 1234 288"]
+        badges = [(158, 174, 1), (452, 122, 2), (1148, 138, 3)]
+        sub, subc = [(275, L["b_n1"]), (530, L["b_n2"]), (1170, L["b_n3"])], RED
+    for d, ex in air:
+        s.append(f'<path d="{d}" fill="none" stroke="{COOL}" stroke-width="4" stroke-linecap="round" marker-end="url(#ac)"{ex}/>')
+    for d in snd:
+        s.append(f'<path d="{d}" fill="none" stroke="{RED}" stroke-width="3" stroke-linecap="round"/>')
+    for x, y, n in badges:
+        s.append(f'<circle cx="{x}" cy="{y}" r="18" fill="{RED}"/>' + txt(x, y + 7, str(n), 20, "#fff", "middle", "700"))
+    hx = 1185 if mit else 1170
+    for x, t in [(85, L["b_grid"]), (275, L["b_tr"]), (530, L["b_wr"]), (910, L["b_cont"]), (hx, L["b_hvac"])]:
+        s.append(txt(x, 344, t, 21, INK, "middle", "700"))
+    for x, t in sub:
+        s.append(txt(x, 372, t, 18, subc, "middle", "700"))
+    s.append('</svg>')
+    return "".join(s)
+
+
 def build():
     OUT.mkdir(parents=True, exist_ok=True)
     for lang, L in T.items():
@@ -166,6 +256,8 @@ def build():
         (OUT / f"wechselrichter-haube{sfx}.svg").write_text(inverter(L), encoding="utf-8")
         (OUT / f"schallwand-prinzip{sfx}.svg").write_text(barrier(L), encoding="utf-8")
         (OUT / f"hsa3-aufbau{sfx}.svg").write_text(hsa3(L), encoding="utf-8")
+        (OUT / f"bess-ohne-schallschutz{sfx}.svg").write_text(bess(L, False), encoding="utf-8")
+        (OUT / f"bess-mit-forcotech{sfx}.svg").write_text(bess(L, True), encoding="utf-8")
     print("SVG-Zeichnungen erzeugt")
 
 

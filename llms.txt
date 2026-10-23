@@ -44,7 +44,7 @@
 <!-- NEWS:START -->
 ## News and analyses
 - [News (Deutsch)](https://www.forcotech.com/news/) · [News (English)](https://www.forcotech.com/en/news/) · [Actualités (Français)](https://www.forcotech.com/fr/actualites/)
-- [Schallschutz für BESS und R290: Wo Mineralwolle und Schaum an Grenzen stoßen](https://www.forcotech.com/news/schallschutz-bess-r290-hsa3/) (2026-10-23, nur Deutsch)
+- [Noise control for BESS and R290: where mineral wool and foam reach their limits](https://www.forcotech.com/en/news/schallschutz-bess-r290-hsa3/) (2026-10-23, Deutsch: https://www.forcotech.com/news/schallschutz-bess-r290-hsa3/)
 - [Why HVAC acoustics is changing its material: meta-acoustics with HSA3](https://www.forcotech.com/en/news/meta-akustik-hsa3-hvac/) (2026-10-19, Deutsch: https://www.forcotech.com/news/meta-akustik-hsa3-hvac/)
 - [The heat pump as a gateway: cyber risks of connected HVAC systems](https://www.forcotech.com/en/news/hvac-iot-cyberrisiken-waermepumpen/) (2026-10-13, Deutsch: https://www.forcotech.com/news/hvac-iot-cyberrisiken-waermepumpen/)
 - [Main noise sources in air-cooled heat pumps and chillers](https://www.forcotech.com/en/news/haupt-laermquellen-waermepumpen-kaelteanlagen/) (2026-09-24, Deutsch: https://www.forcotech.com/news/haupt-laermquellen-waermepumpen-kaelteanlagen/)

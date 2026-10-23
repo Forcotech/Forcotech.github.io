@@ -14,6 +14,28 @@
         1080,
         1350
       ]
+    },
+    "en": {
+      "title": "Noise control for BESS and R290: where mineral wool and foam reach their limits",
+      "alt": "Comparison table of mineral wool, PE/PU foam and HSA3 by fire behaviour, moisture, fibres, static charge, depth for low frequencies and behaviour after a leak or fire",
+      "teaser": "With battery storage and propane heat pumps, fire load, ignition sources, free airflow and durability all count. Why we use metal HSA3 there instead of mineral wool or foam.",
+      "image": "img/news/bess-r290-hsa3-karte-en.webp",
+      "image_full": "img/news/bess-r290-hsa3-en.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
+    },
+    "fr": {
+      "title": "Acoustique pour BESS et R290 : là où laine minérale et mousse atteignent leurs limites",
+      "alt": "Tableau comparatif laine minérale, mousse PE/PU et HSA3 selon réaction au feu, humidité, fibres, électricité statique, épaisseur pour les basses fréquences et comportement après fuite ou incendie",
+      "teaser": "Avec les stockages par batteries et les pompes à chaleur au propane, comptent la charge calorifique, les sources d’inflammation, la libre circulation de l’air et la durabilité. Pourquoi nous y utilisons HSA3 en métal plutôt que laine minérale ou mousse.",
+      "image": "img/news/bess-r290-hsa3-karte-fr.webp",
+      "image_full": "img/news/bess-r290-hsa3-fr.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
     }
   },
   {

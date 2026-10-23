@@ -1,5 +1,22 @@
 [
   {
+    "slug": "schallschutz-bess-r290-hsa3",
+    "date": "2026-10-23",
+    "status": "online",
+    "image": "img/news/bess-r290-hsa3-karte-de.webp",
+    "de": {
+      "title": "Schallschutz für BESS und R290: Wo Mineralwolle und Schaum an Grenzen stoßen",
+      "alt": "Vergleichstabelle Mineralwolle, Schaumstoff PE/PU und HSA3 nach Brandverhalten, Feuchte, Fasern, Elektrostatik, Bautiefe für Tiefton und Verhalten nach Leck oder Brand",
+      "teaser": "Bei Batteriespeichern und Propan-Wärmepumpen zählen Brandlast, Zündquellen, freie Durchströmung und Haltbarkeit. Warum wir dort auf HSA3 aus Metall statt auf Mineralwolle oder Schaum setzen.",
+      "image": "img/news/bess-r290-hsa3-karte-de.webp",
+      "image_full": "img/news/bess-r290-hsa3-de.webp",
+      "image_full_size": [
+        1080,
+        1350
+      ]
+    }
+  },
+  {
     "slug": "meta-akustik-hsa3-hvac",
     "date": "2026-10-19",
     "status": "online",

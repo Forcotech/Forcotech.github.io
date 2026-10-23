@@ -326,7 +326,9 @@ def build():
     # llms.txt
     f = ROOT / "llms.txt"
     s = f.read_text(encoding="utf-8")
-    items = "\n".join(f'- [{p["en"]["title"]}]({SITE}{url("en", p["slug"])}) ({p["date"]}, Deutsch: {SITE}{url("de", p["slug"])})' for p in posts)
+    items = "\n".join(
+        f'- [{p["en"]["title"]}]({SITE}{url("en", p["slug"])}) ({p["date"]}, Deutsch: {SITE}{url("de", p["slug"])})' if "en" in p
+        else f'- [{p["de"]["title"]}]({SITE}{url("de", p["slug"])}) ({p["date"]}, nur Deutsch)' for p in posts)
     block = f"<!-- NEWS:START -->\n## News and analyses\n- [News (Deutsch)]({SITE}/news/) · [News (English)]({SITE}/en/news/) · [Actualités (Français)]({SITE}/fr/actualites/)\n{items}\n<!-- NEWS:END -->"
     if "<!-- NEWS:START -->" in s:
         s = re.sub(r"<!-- NEWS:START -->.*?<!-- NEWS:END -->", block, s, flags=re.S)

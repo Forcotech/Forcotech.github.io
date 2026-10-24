@@ -266,6 +266,10 @@ section.alt .solcard{background:var(--bg)}
 .figs img{width:100%}
 .figs figcaption{font-size:14px;color:var(--muted);padding:10px 14px}
 .figs figcaption b{color:var(--ink)}
+.hsa3-photo{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.hsa3-photo img{width:100%;display:block}
+.hsa3-photo figcaption{font-size:14px;color:var(--muted);padding:10px 14px}
+.hsa3-photo figcaption b{color:var(--ink)}
 .cmp{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-top:20px}
 .cmp table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
 .cmp th,.cmp td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}

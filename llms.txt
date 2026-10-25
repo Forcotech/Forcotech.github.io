@@ -39,7 +39,7 @@
 - Chillers and large heat pumps, CM-Series: [DE](https://www.forcotech.com/loesungen/chiller-grosswaermepumpen/) · [EN](https://www.forcotech.com/en/solutions/chillers-large-heat-pumps/) – tube silencers Ø 200 mm, separate air paths, targets 5–7 m/s and max. 3–5 % capacity loss, catalogue of 19 manufacturers
 - PV inverters and battery storage (BESS): [DE](https://www.forcotech.com/loesungen/wechselrichter-bess/) · [EN](https://www.forcotech.com/en/solutions/inverters-bess/) – wall-mounted and free-standing for 1–5 inverters from approx. €4,400 net, BESS per project
 - Noise barriers, Wall-Series: [DE](https://www.forcotech.com/loesungen/schallwaende/) · [EN](https://www.forcotech.com/en/solutions/noise-barriers/) – barrier vs. enclosure, typically 6–10 dB(A), screening to ISO 9613-2
-- [HSA3 (Deutsch)](https://www.forcotech.com/hsa3/) · [HSA3 (English)](https://www.forcotech.com/en/hsa3/): structure, working principle (Helmholtz resonators, mass-spring system, impedance step), key data and evidence, comparison with mineral wool and foam
+- [HSA3 (Deutsch)](https://www.forcotech.com/hsa3/) · [HSA3 (English)](https://www.forcotech.com/en/hsa3/): structure, working principle (Helmholtz resonators, mass-spring system, impedance step), key data and evidence, reverberation room test results to EN ISO 354 (TU Berlin, Feb 2026: HSA3 with 100 mm mineral wool NRC 0.85 / class C, HSA3 (0.1) alpha 0.83 at 100 Hz, fibre-free HSA3 NRC 0.60–0.65; test report PDF https://www.forcotech.com/downloads/absora-hsa3-hallraum-absorptionsgrade-2026.pdf), comparison with mineral wool and foam
 
 <!-- NEWS:START -->
 ## News and analyses

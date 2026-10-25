@@ -49,6 +49,10 @@ Konfigurators verlinkt, dazu /hsa3/ (EN /en/hsa3/) mit Aufbau, Wirkprinzip, Kenn
 - Hauptteil: loesungen/_src/<id>.de.html / .en.html, Übersicht loesungen/_src/uebersicht.<sprache>.html, HSA3 hsa3/_src/<sprache>.html
 - Zeichnungen img/loesungen/*.svg (DE und -en) erzeugt `python3 tools/svg_loesungen.py`
 
+Abschnitt „Messwerte im Hallraum“ (#hallraum) auf der HSA3-Seite: Daten und Texte in tools/build_hallraum.py
+(Prüfbericht BeSB/ABSORA 02/2026, Veröffentlichung mit ABSORA abgestimmt, PDF in downloads/), setzt den Block in
+hsa3/_src/de.html und en.html ein – `python3 tools/build_hallraum.py`.
+
 Danach `python3 tools/build_loesungen.py` und zuletzt `python3 tools/build_news.py` (Navigation, Sitemap).
 Menüpunkte „Lösungen“ und „HSA3“ stehen in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.
 

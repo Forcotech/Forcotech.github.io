@@ -437,3 +437,34 @@ figure.ph figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
 section.dark figure.ph figcaption{color:var(--d-muted)}
 section.dark .ab .note{margin-top:12px}
 .qf select{appearance:auto}
+
+/* HSA3 – Messwerte im Hallraum (#hallraum, tools/build_hallraum.py) */
+.hr-fig{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.hr-ctl{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.hr-grp{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.hr-grp>span{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:118px}
+.hr-ctl button{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13.5px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
+.hr-ctl button[aria-pressed="false"]{color:var(--muted);background:var(--bg)}
+.hr-ctl button[aria-pressed="false"] i{opacity:.35}
+.hr-ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hr-ctl i,.hr-sw{display:inline-block;width:22px;border-top:3px solid;flex:none}
+.hr-sw{margin-right:8px;vertical-align:middle}
+.hr-scroll{overflow-x:auto}
+.hr-svg{width:100%;min-width:560px;height:auto;display:block}
+.hr-svg text{font:12px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;fill:var(--muted)}
+.hr-svg .hr-yl{text-anchor:end}
+.hr-svg .hr-xl{text-anchor:end}
+.hr-svg .hr-at{text-anchor:middle;font-weight:600;fill:var(--ink)}
+.hr-svg .hr-g,.hr-svg .hr-gv{stroke:var(--line);stroke-width:1}
+.hr-svg .hr-g0{stroke:#9a9a9a;stroke-width:1}
+.hr-svg .hr-low{fill:var(--accent-l)}
+.hr-svg .hr-lowt{fill:var(--accent-d);font-size:11.5px;font-weight:600}
+.hr-svg circle{stroke:#fff;stroke-width:1}
+.hr-fig figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.hr-list{margin-top:20px}
+#hallraum .cmp th small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-left:30px}
+.hr-data{margin-top:16px}
+.hr-data summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.hr-full{font-variant-numeric:tabular-nums}
+.hr-full th,.hr-full td{white-space:nowrap}
+@media (max-width:600px){.hr-fig{padding:12px}.hr-grp>span{min-width:0;width:100%}}

@@ -179,7 +179,7 @@ HSA3 = {
            "alt": "Schematischer Schnitt durch HSA3: gewellte mikroperforierte Deckschicht, Luftkammern, federnd gelagerte Zwischenlage, Resonanzhohlraum und Trägerplatte",
            "b1": "Haube mit HSA3 konfigurieren", "b2": "Prüfbericht anfordern", "subj": "Pr%C3%BCfbericht%20HSA3",
            "facts": [("bis −40 %", "Druckverlust gegenüber Kulissenschalldämpfern"), ("αₛ 0,83", "schon bei 100 Hz, mit Wollhinterlegung – DIN EN ISO 354"),
-                     ("A1", "nicht brennbar nach EN 13501-1"), ("0 Fasern", "keine Mineralwolle, kein Schaum")]},
+                     ("A1", "nicht brennbar nach EN 13501-1"), ("0 Fasern", "in der faserfreien Ausführung – keine Mineralwolle, kein Schaum")]},
     "en": {"nav": "HSA3", "title": "HSA3 – acoustic meta-metal for enclosures: structure, effect, key data | ForCoTech",
            "desc": "HSA3 by ABSORA: micro-perforated, corrugated metal with resonance chambers instead of mineral wool. Up to −40 % pressure drop, reverberation room tested to EN ISO 354 (fibre-free up to 0.80, with wool backing 0.83 already at 100 Hz), non-combustible A1, weatherproof.",
            "kicker": "Technology · Engineered with Absora Technology",
@@ -188,7 +188,7 @@ HSA3 = {
            "alt": "Schematic section through HSA3: corrugated micro-perforated face layer, air chambers, spring-mounted intermediate layer, resonance cavity and carrier plate",
            "b1": "Configure an enclosure with HSA3", "b2": "Request the test report", "subj": "HSA3%20test%20report",
            "facts": [("up to −40 %", "pressure drop vs. splitter silencers"), ("αₛ 0.83", "already at 100 Hz, with wool backing – EN ISO 354"),
-                     ("A1", "non-combustible to EN 13501-1"), ("0 fibres", "no mineral wool, no foam")]},
+                     ("A1", "non-combustible to EN 13501-1"), ("0 fibres", "in the fibre-free version – no mineral wool, no foam")]},
 }
 
 OVERVIEW = {

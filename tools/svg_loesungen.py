@@ -20,7 +20,14 @@ T = {
         "b_n1": "Brummen 100/200 Hz", "b_n2": "Lüfter, Schaltfrequenz", "b_n3": "Verdichter, Ventilatoren",
         "b_s1": "HSA3-Einhausung", "b_s2": "HSA3-Schallhaube", "b_s3": "HSA3-Kulisse",
         "b_aria0": "BESS-Anlage ohne Schallschutz: Transformator, Wechselrichter und Klimagerät des Containers strahlen Schall frei ab",
-        "b_aria1": "BESS-Anlage mit ForCoTech-Lösung: Trafo-Einhausung, Schallhaube am Wechselrichter und Kulisse vor dem Klimagerät aus HSA3"},
+        "b_aria1": "BESS-Anlage mit ForCoTech-Lösung: Trafo-Einhausung, Schallhaube am Wechselrichter und Kulisse vor dem Klimagerät aus HSA3",
+        "f_hi": "Hohe Frequenz – z. B. 2.000 Hz, λ ≈ 17 cm", "f_lo": "Tiefe Frequenz – 100 Hz, λ ≈ 3,4 m",
+        "f_hi2": "deutlicher Schallschatten", "f_lo2": "Schall beugt sich in den Schatten",
+        "f_aria": "Vergleich: Hohe Frequenzen enden an der Wand in einem deutlichen Schallschatten, tiefe Frequenzen beugen sich über die Wandkrone bis zum Empfänger",
+        "r_ref": "Reflektierende Wand", "r_abs": "Absorbierende Wand mit HSA3",
+        "r_ref2": "Mehrfachreflexion:\njede Reflexion strahlt\nzusätzlich über die Krone", "r_abs2": "Schall wird auf der\nQuellseite geschluckt",
+        "r_mirror": "Spiegelquellen", "r_heat": "Schallenergie → Wärme im HSA3",
+        "r_aria": "Vergleich: Bei einer reflektierenden Wand wird der Schall zwischen Anlage und Wand mehrfach hin und her geworfen und strahlt mehrfach über die Krone ab; eine absorbierende HSA3-Wand schluckt ihn auf der Quellseite"},
  "en": {"wall": "Building wall", "wr": "Inverter", "in": "Cool supply air", "out": "Exhaust via HSA3 tubes",
         "lin": "HSA3 inner lining", "front": "Front opens fully", "gap": "500 / 800 mm clearance",
         "src": "Unit", "bar": "Noise barrier with HSA3", "diff": "Diffraction at the top edge", "imm": "Neighbour's window",
@@ -33,7 +40,14 @@ T = {
         "b_n1": "Hum 100/200 Hz", "b_n2": "Fans, switching freq.", "b_n3": "Compressors, fans",
         "b_s1": "HSA3 enclosure", "b_s2": "HSA3 acoustic hood", "b_s3": "HSA3 silencer",
         "b_aria0": "BESS site without noise control: transformer, inverter and the container's HVAC unit radiate noise freely",
-        "b_aria1": "BESS site with ForCoTech solution: transformer enclosure, acoustic hood on the inverter and silencer in front of the HVAC unit, all in HSA3"},
+        "b_aria1": "BESS site with ForCoTech solution: transformer enclosure, acoustic hood on the inverter and silencer in front of the HVAC unit, all in HSA3",
+        "f_hi": "High frequency – e.g. 2,000 Hz, λ ≈ 17 cm", "f_lo": "Low frequency – 100 Hz, λ ≈ 3.4 m",
+        "f_hi2": "clear acoustic shadow", "f_lo2": "sound bends into the shadow",
+        "f_aria": "Comparison: high frequencies end at the barrier in a clear acoustic shadow, low frequencies bend over the top edge to the receiver",
+        "r_ref": "Reflective barrier", "r_abs": "Absorbing barrier with HSA3",
+        "r_ref2": "Multiple reflections:\nevery reflection also\nradiates over the top", "r_abs2": "Sound is absorbed\non the source side",
+        "r_mirror": "Image sources", "r_heat": "sound energy → heat in the HSA3",
+        "r_aria": "Comparison: with a reflective barrier, sound bounces back and forth between unit and barrier and radiates over the top several times; an absorbing HSA3 barrier absorbs it on the source side"},
 }
 
 DEFS = f'''<defs>
@@ -249,12 +263,116 @@ def bess(L, mit):
     return "".join(s)
 
 
+def _arc(cx, cy, r, a0, a1, **kw):
+    import math
+    x0, y0 = cx + r * math.cos(math.radians(a0)), cy + r * math.sin(math.radians(a0))
+    x1, y1 = cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1))
+    large = 1 if (a1 - a0) > 180 else 0
+    attrs = " ".join(f'{k.replace("_", "-")}="{v}"' for k, v in kw.items())
+    return f'<path d="M{x0:.1f} {y0:.1f} A{r} {r} 0 {large} 1 {x1:.1f} {y1:.1f}" fill="none" {attrs}/>'
+
+
+def _house(x, gy):
+    return (f'<path d="M{x} {gy} V{gy-130} L{x+55} {gy-170} L{x+110} {gy-130} V{gy}z" fill="#ece8e8" stroke="#9c9494" stroke-width="2"/>'
+            f'<rect x="{x+34}" y="{gy-105}" width="42" height="52" fill="#fff" stroke="{INK}" stroke-width="3"/>')
+
+
+def frequency(L):
+    """Zwei Felder: hohe Frequenz mit Schallschatten, tiefe Frequenz mit Beugung in den Schatten."""
+    W, H, GY = 1300, 430, 380
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-label="{L["f_aria"]}">', DEFS,
+         f'<rect width="{W}" height="{H}" fill="#fff"/>',
+         f'<line x1="650" y1="30" x2="650" y2="{H-20}" stroke="{LINE}" stroke-width="2"/>']
+    for i, (title, sub, lam, a_end, faint) in enumerate(((L["f_hi"], L["f_hi2"], 13, -52, True),
+                                                          (L["f_lo"], L["f_lo2"], 58, 82, False))):
+        ox = i * 655
+        sx, sy = ox + 95, 310          # Quelle
+        wx, wy = ox + 215, 150         # Wandkrone
+        s.append(f'<clipPath id="cl{i}"><rect x="{ox+10}" y="40" width="{wx-ox-10}" height="{GY-40}"/></clipPath>')
+        s.append(f'<clipPath id="cr{i}"><rect x="{wx+14}" y="40" width="{ox+640-wx-14}" height="{GY-40}"/></clipPath>')
+        s.append(f'<line x1="{ox+10}" y1="{GY}" x2="{ox+640}" y2="{GY}" stroke="{INK}" stroke-width="3"/>')
+        s.append(f'<rect x="{ox+10}" y="{GY}" width="630" height="14" fill="url(#hatch)"/>')
+        if faint:  # geometrischer Schatten unterhalb der Linie Quelle–Kante
+            s.append(f'<path d="M{wx+7} {wy} L{wx+7+(wy-40)/1.26:.0f} 40 L{ox+640} 40 L{ox+640} {GY} L{wx+14} {GY} L{wx+14} {wy}z" fill="#f3eff0"/>')
+        g = [f'<g clip-path="url(#cl{i})">']
+        r = lam
+        while r < 260:
+            g.append(f'<circle cx="{sx}" cy="{sy}" r="{r}" fill="none" stroke="{RED}" stroke-width="{1.6 if faint else 2.4}" opacity=".75"/>')
+            r += lam
+        g.append('</g>')
+        s += g
+        g = [f'<g clip-path="url(#cr{i})">']
+        r = lam
+        while r < 470:
+            if faint:
+                g.append(_arc(wx + 7, wy, r, -90, a_end, stroke=RED, stroke_width=1.6, opacity=".75"))
+                g.append(_arc(wx + 7, wy, r, a_end, 25, stroke=RED, stroke_width=1.2, opacity=".14"))
+            else:
+                g.append(_arc(wx + 7, wy, r, -90, a_end, stroke=RED, stroke_width=2.4, opacity=".75"))
+            r += lam
+        g.append('</g>')
+        s += g
+        s.append(f'<rect x="{ox+40}" y="{sy-20}" width="120" height="{GY-sy+20}" rx="5" fill="#4a4a4a"/>')
+        s.append(f'<circle cx="{sx}" cy="{sy}" r="8" fill="{RED}"/>')
+        s.append(f'<rect x="{wx}" y="{wy}" width="14" height="{GY-wy}" fill="#7a7a7a"/>')
+        s.append(_house(ox + 505, GY))
+        s.append(txt(ox + 25, 30, title, 19, INK, "start", "700"))
+        s.append(f'<rect x="{ox+245}" y="{GY-44}" width="{len(sub)*9.4+20:.0f}" height="30" rx="4" fill="#fff" opacity=".92"/>')
+        s.append(txt(ox + 255, GY - 23, sub, 17, MUT if faint else RED, "start", "700"))
+    s.append('</svg>')
+    return "".join(s)
+
+
+def reflection(L):
+    """Zwei Felder: Mehrfachreflexion an harter Wand gegenüber Absorption mit HSA3."""
+    W, H, GY = 1300, 430, 380
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-label="{L["r_aria"]}">', DEFS,
+         f'<rect width="{W}" height="{H}" fill="#fff"/>',
+         f'<line x1="650" y1="30" x2="650" y2="{H-20}" stroke="{LINE}" stroke-width="2"/>']
+    for i in (0, 1):
+        ox = i * 655
+        ux0, ux1, uy = ox + 50, ox + 230, 200     # Anlage
+        wx, wy = ox + 300, 110                    # Wand nah an der Quelle
+        s.append(f'<line x1="{ox+10}" y1="{GY}" x2="{ox+640}" y2="{GY}" stroke="{INK}" stroke-width="3"/>')
+        s.append(f'<rect x="{ox+10}" y="{GY}" width="630" height="14" fill="url(#hatch)"/>')
+        s.append(f'<rect x="{ux0}" y="{uy}" width="{ux1-ux0}" height="{GY-uy}" rx="6" fill="#4a4a4a"/>')
+        s.append(f'<rect x="{ux0+20}" y="{uy-14}" width="{ux1-ux0-40}" height="14" rx="3" fill="#6b6b6b"/>')
+        s.append(txt((ux0 + ux1) / 2, uy + 110, L["src"], 17, "#fff", "middle", "700"))
+        s.append(f'<rect x="{wx}" y="{wy}" width="18" height="{GY-wy}" fill="#7a7a7a"/>')
+        if i == 0:
+            s.append(txt(ox + 25, 30, L["r_ref"], 19, INK, "start", "700"))
+            pts = [(ux1, 340), (wx, 310), (ux1, 280), (wx, 250), (ux1, 220), (wx, 190)]
+            d = "M" + " L".join(f"{x} {y}" for x, y in pts)
+            s.append(f'<path d="{d}" fill="none" stroke="{RED}" stroke-width="4" stroke-linejoin="round"/>')
+            for (x, y), op, ey in zip(((ux1, 280), (ux1, 220), (wx, 190)), (".45", ".7", "1"), (300, 270, 240)):
+                s.append(f'<path d="M{x} {y} L{wx+9} {wy} L{ox+610} {ey}" fill="none" stroke="{RED}" stroke-width="3.5" opacity="{op}" marker-end="url(#ar)"/>')
+            for x, y in ((wx, 310), (wx, 250), (ux1, 280), (ux1, 220)):
+                s.append(f'<circle cx="{x}" cy="{y}" r="6" fill="#fff" stroke="{RED}" stroke-width="3"/>')
+            s.append(f'<circle cx="{wx+9}" cy="{wy}" r="7" fill="#fff" stroke="{RED}" stroke-width="3"/>')
+            s.append(txt(ox + 360, 320, L["r_ref2"], 16, RED, "start", "700"))
+            s.append(txt(ox + 25, 75, L["r_mirror"], 15, MUT))
+            s.append(f'<line x1="{ox+90}" y1="82" x2="{ux1-6}" y2="216" stroke="{MUT}" stroke-width="1.5"/>')
+        else:
+            s.append(f'<rect x="{wx-14}" y="{wy}" width="14" height="{GY-wy}" fill="url(#hsa)"/>')
+            s.append(txt(ox + 25, 30, L["r_abs"], 19, INK, "start", "700"))
+            for y0, y1 in ((340, 310), (280, 260)):
+                s.append(f'<line x1="{ux1}" y1="{y0}" x2="{wx-18}" y2="{y1}" stroke="{RED}" stroke-width="4" marker-end="url(#ar)"/>')
+            s.append(f'<path d="M{ux1} 215 L{wx+9} {wy} L{ox+610} 300" fill="none" stroke="{RED}" stroke-width="3" opacity=".45" marker-end="url(#ar)"/>')
+            s.append(f'<circle cx="{wx+9}" cy="{wy}" r="7" fill="#fff" stroke="{RED}" stroke-width="3"/>')
+            s.append(txt(ox + 360, 320, L["r_abs2"], 16, INK, "start", "700"))
+            s.append(txt(ox + 360, 366, L["r_heat"], 15, MUT))
+    s.append('</svg>')
+    return "".join(s)
+
+
 def build():
     OUT.mkdir(parents=True, exist_ok=True)
     for lang, L in T.items():
         sfx = "" if lang == "de" else "-en"
         (OUT / f"wechselrichter-haube{sfx}.svg").write_text(inverter(L), encoding="utf-8")
         (OUT / f"schallwand-prinzip{sfx}.svg").write_text(barrier(L), encoding="utf-8")
+        (OUT / f"schallwand-frequenz{sfx}.svg").write_text(frequency(L), encoding="utf-8")
+        (OUT / f"schallwand-reflexion{sfx}.svg").write_text(reflection(L), encoding="utf-8")
         (OUT / f"hsa3-aufbau{sfx}.svg").write_text(hsa3(L), encoding="utf-8")
         (OUT / f"bess-ohne-schallschutz{sfx}.svg").write_text(bess(L, False), encoding="utf-8")
         (OUT / f"bess-mit-forcotech{sfx}.svg").write_text(bess(L, True), encoding="utf-8")

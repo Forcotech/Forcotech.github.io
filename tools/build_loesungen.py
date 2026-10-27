@@ -252,6 +252,25 @@ def hero(lang, kicker, h1, lead, b1, b1_url, b2, b2_url, img, w, h, alt, facts, 
 </div>"""
 
 
+# Rechenzentren: eigene Seite (tools/build_rechenzentren.py), hier nur als Karte in Übersicht und „Weitere Lösungen“
+DC = {
+    "url": {"de": "/rechenzentren/", "en": "/en/data-centres/"},
+    "img": "/img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp", "w": 1500, "h": 695,
+    "de": {"tag": "Data Center · Acoustic Packs", "nav": "Rechenzentren",
+           "teaser": "Freistehende Acoustic Packs für Kaltwassersätze und Rückkühler auf dem Dach: Helmholtz-Röhrenschalldämpfer über den Ventilatoren, Druckverlust innerhalb der Gerätereserve.",
+           "alt": "Acoustic Packs von ForCoTech: zwei freistehende Schallhauben mit Dachschalldämpfern über den Kaltwassersätzen eines Rechenzentrums – Visualisierung"},
+    "en": {"tag": "Data centres · Acoustic packs", "nav": "Data centres",
+           "teaser": "Free-standing acoustic packs for chillers and dry coolers on the roof: Helmholtz tube silencers above the fans, pressure drop within the unit reserve.",
+           "alt": "ForCoTech acoustic packs: two free-standing enclosures with roof silencers above the chillers of a data centre – visualisation"},
+}
+
+
+def dc_card(lang, hx, alt=True):
+    t = DC[lang]
+    return (f'<a class="solcard" href="{DC["url"][lang]}"><img src="{DC["img"]}" width="{DC["w"]}" height="{DC["h"]}" alt="{E(t["alt"]) if alt else ""}" loading="lazy">'
+            f'<span class="tag">{E(t["tag"])}</span><{hx}>{E(t["nav"])}</{hx}><p>{E(t["teaser"])}</p><span class="more">{UI[lang]["rel_more"]}</span></a>')
+
+
 def related(lang, skip):
     u = UI[lang]
     cards = []
@@ -261,6 +280,7 @@ def related(lang, skip):
         t = p[lang]
         cards.append(f'<a class="solcard" href="{p["url"][lang]}"><img src="{pic(p, lang)}" width="{p["w"]}" height="{p["h"]}" alt="" loading="lazy">'
                      f'<span class="tag">{E(t["tag"])}</span><h3>{E(t["nav"])}</h3><p>{E(t["teaser"])}</p><span class="more">{u["rel_more"]}</span></a>')
+    cards.append(dc_card(lang, "h3", alt=False))
     if skip != "hsa3":
         cards.append(f'<a class="solcard" href="{HSA3["url"][lang]}"><img src="{pic(HSA3, lang)}" width="{HSA3["w"]}" height="{HSA3["h"]}" alt="" loading="lazy">'
                      f'<span class="tag">{u["hsa3_tag"]}</span><h3>{u["hsa3_h"]}</h3><p>{u["hsa3_p"]}</p><span class="more">{u["hsa3_more"]}</span></a>')
@@ -308,6 +328,7 @@ def build():
             pt = p[lang]
             cards.append(f'<a class="solcard" href="{p["url"][lang]}"><img src="{pic(p, lang)}" width="{p["w"]}" height="{p["h"]}" alt="{E(pt["alt"])}" loading="lazy">'
                          f'<span class="tag">{E(pt["tag"])}</span><h2>{E(pt["nav"])}</h2><p>{E(pt["teaser"])}</p><span class="more">{u["rel_more"]}</span></a>')
+        cards.append(dc_card(lang, "h2"))
         cards.append(f'<a class="solcard" href="{HSA3["url"][lang]}"><img src="{pic(HSA3, lang)}" width="{HSA3["w"]}" height="{HSA3["h"]}" alt="{E(HSA3[lang]["alt"])}" loading="lazy">'
                      f'<span class="tag">{u["hsa3_tag"]}</span><h2>{u["hsa3_h"]}</h2><p>{u["hsa3_p"]}</p><span class="more">{u["hsa3_more"]}</span></a>')
         ofrag = (ROOT / "loesungen" / "_src" / f"uebersicht.{lang}.html").read_text(encoding="utf-8")

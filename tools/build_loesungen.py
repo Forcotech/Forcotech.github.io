@@ -252,7 +252,7 @@ def hero(lang, kicker, h1, lead, b1, b1_url, b2, b2_url, img, w, h, alt, facts, 
 </div>"""
 
 
-# Rechenzentren: eigene Seite (tools/build_rechenzentren.py), hier nur als Karte in Übersicht und „Weitere Lösungen“
+# Rechenzentren und Adiabatik: eigene Seiten (build_rechenzentren.py, build_adiabatik.py), hier nur als Karten in Übersicht und „Weitere Lösungen“
 DC = {
     "url": {"de": "/rechenzentren/", "en": "/en/data-centres/"},
     "img": "/img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp", "w": 1500, "h": 695,
@@ -265,10 +265,27 @@ DC = {
 }
 
 
-def dc_card(lang, hx, alt=True):
-    t = DC[lang]
-    return (f'<a class="solcard" href="{DC["url"][lang]}"><img src="{DC["img"]}" width="{DC["w"]}" height="{DC["h"]}" alt="{E(t["alt"]) if alt else ""}" loading="lazy">'
-            f'<span class="tag">{E(t["tag"])}</span><{hx}>{E(t["nav"])}</{hx}><p>{E(t["teaser"])}</p><span class="more">{UI[lang]["rel_more"]}</span></a>')
+ADIA = {
+    "url": {"de": "/adiabatik/", "en": "/en/adiabatic-precooling/"},
+    "img": "/img/adiabatik/adiabatik-isometrie.svg", "img_en": "/img/adiabatik/adiabatik-isometrie-en.svg", "w": 1060, "h": 560,
+    "de": {"tag": "Neu · in Erprobung", "nav": "Adiabatische Vorkühlung",
+           "teaser": "Schallschutz, der mitkühlt: Das Adiabatik-Modul in der Haube kühlt die Ansaugluft von Kälteanlagen an Hitzetagen um ca. 6–9 K vor. Pilotanwender gesucht.",
+           "alt": "Isometrie einer Schallhaube mit Adiabatik-Modul an der Längsseite und Abluft-Schalldämpfer auf dem Dach"},
+    "en": {"tag": "New · under test", "nav": "Adiabatic pre-cooling",
+           "teaser": "Noise control that also cools: the adiabatic module in the enclosure pre-cools the intake air of refrigeration plants by approx. 6–9 K on hot days. Pilot users wanted.",
+           "alt": "Isometric view of an enclosure with adiabatic module on the long side and discharge silencer on the roof"},
+}
+EXTRA = [DC, ADIA]  # eigene Seiten außerhalb von PAGES, als Karten in Übersicht und „Weitere Lösungen“
+
+
+def extra_cards(lang, hx, alt=True):
+    out = []
+    for x in EXTRA:
+        t = x[lang]
+        img = x.get("img_" + lang, x["img"])
+        out.append(f'<a class="solcard" href="{x["url"][lang]}"><img src="{img}" width="{x["w"]}" height="{x["h"]}" alt="{E(t["alt"]) if alt else ""}" loading="lazy">'
+                   f'<span class="tag">{E(t["tag"])}</span><{hx}>{E(t["nav"])}</{hx}><p>{E(t["teaser"])}</p><span class="more">{UI[lang]["rel_more"]}</span></a>')
+    return out
 
 
 def related(lang, skip):
@@ -280,7 +297,7 @@ def related(lang, skip):
         t = p[lang]
         cards.append(f'<a class="solcard" href="{p["url"][lang]}"><img src="{pic(p, lang)}" width="{p["w"]}" height="{p["h"]}" alt="" loading="lazy">'
                      f'<span class="tag">{E(t["tag"])}</span><h3>{E(t["nav"])}</h3><p>{E(t["teaser"])}</p><span class="more">{u["rel_more"]}</span></a>')
-    cards.append(dc_card(lang, "h3", alt=False))
+    cards += extra_cards(lang, "h3", alt=False)
     if skip != "hsa3":
         cards.append(f'<a class="solcard" href="{HSA3["url"][lang]}"><img src="{pic(HSA3, lang)}" width="{HSA3["w"]}" height="{HSA3["h"]}" alt="" loading="lazy">'
                      f'<span class="tag">{u["hsa3_tag"]}</span><h3>{u["hsa3_h"]}</h3><p>{u["hsa3_p"]}</p><span class="more">{u["hsa3_more"]}</span></a>')
@@ -328,7 +345,7 @@ def build():
             pt = p[lang]
             cards.append(f'<a class="solcard" href="{p["url"][lang]}"><img src="{pic(p, lang)}" width="{p["w"]}" height="{p["h"]}" alt="{E(pt["alt"])}" loading="lazy">'
                          f'<span class="tag">{E(pt["tag"])}</span><h2>{E(pt["nav"])}</h2><p>{E(pt["teaser"])}</p><span class="more">{u["rel_more"]}</span></a>')
-        cards.append(dc_card(lang, "h2"))
+        cards += extra_cards(lang, "h2")
         cards.append(f'<a class="solcard" href="{HSA3["url"][lang]}"><img src="{pic(HSA3, lang)}" width="{HSA3["w"]}" height="{HSA3["h"]}" alt="{E(HSA3[lang]["alt"])}" loading="lazy">'
                      f'<span class="tag">{u["hsa3_tag"]}</span><h2>{u["hsa3_h"]}</h2><p>{u["hsa3_p"]}</p><span class="more">{u["hsa3_more"]}</span></a>')
         ofrag = (ROOT / "loesungen" / "_src" / f"uebersicht.{lang}.html").read_text(encoding="utf-8")

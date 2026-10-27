@@ -20,7 +20,7 @@ from build_hserie import faq_ld
 ROOT = Path(__file__).resolve().parent.parent
 URL = {"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}
 TECH = {"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}
-IMG = "img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp"
+IMG = "img/rechenzentren/acoustic-packs-rechenzentrum-v3.webp"
 TXT = {
     "de": {"title": "Schallschutz für Rechenzentren – Acoustic Packs für Kaltwassersätze und Rückkühler | ForCoTech",
            "desc": "Freistehende Acoustic Packs für Chiller auf Rechenzentrumsdächern: Helmholtz-Röhrenschalldämpfer über den Ventilatoren, HSA3-Innenverkleidung A1, Druckverlust innerhalb der Gerätereserve, ca. 13 kg/m².",

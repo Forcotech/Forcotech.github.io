@@ -255,7 +255,7 @@ def hero(lang, kicker, h1, lead, b1, b1_url, b2, b2_url, img, w, h, alt, facts, 
 # Rechenzentren und Adiabatik: eigene Seiten (build_rechenzentren.py, build_adiabatik.py), hier nur als Karten in Übersicht und „Weitere Lösungen“
 DC = {
     "url": {"de": "/rechenzentren/", "en": "/en/data-centres/"},
-    "img": "/img/rechenzentren/acoustic-packs-rechenzentrum-v2.webp", "w": 1500, "h": 695,
+    "img": "/img/rechenzentren/acoustic-packs-rechenzentrum-v3.webp", "w": 1500, "h": 695,
     "de": {"tag": "Data Center · Acoustic Packs", "nav": "Rechenzentren",
            "teaser": "Freistehende Acoustic Packs für Kaltwassersätze und Rückkühler auf dem Dach: Helmholtz-Röhrenschalldämpfer über den Ventilatoren, Druckverlust innerhalb der Gerätereserve.",
            "alt": "Acoustic Packs von ForCoTech: zwei freistehende Schallhauben mit Dachschalldämpfern über den Kaltwassersätzen eines Rechenzentrums – Visualisierung"},

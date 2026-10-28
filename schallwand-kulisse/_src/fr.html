@@ -1,0 +1,114 @@
+<section class="alt" id="aufgabe">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">Le problème</span>
+      <h2>L’écran ne suffit pas, le caisson est de trop</h2>
+      <p class="sub">Un écran acoustique apporte en général 6 à 10 dB(A), un caisson 15 à 25 dB(A). Beaucoup de projets se situent entre les deux : il manque 10 à 15 dB(A), mais un caisson n’est pas possible – pour des raisons de place, de maintenance, d’aspect ou de R290.</p>
+    </div>
+    <ul class="check">
+      <li><b>Écran seul :</b> au-delà de 10 dB(A), il doit devenir très haut – structure, charge de vent et autorisations deviennent un sujet.</li>
+      <li><b>Caisson :</b> agit dans toutes les directions, mais modifie le passage de l’air, l’accès et l’implantation.</li>
+      <li><b>Combinaison :</b> l’écran reste d’une hauteur raisonnable, le silencieux posé sur l’appareil traite le refoulement. L’appareil reste ouvert en partie haute et accessible de tous côtés.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="wege">
+  <div class="wrap">
+    <span class="kicker">Principe de la combinaison</span>
+    <h2>Deux chemins acoustiques – deux mesures</h2>
+    <p class="sub">Une pompe à chaleur ou un groupe d’eau glacée rayonne par deux chemins. Ce qui compte n’est pas l’origine du bruit, mais sa direction.</p>
+    <div class="dc-figs">
+      <figure class="dc-wide"><img src="/img/schallwand-kulisse/zwei-wege{{SUF}}.svg" width="820" height="470" alt="Vue latérale : appareil avec silencieux d’extraction, écran acoustique et maison voisine. Le refoulement en haut traverse le silencieux et passe par-dessus l’arête de l’écran, le rayonnement latéral de l’enveloppe et du compresseur est arrêté par l’écran." loading="lazy"><figcaption><b>Principe</b> refoulement en haut et rayonnement latéral (schéma)</figcaption></figure>
+    </div>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">En haut</span><h3>Refoulement par les ventilateurs</h3><p>Le bruit des ventilateurs – et une bonne part du bruit du compresseur entraîné avec l’air à travers la batterie et les ventilateurs. Ce chemin est réduit par le <a href="{{SD}}">silencieux d’extraction RK-200</a> en tubes HSA3.</p></div>
+      <div class="card"><span class="tag">Latéral</span><h3>Enveloppe et compresseur</h3><p>Le bruit du compresseur rayonné directement par l’habillage et les ailettes – grave et souvent tonal. Ce chemin est arrêté par l’écran acoustique avec absorbant HSA3.</p></div>
+      <div class="card"><span class="tag">Valeurs repères</span><h3>Quel niveau sur le côté ?</h3><p>D’après nos projets : latéral en général <b>5 dB sous le haut pour les compresseurs scroll</b>, <b>7 dB sous le haut pour les compresseurs à vis</b>. Avec des données constructeur par face, nous calculons plus précisément.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="hoehenregel">
+  <div class="wrap">
+    <span class="kicker">La règle de conception essentielle</span>
+    <h2>L’écran doit dépasser la ligne de vue entre le silencieux et la fenêtre</h2>
+    <p class="sub">Le silencieux relève la sortie d’air de la hauteur du cadre et du silencieux. Si l’arête de l’écran se trouve sous la ligne reliant la sortie à la fenêtre, le refoulement n’est guère protégé – il détermine alors le résultat, quelle que soit l’efficacité latérale de l’écran.</p>
+    <div class="dc-figs">
+      <figure class="dc-wide"><img src="/img/schallwand-kulisse/hoehenregel{{SUF}}.svg" width="820" height="420" alt="À gauche : écran trop bas, la ligne de vue entre la sortie du silencieux et la fenêtre passe au-dessus de l’arête. À droite : écran assez haut, la ligne de vue est interrompue et le bruit doit être diffracté par l’arête." loading="lazy"><figcaption><b>Règle de hauteur</b> à gauche trop bas, à droite correct (schéma)</figcaption></figure>
+    </div>
+    <ul class="check" style="margin-top:16px">
+      <li><b>Hauteur de sortie</b> = hauteur de l’appareil + cadre de transition (valeur indicative 500 mm) + 1,0 m de silencieux.</li>
+      <li><b>Des fenêtres hautes proches de l’installation</b> exigent un écran plus haut – ou le retour à 45° qui incline l’arête vers l’appareil.</li>
+      <li><b>Le configurateur le vérifie automatiquement</b> et indique le chemin déterminant et la hauteur d’écran suffisante.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="musterauslegung">
+  <div class="wrap">
+    <span class="kicker">Exemple de dimensionnement</span>
+    <h2>Un exemple calculé</h2>
+    <p class="sub">Groupe d’eau glacée à condensation par air 4,9 × 2,24 × 2,4 m, puissance acoustique L<sub>WA</sub> 92 dB(A), compresseurs scroll. Fenêtre au 1er étage (5 m de hauteur) à 25 m derrière un écran en U, objectif 40 dB(A) la nuit (exemple selon la TA Lärm allemande ; en France, le configurateur évalue le critère d’émergence). Exemple sans référence client.</p>
+    <div class="cmp">
+      <table>
+        <thead><tr><th>Variante</th><th>Niveau à la fenêtre</th><th>Résultat</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">sans mesure</th><td>55,3 dB(A)</td><td>15 dB au-dessus de l’objectif</td></tr>
+          <tr><th scope="row">écran de 3,0 m seul</th><td>49,2 dB(A)</td><td>insuffisant – seul, il faudrait env. 5,4 m</td></tr>
+          <tr><th scope="row">silencieux d’extraction seul</th><td>env. 50 dB(A)</td><td>insuffisant – le rayonnement latéral demeure</td></tr>
+          <tr><th scope="row">écran de 3,0 m + silencieux</th><td>43,2 dB(A)</td><td>sortie à 3,9 m au-dessus de l’écran – refoulement déterminant</td></tr>
+          <tr><th scope="row" class="hl">écran de 4,0 m + silencieux</th><td class="hl"><b>39,6 dB(A)</b></td><td class="hl"><b>objectif respecté</b> (par le calcul dès env. 3,8 m)</td></tr>
+          <tr><th scope="row">à titre de comparaison : caisson (−20 dB(A) typ.)</th><td>env. 35 dB(A)</td><td>plus de réserve, mais un caisson fermé</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Estimation selon l’ISO 9613-2 comme dans le configurateur (état de calcul octobre 2026) : effet d’écran des deux chemins à 250 Hz, silencieux avec la valeur basse de la réduction attendue. Ne remplace pas une étude d’impact acoustique.</p>
+    <div class="btns" style="margin-top:16px"><a class="btn" href="{{CFG}}">Ouvrir cet exemple dans le configurateur</a></div>
+  </div>
+</section>
+
+<section class="alt" id="vergleich">
+  <div class="wrap">
+    <span class="kicker">Comparaison</span>
+    <h2>Écran, combinaison ou caisson ?</h2>
+    <div class="cmp">
+      <table>
+        <thead><tr><th scope="col"></th><th>Écran acoustique</th><th>Écran + silencieux</th><th>Caisson acoustique</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Atténuation typique</th><td>6–10 dB(A) côté protégé</td><td class="hl">env. 10–16 dB(A) côté protégé</td><td>15–25 dB(A) dans toutes les directions</td></tr>
+          <tr><th scope="row">Côté air</th><td>ouvert en haut, sans perte de charge</td><td class="hl">ouvert en haut, env. 4–8 Pa</td><td>dimensionné sur débit et pression</td></tr>
+          <tr><th scope="row">Maintenance</th><td>accès libre</td><td class="hl">accès libre, silencieux en partie haute</td><td>par portes et panneaux</td></tr>
+          <tr><th scope="row">R290 (propane)</th><td>sans difficulté</td><td class="hl">sans difficulté, tout métal et mis à la terre</td><td>seulement ouvert en pied, avec accord du constructeur</td></tr>
+          <tr><th scope="row">Fenêtres hautes, plusieurs côtés</th><td>efficacité réduite</td><td class="hl">efficacité réduite</td><td>agit aussi vers le haut</td></tr>
+          <tr><th scope="row">Bien adapté si …</th><td>l’objectif est dépassé de peu</td><td class="hl">il manque 10–15 dB(A) et un caisson n’est pas possible</td><td>plusieurs côtés sont concernés ou une forte atténuation est nécessaire</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="stand">
+  <div class="wrap">
+    <span class="kicker">État du développement</span>
+    <h2>Ce qui est calculé – et ce qui est mesuré</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">Mesuré</span><h3>Absorbant HSA3</h3><p>Coefficients d’absorption en salle réverbérante selon l’ISO 354 – base de l’écran et des tubes.</p></div>
+      <div class="card"><span class="tag">Calculé</span><h3>Silencieux RK-200</h3><p>Perte de charge et dimensionnement des modules calculés ; atténuation d’insertion par octave estimée. L’essai selon EN ISO 7235 sur le prototype est en préparation.</p></div>
+      <div class="card"><span class="tag">Par projet</span><h3>Votre installation</h3><p>Répartition haut/latéral, spectre et géométrie sont vérifiés pour chaque projet – avec votre fiche technique.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt faq" id="fragen">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Quand un écran acoustique seul suffit-il ?</summary><p>Lorsqu’un seul côté est concerné et que l’objectif est dépassé d’environ 10 dB(A) au plus. Au-delà, l’écran devient si haut que structure, charge de vent et aspect posent problème – le silencieux supplémentaire devient alors intéressant.</p></details>
+    <details><summary>Pourquoi le silencieux réduit-il aussi le bruit du compresseur ?</summary><p>Une grande partie du bruit du compresseur est entraînée vers le haut avec l’air, à travers la batterie et les ventilateurs. Tout ce qui sort par le haut traverse les tubes du silencieux – qu’il provienne du ventilateur ou du compresseur. Ce qui rayonne latéralement par l’enveloppe est traité par l’écran.</p></details>
+    <details><summary>Quelle hauteur doit avoir l’écran ?</summary><p>Une hauteur suffisante pour interrompre la ligne de vue entre la sortie du silencieux et la fenêtre déterminante. La sortie se situe à la hauteur de l’appareil plus le cadre de transition plus 1,0 m. Le configurateur calcule la hauteur recommandée pour votre géométrie.</p></details>
+    <details><summary>Quelle est la perte de charge supplémentaire ?</summary><p>Dimensionné pour 5 m/s maximum dans les tubes, le silencieux RK-200 présente environ 4 à 8 Pa. L’écran lui-même n’ajoute aucune perte de charge si la distance à l’appareil est respectée (au moins 800 mm recommandés).</p></details>
+    <details><summary>La combinaison convient-elle aux appareils au R290 ?</summary><p>Oui. L’écran est ouvert, le propane peut s’écouler librement. Le silencieux est entièrement métallique, sans revêtement isolant, conducteur et mis à la terre par le cadre. La zone de sécurité du constructeur reste applicable.</p></details>
+    <details><summary>Les valeurs d’atténuation sont-elles mesurées ?</summary><p>L’absorption du HSA3 est mesurée en salle réverbérante. L’atténuation d’insertion du silencieux RK-200 est pour l’instant estimée et sera mesurée sur le prototype selon l’EN ISO 7235. Sur cette page et dans le configurateur, nous retenons donc la valeur basse.</p></details>
+    <details><summary>Quand un caisson est-il le meilleur choix ?</summary><p>Lorsque plusieurs côtés ou des fenêtres hautes proches de l’installation sont concernés, lorsqu’il manque plus d’environ 15 dB(A) ou lorsque l’appareil souffle latéralement. Le caisson agit alors dans toutes les directions, avec plus de réserve.</p></details>
+  </div>
+</section>

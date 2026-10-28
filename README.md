@@ -39,6 +39,15 @@ bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und fran
 bearbeiten, dann `python3 tools/build_adiabatik.py`. Die Prinzipskizze img/adiabatik/*.svg erzeugt das Skript (Beschriftungen in LBL).
 Karte auf den Startseiten index.html, en/index.html, fr/index.html; Sitemap-Eintrag in tools/build_news.py.
 
+## Spezialthema Schallwand + Abluft-Schalldämpfer
+
+/loesungen/schallwand-kulisse/, /en/solutions/noise-barrier-and-silencer/, /fr/ecran-et-silencieux/: Inhalt in
+schallwand-kulisse/_src/de.html, en.html bzw. fr.html bearbeiten, dann `python3 tools/build_schallwand_kulisse.py`
+(Zeichnungen img/schallwand-kulisse/*.svg aus der Tabelle LBL). Musterauslegung mit Werten aus dem Konfigurator
+(Schallwand mit Option RK-200, Rechenstand 28.10.2026) – bei Änderungen am Rechenkern nachziehen. Link „Beispiel im
+Konfigurator öffnen“ übergibt Gerät und L_WA (`?sd=1&L=…`). Karte auf den Startseiten, Hinweis auf der Seite Schallwände,
+Sitemap-Eintrag in tools/build_news.py.
+
 ## Lösungsseiten und HSA3-Seite
 
 Übersicht /loesungen/ (EN /en/solutions/), je eine Seite pro Anwendung – Wärmepumpen & Klimaanlagen, VRF/VRV,

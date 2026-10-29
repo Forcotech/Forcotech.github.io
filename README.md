@@ -89,6 +89,7 @@ Impressum und Datenschutzerklärung DE/EN/FR: Texte in tools/build_legal.py, dan
 
     python3 tools/check.py      # wenige Sekunden: Links, Bilder, Sitemap, Titel/Beschreibung, CNAME
 
-Läuft bei jedem Push und Pull Request automatisch auf GitHub (`.github/workflows/pruefung.yml`); bei Fehlern
-erscheint ein rotes ✗ und GitHub schickt eine E-Mail. Achtung: Diese Seite wird direkt aus `main` veröffentlicht –
-die Prüfung warnt, hält eine fehlerhafte Fassung aber nicht auf. Deshalb nur über Zweig und Pull Request arbeiten.
+Läuft in Zweigen und Pull Requests automatisch (`.github/workflows/pruefung.yml`) und bei jedem Push auf `main` vor der
+Veröffentlichung (`.github/workflows/veroeffentlichen.yml`): Nur wenn die Prüfung besteht, werden die Seiten
+veröffentlicht – ohne `tools/`, `_src/`, README und CLAUDE.md; die zusammengestellten Seiten werden dabei noch einmal
+geprüft (`tools/check.py --root _site`). Voraussetzung: Settings → Pages → Source „GitHub Actions“.

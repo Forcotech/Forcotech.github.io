@@ -16,8 +16,10 @@ Der Konfigurator unter `/konfigurator/` ist ein eigenes Repository.
 
 ## Feste Regeln
 
-- **Veröffentlicht wird direkt aus `main`.** Jeder Push auf `main` ist sofort live – deshalb immer auf einem eigenen
-  Zweig arbeiten und über einen Pull Request zusammenführen, nachdem die Prüfung grün ist.
+- **Veröffentlicht wird über GitHub Actions** (`.github/workflows/veroeffentlichen.yml`): Jeder Push auf `main` geht
+  nach bestandener Prüfung live; schlägt sie fehl, bleibt der letzte gute Stand online. Trotzdem immer auf einem
+  eigenen Zweig arbeiten und über einen Pull Request zusammenführen. Nicht ausgeliefert werden `tools/`, alle `_src/`,
+  `README.md` und diese Datei.
 - **`CNAME` nie löschen oder ändern** – sonst ist die Domain www.forcotech.com weg.
 - **Seiten mit `_src/` nur dort bearbeiten**, dann das zugehörige Build-Skript ausführen (siehe README). Die erzeugten
   `index.html` nicht von Hand ändern, sonst überschreibt der nächste Build die Änderung.

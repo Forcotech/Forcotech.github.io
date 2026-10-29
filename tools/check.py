@@ -9,7 +9,8 @@ Prüft alle ausgelieferten HTML-Seiten (ohne _src/ und tools/):
 - jeder Eintrag in sitemap.xml existiert,
 - keine eingebetteten Bilder (data:image) und kein Python-Cache im Repository.
 
-    python3 tools/check.py      # Exitcode 1 bei Fehlern
+    python3 tools/check.py               # Exitcode 1 bei Fehlern
+    python3 tools/check.py --root _site  # zusammengestellte Veröffentlichung prüfen
 """
 import re
 import sys
@@ -17,6 +18,9 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
+# --root DIR: einen zusammengestellten Veröffentlichungsordner prüfen (z. B. _site/ im Veröffentlichungsablauf)
+if "--root" in sys.argv:
+    ROOT = Path(sys.argv[sys.argv.index("--root") + 1]).resolve()
 DOMAIN = "www.forcotech.com"
 SKIP_DIRS = {".git", ".github", "tools", "_src", "__pycache__"}
 

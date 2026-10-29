@@ -1,8 +1,9 @@
 # Prüfung der Firmenseite: Links, Bilder, Sitemap, Titel/Beschreibung, CNAME – wenige Sekunden, ohne Installationen.
-# Die Seite wird direkt aus main veröffentlicht; diese Prüfung meldet Fehler (rotes ✗, E-Mail), hält sie aber nicht auf.
+# Auf main prüft der Veröffentlichungsablauf (veroeffentlichen.yml); hier nur Nebenzweige und Pull Requests.
 name: Pruefung
 on:
   push:
+    branches-ignore: [main]
   pull_request:
 concurrency:
   group: pruefung-${{ github.ref }}-${{ github.event_name }}

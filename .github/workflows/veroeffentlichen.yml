@@ -1,0 +1,52 @@
+# Veröffentlichung der Firmenseite auf GitHub Pages: erst Prüfung, dann nur die Seiten.
+# Nicht ausgeliefert: tools/, alle _src/-Ordner, README, CLAUDE.md, Workflows, Git-Dateien.
+# Aktiv, sobald unter Settings → Pages → Source „GitHub Actions“ gewählt ist.
+# Schlägt die Prüfung fehl, wird nicht veröffentlicht – die Seite bleibt auf dem letzten guten Stand.
+name: Veroeffentlichen
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  pruefung:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - run: python3 tools/check.py
+  seite:
+    needs: pruefung
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Nur die Seiten zusammenstellen
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git*' --exclude='/.github/' --exclude='/tools/' --exclude='_src/' \
+                --exclude='/README.md' --exclude='/CLAUDE.md' --exclude='__pycache__/' --exclude='/_site/' ./ _site/
+          for f in tools README.md CLAUDE.md .github; do test ! -e "_site/$f" || { echo "$f darf nicht ausgeliefert werden"; exit 1; }; done
+          test -z "$(find _site -type d -name _src)" || { echo "_src darf nicht ausgeliefert werden"; exit 1; }
+          test "$(cat _site/CNAME)" = "www.forcotech.com"
+          du -sh _site
+      - name: Zusammengestellte Seiten prüfen (keine Verweise auf ausgeschlossene Dateien)
+        run: python3 tools/check.py --root _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

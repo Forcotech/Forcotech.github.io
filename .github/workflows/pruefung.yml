@@ -1,0 +1,18 @@
+# Prüfung der Firmenseite: Links, Bilder, Sitemap, Titel/Beschreibung, CNAME – wenige Sekunden, ohne Installationen.
+# Die Seite wird direkt aus main veröffentlicht; diese Prüfung meldet Fehler (rotes ✗, E-Mail), hält sie aber nicht auf.
+name: Pruefung
+on:
+  push:
+  pull_request:
+concurrency:
+  group: pruefung-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+jobs:
+  pruefung:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - run: python3 tools/check.py

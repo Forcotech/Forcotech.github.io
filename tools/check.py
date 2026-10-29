@@ -111,7 +111,8 @@ def check_sitemap():
 
 
 def check_repo():
-    for d in ROOT.rglob("__pycache__"):
+    ignoriert = "__pycache__" in ((ROOT / ".gitignore").read_text() if (ROOT / ".gitignore").exists() else "")
+    for d in ([] if ignoriert else ROOT.rglob("__pycache__")):
         if ".git" not in d.parts:
             notes.append(f"{d.relative_to(ROOT)}: Python-Cache gehört nicht ins Repository (.gitignore)")
     if not (ROOT / "CNAME").exists() or (ROOT / "CNAME").read_text().strip() != DOMAIN:

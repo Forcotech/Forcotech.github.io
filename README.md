@@ -1,5 +1,7 @@
 # www.forcotech.com
 
+**Zuerst lesen:** `CLAUDE.md` (Arbeitsregeln). Vor jeder Veröffentlichung: `python3 tools/check.py`.
+
 Firmenseite (Visitenkarte) von ForCoTech / Silent-Mode – Silent Engineering di Romolo Vicari, Osnago (LC), Italien.
 Live (eigene Domain, seit 14.10.2026): https://www.forcotech.com/ – Repository forcotech.github.io mit CNAME-Datei.
 Deutsch: https://www.forcotech.com/ · English: https://www.forcotech.com/en/ · Français: https://www.forcotech.com/fr/
@@ -80,4 +82,13 @@ bei Fehler Text zum Kopieren bzw. als E-Mail), Gestaltung am Ende von `style.css
 Dasselbe Formular steht seit 23.10.2026 als Abschluss auf allen Unterseiten (Abschnitt `#anfrage`, aus `form_section()` in
 `tools/startseite_anfrage.py`, eingebunden über `page()` in tools/build_news.py). Vorauswahl „Anlagentyp“: `page(..., typ="pv")`
 setzt `data-anfrage-typ` am <body>; Knöpfe mit `href="#anfrage" data-typ="bess"` wählen beim Klick um.
-Hinweis: tools/build_legal.py ist älter als die live Datenschutzerklärung (YouTube-Absatz) – vor erneutem Ausführen abgleichen.
+Impressum und Datenschutzerklärung DE/EN/FR: Texte in tools/build_legal.py, dann `python3 tools/build_legal.py`
+(seit 29.10.2026 mit dem Live-Stand abgeglichen, inkl. YouTube-Absatz).
+
+## Prüfung vor dem Veröffentlichen
+
+    python3 tools/check.py      # wenige Sekunden: Links, Bilder, Sitemap, Titel/Beschreibung, CNAME
+
+Läuft bei jedem Push und Pull Request automatisch auf GitHub (`.github/workflows/pruefung.yml`); bei Fehlern
+erscheint ein rotes ✗ und GitHub schickt eine E-Mail. Achtung: Diese Seite wird direkt aus `main` veröffentlicht –
+die Prüfung warnt, hält eine fehlerhafte Fassung aber nicht auf. Deshalb nur über Zweig und Pull Request arbeiten.

@@ -1,5 +1,44 @@
 [
   {
+    "slug": "ki-zusammenarbeit-claude",
+    "date": "2026-10-30",
+    "status": "online",
+    "image": "img/news/ki-zusammenarbeit-claude-karte-de.webp",
+    "de": {
+      "title": "Ingenieurserfahrung trifft KI: Wie wir mit Claude arbeiten",
+      "alt": "Bildschirmansicht des ForCoTech-Konfigurators: Eingaben zu Gerät und Kältemittel R290, Auslegungsergebnis mit Außenmaßen, Pegelminderung, Paneelfläche und Gewicht sowie 3D-Ansicht der Schallhaube",
+      "teaser": "Seit den Anfängen der KI arbeiten wir mit ihr, heute täglich direkt mit Claude von Anthropic. Wie die Zusammenarbeit bei Auslegung, Angeboten und Software abläuft, was sie bringt und wo die Grenzen liegen.",
+      "image": "img/news/ki-zusammenarbeit-claude-karte-de.webp",
+      "image_full": "img/news/ki-zusammenarbeit-claude-de.webp",
+      "image_full_size": [
+        1600,
+        960
+      ]
+    },
+    "en": {
+      "title": "Engineering experience meets AI: how we work with Claude",
+      "alt": "Screenshot of the ForCoTech configurator: inputs for unit and R290 refrigerant, design result with outer dimensions, noise reduction, panel area and weight, and a 3D view of the acoustic enclosure",
+      "teaser": "We have worked with AI since its early days – today directly with Claude by Anthropic, every day. How the collaboration works for design, quotations and software, what it delivers and where its limits are.",
+      "image": "img/news/ki-zusammenarbeit-claude-karte-en.webp",
+      "image_full": "img/news/ki-zusammenarbeit-claude-en.webp",
+      "image_full_size": [
+        1600,
+        960
+      ]
+    },
+    "fr": {
+      "title": "L’expérience d’ingénieur rencontre l’IA : comment nous travaillons avec Claude",
+      "alt": "Capture d’écran du configurateur ForCoTech : saisie de l’appareil et du fluide R290, résultat du dimensionnement avec dimensions extérieures, atténuation, surface de panneaux et poids, et vue 3D du caisson acoustique",
+      "teaser": "Nous travaillons avec l’IA depuis ses débuts – aujourd’hui chaque jour directement avec Claude d’Anthropic. Comment se déroule la collaboration pour le dimensionnement, les offres et les logiciels, ce qu’elle apporte et où sont ses limites.",
+      "image": "img/news/ki-zusammenarbeit-claude-karte-fr.webp",
+      "image_full": "img/news/ki-zusammenarbeit-claude-fr.webp",
+      "image_full_size": [
+        1600,
+        960
+      ]
+    }
+  },
+  {
     "slug": "schallschutz-bess-r290-hsa3",
     "date": "2026-10-23",
     "status": "online",

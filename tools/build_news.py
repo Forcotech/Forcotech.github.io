@@ -157,10 +157,15 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
     """alts: {Sprache: Pfad} aller Fassungen dieser Seite, inkl. der eigenen."""
     L = T[lang]
     canon = alts[lang]
-    others = [k for k in LANGS if k in alts and k != lang]
+    others = [k for k in LANGS if k != lang]
     hreflang = "\n".join(f'<link rel="alternate" hreflang="{k}" href="{SITE}{alts[k]}">' for k in LANGS if k in alts)
-    switch = "\n      ".join(f'<a class="lang" href="{alts[k]}" lang="{k}" hreflang="{k}">{k.upper()}</a>' for k in others)
-    foot_lang = " · ".join(f'<a href="{alts[k]}" lang="{k}">{LANG_NAME[k]}</a>' for k in others)
+    # Sprachen ohne eigene Fassung dieser Seite verlinken auf ihre Startseite (ohne hreflang),
+    # damit z. B. FR im Menü nie fehlt.
+    target = {k: alts.get(k, T[k]["home"]) for k in others}
+    switch = "\n      ".join(
+        f'<a class="lang" href="{target[k]}" lang="{k}"' + (f' hreflang="{k}"' if k in alts else "") + f'>{k.upper()}</a>'
+        for k in others)
+    foot_lang = " · ".join(f'<a href="{target[k]}" lang="{k}">{LANG_NAME[k]}</a>' for k in others)
     nav = "\n      ".join(
         f'<a class="opt" href="{h if h.startswith("/") else L["home"] + h}">{n}</a>' for h, n in L["nav"])
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""

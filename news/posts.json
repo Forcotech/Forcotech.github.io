@@ -360,5 +360,32 @@
       "alt": "Rangée de grands ventilateurs axiaux dans un caisson, flux d’air représenté en bleu (illustration)",
       "teaser": "À partir du 24 juillet 2026, des rendements minimaux plus stricts s’appliquent aux ventilateurs de 125 W à 500 kW, dès 2027 pour les ventilateurs intégrés – ce que cela implique pour les équipements CVC."
     }
+  },
+  {
+    "slug": "schallhauben-vrv-hotel-innenstadt",
+    "date": "2026-07-06",
+    "status": "online",
+    "image": "img/news/vrv-einzelschallhauben-dach.webp",
+    "image_full": "img/news/vrv-einzelschallhauben-dach.webp",
+    "image_full_size": [
+      1595,
+      792
+    ],
+    "original": "https://silent-mode.com/blog/schallhauben-vrv-anlagen-hotel-in-der-innenstadt-in-frankreich-l%C3%A4rmbel%C3%A4stigung-in-nahe-gelegenen-attikawohnungen",
+    "de": {
+      "title": "Schallhauben für VRV-Anlagen auf einem Hotel in der Innenstadt – Lärmbelästigung in nahe gelegenen Attikawohnungen",
+      "alt": "Drei grüne Einzelschallhauben mit Luftöffnungen im Dach und Servicetüren auf einem begrünten Flachdach in der Innenstadt",
+      "teaser": "Drei Daikin VRV mit je 32.000 m³/h: Luftein- und -austritt ins Haubendach verlegt, 60-cm-Kulissen, Rahmen aus Nutprofilen – gegen nächtlichen Lärm an den Attikawohnungen."
+    },
+    "en": {
+      "title": "Acoustic enclosures for VRV units on an inner-city hotel – noise at nearby penthouse apartments",
+      "alt": "Three green individual acoustic enclosures with roof air openings and service doors on a green flat roof in a city centre",
+      "teaser": "Three Daikin VRV units at 32,000 m³/h each: air inlet and outlet moved into the enclosure roof, 60 cm splitters, T-slot profile frame – against night-time noise at the penthouses."
+    },
+    "fr": {
+      "title": "Caissons acoustiques pour unités VRV sur un hôtel en centre-ville – nuisances sonores pour les attiques voisins",
+      "alt": "Trois caissons acoustiques individuels verts avec ouvertures d’air en toiture et portes de service sur une toiture végétalisée en centre-ville",
+      "teaser": "Trois Daikin VRV à 32 000 m³/h chacune : entrée et sortie d’air en toiture du caisson, baffles de 60 cm, cadre en profilés à rainure – contre le bruit nocturne aux attiques."
+    }
   }
 ]

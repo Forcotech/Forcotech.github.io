@@ -27,7 +27,7 @@ Seiten /technik/, /en/technology/, /fr/technique/: Inhalt in technik/_src/<sprac
 
 /h-serie/ und /en/h-series/ (keine französische Fassung): Inhalt in hserie/_src/de.html bzw. en.html bearbeiten,
 dann `python3 tools/build_hserie.py`. Die FAQ-Daten (FAQPage) werden aus den <details>-Fragen erzeugt.
-Menüpunkt „H‑Serie“ in DE/EN steht in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.
+Seit 30.10.2026 nicht mehr im Hauptmenü; erreichbar über Lösungen und die Startseite.
 
 ## Data-Center-Lösungen
 
@@ -65,7 +65,7 @@ Abschnitt „Messwerte im Hallraum“ (#hallraum) auf der HSA3-Seite: Daten und 
 hsa3/_src/de.html und en.html ein – `python3 tools/build_hallraum.py`.
 
 Danach `python3 tools/build_loesungen.py` und zuletzt `python3 tools/build_news.py` (Navigation, Sitemap).
-Menüpunkte „Lösungen“ und „HSA3“ stehen in tools/build_news.py (nav) und auf den Startseiten index.html, en/index.html.
+Hauptmenü (Lösungen · Methode · Beispiele · News · Kontakt) steht in tools/build_news.py (nav), auf den Startseiten index.html, en/index.html, fr/index.html und auf leitfaden/index.html.
 
 ## Praxisleitfaden (PDF)
 

@@ -152,13 +152,13 @@ ul.cross li::after{transform:rotate(-45deg)}
 .faq details p{margin:0;padding:0 16px 14px;color:var(--muted)}
 
 /* Kontakt + Fuß */
-.contact{background:var(--accent-l);color:var(--ink);border:1px solid #f3c4c9;border-left:6px solid var(--accent);border-radius:16px;padding:32px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center}
+.contact{background:#fff;color:var(--ink);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:16px;box-shadow:0 2px 14px rgba(0,0,0,.05);padding:32px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center}
 @media (max-width:760px){.contact{grid-template-columns:1fr;padding:24px}}
-.contact h2{color:var(--accent)}.contact p{margin:0}
+.contact h2{color:var(--ink)}.contact p{margin:0}
 .contact a{color:var(--accent-d)}
 .contact .btn{color:#fff}
 .contact .btn + .btn{background:#fff;color:var(--accent);border-color:var(--accent)}
-.contact .btn + .btn:hover{background:#fff7f8}
+.contact .btn + .btn:hover{background:#f6f6f6}
 .contact address{font-style:normal;line-height:1.7;font-size:15px}
 footer{padding:28px 0 40px;font-size:13.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
@@ -403,11 +403,13 @@ h1 .what{display:block;margin-top:14px;font-size:clamp(17px,1.7vw,20px);line-hei
 .qf .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 @media (max-width:600px){.qf .row{grid-template-columns:1fr}}
 .qf label.f{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600;color:var(--ink)}
-.qf input,.qf textarea,.qf select{font:inherit;font-weight:400;font-size:15px;color:var(--ink);background:#fff;border:1px solid #e3b9be;border-radius:8px;padding:10px 12px;width:100%}
+.qf input,.qf textarea,.qf select{font:inherit;font-weight:400;font-size:15px;color:var(--ink);background:#fff;border:1px solid #cfcfcf;border-radius:8px;padding:10px 12px;width:100%}
 .qf input:focus,.qf textarea:focus,.qf select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
-.qf input[type=file]{padding:8px;font-size:14px}
+.qf input[type=file]{padding:8px;font-size:14px;background:#f8f8f8}
+.qf input[type=file]::file-selector-button{font:inherit;font-weight:600;color:var(--ink);background:#fff;border:1px solid #cfcfcf;border-radius:6px;padding:6px 12px;margin-right:12px;cursor:pointer}
+.qf input[type=file]::file-selector-button:hover{border-color:var(--accent);color:var(--accent)}
 .qf .hint{font-size:13px;font-weight:400;color:var(--muted)}
-.qf details.privacy{font-size:13.5px;color:var(--muted);background:#fff;border:1px solid #f0d2d5;border-radius:8px;padding:8px 12px}
+.qf details.privacy{font-size:13.5px;color:var(--muted);background:#f8f8f8;border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 .qf details.privacy summary{cursor:pointer;font-weight:600;color:var(--ink)}
 .qf details.privacy p{margin:8px 0 0}
 .qf .chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:400}
@@ -416,8 +418,8 @@ h1 .what{display:block;margin-top:14px;font-size:clamp(17px,1.7vw,20px);line-hei
 .qf button.btn{cursor:pointer;font:inherit;font-weight:700}
 .qf button.btn[disabled]{opacity:.6;cursor:wait}
 .qf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.qthanks{display:none;background:#fff;border:1px solid #f0d2d5;border-radius:10px;padding:18px}
-.qready{background:#fff;border:1px solid #f0d2d5;border-radius:10px;padding:16px;display:grid;gap:10px}
+.qthanks{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}
+.qready{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px}
 .qready[hidden]{display:none}
 .qready textarea{font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;width:100%;border:1px solid var(--line);border-radius:8px;padding:10px}
 .contact.has-form address{border-top:0}

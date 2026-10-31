@@ -15,7 +15,8 @@ L = {
   sec="kontakt",
   claim="<span>Ruhe für die Nachbarn.</span><em>Leistung für die Anlage.</em>",
   what="Schallhauben für Wärmepumpen und HVAC-Anlagen",
-  lead="Für Wärmepumpen, Kälteanlagen, VRF, PV-Wechselrichter und BESS – individuell ausgelegt, gefertigt mit Absora-Technologie.",
+  lead="<b>Erst der Nachweis, dann die Haube.</b> Für Wärmepumpen, Kälteanlagen, VRF, PV-Wechselrichter und BESS berechnen wir den Pegel am Immissionsort vorab und legen Akustik und Luftführung gemeinsam aus – gefertigt mit Absora-Technologie.",
+  nx_h="So geht es weiter", nx="<li><b>Prüfung</b> Ihrer Angaben – bei Bedarf kurze Rückfrage</li><li><b>Pegelberechnung</b> am Immissionsort und Auslegung von Akustik und Luftführung</li><li><b>Verbindliches Angebot</b> mit Zeichnung – bei komplexen Projekten meist in 2–3 Tagen</li>",
   h2="Projekt anfragen",
   intro="Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen.",
   name="Name *", company="Firma", email="E-Mail *", phone="Telefon", place="Projektort (PLZ / Ort)",
@@ -39,7 +40,8 @@ L = {
   sec="contact",
   claim="<span>Quiet for the neighbours.</span><em>Performance for the unit.</em>",
   what="Acoustic enclosures for heat pumps and HVAC systems",
-  lead="For heat pumps, chillers, VRF, PV inverters and BESS – individually engineered, built with Absora technology.",
+  lead="<b>Proof first, then the enclosure.</b> For heat pumps, chillers, VRF, PV inverters and BESS we calculate the level at the receiver in advance and design acoustics and airflow together – built with Absora technology.",
+  nx_h="What happens next", nx="<li><b>Review</b> of your details – with a short follow-up question if needed</li><li><b>Level calculation</b> at the receiver and design of acoustics and airflow</li><li><b>Binding quotation</b> with drawing – usually within 2–3 days for complex projects</li>",
   h2="Start your project",
   intro="Unit, quantity and location are enough to start – with a data sheet we can check dimensions, air volume and sound power straight away. For complex projects you will usually receive a binding quotation within 2–3 days.",
   name="Name *", company="Company", email="E-mail *", phone="Phone", place="Project location (postcode / town)",
@@ -63,7 +65,8 @@ L = {
   sec="contact",
   claim="<span>Le calme pour les voisins.</span><em>La performance pour l’appareil.</em>",
   what="Caissons acoustiques pour pompes à chaleur et installations CVC",
-  lead="Pour pompes à chaleur, groupes froids, VRF, onduleurs PV et BESS – conçus sur mesure, fabriqués avec la technologie Absora.",
+  lead="<b>D’abord la preuve, ensuite le caisson.</b> Pour pompes à chaleur, groupes froids, VRF, onduleurs PV et BESS, nous calculons à l’avance le niveau au point de réception et concevons ensemble acoustique et flux d’air – fabriqués avec la technologie Absora.",
+  nx_h="Et ensuite ?", nx="<li><b>Vérification</b> de vos données – avec une courte question si nécessaire</li><li><b>Calcul du niveau</b> au point de réception et conception acoustique et aéraulique</li><li><b>Offre ferme</b> avec plan – en général sous 2 à 3 jours pour les projets complexes</li>",
   h2="Lancer votre projet",
   intro="L’appareil, le nombre et le lieu d’implantation suffisent pour commencer – avec la fiche technique, nous vérifions directement dimensions, débit d’air et puissance acoustique. Pour les projets complexes, vous recevez en général une offre ferme sous 2 à 3 jours.",
   name="Nom *", company="Société", email="E-mail *", phone="Téléphone", place="Lieu du projet (code postal / ville)",
@@ -121,6 +124,7 @@ FORM = """<section id="{sec}">
         </div>
       </div>
       <div>
+        <div class="qnext"><b>{nx_h}</b><ol>{nx}</ol></div>
         <address>{addr}</address>
         <p style="margin-top:18px"><b>{side}</b></p>
         <div class="btns" style="margin-top:10px"><a class="btn" href="{cfg_url}">{cfg}</a></div>

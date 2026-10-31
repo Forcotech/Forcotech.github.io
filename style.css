@@ -565,3 +565,9 @@ section.dark .ab-legend span.on::before{background:#b4232f}
 .card.core br,.card.mini br{display:none}
 .card.core .more,.card.mini .more{display:block;margin-top:8px}
 .card.core .price{margin-top:12px}
+
+.founder .f-img{flex:none;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.portrait{float:right;width:200px;margin:4px 0 14px 22px}
+.portrait img{width:200px;height:200px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.portrait figcaption{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+@media (max-width:560px){.portrait{float:none;width:100%;margin:0 0 16px}.portrait img{width:160px;height:160px}}

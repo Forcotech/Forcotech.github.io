@@ -52,7 +52,7 @@
     </div>
   </div>
 </section>
-<script>document.querySelectorAll('.ab').forEach(function(c){var a=c.querySelector('audio'),st=c.querySelector('.ab-state'),bars=c.querySelectorAll('.ab-bar i');function u(){var seg=Math.floor(a.currentTime/3),on=seg%2===1;st.textContent=on?st.dataset.on:st.dataset.off;st.classList.toggle('on',on);bars.forEach(function(b,i){b.classList.toggle('cur',i===seg&&!a.paused);});}a.addEventListener('timeupdate',u);a.addEventListener('pause',u);a.addEventListener('play',function(){document.querySelectorAll('.ab audio').forEach(function(o){if(o!==a)o.pause();});});});</script>
+<script src="/hoerprobe.js" defer></script>
 
 <section id="ablauf">
   <div class="wrap">

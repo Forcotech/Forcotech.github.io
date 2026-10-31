@@ -200,7 +200,7 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
 <a class="skip" href="#main">{L["skip"]}</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="{L['home']}" aria-label="{L['home_label']}"><img src="/img/forcotech-logo.png" width="415" height="231" alt="{LOGO_ALT}"></a>
+    <a class="logo" href="{L['home']}" aria-label="{L['home_label']}"><img src="/img/forcotech-logo-kompakt.png" width="285" height="120" alt="{LOGO_ALT}"></a>
     <nav class="nav" aria-label="{L['nav_label']}">
       {nav}
       <a class="cta" href="{L['cfg'][0]}">{L['cfg'][1]}</a>
@@ -215,6 +215,7 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
 
 <footer>
   <div class="wrap">
+    <div class="fbrand"><img src="/img/forcotech-logo.png" width="415" height="231" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology" loading="lazy"><a href="mailto:info@forcotech.com">info@forcotech.com</a></div>
     <span>{FOOT.format(y=date.today().year, it=it, al=al)}</span>
     <span><a href="{L['imprint_url']}">{L["imprint"]}</a> · <a href="{L['privacy_url']}">{L["privacy"]}</a> · {foot_lang}</span>
   </div>

@@ -6,19 +6,151 @@
       "datum": "2026-11-01",
       "fertig": false,
       "de": {
-        "titel": "Zwei Schallhauben für zwei und drei Kälteanlagen auf dem Flachdach",
+        "titel": "Zwei Schallhauben auf einem Flachdach",
         "status": "Tragrahmen und obere Paneele montiert",
-        "text": "Eine Haube für zwei und eine Haube für drei Kälteanlagen, montiert auf einer Stahlträgerkonstruktion auf dem Flachdach eines Gebäudes in Küstennähe. Die Profilrahmen stehen, die oberen Paneele mit Lüftungsgittern sind montiert. Unter dem Dach sitzen die HSA3-Röhrenschalldämpfer als Decke und als Wand – ohne Mineralwolle, nicht brennbar (A1)."
+        "text": "Eine Schallhaube für zwei und eine für drei Kälteanlagen, beide ausgelegt auf eine maximale Luftgeschwindigkeit von 6 m/s. Unter dem Dach sitzen HSA3-Röhrenschalldämpfer als Decke und Wand – ohne Mineralwolle, nicht brennbar (A1).",
+        "daten": [
+          {
+            "titel": "Schallhaube für 2 Kälteanlagen",
+            "werte": [
+              [
+                "Abmessungen (L × B × H)",
+                "8.800 × 4.870 × 3.380 mm"
+              ],
+              [
+                "Gewicht",
+                "1.864 kg"
+              ],
+              [
+                "Luftvolumenstrom",
+                "167.820 m³/h"
+              ],
+              [
+                "Max. Luftgeschwindigkeit",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Schallhaube für 3 Kälteanlagen",
+            "werte": [
+              [
+                "Abmessungen (L × B × H)",
+                "10.500 × 4.870 × 3.380 mm"
+              ],
+              [
+                "Gewicht",
+                "2.135 kg"
+              ],
+              [
+                "Luftvolumenstrom",
+                "max. 269.730 m³/h"
+              ],
+              [
+                "Max. Luftgeschwindigkeit",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
       },
       "en": {
-        "titel": "Two acoustic enclosures for two and three chillers on a flat roof",
+        "titel": "Two acoustic enclosures on a flat roof",
         "status": "Support frame and upper panels installed",
-        "text": "One enclosure for two and one for three chillers, mounted on a steel beam structure on the flat roof of a building near the coast. The profile frames are up and the upper panels with ventilation grilles are in place. Below the roof, HSA3 tube silencers form the ceiling and the wall – no mineral wool, non-combustible (A1)."
+        "text": "One enclosure for two and one for three chillers, both designed for a maximum air velocity of 6 m/s. Below the roof, HSA3 tube silencers form the ceiling and wall – no mineral wool, non-combustible (A1).",
+        "daten": [
+          {
+            "titel": "Enclosure for 2 chillers",
+            "werte": [
+              [
+                "Dimensions (L × W × H)",
+                "8,800 × 4,870 × 3,380 mm"
+              ],
+              [
+                "Weight",
+                "1,864 kg"
+              ],
+              [
+                "Air flow",
+                "167,820 m³/h"
+              ],
+              [
+                "Max. air velocity",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Enclosure for 3 chillers",
+            "werte": [
+              [
+                "Dimensions (L × W × H)",
+                "10,500 × 4,870 × 3,380 mm"
+              ],
+              [
+                "Weight",
+                "2,135 kg"
+              ],
+              [
+                "Air flow",
+                "max. 269,730 m³/h"
+              ],
+              [
+                "Max. air velocity",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
       },
       "fr": {
-        "titel": "Deux caissons acoustiques pour deux et trois groupes froids sur toit-terrasse",
+        "titel": "Deux caissons acoustiques sur un toit-terrasse",
         "status": "Châssis et panneaux supérieurs montés",
-        "text": "Un caisson pour deux et un caisson pour trois groupes froids, montés sur une structure en poutres acier sur le toit-terrasse d’un bâtiment proche de la côte. Les châssis profilés sont posés, les panneaux supérieurs avec grilles de ventilation sont montés. Sous la toiture, les silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1)."
+        "text": "Un caisson pour deux et un pour trois groupes froids, tous deux dimensionnés pour une vitesse d’air maximale de 6 m/s. Sous la toiture, des silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1).",
+        "daten": [
+          {
+            "titel": "Caisson pour 2 groupes froids",
+            "werte": [
+              [
+                "Dimensions (L × l × H)",
+                "8 800 × 4 870 × 3 380 mm"
+              ],
+              [
+                "Poids",
+                "1 864 kg"
+              ],
+              [
+                "Débit d’air",
+                "167 820 m³/h"
+              ],
+              [
+                "Vitesse d’air max.",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Caisson pour 3 groupes froids",
+            "werte": [
+              [
+                "Dimensions (L × l × H)",
+                "10 500 × 4 870 × 3 380 mm"
+              ],
+              [
+                "Poids",
+                "2 135 kg"
+              ],
+              [
+                "Débit d’air",
+                "max. 269 730 m³/h"
+              ],
+              [
+                "Vitesse d’air max.",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
       },
       "bilder": [
         {

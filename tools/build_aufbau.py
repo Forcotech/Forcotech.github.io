@@ -71,6 +71,18 @@ def img_tag(b, lang, lazy=True):
             + (' loading="lazy"' if lazy else "") + ">")
 
 
+def daten(t):
+    """Optionale Kenndaten je Haube: t["daten"] = [{"titel": ..., "werte": [[Bezeichnung, Wert], ...]}]."""
+    if not t.get("daten"):
+        return ""
+    boxes = "".join(
+        f'<div class="ab-spec"><h3>{e(d["titel"])}</h3><dl>'
+        + "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in d["werte"])
+        + "</dl></div>"
+        for d in t["daten"])
+    return f'<div class="ab-specs">{boxes}</div>\n    '
+
+
 def card(p, lang, first):
     t, T = p[lang], TXT[lang]
     chip = f'<span class="ab-chip{" ab-done" if p.get("fertig") else ""}">{T["done"] if p.get("fertig") else T["running"]}</span>'
@@ -83,7 +95,7 @@ def card(p, lang, first):
     <h2>{e(t['titel'])}</h2>
     <p class="ab-status">{e(t['status'])}</p>
     <p>{e(t['text'])}</p>
-    <div class="ab-photos">
+    {daten(t)}<div class="ab-photos">
       {figs}
     </div>
   </article>"""

@@ -36,7 +36,7 @@ T = {
         "h_pre": "News und", "h_acc": "Analysen",
         "sub": "Projekte, Messungen und Hintergründe aus der Auslegung unserer Schallhauben.",
         "all": "Alle Beiträge", "back": "Alle Beiträge", "skip": "Zum Inhalt",
-        "nav": [("/loesungen/", "Lösungen"), ("#methode", "Methode"), ("#beispiele", "Beispiele"),
+        "nav": [("/loesungen/", "Lösungen"), ("#methode", "Methode"), ("#beispiele", "Beispiele"), ("/projekte-im-aufbau/", "Im Aufbau"),
                 ("/news/", "News"), ("#kontakt", "Kontakt")],
         "cfg": ("https://www.forcotech.com/konfigurator/", "Konfigurator"),
         "nav_label": "Hauptnavigation", "home_label": "ForCoTech Startseite",
@@ -53,7 +53,7 @@ T = {
         "h_pre": "News and", "h_acc": "analyses",
         "sub": "Projects, measurements and background from the design of our acoustic enclosures.",
         "all": "All posts", "back": "All posts", "skip": "Skip to content",
-        "nav": [("/en/solutions/", "Solutions"), ("#method", "Method"), ("#examples", "Examples"),
+        "nav": [("/en/solutions/", "Solutions"), ("#method", "Method"), ("#examples", "Examples"), ("/en/projects-in-progress/", "In progress"),
                 ("/en/news/", "News"), ("#contact", "Contact")],
         "cfg": ("https://www.forcotech.com/konfigurator/en/", "Configurator"),
         "nav_label": "Main navigation", "home_label": "ForCoTech home",
@@ -70,7 +70,7 @@ T = {
         "h_pre": "Actualités et", "h_acc": "analyses",
         "sub": "Projets, mesures et contexte issus de la conception de nos caissons acoustiques.",
         "all": "Toutes les publications", "back": "Toutes les publications", "skip": "Aller au contenu",
-        "nav": [("#applications", "Applications"), ("#methode", "Méthode"), ("#exemples", "Exemples"),
+        "nav": [("#applications", "Applications"), ("#methode", "Méthode"), ("#exemples", "Exemples"), ("/fr/projets-en-cours/", "En cours"),
                 ("/fr/actualites/", "Actualités"), ("#contact", "Contact")],
         "cfg": ("https://www.forcotech.com/konfigurator/fr/", "Configurateur"),
         "nav_label": "Navigation principale", "home_label": "ForCoTech – accueil",
@@ -315,6 +315,7 @@ def build():
     lines += group({"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}, today)
     lines += group({"de": "/adiabatik/", "en": "/en/adiabatic-precooling/", "fr": "/fr/pre-refroidissement-adiabatique/"}, today)
     lines += group({"de": "/loesungen/schallwand-kulisse/", "en": "/en/solutions/noise-barrier-and-silencer/", "fr": "/fr/ecran-et-silencieux/"}, today)  # tools/build_schallwand_kulisse.py
+    lines += group({"de": "/projekte-im-aufbau/", "en": "/en/projects-in-progress/", "fr": "/fr/projets-en-cours/"}, today)  # tools/build_aufbau.py
     lines += group({"de": "/leitfaden/"}, today)  # Praxisleitfaden (Handseite leitfaden/index.html, PDF in downloads/)
     # Lösungsseiten und HSA3 (tools/build_loesungen.py)
     import build_loesungen as bl

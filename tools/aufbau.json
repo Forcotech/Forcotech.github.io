@@ -6,29 +6,33 @@
       "datum": "2026-11-01",
       "fertig": false,
       "de": {
-        "titel": "Großhaube um eine luftgekühlte Anlage auf dem Flachdach",
+        "titel": "Zwei Schallhauben für zwei und drei Kälteanlagen auf dem Flachdach",
         "status": "Tragrahmen und obere Paneele montiert",
-        "text": "Der Profilrahmen steht auf dem Stahlunterbau, die oberen Paneele mit Lüftungsgittern sind montiert. Unter dem Dach sitzen die HSA3-Röhrenschalldämpfer als Decke und als Wand – ohne Mineralwolle, nicht brennbar (A1)."
+        "text": "Eine Haube für zwei und eine Haube für drei Kälteanlagen, montiert auf einer Stahlträgerkonstruktion auf dem Flachdach eines Gebäudes in Küstennähe. Die Profilrahmen stehen, die oberen Paneele mit Lüftungsgittern sind montiert. Unter dem Dach sitzen die HSA3-Röhrenschalldämpfer als Decke und als Wand – ohne Mineralwolle, nicht brennbar (A1)."
       },
       "en": {
-        "titel": "Large enclosure around an air-cooled unit on a flat roof",
+        "titel": "Two acoustic enclosures for two and three chillers on a flat roof",
         "status": "Support frame and upper panels installed",
-        "text": "The profile frame stands on the steel substructure and the upper panels with ventilation grilles are in place. Below the roof, HSA3 tube silencers form the ceiling and the wall – no mineral wool, non-combustible (A1)."
+        "text": "One enclosure for two and one for three chillers, mounted on a steel beam structure on the flat roof of a building near the coast. The profile frames are up and the upper panels with ventilation grilles are in place. Below the roof, HSA3 tube silencers form the ceiling and the wall – no mineral wool, non-combustible (A1)."
       },
       "fr": {
-        "titel": "Grand caisson autour d’une unité à air sur toit-terrasse",
+        "titel": "Deux caissons acoustiques pour deux et trois groupes froids sur toit-terrasse",
         "status": "Châssis et panneaux supérieurs montés",
-        "text": "Le châssis profilé repose sur la structure acier, les panneaux supérieurs avec grilles de ventilation sont posés. Sous la toiture, les silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1)."
+        "text": "Un caisson pour deux et un caisson pour trois groupes froids, montés sur une structure en poutres acier sur le toit-terrasse d’un bâtiment proche de la côte. Les châssis profilés sont posés, les panneaux supérieurs avec grilles de ventilation sont montés. Sous la toiture, les silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1)."
       },
       "bilder": [
-        {"datei": "2026-11-grosshaube-rahmen.webp",
-         "de": "Profilrahmen einer Großhaube auf dem Flachdach mit montierten oberen Paneelen und Lüftungsgittern, darin eine luftgekühlte Anlage",
-         "en": "Profile frame of a large enclosure on a flat roof with upper panels and ventilation grilles installed, an air-cooled unit inside",
-         "fr": "Châssis profilé d’un grand caisson sur toit-terrasse avec panneaux supérieurs et grilles de ventilation posés, une unité à air à l’intérieur"},
-        {"datei": "2026-11-hsa3-roehrendecke.webp",
-         "de": "HSA3-Röhrenschalldämpfer als Decke und Wand im Profilrahmen, von unten gesehen",
-         "en": "HSA3 tube silencers as ceiling and wall in the profile frame, seen from below",
-         "fr": "Silencieux tubulaires HSA3 en plafond et en paroi dans le châssis profilé, vus d’en bas"}
+        {
+          "datei": "2026-11-grosshaube-rahmen.webp",
+          "de": "Profilrahmen einer Schallhaube auf Stahlträgern auf dem Flachdach mit montierten oberen Paneelen und Lüftungsgittern, darin eine Kälteanlage",
+          "en": "Profile frame of an acoustic enclosure on steel beams on a flat roof with upper panels and ventilation grilles installed, a chiller inside",
+          "fr": "Châssis profilé d’un caisson acoustique sur poutres acier en toiture-terrasse avec panneaux supérieurs et grilles de ventilation posés, un groupe froid à l’intérieur"
+        },
+        {
+          "datei": "2026-11-hsa3-roehrendecke.webp",
+          "de": "HSA3-Röhrenschalldämpfer als Decke und Wand im Profilrahmen, von unten gesehen",
+          "en": "HSA3 tube silencers as ceiling and wall in the profile frame, seen from below",
+          "fr": "Silencieux tubulaires HSA3 en plafond et en paroi dans le châssis profilé, vus d’en bas"
+        }
       ]
     },
     {
@@ -51,10 +55,13 @@
         "text": "Deux châssis profilés autour de plusieurs unités extérieures sur le toit d’un bâtiment neuf. Les châssis sont posés, les panneaux et silencieux suivent."
       },
       "bilder": [
-        {"datei": "2026-11-dach-zwei-rahmen.webp", "breit": true,
-         "de": "Zwei offene Profilrahmen um Außengeräte auf einem Flachdach vor blauem Himmel",
-         "en": "Two open profile frames around outdoor units on a flat roof against a blue sky",
-         "fr": "Deux châssis profilés ouverts autour d’unités extérieures sur un toit-terrasse, ciel bleu"}
+        {
+          "datei": "2026-11-dach-zwei-rahmen.webp",
+          "breit": true,
+          "de": "Zwei offene Profilrahmen um Außengeräte auf einem Flachdach vor blauem Himmel",
+          "en": "Two open profile frames around outdoor units on a flat roof against a blue sky",
+          "fr": "Deux châssis profilés ouverts autour d’unités extérieures sur un toit-terrasse, ciel bleu"
+        }
       ]
     }
   ]

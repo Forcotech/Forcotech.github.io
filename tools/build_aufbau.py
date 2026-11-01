@@ -31,7 +31,7 @@ TXT = {
            "kicker": "Aus Fertigung und Montage", "h1": "Projekte im Aufbau",
            "lead": "Momentaufnahmen von Anlagen, die gerade entstehen – vom Tragrahmen bis zur fertigen Haube. Wir aktualisieren diese Seite laufend.",
            "note": "Ohne Kundennamen und Standorte: Die Anlagen gehören nach der Lieferung unseren Kunden. Fertige Anlagen zeigen wir unter <a href=\"{ex}\">Ausführungsbeispiele</a>.",
-           "stand": "Stand", "done": "Abgeschlossen", "running": "Im Aufbau",
+           "stand": "Stand:", "done": "Abgeschlossen", "running": "Im Aufbau",
            "teaser_h": "Gerade im Aufbau", "teaser_more": "Alle Projekte im Aufbau →",
            "b1": "Projekt anfragen", "b2": "Zum Konfigurator", "zoom": "Foto in voller Größe öffnen"},
     "en": {"title": "Projects in progress – acoustic enclosures in fabrication and installation | ForCoTech",
@@ -39,7 +39,7 @@ TXT = {
            "kicker": "From fabrication and installation", "h1": "Projects in progress",
            "lead": "Snapshots of installations as they take shape – from the support frame to the finished enclosure. We update this page regularly.",
            "note": "No customer names or locations: after delivery the installations belong to our customers. Finished installations are shown under <a href=\"{ex}\">Examples</a>.",
-           "stand": "Updated", "done": "Completed", "running": "In progress",
+           "stand": "Updated:", "done": "Completed", "running": "In progress",
            "teaser_h": "Currently in progress", "teaser_more": "All projects in progress →",
            "b1": "Request a project", "b2": "Open configurator", "zoom": "Open photo in full size"},
     "fr": {"title": "Projets en cours – caissons acoustiques en fabrication et en montage | ForCoTech",
@@ -47,17 +47,18 @@ TXT = {
            "kicker": "Fabrication et montage", "h1": "Projets en cours",
            "lead": "Instantanés d’installations en train de prendre forme – du châssis au caisson terminé. Nous mettons cette page à jour régulièrement.",
            "note": "Sans noms de clients ni lieux : après la livraison, les installations appartiennent à nos clients. Les installations terminées figurent sous <a href=\"{ex}\">Exemples</a>.",
-           "stand": "Mise à jour", "done": "Terminé", "running": "En cours",
+           "stand": "Mise à jour :", "done": "Terminé", "running": "En cours",
            "teaser_h": "Actuellement en cours", "teaser_more": "Tous les projets en cours →",
            "b1": "Demander un projet", "b2": "Ouvrir le configurateur", "zoom": "Ouvrir la photo en taille réelle"},
 }
 e = bn.e
 
 
-def month(m, lang):
-    y, mm = m.split("-")
+def datum(d, lang):
+    """2026-11-08 -> „8. November 2026“ / „8 November 2026“ / „8 novembre 2026“"""
+    y, mm, dd = d.split("-")
     name = MON[lang][int(mm) - 1]
-    return f"{name} {y}"
+    return f"{int(dd)}. {name} {y}" if lang == "de" else f"{int(dd)} {name} {y}"
 
 
 def img_tag(b, lang, lazy=True):
@@ -78,7 +79,7 @@ def card(p, lang, first):
         f'{img_tag(b, lang, lazy=not (first and i == 0))}</a></figure>'
         for i, b in enumerate(p["bilder"]))
     return f"""  <article class="ab-card" id="{p['id']}">
-    <div class="ab-head">{chip}<time datetime="{p['monat']}">{month(p['monat'], lang)}</time></div>
+    <div class="ab-head">{chip}<time datetime="{p['datum']}">{T['stand']} {datum(p['datum'], lang)}</time></div>
     <h2>{e(t['titel'])}</h2>
     <p class="ab-status">{e(t['status'])}</p>
     <p>{e(t['text'])}</p>
@@ -112,7 +113,7 @@ def teaser(projekte, lang):
 def build():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     projekte = data["projekte"]
-    stand = max((p["monat"] for p in projekte), default=None)
+    stand = max((p["datum"] for p in projekte), default=None)
     for lang in URL:
         T = TXT[lang]
         cards = "\n".join(card(p, lang, i == 0) for i, p in enumerate(projekte))
@@ -127,7 +128,7 @@ def build():
 <section>
   <div class="wrap ab-list">
 {cards}
-    <p class="note">{T['note'].format(ex=EX[lang])}{f" · {T['stand']}: {month(stand, lang)}" if stand else ""}</p>
+    <p class="note">{T['note'].format(ex=EX[lang])}{f" · {T['stand']} {datum(stand, lang)}" if stand else ""}</p>
   </div>
 </section>"""
         og = f"img/aufbau/{projekte[0]['bilder'][0]['datei']}" if projekte else None

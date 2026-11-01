@@ -129,6 +129,26 @@
   </div>
 </section>
 
+<section id="fluessigkuehlung">
+  <div class="wrap">
+    <span class="kicker">Flüssigkühlung im KI-Rechenzentrum</span>
+    <h2>Flüssigkühlung: Der Lärm wandert zum Rückkühler</h2>
+    <p class="sub">KI-Racks mit 100–200 kW lassen sich mit Luft nicht mehr kühlen. Direct-to-Chip-Kühlung über Coolant Distribution Units (CDU) wird zum Standard. Was das für Investition, Betrieb und Schallschutz bedeutet:</p>
+    <div class="stats s4" style="margin:20px 0">
+      <div><b>≈ gleich</b><span>Investition wie Luftkühlung bei gleicher Rackdichte (10 kW/Rack)</span></div>
+      <div><b>−10 bis −14 %</b><span>Investition bei 20–40 kW/Rack durch Verdichtung</span></div>
+      <div><b>−18 %</b><span>Strom der Gebäudetechnik bei ca. 75 % Flüssiganteil</span></div>
+      <div><b>−80 %</b><span>Leistung der Serverlüfter</span></div>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="tag">Investition (CAPEX)</span><h3>Gleich teuer, kleiner gebaut</h3><p>Kältemaschinen und Umluftgeräte entfallen weitgehend, USV und Schaltanlage werden kleiner, weil die Serverlüfter wegfallen. Dafür kommen CDUs, Pumpen, Rohrleitungen und Rückkühler hinzu. Der Vorteil entsteht über die Dichte: weniger Racks, weniger Fläche. Die Nachrüstung bestehender Säle ist teurer.</p></div>
+      <div class="card"><span class="tag">Betrieb (OPEX)</span><h3>Warmwasser statt Kältemaschine</h3><p>Die Kreisläufe laufen mit hohen Vorlauftemperaturen, typisch 30–45 °C. Damit kühlt der Rückkühler über viele Stunden im Jahr frei, ohne Verdichter. Die PUE zeigt den Vorteil kaum, weil auch der IT-Strom sinkt. Aussagekräftiger ist die TUE, in der Studie um 15,5 % besser.</p></div>
+      <div class="card"><span class="tag">Schallschutz</span><h3>Jedes Pascal kostet Lüfterstrom</h3><p>Die Wärme geht über große Rückkühler mit vielen Ventilatoren ab, die im Sommer und an warmen Nächten unter Volllast laufen. Ein Acoustic Pack mit HSA3 und Helmholtz-Röhren senkt den Pegel innerhalb der Druckreserve der Ventilatoren und hält so den Betriebsvorteil der Flüssigkühlung.</p></div>
+    </div>
+    <p class="note">Rechenbeispiel: Ein 200‑kW-Rack braucht bei 10 K Spreizung rund 287 l/min Wasser (Q = ṁ · c<sub>p</sub> · ΔT). Investitionswerte: <a href="https://blog.se.com/datacenter/architecture/2020/02/24/liquid-vs-air-cooling-which-is-the-capex-winner/" rel="noopener" target="_blank">Schneider Electric, White Paper 282</a> (2 MW, Tauchkühlung, 2020). Betriebswerte: <a href="https://vertiv.com/en-us/about/news-and-insights/articles/blog-posts/quantifying-data-center-pue-when-introducing-liquid-cooling" rel="noopener" target="_blank">NVIDIA/Vertiv, ASME InterPACK 2022</a> (1–2 MW, Direct-to-Chip mit CDUs). Richtwerte – kein Ersatz für eine projektbezogene Wirtschaftlichkeitsrechnung.</p>
+  </div>
+</section>
+
 <section id="ablauf">
   <div class="wrap">
     <h2>Von der Anfrage bis zur Messung</h2>

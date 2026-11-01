@@ -1,5 +1,44 @@
 [
   {
+    "slug": "fluessigkuehlung-rechenzentrum",
+    "date": "2026-11-01",
+    "status": "online",
+    "image": "img/news/fluessigkuehlung-rechenzentrum-karte-de.webp",
+    "de": {
+      "title": "Flüssigkühlung im KI-Rechenzentrum: Was sie kostet – und wohin der Lärm wandert",
+      "alt": "Grafik: KI-Rack, CDU und Rückkühler auf dem Dach mit Acoustic Pack aus HSA3-Helmholtz-Röhren; Kennzahlen zu Investition und Stromverbrauch der Flüssigkühlung",
+      "teaser": "Direct-to-Chip-Kühlung über CDUs wird zum Standard. Investition und Betrieb im Vergleich zur Luftkühlung – und warum der Lärm nicht verschwindet, sondern zum Rückkühler wandert.",
+      "image": "img/news/fluessigkuehlung-rechenzentrum-karte-de.webp",
+      "image_full": "img/news/fluessigkuehlung-rechenzentrum-de.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
+    },
+    "en": {
+      "title": "Liquid cooling in AI data centres: what it costs – and where the noise goes",
+      "alt": "Graphic: AI rack, CDU and dry cooler on the roof with an acoustic pack of HSA3 Helmholtz tubes; key figures on investment and power consumption of liquid cooling",
+      "teaser": "Direct-to-chip cooling via CDUs is becoming the standard. Investment and operation compared with air cooling – and why the noise doesn’t disappear but moves to the dry cooler.",
+      "image": "img/news/fluessigkuehlung-rechenzentrum-karte-en.webp",
+      "image_full": "img/news/fluessigkuehlung-rechenzentrum-en.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
+    },
+    "fr": {
+      "title": "Refroidissement liquide dans les centres de données IA : ce qu’il coûte – et où va le bruit",
+      "alt": "Graphique : baie IA, CDU et aéroréfrigérant en toiture avec acoustic pack en tubes de Helmholtz HSA3 ; chiffres clés sur l’investissement et la consommation du refroidissement liquide",
+      "teaser": "Le refroidissement direct sur puce via CDU devient la norme. Investissement et exploitation comparés à l’air – et pourquoi le bruit ne disparaît pas mais se déplace vers l’aéroréfrigérant.",
+      "image": "img/news/fluessigkuehlung-rechenzentrum-karte-fr.webp",
+      "image_full": "img/news/fluessigkuehlung-rechenzentrum-fr.webp",
+      "image_full_size": [
+        1200,
+        1200
+      ]
+    }
+  },
+  {
     "slug": "ki-zusammenarbeit-claude",
     "date": "2026-10-30",
     "status": "online",

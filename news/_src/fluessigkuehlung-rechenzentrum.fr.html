@@ -1,0 +1,31 @@
+<p class="nlead">Les baies IA de 100 à 200 kW ne peuvent plus être refroidies par air. Le refroidissement direct sur puce via des unités de distribution de liquide (CDU) devient la norme dans les centres de données. Combien cela coûte-t-il par rapport à l’air – et qu’est-ce que cela change pour la protection acoustique ?</p>
+
+<h2>Fonctionnement d’une CDU</h2>
+<p>La CDU sépare deux circuits par un échangeur à plaques (PHE) : le circuit technologique (TCS) amène le liquide aux plaques froides des GPU et CPU, le circuit bâtiment (FWS) évacue la chaleur vers l’aéroréfrigérant ou le groupe froid. Pompes à vitesse variable, filtres, vase d’expansion, séparateur d’air, capteurs et régulation maintiennent température, débit et pression.</p>
+<p>Un calcul simple donne l’ordre de grandeur : une baie de 200 kW nécessite environ 4,8 kg d’eau par seconde pour un écart de 10 K, soit environ 287 l/min (Q = ṁ · c<sub>p</sub> · ΔT).</p>
+
+<h2>Investissement (CAPEX) : à peu près égal – moins cher grâce à la densité</h2>
+<ul class="check">
+<li><b>À densité égale</b>, Schneider Electric obtient des coûts pratiquement identiques pour un centre de 2 MW : 7,02 $/W à l’air, 6,98 $/W en liquide (10 kW/baie).</li>
+<li><b>Avec une densité plus élevée</b>, les coûts baissent : environ 10 % à 20 kW/baie, environ 14 % à 40 kW/baie – moins de baies, moins de surface, bâtiment plus petit.</li>
+<li><b>Ce qui disparaît :</b> groupes froids et centrales de traitement d’air en grande partie ; onduleurs et tableaux électriques plus petits, car les ventilateurs des serveurs disparaissent.</li>
+<li><b>Ce qui s’ajoute :</b> CDU, pompes, tuyauteries, aéroréfrigérants. La rénovation de salles existantes coûte nettement plus cher qu’une construction neuve.</li>
+</ul>
+
+<h2>Exploitation (OPEX) : moins d’électricité, plus de free cooling</h2>
+<ul class="check">
+<li><b>Étude de mesure NVIDIA/Vertiv</b> (1–2 MW, 50 baies, direct sur puce avec CDU) : avec environ 75 % de part liquide, l’électricité des installations techniques a baissé de 18 %, la consommation totale de 10 %. Les ventilateurs des serveurs consommaient 80 % de moins.</li>
+<li><b>Eau chaude au lieu de groupes froids :</b> les circuits fonctionnent à des températures de départ typiques de 30–45 °C ; l’aéroréfrigérant assure le free cooling de nombreuses heures par an, sans compresseur.</li>
+<li><b>Le PUE est trompeur :</b> dans l’étude, il n’est passé que de 1,38 à 1,34, car la consommation IT baisse aussi. Le TUE est plus parlant – amélioré de 15,5 %.</li>
+</ul>
+
+<h2>Protection acoustique : le bruit se déplace vers l’aéroréfrigérant</h2>
+<p>Le refroidissement liquide ne fait pas disparaître le bruit. La chaleur est évacuée par de grands aéroréfrigérants dotés de nombreux ventilateurs, à pleine charge en été et par nuits chaudes – précisément quand les limites nocturnes sont les plus strictes.</p>
+<ul class="check">
+<li><b>Chaque pascal coûte de l’énergie.</b> Un silencieux à forte perte de charge annule le gain d’efficacité du refroidissement liquide ou réduit la puissance frigorifique par fortes chaleurs.</li>
+<li><b>Nos acoustic packs</b> avec acoustique métallique HSA3 et tubes de Helmholtz réduisent le niveau sonore dans la réserve de pression des ventilateurs – incombustibles (A1), sans laine minérale.</li>
+<li><b>Basses fréquences maîtrisées :</b> après atténuation, la bande de 63 Hz détermine généralement le niveau. Les chambres de résonance des tubes sont accordées précisément sur cette plage.</li>
+</ul>
+<p>Voir l’exemple d’un centre de données type sur notre page <a href="/fr/centres-de-donnees/#refroidissement-liquide">solutions pour centres de données</a>.</p>
+
+<p class="note">Sources : <a href="https://blog.se.com/datacenter/architecture/2020/02/24/liquid-vs-air-cooling-which-is-the-capex-winner/" rel="noopener" target="_blank">Schneider Electric, White Paper 282</a> (2 MW, immersion, 2020) ; <a href="https://vertiv.com/en-us/about/news-and-insights/articles/blog-posts/quantifying-data-center-pue-when-introducing-liquid-cooling" rel="noopener" target="_blank">NVIDIA/Vertiv, ASME InterPACK 2022</a> (1–2 MW, direct sur puce avec CDU). Valeurs indicatives – ne remplacent pas une étude de rentabilité propre au projet.</p>

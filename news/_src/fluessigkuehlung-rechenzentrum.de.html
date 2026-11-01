@@ -1,0 +1,31 @@
+<p class="nlead">KI-Racks mit 100–200 kW lassen sich mit Luft nicht mehr kühlen. Direct-to-Chip-Kühlung über Coolant Distribution Units (CDU) wird im Rechenzentrum zum Standard. Was kostet das im Vergleich zur Luftkühlung – und was bedeutet es für den Schallschutz?</p>
+
+<h2>So funktioniert eine CDU</h2>
+<p>Die CDU trennt zwei Kreisläufe über einen Plattenwärmetauscher (PHE): Der Technologiekreis (TCS) führt das Kühlmittel zu den Kühlplatten auf GPUs und CPUs. Der Gebäudekreis (FWS) bringt die Wärme zum Rückkühler oder zur Kältemaschine. Pumpen mit drehzahlgeregeltem Antrieb, Filter, Ausdehnungsgefäß, Luftabscheider, Sensoren und eine Steuerung halten Temperatur, Durchfluss und Druck stabil.</p>
+<p>Eine einfache Rechnung zeigt die Größenordnung: Ein 200‑kW-Rack braucht bei 10 K Spreizung rund 4,8 kg Wasser pro Sekunde, also etwa 287 l/min (Q = ṁ · c<sub>p</sub> · ΔT).</p>
+
+<h2>Investition (CAPEX): etwa gleich – günstiger durch Dichte</h2>
+<ul class="check">
+<li><b>Bei gleicher Rackdichte</b> kommt Schneider Electric für ein 2‑MW-Rechenzentrum auf praktisch gleiche Kosten: 7,02 $/W mit Luft, 6,98 $/W mit Flüssigkeit (10 kW/Rack).</li>
+<li><b>Mit höherer Dichte</b> sinken die Kosten: rund 10 % bei 20 kW/Rack, rund 14 % bei 40 kW/Rack. Es braucht weniger Racks, weniger Fläche und weniger Gebäude.</li>
+<li><b>Was wegfällt:</b> Kältemaschinen und Umluftgeräte weitgehend; USV und Schaltanlage werden kleiner, weil die Serverlüfter wegfallen.</li>
+<li><b>Was dazukommt:</b> CDUs, Pumpen, Rohrleitungen, Rückkühler. Die Nachrüstung bestehender Säle ist deutlich teurer als ein Neubau.</li>
+</ul>
+
+<h2>Betrieb (OPEX): weniger Strom, mehr freie Kühlung</h2>
+<ul class="check">
+<li><b>Messstudie NVIDIA/Vertiv</b> (1–2 MW, 50 Racks, Direct-to-Chip mit CDUs): Bei rund 75 % Flüssiganteil sank der Strom der Gebäudetechnik um 18 %, der Gesamtstrom um 10 %. Die Serverlüfter brauchten 80 % weniger.</li>
+<li><b>Warmwasser statt Kältemaschine:</b> Die Kreisläufe laufen mit Vorlauftemperaturen von typisch 30–45 °C. Damit kühlt der Rückkühler viele Stunden im Jahr frei, ohne Verdichter.</li>
+<li><b>Die PUE täuscht:</b> In der Studie sank sie nur von 1,38 auf 1,34, weil auch der IT-Strom sinkt. Aussagekräftiger ist die TUE – sie verbesserte sich um 15,5 %.</li>
+</ul>
+
+<h2>Schallschutz: Der Lärm wandert zum Rückkühler</h2>
+<p>Mit der Flüssigkühlung verschwindet der Lärm nicht. Die Wärme geht über große Rückkühler mit vielen Ventilatoren ab, die im Sommer und in warmen Nächten unter Volllast laufen – genau dann, wenn nachts die strengsten Immissionsrichtwerte gelten.</p>
+<ul class="check">
+<li><b>Jedes Pascal kostet Lüfterstrom.</b> Ein Schalldämpfer mit hohem Druckverlust frisst den Effizienzgewinn der Flüssigkühlung wieder auf oder kostet Kühlleistung an heißen Tagen.</li>
+<li><b>Unsere Acoustic Packs</b> mit <a href="/hsa3/">HSA3</a>-Metallakustik und Helmholtz-Röhren senken den Pegel innerhalb der Druckreserve der Ventilatoren – nicht brennbar (A1), ohne Mineralwolle.</li>
+<li><b>Tiefton im Griff:</b> Nach der Dämpfung bestimmt meist der Bereich um 63 Hz den Pegel. Die Resonanzkammern der Röhren sind genau darauf abgestimmt.</li>
+</ul>
+<p>Wie das an einem Muster-Rechenzentrum aussieht, zeigt unsere Seite <a href="/rechenzentren/#fluessigkuehlung">Data-Center-Lösungen</a>.</p>
+
+<p class="note">Quellen: <a href="https://blog.se.com/datacenter/architecture/2020/02/24/liquid-vs-air-cooling-which-is-the-capex-winner/" rel="noopener" target="_blank">Schneider Electric, White Paper 282</a> (2 MW, Tauchkühlung, 2020); <a href="https://vertiv.com/en-us/about/news-and-insights/articles/blog-posts/quantifying-data-center-pue-when-introducing-liquid-cooling" rel="noopener" target="_blank">NVIDIA/Vertiv, ASME InterPACK 2022</a> (1–2 MW, Direct-to-Chip mit CDUs). Richtwerte – kein Ersatz für eine projektbezogene Wirtschaftlichkeitsrechnung.</p>

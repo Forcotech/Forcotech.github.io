@@ -1,0 +1,31 @@
+<p class="nlead">AI racks with 100–200 kW can no longer be cooled with air. Direct-to-chip cooling via coolant distribution units (CDUs) is becoming the standard in data centres. How does the cost compare with air cooling – and what does it mean for noise control?</p>
+
+<h2>How a CDU works</h2>
+<p>The CDU separates two loops via a plate heat exchanger (PHE): the technology cooling system (TCS) carries coolant to the cold plates on GPUs and CPUs, the facility water system (FWS) takes the heat to the dry cooler or chiller. Variable-speed pumps, filters, an expansion tank, an air separator, sensors and controls keep temperature, flow and pressure stable.</p>
+<p>A simple calculation shows the scale: a 200 kW rack needs about 4.8 kg of water per second at a 10 K temperature rise – roughly 287 l/min (Q = ṁ · c<sub>p</sub> · ΔT).</p>
+
+<h2>Investment (CAPEX): about equal – cheaper through density</h2>
+<ul class="check">
+<li><b>At the same rack density</b> Schneider Electric finds practically equal costs for a 2 MW data centre: $7.02/W with air, $6.98/W with liquid (10 kW/rack).</li>
+<li><b>At higher density</b> costs fall: about 10% at 20 kW/rack, about 14% at 40 kW/rack – fewer racks, less floor space, smaller building.</li>
+<li><b>What goes:</b> chillers and air handlers largely; UPS and switchgear shrink because server fans disappear.</li>
+<li><b>What is added:</b> CDUs, pumps, piping, dry coolers. Retrofitting existing halls costs considerably more than a new build.</li>
+</ul>
+
+<h2>Operation (OPEX): less power, more free cooling</h2>
+<ul class="check">
+<li><b>NVIDIA/Vertiv measurement study</b> (1–2 MW, 50 racks, direct-to-chip with CDUs): at about 75% liquid share, facility power fell by 18% and total power by 10%. Server fans needed 80% less.</li>
+<li><b>Warm water instead of chillers:</b> the loops run at supply temperatures of typically 30–45 °C, so the dry cooler provides free cooling for many hours a year without compressors.</li>
+<li><b>PUE is misleading:</b> in the study it only fell from 1.38 to 1.34 because IT power falls too. TUE is more meaningful – it improved by 15.5%.</li>
+</ul>
+
+<h2>Noise control: the noise moves to the dry cooler</h2>
+<p>Liquid cooling does not make the noise disappear. Heat is rejected through large dry coolers with many fans that run at full load in summer and on warm nights – exactly when the strictest night-time limits apply.</p>
+<ul class="check">
+<li><b>Every pascal costs fan power.</b> A silencer with a high pressure drop eats up the efficiency gain of liquid cooling or costs cooling capacity on hot days.</li>
+<li><b>Our acoustic packs</b> with <a href="/en/hsa3/">HSA3</a> metal acoustics and Helmholtz tubes reduce the noise level within the fans’ pressure reserve – non-combustible (A1), no mineral wool.</li>
+<li><b>Low frequencies under control:</b> after attenuation, the 63 Hz band usually determines the level. The tubes’ resonance chambers are tuned to exactly that.</li>
+</ul>
+<p>See how this looks for a reference data centre on our <a href="/en/data-centres/#liquid-cooling">data centre solutions</a> page.</p>
+
+<p class="note">Sources: <a href="https://blog.se.com/datacenter/architecture/2020/02/24/liquid-vs-air-cooling-which-is-the-capex-winner/" rel="noopener" target="_blank">Schneider Electric, White Paper 282</a> (2 MW, immersion cooling, 2020); <a href="https://vertiv.com/en-us/about/news-and-insights/articles/blog-posts/quantifying-data-center-pue-when-introducing-liquid-cooling" rel="noopener" target="_blank">NVIDIA/Vertiv, ASME InterPACK 2022</a> (1–2 MW, direct-to-chip with CDUs). Indicative values – no substitute for a project-specific business case.</p>

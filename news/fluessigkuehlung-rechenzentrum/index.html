@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
+<!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flüssigkühlung im KI-Rechenzentrum: Was sie kostet – und wohin der Lärm wandert – ForCoTech</title>
+<meta name="description" content="Direct-to-Chip-Kühlung über CDUs wird zum Standard. Investition und Betrieb im Vergleich zur Luftkühlung – und warum der Lärm nicht verschwindet, sondern zum Rückkühler wandert.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://www.forcotech.com/news/fluessigkuehlung-rechenzentrum/">
+<link rel="alternate" hreflang="de" href="https://www.forcotech.com/news/fluessigkuehlung-rechenzentrum/">
+<link rel="alternate" hreflang="en" href="https://www.forcotech.com/en/news/fluessigkuehlung-rechenzentrum/">
+<link rel="alternate" hreflang="fr" href="https://www.forcotech.com/fr/actualites/fluessigkuehlung-rechenzentrum/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ForCoTech">
+<meta property="og:title" content="Flüssigkühlung im KI-Rechenzentrum: Was sie kostet – und wohin der Lärm wandert – ForCoTech">
+<meta property="og:description" content="Direct-to-Chip-Kühlung über CDUs wird zum Standard. Investition und Betrieb im Vergleich zur Luftkühlung – und warum der Lärm nicht verschwindet, sondern zum Rückkühler wandert.">
+<meta property="og:url" content="https://www.forcotech.com/news/fluessigkuehlung-rechenzentrum/">
+<meta property="og:image" content="https://www.forcotech.com/img/news/fluessigkuehlung-rechenzentrum-karte-de.webp">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/img/forcotech-logo.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Flüssigkühlung im KI-Rechenzentrum: Was sie kostet – und wohin der Lärm wandert", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "inLanguage": "de", "image": "https://www.forcotech.com/img/news/fluessigkuehlung-rechenzentrum-de.webp", "mainEntityOfPage": "https://www.forcotech.com/news/fluessigkuehlung-rechenzentrum/", "author": {"@type": "Person", "name": "Romolo Vicari"}, "publisher": {"@id": "https://www.forcotech.com/#org", "@type": "Organization", "name": "Silent Engineering di Romolo Vicari", "logo": {"@type": "ImageObject", "url": "https://www.forcotech.com/img/forcotech-logo.png"}}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="ForCoTech Startseite"><img src="/img/forcotech-logo-kompakt.png" width="285" height="120" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="opt" href="/loesungen/">Lösungen</a>
+      <a class="opt" href="/#methode">Methode</a>
+      <a class="opt" href="/#beispiele">Beispiele</a>
+      <a class="opt" href="/projekte-im-aufbau/">Im Aufbau</a>
+      <a class="opt" href="/news/">News</a>
+      <a class="opt" href="/#kontakt">Kontakt</a>
+      <a class="cta" href="https://www.forcotech.com/konfigurator/">Konfigurator</a>
+      <a class="lang" href="/en/news/fluessigkuehlung-rechenzentrum/" lang="en" hreflang="en">EN</a>
+      <a class="lang" href="/fr/actualites/fluessigkuehlung-rechenzentrum/" lang="fr" hreflang="fr">FR</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="npost">
+  <div class="wrap">
+    <p class="nback"><a href="/news/">← Alle Beiträge</a></p>
+    <time datetime="2026-11-01">01.11.2026</time>
+    <h1>Flüssigkühlung im KI-Rechenzentrum: Was sie kostet – und wohin der Lärm wandert</h1>
+    <figure><a href="/img/news/fluessigkuehlung-rechenzentrum-de.webp" title="Grafik in voller Größe öffnen"><img src="/img/news/fluessigkuehlung-rechenzentrum-de.webp" width="1200" height="1200" alt="Grafik: KI-Rack, CDU und Rückkühler auf dem Dach mit Acoustic Pack aus HSA3-Helmholtz-Röhren; Kennzahlen zu Investition und Stromverbrauch der Flüssigkühlung" fetchpriority="high"></a></figure>
+    <div class="nbody">
+<p class="nlead">KI-Racks mit 100–200 kW lassen sich mit Luft nicht mehr kühlen. Direct-to-Chip-Kühlung über Coolant Distribution Units (CDU) wird im Rechenzentrum zum Standard. Was kostet das im Vergleich zur Luftkühlung – und was bedeutet es für den Schallschutz?</p>
+
+<h2>So funktioniert eine CDU</h2>
+<p>Die CDU trennt zwei Kreisläufe über einen Plattenwärmetauscher (PHE): Der Technologiekreis (TCS) führt das Kühlmittel zu den Kühlplatten auf GPUs und CPUs. Der Gebäudekreis (FWS) bringt die Wärme zum Rückkühler oder zur Kältemaschine. Pumpen mit drehzahlgeregeltem Antrieb, Filter, Ausdehnungsgefäß, Luftabscheider, Sensoren und eine Steuerung halten Temperatur, Durchfluss und Druck stabil.</p>
+<p>Eine einfache Rechnung zeigt die Größenordnung: Ein 200‑kW-Rack braucht bei 10 K Spreizung rund 4,8 kg Wasser pro Sekunde, also etwa 287 l/min (Q = ṁ · c<sub>p</sub> · ΔT).</p>
+
+<h2>Investition (CAPEX): etwa gleich – günstiger durch Dichte</h2>
+<ul class="check">
+<li><b>Bei gleicher Rackdichte</b> kommt Schneider Electric für ein 2‑MW-Rechenzentrum auf praktisch gleiche Kosten: 7,02 $/W mit Luft, 6,98 $/W mit Flüssigkeit (10 kW/Rack).</li>
+<li><b>Mit höherer Dichte</b> sinken die Kosten: rund 10 % bei 20 kW/Rack, rund 14 % bei 40 kW/Rack. Es braucht weniger Racks, weniger Fläche und weniger Gebäude.</li>
+<li><b>Was wegfällt:</b> Kältemaschinen und Umluftgeräte weitgehend; USV und Schaltanlage werden kleiner, weil die Serverlüfter wegfallen.</li>
+<li><b>Was dazukommt:</b> CDUs, Pumpen, Rohrleitungen, Rückkühler. Die Nachrüstung bestehender Säle ist deutlich teurer als ein Neubau.</li>
+</ul>
+
+<h2>Betrieb (OPEX): weniger Strom, mehr freie Kühlung</h2>
+<ul class="check">
+<li><b>Messstudie NVIDIA/Vertiv</b> (1–2 MW, 50 Racks, Direct-to-Chip mit CDUs): Bei rund 75 % Flüssiganteil sank der Strom der Gebäudetechnik um 18 %, der Gesamtstrom um 10 %. Die Serverlüfter brauchten 80 % weniger.</li>
+<li><b>Warmwasser statt Kältemaschine:</b> Die Kreisläufe laufen mit Vorlauftemperaturen von typisch 30–45 °C. Damit kühlt der Rückkühler viele Stunden im Jahr frei, ohne Verdichter.</li>
+<li><b>Die PUE täuscht:</b> In der Studie sank sie nur von 1,38 auf 1,34, weil auch der IT-Strom sinkt. Aussagekräftiger ist die TUE – sie verbesserte sich um 15,5 %.</li>
+</ul>
+
+<h2>Schallschutz: Der Lärm wandert zum Rückkühler</h2>
+<p>Mit der Flüssigkühlung verschwindet der Lärm nicht. Die Wärme geht über große Rückkühler mit vielen Ventilatoren ab, die im Sommer und in warmen Nächten unter Volllast laufen – genau dann, wenn nachts die strengsten Immissionsrichtwerte gelten.</p>
+<ul class="check">
+<li><b>Jedes Pascal kostet Lüfterstrom.</b> Ein Schalldämpfer mit hohem Druckverlust frisst den Effizienzgewinn der Flüssigkühlung wieder auf oder kostet Kühlleistung an heißen Tagen.</li>
+<li><b>Unsere Acoustic Packs</b> mit <a href="/hsa3/">HSA3</a>-Metallakustik und Helmholtz-Röhren senken den Pegel innerhalb der Druckreserve der Ventilatoren – nicht brennbar (A1), ohne Mineralwolle.</li>
+<li><b>Tiefton im Griff:</b> Nach der Dämpfung bestimmt meist der Bereich um 63 Hz den Pegel. Die Resonanzkammern der Röhren sind genau darauf abgestimmt.</li>
+</ul>
+<p>Wie das an einem Muster-Rechenzentrum aussieht, zeigt unsere Seite <a href="/rechenzentren/#fluessigkuehlung">Data-Center-Lösungen</a>.</p>
+
+<p class="note">Quellen: <a href="https://blog.se.com/datacenter/architecture/2020/02/24/liquid-vs-air-cooling-which-is-the-capex-winner/" rel="noopener" target="_blank">Schneider Electric, White Paper 282</a> (2 MW, Tauchkühlung, 2020); <a href="https://vertiv.com/en-us/about/news-and-insights/articles/blog-posts/quantifying-data-center-pue-when-introducing-liquid-cooling" rel="noopener" target="_blank">NVIDIA/Vertiv, ASME InterPACK 2022</a> (1–2 MW, Direct-to-Chip mit CDUs). Richtwerte – kein Ersatz für eine projektbezogene Wirtschaftlichkeitsrechnung.</p>
+    </div>
+  </div>
+</article>
+<section id="anfrage">
+  <div class="wrap">
+    <div class="contact has-form">
+      <div>
+        <div class="intro"><h2>Projekt anfragen</h2><p>Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen; Sonderanfertigungen liefern wir meist 40–60 Tage nach Bestellung.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Firma<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-Mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Telefon<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option></select></label>
+          <div class="row">
+            <label class="f">Anlage (Hersteller / Modell)<input id="q_unit" placeholder="z. B. York YMAE0260"></label>
+            <label class="f">Anzahl Geräte<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Projektort (PLZ / Ort)<input id="q_place"></label>
+          <label class="f">Nachricht<textarea id="q_msg" rows="3" placeholder="z. B. Richtwert nachts, Abstand zum Nachbarn, Dachaufstellung, Termin …"></textarea></label>
+          <label class="f">Datenblatt, Plan oder Foto (optional · PDF oder Bild, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Datenschutzhinweise zu dieser Anfrage</summary><p><b>Verantwortlicher:</b> Silent Engineering di Romolo Vicari (Marke ForCoTech), Via Trento 22, 23875 Osnago (LC), Italien · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Zweck:</b> Ihre Angaben und ein ggf. beigefügtes Datenblatt verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und zur Erstellung eines Angebots. Soweit dafür nötig, geben wir die technischen Projektangaben an unseren Fertigungspartner weiter; keine Weitergabe zu Werbezwecken.</p><p><b>Versand:</b> über den Formulardienst FormSubmit (formsubmit.co), der die Anfrage per E-Mail an info@forcotech.com weiterleitet; dabei ist eine Verarbeitung außerhalb der EU möglich. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Ihre Einwilligung (Art. 6 Abs. 1 lit. a, Art. 49 Abs. 1 lit. a DSGVO), jederzeit widerruflich. Alternativ erreichen Sie uns direkt per E-Mail.</p><p><b>Speicherdauer und Rechte:</b> Löschung nach Abschluss der Anfrage, bei Vertrag nach den gesetzlichen Fristen. Auskunft, Berichtigung, Löschung, Widerspruch und Widerruf formlos an info@forcotech.com. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert und verarbeitet und dafür über FormSubmit übermittelt werden (siehe <a href="/datenschutz/">Datenschutzerklärung</a>). Die Einwilligung kann ich jederzeit widerrufen. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Anfrage senden</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Vielen Dank für Ihre Anfrage!</b><br>Wir melden uns in der Regel innerhalb von 2–3 Werktagen.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Text kopieren</button><a class="btn ghost" id="qMail" href="#">Im E-Mail-Programm öffnen</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
+      </div>
+      <div>
+        <div class="qnext"><b>So geht es weiter</b><ol><li><b>Prüfung</b> Ihrer Angaben – bei Bedarf kurze Rückfrage</li><li><b>Pegelberechnung</b> am Immissionsort und Auslegung von Akustik und Luftführung</li><li><b>Verbindliches Angebot</b> mit Zeichnung – bei komplexen Projekten meist in 2–3 Tagen</li></ol></div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Lieber selbst vordimensionieren?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand"><img src="/img/forcotech-logo.png" width="415" height="231" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology" loading="lazy"><a href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+    <span>© 2026 Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italien · P.IVA IT03833150133 · in Allianz mit ABSORA GmbH, Berlin</span>
+    <span><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="/en/news/fluessigkuehlung-rechenzentrum/" lang="en">English</a> · <a href="/fr/actualites/fluessigkuehlung-rechenzentrum/" lang="fr">Français</a></span>
+  </div>
+</footer>
+<script src="/anfrage.js" defer></script>
+</body>
+</html>

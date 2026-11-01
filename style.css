@@ -591,3 +591,9 @@ section.dark .ab-legend span.on::before{background:#b4232f}
 .ab-photos .ab-wide img{aspect-ratio:auto}
 .ab-teaser img{aspect-ratio:4/3}
 .ab-list .note{margin:4px 0 0}
+.ab-specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:4px 0 16px}
+.ab-spec{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.ab-spec h3{font-size:15.5px;margin:0 0 8px}
+.ab-spec dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0;font-size:14.5px}
+.ab-spec dt{color:var(--muted)}
+.ab-spec dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}

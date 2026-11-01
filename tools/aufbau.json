@@ -2,6 +2,127 @@
   "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Datum = Stand der Fotos (JJJJ-MM-TT), wird auf der Seite angezeigt. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
   "projekte": [
     {
+      "id": "2026-11-kaskade-4-wp",
+      "datum": "2026-11-01",
+      "fertig": false,
+      "de": {
+        "titel": "Schallhaube für eine Kaskade aus 4 × Weishaupt WWP LA 60",
+        "status": "Montage abgeschlossen, Anlage vor der Inbetriebnahme",
+        "text": "Vier Luft/Wasser-Wärmepumpen in Kaskade stehen frei auf einer Grünfläche in direkter Nähe zu Wohnbebauung. Eine durchgehende Schallhaube umschließt alle vier Geräte gemeinsam. Tragkonstruktion aus Aluminium-Systemprofilen, Wand- und Dachpaneele mit Schallabsorption, Zu- und Abluftöffnungen oben und unten in jedem Wandfeld, zweiflügelige Wartungstüren an der Stirnseite.",
+        "daten": [
+          {
+            "titel": "Schallhaube für 4 Wärmepumpen",
+            "werte": [
+              [
+                "Abmessungen (L × B × H)",
+                "12.440 × 2.600 × 2.600 mm"
+              ],
+              [
+                "Gewicht",
+                "1.443 kg"
+              ],
+              [
+                "Luftvolumenstrom",
+                "100.000 m³/h (alle vier Geräte unter Volllast)"
+              ],
+              [
+                "Freier Querschnitt der Luftöffnungen",
+                "ca. 5,6 m²"
+              ],
+              [
+                "Max. Luftgeschwindigkeit",
+                "5 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "en": {
+        "titel": "Acoustic enclosure for a cascade of 4 × Weishaupt WWP LA 60",
+        "status": "Installation completed, system ready for commissioning",
+        "text": "Four air-to-water heat pumps in cascade stand in the open on a green area close to residential buildings. One continuous enclosure houses all four units together. Support structure of aluminium system profiles, sound-absorbing wall and roof panels, intake and exhaust openings at the top and bottom of every wall bay, double-leaf service doors at the front end.",
+        "daten": [
+          {
+            "titel": "Enclosure for 4 heat pumps",
+            "werte": [
+              [
+                "Dimensions (L × W × H)",
+                "12,440 × 2,600 × 2,600 mm"
+              ],
+              [
+                "Weight",
+                "1,443 kg"
+              ],
+              [
+                "Air flow",
+                "100,000 m³/h (all four units at full load)"
+              ],
+              [
+                "Free area of air openings",
+                "approx. 5.6 m²"
+              ],
+              [
+                "Max. air velocity",
+                "5 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "titel": "Caisson acoustique pour une cascade de 4 × Weishaupt WWP LA 60",
+        "status": "Montage terminé, installation avant mise en service",
+        "text": "Quatre pompes à chaleur air/eau en cascade sont installées en plein air sur un espace vert, à proximité immédiate de logements. Un caisson continu enveloppe les quatre unités ensemble. Structure en profilés aluminium, panneaux de paroi et de toiture absorbants, ouvertures d’aspiration et de soufflage en haut et en bas de chaque travée, portes de maintenance à deux vantaux en façade frontale.",
+        "daten": [
+          {
+            "titel": "Caisson pour 4 pompes à chaleur",
+            "werte": [
+              [
+                "Dimensions (L × l × H)",
+                "12 440 × 2 600 × 2 600 mm"
+              ],
+              [
+                "Poids",
+                "1 443 kg"
+              ],
+              [
+                "Débit d’air",
+                "100 000 m³/h (les quatre unités à pleine charge)"
+              ],
+              [
+                "Section libre des ouvertures",
+                "env. 5,6 m²"
+              ],
+              [
+                "Vitesse d’air max.",
+                "5 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "bilder": [
+        {
+          "datei": "2026-11-kaskade-rahmen.webp",
+          "de": "Abb. 1 – Tragrahmen aus Aluminiumprofilen über vier Wärmepumpen in Kaskade auf einer Grünfläche",
+          "en": "Fig. 1 – Aluminium profile support frame over four cascaded heat pumps on a green area",
+          "fr": "Fig. 1 – Châssis en profilés aluminium au-dessus de quatre pompes à chaleur en cascade sur un espace vert"
+        },
+        {
+          "datei": "2026-11-kaskade-dach.webp",
+          "de": "Abb. 2 – Geschlossene Dachfläche der Schallhaube, Paneele im Profilraster",
+          "en": "Fig. 2 – Closed roof of the enclosure, panels in the profile grid",
+          "fr": "Fig. 2 – Toiture fermée du caisson, panneaux dans la trame de profilés"
+        },
+        {
+          "datei": "2026-11-kaskade-fertig.webp",
+          "de": "Abb. 3 – Fertig montierte Schallhaube mit Luftöffnungen in jedem Wandfeld und Wartungstüren an der Stirnseite",
+          "en": "Fig. 3 – Fully installed enclosure with air openings in every wall bay and service doors at the front end",
+          "fr": "Fig. 3 – Caisson entièrement monté avec ouvertures d’air dans chaque travée et portes de maintenance en façade"
+        }
+      ]
+    },
+    {
       "id": "2026-11-grosshaube-flachdach",
       "datum": "2026-11-01",
       "fertig": false,

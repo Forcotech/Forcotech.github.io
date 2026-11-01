@@ -1,9 +1,9 @@
 {
-  "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
+  "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Datum = Stand der Fotos (JJJJ-MM-TT), wird auf der Seite angezeigt. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
   "projekte": [
     {
       "id": "2026-11-grosshaube-flachdach",
-      "monat": "2026-11",
+      "datum": "2026-11-01",
       "fertig": false,
       "de": {
         "titel": "Großhaube um eine luftgekühlte Anlage auf dem Flachdach",
@@ -33,7 +33,7 @@
     },
     {
       "id": "2026-11-zwei-rahmen-dach",
-      "monat": "2026-11",
+      "datum": "2026-11-01",
       "fertig": false,
       "de": {
         "titel": "Zwei Einhausungen für Außengeräte auf einem Dach",

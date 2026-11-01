@@ -71,9 +71,9 @@ Hauptmenü (Lösungen · Methode · Beispiele · Im Aufbau · News · Kontakt) s
 
 /projekte-im-aufbau/, /en/projects-in-progress/, /fr/projets-en-cours/ (Menüpunkt „Im Aufbau“) und der Block
 „Gerade im Aufbau“ auf den Startseiten (zwischen `<!-- AUFBAU:START -->` und `<!-- AUFBAU:END -->`). Daten in
-`tools/aufbau.json` (neuester Eintrag oben, Texte DE/EN/FR, Status, Monat, `"fertig": true` für Abgeschlossenes),
+`tools/aufbau.json` (neuester Eintrag oben, Texte DE/EN/FR, Status, Datum des Stands, `"fertig": true` für Abgeschlossenes),
 Fotos in `img/aufbau/` (neutral zugeschnitten: keine Kundennamen, Standorte, erkennbaren Gebäude; WebP, max. 1000 px;
-Panoramafotos mit `"breit": true`). Danach `python3 tools/build_aufbau.py` und `python3 tools/build_news.py`.
+Panoramafotos mit `"breit": true`). Wird wöchentlich aktualisiert. Danach `python3 tools/build_aufbau.py` und `python3 tools/build_news.py`.
 
 ## Praxisleitfaden (PDF)
 

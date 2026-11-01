@@ -65,7 +65,15 @@ Abschnitt „Messwerte im Hallraum“ (#hallraum) auf der HSA3-Seite: Daten und 
 hsa3/_src/de.html und en.html ein – `python3 tools/build_hallraum.py`.
 
 Danach `python3 tools/build_loesungen.py` und zuletzt `python3 tools/build_news.py` (Navigation, Sitemap).
-Hauptmenü (Lösungen · Methode · Beispiele · News · Kontakt) steht in tools/build_news.py (nav), auf den Startseiten index.html, en/index.html, fr/index.html und auf leitfaden/index.html.
+Hauptmenü (Lösungen · Methode · Beispiele · Im Aufbau · News · Kontakt) steht in tools/build_news.py (nav), auf den Startseiten index.html, en/index.html, fr/index.html und auf leitfaden/index.html.
+
+## Projekte im Aufbau
+
+/projekte-im-aufbau/, /en/projects-in-progress/, /fr/projets-en-cours/ (Menüpunkt „Im Aufbau“) und der Block
+„Gerade im Aufbau“ auf den Startseiten (zwischen `<!-- AUFBAU:START -->` und `<!-- AUFBAU:END -->`). Daten in
+`tools/aufbau.json` (neuester Eintrag oben, Texte DE/EN/FR, Status, Monat, `"fertig": true` für Abgeschlossenes),
+Fotos in `img/aufbau/` (neutral zugeschnitten: keine Kundennamen, Standorte, erkennbaren Gebäude; WebP, max. 1000 px;
+Panoramafotos mit `"breit": true`). Danach `python3 tools/build_aufbau.py` und `python3 tools/build_news.py`.
 
 ## Praxisleitfaden (PDF)
 

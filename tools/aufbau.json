@@ -1,10 +1,11 @@
 {
-  "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Datum = Stand der Fotos (JJJJ-MM-TT), wird auf der Seite angezeigt. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
+  "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Datum = Stand der Fotos (JJJJ-MM-TT), wird auf der Seite angezeigt. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. \"phase\" = aktueller Schritt im Fortschrittsbalken: 1 Fertigung, 2 Tragrahmen, 3 Paneele und Schalldämpfer, 4 Inbetriebnahme. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
   "projekte": [
     {
       "id": "2026-11-kaskade-4-wp",
       "datum": "2026-11-01",
       "fertig": false,
+      "phase": 4,
       "de": {
         "titel": "Schallhaube für eine Kaskade aus 4 × Weishaupt WWP LA 60",
         "status": "Montage abgeschlossen, Anlage vor der Inbetriebnahme",
@@ -109,16 +110,22 @@
           "fr": "Fig. 1 – Châssis en profilés aluminium au-dessus de quatre pompes à chaleur en cascade sur un espace vert"
         },
         {
+          "datei": "2026-11-kaskade-rahmen-2.webp",
+          "de": "Abb. 2 – Tragrahmen von der Gegenseite, Wärmepumpen in Kaskade hintereinander",
+          "en": "Fig. 2 – Support frame from the opposite side, heat pumps lined up in cascade",
+          "fr": "Fig. 2 – Châssis vu du côté opposé, pompes à chaleur alignées en cascade"
+        },
+        {
           "datei": "2026-11-kaskade-dach.webp",
-          "de": "Abb. 2 – Geschlossene Dachfläche der Schallhaube, Paneele im Profilraster",
-          "en": "Fig. 2 – Closed roof of the enclosure, panels in the profile grid",
-          "fr": "Fig. 2 – Toiture fermée du caisson, panneaux dans la trame de profilés"
+          "de": "Abb. 3 – Geschlossene Dachfläche der Schallhaube, Paneele im Profilraster",
+          "en": "Fig. 3 – Closed roof of the enclosure, panels in the profile grid",
+          "fr": "Fig. 3 – Toiture fermée du caisson, panneaux dans la trame de profilés"
         },
         {
           "datei": "2026-11-kaskade-fertig.webp",
-          "de": "Abb. 3 – Fertig montierte Schallhaube mit Luftöffnungen in jedem Wandfeld und Wartungstüren an der Stirnseite",
-          "en": "Fig. 3 – Fully installed enclosure with air openings in every wall bay and service doors at the front end",
-          "fr": "Fig. 3 – Caisson entièrement monté avec ouvertures d’air dans chaque travée et portes de maintenance en façade"
+          "de": "Abb. 4 – Fertig montierte Schallhaube mit Luftöffnungen in jedem Wandfeld und Wartungstüren an der Stirnseite",
+          "en": "Fig. 4 – Fully installed enclosure with air openings in every wall bay and service doors at the front end",
+          "fr": "Fig. 4 – Caisson entièrement monté avec ouvertures d’air dans chaque travée et portes de maintenance en façade"
         }
       ]
     },
@@ -126,6 +133,7 @@
       "id": "2026-11-grosshaube-flachdach",
       "datum": "2026-11-01",
       "fertig": false,
+      "phase": 3,
       "de": {
         "titel": "Zwei Schallhauben auf einem Flachdach",
         "status": "Tragrahmen und obere Paneele montiert",
@@ -292,6 +300,7 @@
       "id": "2026-11-zwei-rahmen-dach",
       "datum": "2026-11-01",
       "fertig": false,
+      "phase": 3,
       "de": {
         "titel": "Zwei Einhausungen für Außengeräte auf einem Dach",
         "status": "Tragrahmen montiert",

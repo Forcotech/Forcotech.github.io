@@ -33,7 +33,9 @@ TXT = {
            "note": "Ohne Kundennamen und Standorte: Die Anlagen gehören nach der Lieferung unseren Kunden. Fertige Anlagen zeigen wir unter <a href=\"{ex}\">Ausführungsbeispiele</a>.",
            "stand": "Stand:", "done": "Abgeschlossen", "running": "Im Aufbau",
            "teaser_h": "Gerade im Aufbau", "teaser_more": "Alle Projekte im Aufbau →",
-           "b1": "Projekt anfragen", "b2": "Zum Konfigurator", "zoom": "Foto in voller Größe öffnen"},
+           "b1": "Projekt anfragen", "b2": "Zum Konfigurator", "zoom": "Foto in voller Größe öffnen",
+           "phasen": ["Fertigung", "Tragrahmen", "Paneele und Schalldämpfer", "Inbetriebnahme"], "fortschritt": "Fortschritt",
+           "lb": {"close": "Schließen", "prev": "Vorheriges Foto", "next": "Nächstes Foto", "of": "von"}},
     "en": {"title": "Projects in progress – acoustic enclosures in fabrication and installation | ForCoTech",
            "desc": "Current ForCoTech acoustic enclosure projects in progress: snapshots from fabrication and installation – profile frames, panels, HSA3 silencers. No customer names or locations.",
            "kicker": "From fabrication and installation", "h1": "Projects in progress",
@@ -41,7 +43,9 @@ TXT = {
            "note": "No customer names or locations: after delivery the installations belong to our customers. Finished installations are shown under <a href=\"{ex}\">Examples</a>.",
            "stand": "Updated:", "done": "Completed", "running": "In progress",
            "teaser_h": "Currently in progress", "teaser_more": "All projects in progress →",
-           "b1": "Request a project", "b2": "Open configurator", "zoom": "Open photo in full size"},
+           "b1": "Request a project", "b2": "Open configurator", "zoom": "Open photo in full size",
+           "phasen": ["Fabrication", "Support frame", "Panels and silencers", "Commissioning"], "fortschritt": "Progress",
+           "lb": {"close": "Close", "prev": "Previous photo", "next": "Next photo", "of": "of"}},
     "fr": {"title": "Projets en cours – caissons acoustiques en fabrication et en montage | ForCoTech",
            "desc": "Projets de caissons acoustiques ForCoTech en cours : instantanés de fabrication et de montage – châssis profilés, panneaux, silencieux HSA3. Sans noms de clients ni lieux.",
            "kicker": "Fabrication et montage", "h1": "Projets en cours",
@@ -49,7 +53,9 @@ TXT = {
            "note": "Sans noms de clients ni lieux : après la livraison, les installations appartiennent à nos clients. Les installations terminées figurent sous <a href=\"{ex}\">Exemples</a>.",
            "stand": "Mise à jour :", "done": "Terminé", "running": "En cours",
            "teaser_h": "Actuellement en cours", "teaser_more": "Tous les projets en cours →",
-           "b1": "Demander un projet", "b2": "Ouvrir le configurateur", "zoom": "Ouvrir la photo en taille réelle"},
+           "b1": "Demander un projet", "b2": "Ouvrir le configurateur", "zoom": "Ouvrir la photo en taille réelle",
+           "phasen": ["Fabrication", "Châssis", "Panneaux et silencieux", "Mise en service"], "fortschritt": "Avancement",
+           "lb": {"close": "Fermer", "prev": "Photo précédente", "next": "Photo suivante", "of": "sur"}},
 }
 e = bn.e
 
@@ -83,17 +89,32 @@ def daten(t):
     return f'<div class="ab-specs">{boxes}</div>\n    '
 
 
+def fortschritt(p, lang):
+    """Fortschrittsbalken: p["phase"] = aktueller Schritt (1–4); bei "fertig" alle Schritte erledigt."""
+    T = TXT[lang]
+    ph = p.get("phase")
+    if not ph and not p.get("fertig"):
+        return ""
+    cur = len(T["phasen"]) + 1 if p.get("fertig") else int(ph)
+    li = "".join(
+        f'<li class="{"pg-done" if i < cur else "pg-cur" if i == cur else "pg-next"}"'
+        + (' aria-current="step"' if i == cur else "") + f"><span>{e(n)}</span></li>"
+        for i, n in enumerate(T["phasen"], 1))
+    return f'<ol class="pg" aria-label="{T["fortschritt"]}">{li}</ol>\n    '
+
+
 def card(p, lang, first):
     t, T = p[lang], TXT[lang]
     chip = f'<span class="ab-chip{" ab-done" if p.get("fertig") else ""}">{T["done"] if p.get("fertig") else T["running"]}</span>'
     figs = "\n      ".join(
-        f'<figure{" class=\"ab-wide\"" if b.get("breit") else ""}><a href="/img/aufbau/{b["datei"]}" title="{T["zoom"]}">'
+        f'<figure{" class=\"ab-wide\"" if b.get("breit") else ""}><a class="lb-link" href="/img/aufbau/{b["datei"]}" title="{T["zoom"]}">'
         f'{img_tag(b, lang, lazy=not (first and i == 0))}</a></figure>'
         for i, b in enumerate(p["bilder"]))
     return f"""  <article class="ab-card" id="{p['id']}">
     <div class="ab-head">{chip}<time datetime="{p['datum']}">{T['stand']} {datum(p['datum'], lang)}</time></div>
     <h2>{e(t['titel'])}</h2>
     <p class="ab-status">{e(t['status'])}</p>
+    {fortschritt(p, lang)}
     <p>{e(t['text'])}</p>
     {daten(t)}<div class="ab-photos">
       {figs}
@@ -137,14 +158,15 @@ def build():
     <div class="btns"><a class="btn" href="#anfrage">{T['b1']}</a><a class="btn ghost" href="{bn.T[lang]['cfg'][0]}">{T['b2']}</a></div>
   </div>
 </div>
-<section>
+<section data-lb='{json.dumps(T["lb"], ensure_ascii=False)}'>
   <div class="wrap ab-list">
 {cards}
     <p class="note">{T['note'].format(ex=EX[lang])}{f" · {T['stand']} {datum(stand, lang)}" if stand else ""}</p>
   </div>
 </section>"""
         og = f"img/aufbau/{projekte[0]['bilder'][0]['datei']}" if projekte else None
-        bn.write(URL[lang][1:] + "index.html", bn.page(lang, T["title"], T["desc"], dict(URL), main, og_image=og))
+        bn.write(URL[lang][1:] + "index.html", bn.page(lang, T["title"], T["desc"], dict(URL), main, og_image=og,
+                                                     extra_head='<script src="/lightbox.js" defer></script>'))
 
         home = ROOT / HOME[lang]
         s = home.read_text(encoding="utf-8")

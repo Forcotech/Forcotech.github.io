@@ -23,7 +23,8 @@
 - HSA3 acoustic meta-metal by ABSORA GmbH (Berlin, patent holder): up to 40 % lower pressure drop than conventional splitter silencers, reverberation room tested to EN ISO 354 (TU Berlin 2026): fibre-free up to 0.80, with 100 mm mineral wool backing 0.83 already at 100 Hz; alternative lining Stratocell Whisper 50 mm FR
 - How HSA3 works: micro-perforated, corrugated metal top layer on a spring-mounted structure; air chambers act as resonators (Helmholtz and mass-spring principle), no mineral wool; effective at low compressor frequencies
 - HSA3 as a modular kit: compressor panels, retrofit fan cylinders against blade passing frequency, partition walls between heat pumps (also keep defrost air off the neighbouring unit), full enclosures; bolted aluminium profile system 45 x 45 mm, liftable without a crane
-- Design targets: 5–7 m/s in free openings, max. 3–5 % loss of unit capacity
+- Design approach: the enclosure is treated as a coupled acoustic, aerodynamic and thermal system; CFD is used to minimise recirculation, flow separation, local velocity peaks and thermal short-circuits
+- Design targets (project-specific): typically 5–7 m/s in free openings, checked against geometry and fan reserve; capacity loss limited to approx. 3–5 % max.
 - Product lines: H series (small heat pumps), CM series (large heat pumps/chillers), V series (VRF/VRV), Wall series (noise barriers), PV inverter and BESS enclosures
 - In alliance with ABSORA GmbH, Berlin (developer and patent holder of HSA3): design by Silent Engineering, manufacturing and installation together with ABSORA
 - R290 (propane) units: enclosure only with written manufacturer approval; floorless design so leaked propane flows away, no ignition sources (except explosion-proof), permanently open storm/relief openings on at least two sides, relief areas to EN 14994 if a zone lies inside, CFD check of gas outflow

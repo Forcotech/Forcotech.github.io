@@ -165,6 +165,40 @@
         </div>
       </div>
     </div>
+        <h3 id="r290-havarie" style="margin-top:34px">ATEX-Konzept in zwei Stufen: passiv und im Havariefall</h3>
+    <p>Die passiven Maßnahmen – kein Boden, keine Senke, keine Zündquellen, unverschließbare Öffnungen – wirken immer, auch bei Stromausfall. Für den Havariefall ergänzen wir eine Gaswarnanlage, die die ohnehin vorhandenen Ventilatoren des Geräts nutzt: Statt einer separaten Ex-Lüftungsanlage mit Kanälen und Zusatzventilatoren braucht es nur Sensoren, eine Gaswarnzentrale und eine Warneinrichtung.</p>
+    <figure class="r290-havarie" style="margin:18px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px"><img src="/img/r290/r290-5-havarie-de.svg" width="900" height="400" loading="lazy" alt="Schema Havariefall R290: Ein bodennaher Gassensor meldet an die Gaswarnzentrale außerhalb der Ex-Zone, die Geräteventilatoren laufen mit 100 %, Außenluft strömt bodennah nach, die Abluft geht senkrecht nach oben; Ablauf Voralarm, Hauptalarm, Entwarnung" style="display:block;width:100%;height:auto"></figure>
+    <div class="two" style="margin-top:22px">
+      <div>
+        <h3>So funktioniert die Havarie-Be- und Entlüftung</h3>
+        <ul class="check">
+          <li><b>Gassensoren bodennah</b> (Infrarot, Ex-Ausführung) dort, wo sich Propan am längsten halten würde – meist an der geschlossenen Wand zur Bebauung.</li>
+          <li><b>Voralarm:</b> Die Gaswarnzentrale außerhalb der Ex-Zone schaltet die Geräteventilatoren auf 100 %. Außenluft strömt bodennah über die Kulissen nach, die Abluft geht senkrecht über den Dachschalldämpfer weg von Fassaden und Fenstern.</li>
+          <li><b>Hauptalarm:</b> Verdichter aus, Ventilatoren laufen weiter, Blitzleuchte und Hupe am Zugang, Meldung an die Gebäudeleittechnik.</li>
+          <li><b>Rückfallebene:</b> Gibt der Hersteller den Ventilatorbetrieb im Leckagefall nicht frei, ergänzen wir je Haube einen Ex-Abluftventilator (ATEX II 2G) mit bodennaher Absaugung und senkrechtem Ausblas vom Gebäude weg.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="target">
+          <h3>Rechenbeispiel (Schätzung)</h3>
+          <p style="color:var(--ink);margin-bottom:10px">Gruppenhaube um drei Großwärmepumpen mit je ca. 138.000 m³/h Luftvolumenstrom. Bemessungsleckage: Inhalt eines Kältekreises (7 kg) in 4 Minuten. Mit den Geräteventilatoren auf 100 % liegt die mittlere Konzentration im Abluftstrom unter 1 % der unteren Explosionsgrenze (0,038 kg/m³) – Zielwert ist höchstens 25 %. Die Notlüftung für Maschinenräume nach EN 378-3 wäre um ein Vielfaches übertroffen.</p>
+          <h3>Voraussetzungen</h3>
+          <p style="color:var(--ink)">Schriftliche Freigabe des Herstellers für den Ventilatorbetrieb mit 100 % im Leckagefall und eine Schnittstelle zur Verdichterabschaltung. Zoneneinteilung, Bemessungsleckage und Alarmschwellen legt der Betreiber im Explosionsschutzkonzept fest.</p>
+        </div>
+      </div>
+    </div>
+    <div class="dc-table r290-steps" style="margin-top:22px">
+      <table>
+        <thead><tr><th>Stufe</th><th>Auslöser (typisch)</th><th>Reaktion</th></tr></thead>
+        <tbody>
+          <tr><td>Normalbetrieb</td><td>unter Voralarm</td><td>Regelbetrieb, Sensoren werden laufend überwacht</td></tr>
+          <tr><td>1 · Voralarm</td><td>15 % UEG</td><td>Geräteventilatoren 100 %, Meldung an die Gebäudeleittechnik</td></tr>
+          <tr><td>2 · Hauptalarm</td><td>25 % UEG</td><td>Verdichter aus, Ventilatoren laufen weiter, Blitzleuchte und Hupe</td></tr>
+          <tr><td>3 · Entwarnung</td><td>unter 5 % UEG</td><td>Nachlaufzeit, Wiedereinschalten nur nach manueller Quittierung</td></tr>
+          <tr><td>Störung</td><td>Sensorstörung</td><td>sicherer Zustand wie Voralarm</td></tr>
+        </tbody>
+      </table>
+    </div>
     <details class="checklist">
       <summary>Checkliste für Planung, Ausführung und Betrieb</summary>
       <div class="cl">
@@ -177,6 +211,7 @@
           <li>Bodenöffnungen auf mindestens zwei Seiten, Querschnitt mit Hersteller abgestimmt</li>
           <li>CFD-Nachweis für Luftführung, Windeinfluss und Gasabfluss</li>
           <li>Entlastungsflächen nach DIN EN 14994, falls eine Zone in der Haube liegt</li>
+          <li>Havariekonzept: Gaswarnung, Herstellerfreigabe für Ventilatorbetrieb 100 %, Verdichterabschaltung</li>
         </ul></div>
         <div><h3>Ausführung</h3><ul class="check">
           <li>Haube ohne Boden, berührungsfrei zum Gerät</li>
@@ -186,11 +221,13 @@
           <li>Keine Klappen in Sturmöffnungen oder nur stromlos offen und winddrucksicher</li>
           <li>Innenverkleidung A1 (HSA3), Absorber mindestens B1</li>
           <li>Kennzeichnung: brennbares Kältemittel, keine Zündquellen</li>
+          <li>Gassensoren bodennah, Gaswarnzentrale außerhalb der Ex-Zone</li>
         </ul></div>
         <div><h3>Betrieb und Wartung</h3><ul class="check">
           <li>Boden- und Sturmöffnungen bei jeder Wartung auf Laub, Schnee und Gegenstände prüfen</li>
           <li>Keine Lagerung in oder an der Haube</li>
           <li>Arbeiten am Kältekreis nur mit Gaswarngerät und funkenfreiem Werkzeug</li>
+          <li>Gaswarnanlage regelmäßig prüfen und kalibrieren</li>
         </ul></div>
       </div>
     </details>

@@ -165,6 +165,40 @@
         </div>
       </div>
     </div>
+        <h3 id="r290-havarie" style="margin-top:34px">Two-stage ATEX concept: passive and in case of a leak</h3>
+    <p>The passive measures – no floor, no pit, no ignition sources, openings that cannot be closed – always work, even during a power cut. For a leak we add a gas detection system that uses the unit’s own fans: instead of a separate Ex ventilation system with ducts and extra fans, all it takes is sensors, a gas detection controller and a warning device.</p>
+    <figure class="r290-havarie" style="margin:18px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px"><img src="/img/r290/r290-5-havarie-en.svg" width="900" height="400" loading="lazy" alt="Schematic of an R290 leak: a floor-level gas sensor signals the controller outside the Ex zone, the unit fans run at 100 %, outdoor air flows in at floor level, exhaust air leaves vertically; sequence pre-alarm, main alarm, all clear" style="display:block;width:100%;height:auto"></figure>
+    <div class="two" style="margin-top:22px">
+      <div>
+        <h3>How the emergency ventilation works</h3>
+        <ul class="check">
+          <li><b>Floor-level gas sensors</b> (infrared, Ex version) where propane would linger longest – usually at the closed wall facing the building.</li>
+          <li><b>Pre-alarm:</b> the controller outside the Ex zone switches the unit fans to 100 %. Outdoor air flows in at floor level through the silencers, exhaust air leaves vertically through the roof silencer, away from façades and windows.</li>
+          <li><b>Main alarm:</b> compressors off, fans keep running, beacon and horn at the access, signal to the BMS.</li>
+          <li><b>Fallback:</b> if the manufacturer does not approve fan operation during a leak, we add one Ex exhaust fan per enclosure (ATEX II 2G) with floor-level extraction and vertical discharge away from the building.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="target">
+          <h3>Worked example (estimate)</h3>
+          <p style="color:var(--ink);margin-bottom:10px">Group enclosure around three large heat pumps with approx. 138,000 m³/h air flow each. Design leak: the content of one refrigerant circuit (7 kg) in 4 minutes. With the unit fans at 100 %, the average concentration in the exhaust air stays below 1 % of the lower flammability limit (0.038 kg/m³) – the target is 25 % at most. The emergency ventilation for machinery rooms to EN 378-3 would be exceeded many times over.</p>
+          <h3>Requirements</h3>
+          <p style="color:var(--ink)">Written approval by the manufacturer for 100 % fan operation during a leak and an interface for shutting down the compressors. Zoning, design leak and alarm thresholds are set by the operator in the explosion protection concept.</p>
+        </div>
+      </div>
+    </div>
+    <div class="dc-table r290-steps" style="margin-top:22px">
+      <table>
+        <thead><tr><th>Stage</th><th>Trigger (typical)</th><th>Response</th></tr></thead>
+        <tbody>
+          <tr><td>Normal operation</td><td>below pre-alarm</td><td>normal control, sensors continuously monitored</td></tr>
+          <tr><td>1 · Pre-alarm</td><td>15 % LFL</td><td>unit fans 100 %, signal to the BMS</td></tr>
+          <tr><td>2 · Main alarm</td><td>25 % LFL</td><td>compressors off, fans keep running, beacon and horn</td></tr>
+          <tr><td>3 · All clear</td><td>below 5 % LFL</td><td>run-on time, restart only after manual reset</td></tr>
+          <tr><td>Fault</td><td>sensor fault</td><td>safe state as in pre-alarm</td></tr>
+        </tbody>
+      </table>
+    </div>
     <details class="checklist">
       <summary>Checklist for planning, installation and operation</summary>
       <div class="cl">
@@ -177,6 +211,7 @@
           <li>Ground openings on at least two sides, cross-section agreed with the manufacturer</li>
           <li>CFD verification of air flow, wind influence and gas outflow</li>
           <li>Relief areas to EN 14994 if a zone lies inside the enclosure</li>
+          <li>Leak concept: gas detection, manufacturer approval for 100 % fan operation, compressor shutdown</li>
         </ul></div>
         <div><h3>Installation</h3><ul class="check">
           <li>Enclosure without floor, no contact with the unit</li>
@@ -186,11 +221,13 @@
           <li>No louvres in storm openings, or only fail-open and wind-pressure-proof</li>
           <li>Inner lining A1 (HSA3), absorbers at least B1</li>
           <li>Marking: flammable refrigerant, no ignition sources</li>
+          <li>Floor-level gas sensors, gas detection controller outside the Ex zone</li>
         </ul></div>
         <div><h3>Operation and maintenance</h3><ul class="check">
           <li>Check ground and storm openings for leaves, snow and objects at every service</li>
           <li>No storage in or next to the enclosure</li>
           <li>Work on the refrigerant circuit only with a gas detector and spark-free tools</li>
+          <li>Test and calibrate the gas detection system regularly</li>
         </ul></div>
       </div>
     </details>

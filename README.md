@@ -41,6 +41,14 @@ bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und fran
 bearbeiten, dann `python3 tools/build_adiabatik.py`. Die Prinzipskizze img/adiabatik/*.svg erzeugt das Skript (Beschriftungen in LBL).
 Karte auf den Startseiten index.html, en/index.html, fr/index.html; Sitemap-Eintrag in tools/build_news.py.
 
+## Nachhaltigkeit mit HSA3
+
+/nachhaltigkeit/, /en/sustainability/, /fr/durabilite/: Inhalt in nachhaltigkeit/_src/de.html, en.html bzw. fr.html
+bearbeiten, Kopf (Titel, Einleitung, Kennzahlen) in der Tabelle TXT, dann `python3 tools/build_nachhaltigkeit.py`.
+Nur bereits veröffentlichte Werte; das Energie-Rechenbeispiel ist als Schätzung mit Annahmen gekennzeichnet.
+Verlinkt von der HSA3-Seite (Karte unter „Einsatz“) und vom Abschnitt Nachhaltigkeit der Technik-Seiten; Sitemap-Eintrag
+in tools/build_news.py. Die FR-Fassung verlinkt mangels FR-Lösungs- und HSA3-Seiten auf /fr/technique/.
+
 ## Spezialthema Schallwand + Abluft-Schalldämpfer
 
 /loesungen/schallwand-kulisse/, /en/solutions/noise-barrier-and-silencer/, /fr/ecran-et-silencieux/: Inhalt in

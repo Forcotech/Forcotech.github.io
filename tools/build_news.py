@@ -314,6 +314,7 @@ def build():
     lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
     lines += group({"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}, today)
     lines += group({"de": "/adiabatik/", "en": "/en/adiabatic-precooling/", "fr": "/fr/pre-refroidissement-adiabatique/"}, today)
+    lines += group({"de": "/nachhaltigkeit/", "en": "/en/sustainability/", "fr": "/fr/durabilite/"}, today)  # tools/build_nachhaltigkeit.py
     lines += group({"de": "/loesungen/schallwand-kulisse/", "en": "/en/solutions/noise-barrier-and-silencer/", "fr": "/fr/ecran-et-silencieux/"}, today)  # tools/build_schallwand_kulisse.py
     lines += group({"de": "/projekte-im-aufbau/", "en": "/en/projects-in-progress/", "fr": "/fr/projets-en-cours/"}, today)  # tools/build_aufbau.py
     lines += group({"de": "/leitfaden/"}, today)  # Praxisleitfaden (Handseite leitfaden/index.html, PDF in downloads/)

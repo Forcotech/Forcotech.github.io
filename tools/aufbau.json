@@ -2,6 +2,191 @@
   "_hinweis": "Projekte im Aufbau. Neuester Eintrag oben. Keine Kundennamen, keine Standorte, keine erkennbaren Gebäude. Datum = Stand der Fotos (JJJJ-MM-TT), wird auf der Seite angezeigt. Bilder in img/aufbau/ (max. 1000 px breit, WebP). Danach: python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py. \"phase\" = aktueller Schritt im Fortschrittsbalken: 1 Fertigung, 2 Tragrahmen, 3 Paneele und Schalldämpfer, 4 Inbetriebnahme. Abgeschlossene Projekte: \"fertig\": true setzen (bleiben mit Vermerk stehen) oder Eintrag löschen.",
   "projekte": [
     {
+      "id": "2026-11-grosshaube-flachdach",
+      "datum": "2026-11-13",
+      "fertig": false,
+      "phase": 3,
+      "de": {
+        "titel": "Zwei Schallhauben auf einem Flachdach",
+        "status": "Obere Paneele rundum und Wandpaneele weitgehend montiert, letzte Wandfelder folgen",
+        "text": "Eine Schallhaube für zwei und eine für drei Kälteanlagen, beide ausgelegt auf eine maximale Luftgeschwindigkeit von 6 m/s. Unter dem Dach sitzen HSA3-Röhrenschalldämpfer als Decke und Wand – ohne Mineralwolle, nicht brennbar (A1).",
+        "daten": [
+          {
+            "titel": "Schallhaube für 2 Kälteanlagen",
+            "werte": [
+              [
+                "Abmessungen (L × B × H)",
+                "8.800 × 4.870 × 3.380 mm"
+              ],
+              [
+                "Gewicht",
+                "1.864 kg"
+              ],
+              [
+                "Luftvolumenstrom",
+                "167.820 m³/h"
+              ],
+              [
+                "Max. Luftgeschwindigkeit",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Schallhaube für 3 Kälteanlagen",
+            "werte": [
+              [
+                "Abmessungen (L × B × H)",
+                "10.500 × 4.870 × 3.380 mm"
+              ],
+              [
+                "Gewicht",
+                "2.135 kg"
+              ],
+              [
+                "Luftvolumenstrom",
+                "max. 269.730 m³/h"
+              ],
+              [
+                "Max. Luftgeschwindigkeit",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "en": {
+        "titel": "Two acoustic enclosures on a flat roof",
+        "status": "Upper panels all round and most wall panels installed, last wall bays to follow",
+        "text": "One enclosure for two and one for three chillers, both designed for a maximum air velocity of 6 m/s. Below the roof, HSA3 tube silencers form the ceiling and wall – no mineral wool, non-combustible (A1).",
+        "daten": [
+          {
+            "titel": "Enclosure for 2 chillers",
+            "werte": [
+              [
+                "Dimensions (L × W × H)",
+                "8,800 × 4,870 × 3,380 mm"
+              ],
+              [
+                "Weight",
+                "1,864 kg"
+              ],
+              [
+                "Air flow",
+                "167,820 m³/h"
+              ],
+              [
+                "Max. air velocity",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Enclosure for 3 chillers",
+            "werte": [
+              [
+                "Dimensions (L × W × H)",
+                "10,500 × 4,870 × 3,380 mm"
+              ],
+              [
+                "Weight",
+                "2,135 kg"
+              ],
+              [
+                "Air flow",
+                "max. 269,730 m³/h"
+              ],
+              [
+                "Max. air velocity",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "titel": "Deux caissons acoustiques sur un toit-terrasse",
+        "status": "Panneaux supérieurs sur tout le pourtour et la plupart des panneaux de paroi posés, dernières travées à suivre",
+        "text": "Un caisson pour deux et un pour trois groupes froids, tous deux dimensionnés pour une vitesse d’air maximale de 6 m/s. Sous la toiture, des silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1).",
+        "daten": [
+          {
+            "titel": "Caisson pour 2 groupes froids",
+            "werte": [
+              [
+                "Dimensions (L × l × H)",
+                "8 800 × 4 870 × 3 380 mm"
+              ],
+              [
+                "Poids",
+                "1 864 kg"
+              ],
+              [
+                "Débit d’air",
+                "167 820 m³/h"
+              ],
+              [
+                "Vitesse d’air max.",
+                "6 m/s"
+              ]
+            ]
+          },
+          {
+            "titel": "Caisson pour 3 groupes froids",
+            "werte": [
+              [
+                "Dimensions (L × l × H)",
+                "10 500 × 4 870 × 3 380 mm"
+              ],
+              [
+                "Poids",
+                "2 135 kg"
+              ],
+              [
+                "Débit d’air",
+                "max. 269 730 m³/h"
+              ],
+              [
+                "Vitesse d’air max.",
+                "6 m/s"
+              ]
+            ]
+          }
+        ]
+      },
+      "bilder": [
+        {
+          "datei": "2026-11-grosshaube-waende.webp",
+          "de": "Aktueller Stand: Schallhaube für zwei Kälteanlagen mit geschlossenen Wandpaneelen und Lüftungsgittern im oberen Band, ein Wandfeld an der Stirnseite noch offen",
+          "en": "Current status: enclosure for two chillers with closed wall panels and ventilation grilles in the upper band, one bay at the front end still open",
+          "fr": "État actuel : caisson pour deux groupes froids avec panneaux de paroi fermés et grilles de ventilation en partie haute, une travée en façade frontale encore ouverte"
+        },
+        {
+          "datei": "2026-11-grosshaube-paneele.webp",
+          "de": "Obere Paneele mit Lüftungsgittern rundum montiert, darunter der offene Profilrahmen mit beiden Kälteanlagen; Montagematerial auf dem Dach",
+          "en": "Upper panels with ventilation grilles installed all round, below them the open profile frame with both chillers; installation material on the roof",
+          "fr": "Panneaux supérieurs avec grilles de ventilation posés sur tout le pourtour, en dessous le châssis profilé ouvert avec les deux groupes froids ; matériel de montage sur le toit"
+        },
+        {
+          "datei": "2026-11-grosshaube-rahmen.webp",
+          "de": "Profilrahmen einer Schallhaube auf Stahlträgern auf dem Flachdach mit montierten oberen Paneelen und Lüftungsgittern, darin eine Kälteanlage",
+          "en": "Profile frame of an acoustic enclosure on steel beams on a flat roof with upper panels and ventilation grilles installed, a chiller inside",
+          "fr": "Châssis profilé d’un caisson acoustique sur poutres acier en toiture-terrasse avec panneaux supérieurs et grilles de ventilation posés, un groupe froid à l’intérieur"
+        },
+        {
+          "datei": "2026-11-hsa3-roehrendecke.webp",
+          "de": "HSA3-Röhrenschalldämpfer als Decke und Wand im Profilrahmen, von unten gesehen",
+          "en": "HSA3 tube silencers as ceiling and wall in the profile frame, seen from below",
+          "fr": "Silencieux tubulaires HSA3 en plafond et en paroi dans le châssis profilé, vus d’en bas"
+        },
+        {
+          "datei": "2026-11-grosshaube-zwei-geraete.webp",
+          "de": "Schallhaube für zwei Kälteanlagen: Tragrahmen und obere Paneele mit Lüftungsgittern montiert, daneben Montagematerial auf dem Dach",
+          "en": "Enclosure for two chillers: support frame and upper panels with ventilation grilles installed, installation material on the roof alongside",
+          "fr": "Caisson pour deux groupes froids : châssis et panneaux supérieurs avec grilles de ventilation posés, matériel de montage sur le toit à côté"
+        }
+      ]
+    },
+    {
       "id": "2026-11-kaskade-4-wp",
       "datum": "2026-11-01",
       "fertig": false,
@@ -126,179 +311,6 @@
           "de": "Abb. 4 – Fertig montierte Schallhaube mit Luftöffnungen in jedem Wandfeld und Wartungstüren an der Stirnseite",
           "en": "Fig. 4 – Fully installed enclosure with air openings in every wall bay and service doors at the front end",
           "fr": "Fig. 4 – Caisson entièrement monté avec ouvertures d’air dans chaque travée et portes de maintenance en façade"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-grosshaube-flachdach",
-      "datum": "2026-11-01",
-      "fertig": false,
-      "phase": 3,
-      "de": {
-        "titel": "Zwei Schallhauben auf einem Flachdach",
-        "status": "Tragrahmen und obere Paneele montiert",
-        "text": "Eine Schallhaube für zwei und eine für drei Kälteanlagen, beide ausgelegt auf eine maximale Luftgeschwindigkeit von 6 m/s. Unter dem Dach sitzen HSA3-Röhrenschalldämpfer als Decke und Wand – ohne Mineralwolle, nicht brennbar (A1).",
-        "daten": [
-          {
-            "titel": "Schallhaube für 2 Kälteanlagen",
-            "werte": [
-              [
-                "Abmessungen (L × B × H)",
-                "8.800 × 4.870 × 3.380 mm"
-              ],
-              [
-                "Gewicht",
-                "1.864 kg"
-              ],
-              [
-                "Luftvolumenstrom",
-                "167.820 m³/h"
-              ],
-              [
-                "Max. Luftgeschwindigkeit",
-                "6 m/s"
-              ]
-            ]
-          },
-          {
-            "titel": "Schallhaube für 3 Kälteanlagen",
-            "werte": [
-              [
-                "Abmessungen (L × B × H)",
-                "10.500 × 4.870 × 3.380 mm"
-              ],
-              [
-                "Gewicht",
-                "2.135 kg"
-              ],
-              [
-                "Luftvolumenstrom",
-                "max. 269.730 m³/h"
-              ],
-              [
-                "Max. Luftgeschwindigkeit",
-                "6 m/s"
-              ]
-            ]
-          }
-        ]
-      },
-      "en": {
-        "titel": "Two acoustic enclosures on a flat roof",
-        "status": "Support frame and upper panels installed",
-        "text": "One enclosure for two and one for three chillers, both designed for a maximum air velocity of 6 m/s. Below the roof, HSA3 tube silencers form the ceiling and wall – no mineral wool, non-combustible (A1).",
-        "daten": [
-          {
-            "titel": "Enclosure for 2 chillers",
-            "werte": [
-              [
-                "Dimensions (L × W × H)",
-                "8,800 × 4,870 × 3,380 mm"
-              ],
-              [
-                "Weight",
-                "1,864 kg"
-              ],
-              [
-                "Air flow",
-                "167,820 m³/h"
-              ],
-              [
-                "Max. air velocity",
-                "6 m/s"
-              ]
-            ]
-          },
-          {
-            "titel": "Enclosure for 3 chillers",
-            "werte": [
-              [
-                "Dimensions (L × W × H)",
-                "10,500 × 4,870 × 3,380 mm"
-              ],
-              [
-                "Weight",
-                "2,135 kg"
-              ],
-              [
-                "Air flow",
-                "max. 269,730 m³/h"
-              ],
-              [
-                "Max. air velocity",
-                "6 m/s"
-              ]
-            ]
-          }
-        ]
-      },
-      "fr": {
-        "titel": "Deux caissons acoustiques sur un toit-terrasse",
-        "status": "Châssis et panneaux supérieurs montés",
-        "text": "Un caisson pour deux et un pour trois groupes froids, tous deux dimensionnés pour une vitesse d’air maximale de 6 m/s. Sous la toiture, des silencieux tubulaires HSA3 forment le plafond et la paroi – sans laine minérale, incombustibles (A1).",
-        "daten": [
-          {
-            "titel": "Caisson pour 2 groupes froids",
-            "werte": [
-              [
-                "Dimensions (L × l × H)",
-                "8 800 × 4 870 × 3 380 mm"
-              ],
-              [
-                "Poids",
-                "1 864 kg"
-              ],
-              [
-                "Débit d’air",
-                "167 820 m³/h"
-              ],
-              [
-                "Vitesse d’air max.",
-                "6 m/s"
-              ]
-            ]
-          },
-          {
-            "titel": "Caisson pour 3 groupes froids",
-            "werte": [
-              [
-                "Dimensions (L × l × H)",
-                "10 500 × 4 870 × 3 380 mm"
-              ],
-              [
-                "Poids",
-                "2 135 kg"
-              ],
-              [
-                "Débit d’air",
-                "max. 269 730 m³/h"
-              ],
-              [
-                "Vitesse d’air max.",
-                "6 m/s"
-              ]
-            ]
-          }
-        ]
-      },
-      "bilder": [
-        {
-          "datei": "2026-11-grosshaube-rahmen.webp",
-          "de": "Profilrahmen einer Schallhaube auf Stahlträgern auf dem Flachdach mit montierten oberen Paneelen und Lüftungsgittern, darin eine Kälteanlage",
-          "en": "Profile frame of an acoustic enclosure on steel beams on a flat roof with upper panels and ventilation grilles installed, a chiller inside",
-          "fr": "Châssis profilé d’un caisson acoustique sur poutres acier en toiture-terrasse avec panneaux supérieurs et grilles de ventilation posés, un groupe froid à l’intérieur"
-        },
-        {
-          "datei": "2026-11-hsa3-roehrendecke.webp",
-          "de": "HSA3-Röhrenschalldämpfer als Decke und Wand im Profilrahmen, von unten gesehen",
-          "en": "HSA3 tube silencers as ceiling and wall in the profile frame, seen from below",
-          "fr": "Silencieux tubulaires HSA3 en plafond et en paroi dans le châssis profilé, vus d’en bas"
-        },
-        {
-          "datei": "2026-11-grosshaube-zwei-geraete.webp",
-          "de": "Schallhaube für zwei Kälteanlagen: Tragrahmen und obere Paneele mit Lüftungsgittern montiert, daneben Montagematerial auf dem Dach",
-          "en": "Enclosure for two chillers: support frame and upper panels with ventilation grilles installed, installation material on the roof alongside",
-          "fr": "Caisson pour deux groupes froids : châssis et panneaux supérieurs avec grilles de ventilation posés, matériel de montage sur le toit à côté"
         }
       ]
     },

@@ -81,7 +81,7 @@ Hauptmenü (Lösungen · Methode · Beispiele · Im Aufbau · News · Kontakt) s
 „Gerade im Aufbau“ auf den Startseiten (zwischen `<!-- AUFBAU:START -->` und `<!-- AUFBAU:END -->`). Daten in
 `tools/aufbau.json` (neuester Eintrag oben, Texte DE/EN/FR, Status, Datum des Stands, `"fertig": true` für Abgeschlossenes),
 Fotos in `img/aufbau/` (neutral zugeschnitten: keine Kundennamen, Standorte, erkennbaren Gebäude; WebP, max. 1000 px;
-Panoramafotos mit `"breit": true`). Wird wöchentlich aktualisiert. Danach `python3 tools/build_aufbau.py` und `python3 tools/build_news.py`.
+Panoramafotos mit `"breit": true`; optional `"video"` je Projekt: MP4 1280 × 720 ohne Ton + Poster je Sprache in `img/aufbau/`, erscheint in der Projektkarte und oben im Startseiten-Block, startet erst auf Klick). Wird wöchentlich aktualisiert. Danach `python3 tools/build_aufbau.py` und `python3 tools/build_news.py`.
 
 ## Praxisleitfaden (PDF)
 

@@ -153,6 +153,13 @@
           }
         ]
       },
+      "video": {
+        "datei": "2026-11-grosshaube-bauverlauf-{lang}.mp4",
+        "poster": "2026-11-grosshaube-bauverlauf-{lang}.webp",
+        "de": "Bauverlauf im Video (50 s, ohne Ton): vom Tragrahmen bis zum fast geschlossenen Wandpaneel",
+        "en": "Progress video (50 s, silent): from the support frame to almost closed wall panels",
+        "fr": "Vidéo de l’avancement (50 s, sans son) : du châssis aux panneaux de paroi presque fermés"
+      },
       "bilder": [
         {
           "datei": "2026-11-grosshaube-waende.webp",

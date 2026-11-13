@@ -629,3 +629,9 @@ section.dark .ab-legend span.on::before{background:#b4232f}
 .lb-prev{left:10px;top:50%;transform:translateY(-50%)}
 .lb-next{right:10px;top:50%;transform:translateY(-50%)}
 @media (max-width:560px){.lb{padding:56px 8px 16px}.lb-prev,.lb-next{top:auto;bottom:12px;transform:none}.lb-fig img{max-height:calc(100vh - 170px)}}
+
+/* Projekte im Aufbau: Video (tools/build_aufbau.py) */
+.ab-video{margin:14px 0 0}
+.ab-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;background:#111}
+.ab-video figcaption{font-size:13.5px;color:var(--muted);padding:8px 2px 0}
+.ab-video-home{max-width:960px;margin:0 auto 22px}

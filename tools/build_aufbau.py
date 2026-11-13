@@ -9,6 +9,11 @@ Neues Projekt oder neuer Stand:
   2. Eintrag oben in tools/aufbau.json einfügen bzw. Status/Text ändern (DE, EN, FR).
   3. python3 tools/build_aufbau.py && python3 tools/build_news.py && python3 tools/check.py
 
+Video (optional, je Projekt): "video": {"datei": "name-{lang}.mp4", "poster": "name-{lang}.webp", "de": "Bildunterschrift", ...}
+in tools/aufbau.json; Dateien je Sprache in img/aufbau/ (1280 × 720, ohne Ton, MP4 mit faststart). Das Video erscheint
+in der Projektkarte und – für das neueste laufende Projekt mit Video – oben im Startseiten-Block „Gerade im Aufbau“.
+Selbst gehostet, kein externer Dienst, startet erst auf Klick (preload="none").
+
 Kopf, Navigation, Anfrageformular und Fuß kommen aus tools/build_news.py.
 """
 import json, re, sys
@@ -103,6 +108,20 @@ def fortschritt(p, lang):
     return f'<ol class="pg" aria-label="{T["fortschritt"]}">{li}</ol>\n    '
 
 
+def video_tag(p, lang, cls="ab-video"):
+    v = p.get("video")
+    if not v:
+        return ""
+    src, poster = v["datei"].format(lang=lang), v["poster"].format(lang=lang)
+    for f in (src, poster):
+        if not (ROOT / "img" / "aufbau" / f).exists():
+            sys.exit(f"Video-Datei fehlt: img/aufbau/{f}")
+    cap = e(v[lang])
+    return (f'<figure class="{cls}"><video controls preload="none" playsinline width="1280" height="720" '
+            f'poster="/img/aufbau/{poster}" aria-label="{cap}"><source src="/img/aufbau/{src}" type="video/mp4"></video>'
+            f'<figcaption>{cap}</figcaption></figure>')
+
+
 def card(p, lang, first):
     t, T = p[lang], TXT[lang]
     chip = f'<span class="ab-chip{" ab-done" if p.get("fertig") else ""}">{T["done"] if p.get("fertig") else T["running"]}</span>'
@@ -116,7 +135,7 @@ def card(p, lang, first):
     <p class="ab-status">{e(t['status'])}</p>
     {fortschritt(p, lang)}
     <p>{e(t['text'])}</p>
-    {daten(t)}<div class="ab-photos">
+    {daten(t)}{video_tag(p, lang)}<div class="ab-photos">
       {figs}
     </div>
   </article>"""
@@ -132,10 +151,12 @@ def teaser(projekte, lang):
     figs = "\n      ".join(
         f'<figure><a href="{URL[lang]}#{p["id"]}">{img_tag(b, lang)}</a><figcaption>{e(p[lang]["titel"])} – {e(p[lang]["status"])}</figcaption></figure>'
         for p, b in bilder)
+    vp = next((p for p in laufend if p.get("video")), None)
+    vid = (video_tag(vp, lang, "ab-video ab-video-home") + "\n    ") if vp else ""
     return f"""<section class="alt" id="aufbau">
   <div class="wrap">
     <h2>{T['teaser_h']}</h2>
-    <div class="gallery ab-teaser">
+    {vid}<div class="gallery ab-teaser">
       {figs}
     </div>
     <p class="nmore"><a href="{URL[lang]}">{T['teaser_more']}</a></p>

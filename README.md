@@ -23,7 +23,7 @@ Beispiele und Ablauf. Die technischen Abschnitte (HSA3, Luftführung, Auslegung,
 Seiten /technik/, /en/technology/, /fr/technique/: Inhalt in technik/_src/<sprache>.html bearbeiten, dann
 `python3 tools/build_technik.py`. Navigation und Sitemap kommen aus tools/build_news.py.
 Im Abschnitt Bauweise steht die Montage-Animation einer Modulhaube (#montage-video): je Sprache
-`img/schallhaube-aufbau/montage-modulhaube-<de|en|fr>.mp4` (1280 × 720, 49 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`.
+`img/schallhaube-aufbau/montage-modulhaube-<de|en|fr>.mp4` (1280 × 720, 53 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`.
 
 ## Produktseite H-Serie
 

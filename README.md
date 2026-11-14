@@ -24,6 +24,8 @@ Seiten /technik/, /en/technology/, /fr/technique/: Inhalt in technik/_src/<sprac
 `python3 tools/build_technik.py`. Navigation und Sitemap kommen aus tools/build_news.py.
 Im Abschnitt Bauweise steht die Montage-Animation einer Modulhaube (#montage-video): je Sprache
 `img/schallhaube-aufbau/montage-modulhaube-<de|en|fr>.mp4` (1280 × 720, 53 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`.
+Darunter die Animation zur Lufttrennung (#lufttrennung-video): `img/schallhaube-aufbau/lufttrennung-<de|en|fr>.mp4`
+(1280 × 720, 36 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`.
 
 ## Produktseite H-Serie
 

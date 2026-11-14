@@ -26,6 +26,8 @@ Im Abschnitt Bauweise steht die Montage-Animation einer Modulhaube (#montage-vid
 `img/schallhaube-aufbau/montage-modulhaube-<de|en|fr>.mp4` (1280 × 720, 53 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`.
 Darunter die Animation zur Lufttrennung (#lufttrennung-video): `img/schallhaube-aufbau/lufttrennung-<de|en|fr>.mp4`
 (1280 × 720, 36 s, mit illustrativem Ventilatorgeräusch, startet erst auf Klick) mit Poster `.webp`.
+Darunter die Strömungssimulation (#stroemung-video): `img/schallhaube-aufbau/stroemung-lufttrennung-<de|en|fr>.mp4`
+(1280 × 720, 46 s, ohne Ton, 2D-Simulation mit angenommenen Werten, als Schätzung gekennzeichnet) mit Poster `.webp`.
 
 ## Produktseite H-Serie
 

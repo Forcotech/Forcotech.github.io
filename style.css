@@ -635,3 +635,17 @@ section.dark .ab-legend span.on::before{background:#b4232f}
 .ab-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;background:#111}
 .ab-video figcaption{font-size:13.5px;color:var(--muted);padding:8px 2px 0}
 .ab-video-home{max-width:960px;margin:0 auto 22px}
+
+/* Weiterführende Links deutlich sichtbar (15.11.2026): Linkzeile als Schaltflächen, „… →“-Links als Chips */
+.linkrow{gap:10px 12px;margin-top:26px}
+.linkrow a{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:2px solid var(--accent);border-radius:9px;background:#fff;color:var(--accent);text-decoration:none;line-height:1.2;transition:background .15s,color .15s}
+.linkrow a:hover,.linkrow a:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent)}
+.linkrow a:first-child{background:var(--accent);color:#fff}
+.linkrow a:first-child:hover{background:var(--accent-d);border-color:var(--accent-d)}
+a.more,.solcard .more,.card .more,.steps li .more,.tech-peek .more{display:inline-flex;align-items:center;gap:4px;width:auto;align-self:flex-start;padding:6px 12px;border-radius:8px;background:var(--accent-l);color:var(--accent-d);font-weight:700;font-size:14.5px;line-height:1.3;text-decoration:none;transition:background .15s,color .15s}
+a.more:hover,a.more:focus-visible,.solcard:hover .more,.solcard:focus-visible .more{background:var(--accent);color:#fff}
+.card.core .more,.card.mini .more{display:inline-flex;margin-top:10px}
+.tech-peek .more{margin-top:6px}
+.tech-peek .more + br{display:block;content:"";margin-top:6px}
+section.dark a.more,.tech-peek.dark .more{background:#3a1519;color:#ff8a93}
+section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);color:#121417}

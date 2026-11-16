@@ -52,6 +52,9 @@ Karte auf den Startseiten index.html, en/index.html, fr/index.html; Sitemap-Eint
 /nachhaltigkeit/, /en/sustainability/, /fr/durabilite/: Inhalt in nachhaltigkeit/_src/de.html, en.html bzw. fr.html
 bearbeiten, Kopf (Titel, Einleitung, Kennzahlen) in der Tabelle TXT, dann `python3 tools/build_nachhaltigkeit.py`.
 Nur bereits veröffentlichte Werte; das Energie-Rechenbeispiel ist als Schätzung mit Annahmen gekennzeichnet.
+Abschnitt „Modularer Rückbau“ (#rueckbau, EN #dismantling, FR #demontage) mit Rückbau-Animation: je Sprache
+`img/schallhaube-aufbau/rueckbau-modulhaube-<de|en|fr>.mp4` (1280 × 720, 52 s, ohne Ton, startet erst auf Klick) mit Poster `.webp`;
+dasselbe Video im Abschnitt Kreislaufwirtschaft der Rechenzentrums-Seiten (#kreislauf, EN #circularity, FR #circularite).
 Verlinkt von der HSA3-Seite (Karte unter „Einsatz“) und vom Abschnitt Nachhaltigkeit der Technik-Seiten; Sitemap-Eintrag
 in tools/build_news.py. Die FR-Fassung verlinkt mangels FR-Lösungs- und HSA3-Seiten auf /fr/technique/.
 

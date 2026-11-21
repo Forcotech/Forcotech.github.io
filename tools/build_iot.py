@@ -219,6 +219,26 @@ EX = {
 }
 
 
+# Einordnung der Wirtschaftlichkeit (unter der Beispielrechnung); Preise passend zur Richtpreistabelle in iot/_src
+ROI = {
+    "de": ("Einordnung: Wann rechnet sich das?", [
+        ("Kleine Wärmepumpen", "Basis-Paket, ca. 1.800 €", "Über die Stromersparnis allein rechnet es sich erst nach etwa 4–6 Jahren. Hier ist das Monitoring vor allem eine Absicherung gegen Gewährleistungsstreit und Lärmbeschwerden."),
+        ("Großanlagen und Kaltwassersätze", "Performance-Paket, ca. 2.800 €", "Deckt das System eine Rezirkulation oder verschmutzte Kulissen wie in der Beispielrechnung auf, ist es oft schon im ersten Betriebsjahr bezahlt."),
+        ("R290-Großanlagen", "ATEX-Paket, ca. 6.500 €", "Hier zählen Genehmigungsfähigkeit und Haftungssicherheit. Eine Gaswarnanlage ist ohnehin vorgeschrieben – Fernmeldung und Dokumentation kosten im Verhältnis zur Gesamtanlage wenig."),
+        ("Mehrere Hauben auf einem Dach", "ein Gateway für alle", "Das Gateway wird nur einmal benötigt. Jede weitere Haube am selben Standort wird dadurch spürbar günstiger.")]),
+    "en": ("In context: when does it pay off?", [
+        ("Small heat pumps", "Basic package, approx. €1,800", "On power savings alone it pays off only after about 4–6 years. Here monitoring is mainly protection against warranty disputes and noise complaints."),
+        ("Large units and chillers", "Performance package, approx. €2,800", "If the system uncovers recirculation or fouled silencers as in the example calculation, it often pays for itself in the first year of operation."),
+        ("Large R290 units", "ATEX package, approx. €6,500", "What counts here is approvability and liability protection. A gas warning system is required anyway – remote reporting and documentation cost little compared with the whole installation."),
+        ("Several enclosures on one roof", "one gateway for all", "The gateway is needed only once. Each additional enclosure at the same site therefore costs noticeably less.")]),
+    "fr": ("En perspective : quand est-ce rentable ?", [
+        ("Petites pompes à chaleur", "Offre Base, env. 1 800 €", "Par la seule économie d’électricité, le retour prend environ 4 à 6 ans. Le monitoring est ici surtout une protection contre les litiges de garantie et les plaintes pour bruit."),
+        ("Grandes installations et groupes froids", "Offre Performance, env. 2 800 €", "Si le système détecte une recirculation ou des silencieux encrassés comme dans l’exemple de calcul, il est souvent amorti dès la première année d’exploitation."),
+        ("Grandes installations au R290", "Offre ATEX, env. 6 500 €", "Ce qui compte ici, c’est l’autorisation et la sécurité juridique. Une détection gaz est de toute façon obligatoire – le report à distance et la documentation coûtent peu au regard de l’installation complète."),
+        ("Plusieurs caissons sur un toit", "une passerelle pour tous", "La passerelle n’est nécessaire qu’une fois. Chaque caisson supplémentaire sur le même site coûte donc nettement moins.")]),
+}
+
+
 def svg_lastgang(lang):
     t = EX[lang]
     import math
@@ -326,6 +346,8 @@ def beispiele(lang):
     <h2>{t["rh"]}</h2>
     <div class="iot-calcs">{card(t["r1h"], t["r1"], r["e1"], r["eur1"])}{card(t["r2h"], t["r2"], r["e2"], r["eur2"])}</div>
     <p class="note">{t["rnote"]}</p>
+    <h3 class="iot-roi-h">{ROI[lang][0]}</h3>
+    <div class="iot-roi">{"".join(f'<div><h4>{a}</h4><span class="tag">{b}</span><p>{c}</p></div>' for a, b, c in ROI[lang][1])}</div>
   </div>
 </section>"""
 

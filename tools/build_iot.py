@@ -20,21 +20,21 @@ TXT = {
     "de": {"title": "IoT-Services für Schallhauben – LoRaWAN-Monitoring von Druckverlust, Schall, Strom und Kältemittel bis ATEX | ForCoTech",
            "desc": "Funksensoren per LoRaWAN für Schallhauben und HVAC-Anlagen: Druckverlust, Luftgeschwindigkeit, Temperatur, Schallpegel, Lastgang (Strom), Kältemittelleckage per Infrarot (NDIR) – nachrüstbar, bis zur ATEX-Ausführung für R290.",
            "kicker": "IoT-Services · LoRaWAN-Monitoring",
-           "h1": "Messen statt vermuten: IoT-Monitoring für Schallhauben – bis zur ATEX-Lösung",
+           "h1": "IoT-Monitoring bis zur ATEX-Lösung",
            "lead": "Funksensoren messen Druckverlust, Luftgeschwindigkeit, Temperatur, Schallpegel, Stromverbrauch und Kältemittel. So zeigt der Betrieb, was die Auslegung verspricht: Pegel eingehalten, Druckverlust innerhalb der Reserve, kein Mehrverbrauch, dichter Kältekreis. Übertragen per LoRaWAN, nachrüstbar – für R290-Anlagen in Ex-Ausführung.",
            "b1": "IoT-Monitoring anfragen", "b2": "R290 und ATEX",
            "alt": "Systemschema: Sensoren für Differenzdruck, Luftgeschwindigkeit, Temperatur und Kältemittel in einer Schallhaube senden per LoRaWAN an ein Gateway und einen Netzwerkserver; von dort gehen die Daten an Dashboard, Alarme und Gebäudeleittechnik. Der Gassensor ist zusätzlich fest mit der Gaswarnzentrale verdrahtet."},
     "en": {"title": "IoT services for acoustic enclosures – LoRaWAN monitoring of pressure drop, sound, power and refrigerant up to ATEX | ForCoTech",
            "desc": "Wireless LoRaWAN sensors for acoustic enclosures and HVAC units: pressure drop, air velocity, temperature, sound level, load profile (power), refrigerant leaks via infrared (NDIR) – retrofittable, up to ATEX design for R290.",
            "kicker": "IoT services · LoRaWAN monitoring",
-           "h1": "Measure, don’t guess: IoT monitoring for acoustic enclosures – up to the ATEX solution",
+           "h1": "IoT monitoring up to the ATEX solution",
            "lead": "Wireless sensors measure pressure drop, air velocity, temperature, sound level, power consumption and refrigerant. Operation then shows what the design promises: noise limits met, pressure drop within the reserve, no extra consumption, a tight refrigerant circuit. Transmitted via LoRaWAN, retrofittable – in explosion-proof design for R290 units.",
            "b1": "Request IoT monitoring", "b2": "R290 and ATEX",
            "alt": "System diagram: sensors for differential pressure, air velocity, temperature and refrigerant inside an acoustic enclosure transmit via LoRaWAN to a gateway and a network server; from there data go to dashboard, alarms and building management system. The gas sensor is additionally hard-wired to the gas warning controller."},
     "fr": {"title": "Services IoT pour caissons acoustiques – monitoring LoRaWAN de la perte de charge, du bruit, de l’électricité et du fluide frigorigène jusqu’à l’ATEX | ForCoTech",
            "desc": "Capteurs sans fil LoRaWAN pour caissons acoustiques et installations CVC : perte de charge, vitesse d’air, température, niveau sonore, courbe de charge (électricité), fuites de fluide frigorigène par infrarouge (NDIR) – en rétrofit, jusqu’à l’exécution ATEX pour le R290.",
            "kicker": "Services IoT · Monitoring LoRaWAN",
-           "h1": "Mesurer plutôt que supposer&nbsp;: monitoring IoT pour caissons acoustiques – jusqu’à la solution ATEX",
+           "h1": "Monitoring IoT jusqu’à la solution ATEX",
            "lead": "Des capteurs sans fil mesurent perte de charge, vitesse d’air, température, niveau sonore, consommation électrique et fluide frigorigène. L’exploitation montre alors ce que promet le dimensionnement&nbsp;: niveaux respectés, perte de charge dans la réserve, pas de surconsommation, circuit frigorifique étanche. Transmission LoRaWAN, rétrofit possible – en exécution antidéflagrante pour le R290.",
            "b1": "Demander un monitoring IoT", "b2": "R290 et ATEX",
            "alt": "Schéma du système : des capteurs de pression différentielle, de vitesse d’air, de température et de fluide frigorigène dans un caisson acoustique transmettent par LoRaWAN à une passerelle et à un serveur réseau ; de là, les données vont vers le tableau de bord, les alarmes et la GTB. Le détecteur de gaz est en outre câblé à la centrale de détection gaz."},
@@ -139,7 +139,7 @@ def build():
   <div class="wrap hg">
     <div>
       <span class="kicker">{t["kicker"]}</span>
-      <h1 class="iot-h1">{t["h1"]}</h1>
+      <h1>{t["h1"]}</h1>
       <p class="lead">{t["lead"]}</p>
       <div class="btns"><a class="btn" href="#anfrage" data-typ="iot">{t["b1"]}</a><a class="btn ghost" href="{TECH[lang]}">{t["b2"]}</a></div>
     </div>

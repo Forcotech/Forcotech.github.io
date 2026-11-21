@@ -138,6 +138,9 @@ _IP = {
     "ir": '<path d="M12 3s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/><path d="M9.5 14h5"/>',
     "db": '<path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a7.5 7.5 0 0 1 0 11"/>',
     "kw": '<path d="M13 3L5 14h6l-1 7 8-11h-6z"/>',
+    "shield": '<path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+    "wrench": '<path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L4 17l3 3 5.2-5.2a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+    "lock": '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/>',
     "ex": '<path d="M12 3l9.5 17h-19z"/><text x="12" y="17.2" text-anchor="middle" font-size="7" font-weight="800" fill="currentColor" stroke="none" font-family="Arial">Ex</text>',
 }
 
@@ -148,7 +151,7 @@ def icons(frag):
         ic = (f'<span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" '
               f'stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">{_IP[k]}</svg></span>')
         return m.group(1) + ">" + ic
-    return re.sub(r'(<div class="card(?: iot-atex)?" data-ico="(\w+)")>', rep, frag)
+    return re.sub(r'(<div class="card(?: iot-atex| iot-aud)?" data-ico="(\w+)")>', rep, frag)
 
 
 # ---------- Beispielgrafiken und Beispielrechnung (Abschnitt <!--BEISPIELE-->) ----------

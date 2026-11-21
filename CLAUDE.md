@@ -26,7 +26,8 @@ Der Konfigurator unter `/konfigurator/` ist ein eigenes Repository.
 - **Keine Kundennamen und keine Projektstandorte** in Texten, Bildern, Dateinamen oder Bildunterschriften.
   Referenzen nur neutral („500+ Projekte“, „Muster-Rechenzentrum“).
 - **Messwerte und Prüfberichte nur nach Freigabe** veröffentlichen; Werte ohne Prüfbericht als Schätzung kennzeichnen.
-- **Keine Preise außer veröffentlichten Listenpreisen**; individuelle Lösungen „Preis mit dem Angebot“.
+- **Keine Preise außer veröffentlichten Listenpreisen**; individuelle Lösungen „Preis mit dem Angebot“. Ausnahme (freigegeben
+  von Romolo am 21.11.2026): Richtpreisspannen der IoT-Pakete auf `/iot/`, als unverbindlich und netto gekennzeichnet.
 - **B2B:** Ansprache von Planern, Anlagenbauern, Fachbetrieben und Betreibern – nicht von Privatkunden.
 - **Datenschutz:** Kommt ein neuer Dienst hinzu (Video, Karte, Schrift, Formular), Datenschutzerklärung in
   `tools/build_legal.py` ergänzen und ausführen. Keine Cookies, kein Tracking.

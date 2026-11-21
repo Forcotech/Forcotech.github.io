@@ -683,3 +683,5 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 .card.iot-aud .iot-lbl+p{margin-top:0}
 .card.iot-aud{display:flex;flex-direction:column}
 .card.iot-aud .more{margin-top:auto;padding-top:12px}
+.iot-table td.iot-preis,.iot-table th:last-child{white-space:nowrap;font-weight:700}
+.iot-table td.iot-preis{color:var(--accent)}

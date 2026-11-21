@@ -313,6 +313,7 @@ def build():
     lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}, today)
     lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
     lines += group({"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}, today)
+    lines += group({"de": "/iot/", "en": "/en/iot/", "fr": "/fr/iot/"}, today)  # tools/build_iot.py
     lines += group({"de": "/adiabatik/", "en": "/en/adiabatic-precooling/", "fr": "/fr/pre-refroidissement-adiabatique/"}, today)
     lines += group({"de": "/nachhaltigkeit/", "en": "/en/sustainability/", "fr": "/fr/durabilite/"}, today)  # tools/build_nachhaltigkeit.py
     lines += group({"de": "/loesungen/schallwand-kulisse/", "en": "/en/solutions/noise-barrier-and-silencer/", "fr": "/fr/ecran-et-silencieux/"}, today)  # tools/build_schallwand_kulisse.py

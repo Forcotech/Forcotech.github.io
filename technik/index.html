@@ -226,7 +226,7 @@
       </div>
     </div>
         <h3 id="r290-havarie" style="margin-top:34px">ATEX-Konzept in zwei Stufen: passiv und im Havariefall</h3>
-    <p>Die passiven Maßnahmen – kein Boden, keine Senke, keine Zündquellen, unverschließbare Öffnungen – wirken immer, auch bei Stromausfall. Für den Havariefall ergänzen wir eine Gaswarnanlage, die die ohnehin vorhandenen Ventilatoren des Geräts nutzt: Statt einer separaten Ex-Lüftungsanlage mit Kanälen und Zusatzventilatoren braucht es nur Sensoren, eine Gaswarnzentrale und eine Warneinrichtung.</p>
+    <p>Die passiven Maßnahmen – kein Boden, keine Senke, keine Zündquellen, unverschließbare Öffnungen – wirken immer, auch bei Stromausfall. Für den Havariefall ergänzen wir eine Gaswarnanlage, die die ohnehin vorhandenen Ventilatoren des Geräts nutzt: Statt einer separaten Ex-Lüftungsanlage mit Kanälen und Zusatzventilatoren braucht es nur Sensoren, eine Gaswarnzentrale und eine Warneinrichtung. <a href="/iot/">Fernüberwachung per LoRaWAN →</a></p>
     <figure class="r290-havarie" style="margin:18px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px"><img src="/img/r290/r290-5-havarie-de.svg" width="900" height="400" loading="lazy" alt="Schema Havariefall R290: Ein bodennaher Gassensor meldet an die Gaswarnzentrale außerhalb der Ex-Zone, die Geräteventilatoren laufen mit 100 %, Außenluft strömt bodennah nach, die Abluft geht senkrecht nach oben; Ablauf Voralarm, Hauptalarm, Entwarnung" style="display:block;width:100%;height:auto"></figure>
     <div class="two" style="margin-top:22px">
       <div>
@@ -347,7 +347,7 @@
             <label class="f">E-Mail *<input id="q_email" type="email" required autocomplete="email"></label>
             <label class="f">Telefon<input id="q_phone" type="tel" autocomplete="tel"></label>
           </div>
-          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option></select></label>
+          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="iot">IoT-Monitoring / Sensorik</option><option value="sonst">Sonstiges</option></select></label>
           <div class="row">
             <label class="f">Anlage (Hersteller / Modell)<input id="q_unit" placeholder="z. B. York YMAE0260"></label>
             <label class="f">Anzahl Geräte<input id="q_count" inputmode="numeric"></label>

@@ -11,7 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 L = {
  "index.html": dict(
-  typ_l="Anlagentyp", typ_o='<option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="sonst">Sonstiges</option>',
+  typ_l="Anlagentyp", typ_o='<option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="iot">IoT-Monitoring / Sensorik</option><option value="sonst">Sonstiges</option>',
   sec="kontakt",
   claim="<span>Ruhe für die Nachbarn.</span><em>Leistung für die Anlage.</em>",
   what="Schallhauben für Wärmepumpen und HVAC-Anlagen",
@@ -36,7 +36,7 @@ L = {
   addr="<b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a><br>Web: <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
  ),
  "en/index.html": dict(
-  typ_l="Equipment type", typ_o='<option value="">please select</option><option value="wp">Heat pump / AC unit</option><option value="gross">Chiller / large heat pump / dry cooler</option><option value="vrf">VRF/VRV outdoor unit</option><option value="pv">PV inverter</option><option value="bess">Battery storage (BESS)</option><option value="dc">Data centre</option><option value="wand">Noise barrier</option><option value="sonst">Other</option>',
+  typ_l="Equipment type", typ_o='<option value="">please select</option><option value="wp">Heat pump / AC unit</option><option value="gross">Chiller / large heat pump / dry cooler</option><option value="vrf">VRF/VRV outdoor unit</option><option value="pv">PV inverter</option><option value="bess">Battery storage (BESS)</option><option value="dc">Data centre</option><option value="wand">Noise barrier</option><option value="iot">IoT monitoring / sensors</option><option value="sonst">Other</option>',
   sec="contact",
   claim="<span>Quiet for the neighbours.</span><em>Performance for the unit.</em>",
   what="Acoustic enclosures for heat pumps and HVAC systems",
@@ -61,7 +61,7 @@ L = {
   addr="<b>Silent Engineering di Romolo Vicari</b><br>Brands ForCoTech and Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italy<br>Email: <a href=\"mailto:info@forcotech.com\">info@forcotech.com</a><br>Web: <a href=\"https://www.silent-mode.com\">silent-mode.com</a>",
  ),
  "fr/index.html": dict(
-  typ_l="Type d’installation", typ_o='<option value="">veuillez choisir</option><option value="wp">Pompe à chaleur / climatiseur</option><option value="gross">Groupe froid / grande PAC / aéroréfrigérant</option><option value="vrf">Unité extérieure VRF/VRV</option><option value="pv">Onduleur PV</option><option value="bess">Stockage par batteries (BESS)</option><option value="dc">Centre de données</option><option value="wand">Écran acoustique</option><option value="sonst">Autre</option>',
+  typ_l="Type d’installation", typ_o='<option value="">veuillez choisir</option><option value="wp">Pompe à chaleur / climatiseur</option><option value="gross">Groupe froid / grande PAC / aéroréfrigérant</option><option value="vrf">Unité extérieure VRF/VRV</option><option value="pv">Onduleur PV</option><option value="bess">Stockage par batteries (BESS)</option><option value="dc">Centre de données</option><option value="wand">Écran acoustique</option><option value="iot">Monitoring IoT / capteurs</option><option value="sonst">Autre</option>',
   sec="contact",
   claim="<span>Le calme pour les voisins.</span><em>La performance pour l’appareil.</em>",
   what="Caissons acoustiques pour pompes à chaleur et installations CVC",

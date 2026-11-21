@@ -1,0 +1,228 @@
+<!doctype html>
+<!-- © Silent Engineering di Romolo Vicari, Osnago (LC), Italien – Alle Rechte vorbehalten. -->
+<!-- Automatisch erzeugt mit tools/build_news.py – Änderungen in news/posts.json bzw. news/_src/ vornehmen. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IoT-Services für Schallhauben – LoRaWAN-Monitoring von Druckverlust, Temperatur und Kältemittel bis ATEX | ForCoTech</title>
+<meta name="description" content="Funksensoren per LoRaWAN für Schallhauben und HVAC-Anlagen: Druckverlust, Luftgeschwindigkeit, Temperatur, Kältemittelleckage per Infrarot (NDIR) – nachrüstbar, bis zur ATEX-Ausführung für R290.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://www.forcotech.com/iot/">
+<link rel="alternate" hreflang="de" href="https://www.forcotech.com/iot/">
+<link rel="alternate" hreflang="en" href="https://www.forcotech.com/en/iot/">
+<link rel="alternate" hreflang="fr" href="https://www.forcotech.com/fr/iot/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ForCoTech">
+<meta property="og:title" content="IoT-Services für Schallhauben – LoRaWAN-Monitoring von Druckverlust, Temperatur und Kältemittel bis ATEX | ForCoTech">
+<meta property="og:description" content="Funksensoren per LoRaWAN für Schallhauben und HVAC-Anlagen: Druckverlust, Luftgeschwindigkeit, Temperatur, Kältemittelleckage per Infrarot (NDIR) – nachrüstbar, bis zur ATEX-Ausführung für R290.">
+<meta property="og:url" content="https://www.forcotech.com/iot/">
+
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="/img/forcotech-logo.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Warum LoRaWAN und nicht WLAN oder Mobilfunk je Sensor?", "acceptedAnswer": {"@type": "Answer", "text": "LoRaWAN-Sensoren senden mit sehr wenig Energie über große Entfernungen und laufen deshalb jahrelang mit einer Batterie. Das 868-MHz-Signal kommt aus Hauben mit Lüftungsöffnungen deutlich besser heraus als WLAN; bei Bedarf wird die Antenne außen geführt. Ein Gateway bedient viele Sensoren, das Netz ist unabhängig vom IT-Netz des Kunden."}}, {"@type": "Question", "name": "Ersetzt das IoT-Monitoring die Gaswarnanlage?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Bei R290 und anderen Kältemitteln, für die eine Gaswarnung vorgeschrieben ist, bleibt die fest verdrahtete Gaswarnzentrale mit Abschaltung die Sicherheitsfunktion. Das Funk-Monitoring ergänzt sie um Fernmeldung, Trends und Dokumentation."}}, {"@type": "Question", "name": "Wem gehören die Messdaten?", "acceptedAnswer": {"@type": "Answer", "text": "Dem Betreiber. Der Netzwerkserver kann beim Betreiber laufen oder in der EU gehostet werden. Die Funkübertragung ist nach LoRaWAN-Standard mit AES-128 verschlüsselt."}}, {"@type": "Question", "name": "Öffnet das ein Einfallstor für Cyberangriffe?", "acceptedAnswer": {"@type": "Answer", "text": "Die Sensoren messen nur und greifen nicht in die Steuerung der Anlage ein; die Anbindung an die Gebäudeleittechnik erfolgt lesend. Hintergründe zu Risiken vernetzter Anlagen: Die Wärmepumpe als Einfallstor."}}, {"@type": "Question", "name": "Hilft die Leckage-Erkennung bei der F-Gase-Verordnung?", "acceptedAnswer": {"@type": "Answer", "text": "Die F-Gase-Verordnung (EU) 2024/573 schreibt ab bestimmten Füllmengen ein Leckage-Erkennungssystem vor und verlängert die Prüfintervalle, wenn eines installiert ist. Ob und wie unser System dafür angerechnet wird, stimmen wir projektbezogen mit dem Kälteanlagenbauer ab."}}, {"@type": "Question", "name": "Lassen sich bestehende Schallhauben nachrüsten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Die Sensoren sind batteriebetrieben und werden ohne Kabeldurchführungen in der Schallhülle montiert. Für Ex-Zonen kommen nur Geräte mit Zulassung für die festgelegte Zone zum Einsatz."}}]}</script>
+</head>
+<body data-anfrage-typ="iot">
+<a class="skip" href="#main">Zum Inhalt</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="ForCoTech Startseite"><img src="/img/forcotech-logo-kompakt.png" width="285" height="120" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="opt" href="/loesungen/">Lösungen</a>
+      <a class="opt" href="/#methode">Methode</a>
+      <a class="opt" href="/#beispiele">Beispiele</a>
+      <a class="opt" href="/projekte-im-aufbau/">Im Aufbau</a>
+      <a class="opt" href="/news/">News</a>
+      <a class="opt" href="/#kontakt">Kontakt</a>
+      <a class="cta" href="https://www.forcotech.com/konfigurator/">Konfigurator</a>
+      <a class="lang" href="/en/iot/" lang="en" hreflang="en">EN</a>
+      <a class="lang" href="/fr/iot/" lang="fr" hreflang="fr">FR</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap hg">
+    <div>
+      <span class="kicker">IoT-Services · LoRaWAN-Monitoring</span>
+      <h1>Messen statt vermuten: Druck&shy;verlust, Luft&shy;geschwindigkeit, Temperatur und Kälte&shy;mittel – bis zur ATEX-Lösung</h1>
+      <p class="lead">Funksensoren in und an der Schallhaube zeigen im Betrieb, was die Auslegung verspricht: Druckverlust innerhalb der Reserve, keine Rezirkulation, dichter Kältekreis. Übertragen per LoRaWAN, batteriebetrieben und nachrüstbar – für R290-Anlagen in Ex-Ausführung.</p>
+      <div class="btns"><a class="btn" href="#anfrage" data-typ="iot">IoT-Monitoring anfragen</a><a class="btn ghost" href="/technik/#r290-havarie">R290 und ATEX</a></div>
+    </div>
+    <figure class="dc-hero iot-hero"><img src="/img/iot/lorawan-system-de.svg" width="920" height="490" alt="Systemschema: Sensoren für Differenzdruck, Luftgeschwindigkeit, Temperatur und Kältemittel in einer Schallhaube senden per LoRaWAN an ein Gateway und einen Netzwerkserver; von dort gehen die Daten an Dashboard, Alarme und Gebäudeleittechnik. Der Gassensor ist zusätzlich fest mit der Gaswarnzentrale verdrahtet." fetchpriority="high"></figure>
+  </div>
+</div>
+<section class="alt" id="aufgabe">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">Die Aufgabe</span>
+      <h2>Die Haube ist ausgelegt – der Betrieb zeigt, ob es so bleibt</h2>
+      <p class="sub">Akustik und Luftführung legen wir vorab per Berechnung und CFD aus. Im Betrieb verändern Laub, Schnee, Staub, Wind und Teillast die Bedingungen. Wer misst, erkennt Abweichungen, bevor Leistung, Effizienz oder Sicherheit leiden.</p>
+    </div>
+    <ul class="check">
+      <li><b>Verschmutzung:</b> Laub, Pollen und Staub in den Schalldämpfern erhöhen den Druckverlust – die Ventilatoren arbeiten gegen ihre Reserve.</li>
+      <li><b>Rezirkulation:</b> Warme Abluft, die wieder angesaugt wird, kostet Leistung. Sichtbar wird sie am Temperaturunterschied zwischen Zuluft und Umgebung.</li>
+      <li><b>Kältemittelverlust:</b> Kleine Leckagen bleiben lange unbemerkt – mit Folgen für Effizienz, F-Gase-Pflichten und bei R290 für die Sicherheit.</li>
+      <li><b>Nachweis:</b> Messwerte belegen gegenüber Betreiber und Planer, dass die Haube die Anlage nicht ausbremst.</li>
+      <li><b>Wartung nach Zustand:</b> Reinigung und Service dann, wenn die Messwerte es verlangen – nicht nach Kalender.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="messgroessen">
+  <div class="wrap">
+    <span class="kicker">Messgrößen</span>
+    <h2>Vier Messgrößen, ein Funknetz</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">Differenzdruck</span><h3>Druckverlust</h3><p>Differenzdrucksensoren über Zu- und Abluftschalldämpfer messen den Druckverlust in Pa und vergleichen ihn mit dem Auslegungswert und der Druckreserve des Geräts. Steigt er, ist eine Reinigung fällig.</p></div>
+      <div class="card"><span class="tag">Strömung</span><h3>Luftgeschwindigkeit und Volumenstrom</h3><p>Messung im Schalldämpferspalt bzw. am Luftaustritt. Daraus ergibt sich der Volumenstrom je Betriebsfall – Kontrolle der Auslegungsgeschwindigkeit und früher Hinweis auf blockierte Querschnitte.</p></div>
+      <div class="card"><span class="tag">Temperatur</span><h3>Zuluft, Abluft, Innenraum</h3><p>Fühler an Ansaugung, Austritt und Umgebung. Liegt die Zuluft über der Außentemperatur, saugt die Anlage Abluft zurück. Bei Wechselrichtern und Batteriespeichern: Überwachung der Haubeninnentemperatur.</p></div>
+      <div class="card"><span class="tag">Kältemittel</span><h3>Leckage per Infrarot (NDIR)</h3><p>Infrarotsensoren erkennen Kältemittel bodennah, wo es sich sammelt – für HFKW/HFO (z. B. R32, R410A, R454B), CO₂ (R744) und Propan (R290). Selektiv und langzeitstabil, Alarmschwellen in ppm bzw. % UEG.</p></div>
+      <div class="card iot-atex"><span class="tag">Explosionsschutz</span><h3>ATEX-Ausführung für R290</h3><p>Für Ex-Zonen in und an der Haube: Sensoren und Funkknoten mit ATEX-/IECEx-Zulassung für die festgelegte Zone. Die Abschaltung läuft fest verdrahtet über die Gaswarnzentrale – LoRaWAN meldet und dokumentiert.</p><a class="more" href="/technik/#r290-havarie">ATEX-Konzept in zwei Stufen →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="system">
+  <div class="wrap">
+    <span class="kicker">Systemaufbau</span>
+    <h2>Vom Sensor bis zur Gebäudeleittechnik</h2>
+    <p class="sub">LoRaWAN ist ein offener Funkstandard für Sensoren mit großer Reichweite und sehr geringem Energiebedarf (in Europa im 868-MHz-Band). Ein eigenes Funknetz – unabhängig vom IT-Netz des Kunden.</p>
+    <figure class="iot-fig"><img src="/img/iot/lorawan-system-de.svg" width="920" height="490" alt="" loading="lazy"><figcaption><b>Systemschema:</b> Messwerte per Funk, Sicherheitsfunktion per Kabel</figcaption></figure>
+    <div class="types" style="margin-top:20px">
+      <div><h3>Sensoren</h3><p>Batteriebetrieben, je nach Sendeintervall mehrere Jahre Laufzeit. Keine Kabel durch die Schallhülle – keine Schallbrücken, keine zusätzlichen Durchführungen.</p></div>
+      <div><h3>LoRaWAN-Gateway</h3><p>Ein Gateway deckt in der Regel ein ganzes Dach oder Gelände ab – im Freien über große Entfernungen, im Gebäude über mehrere Geschosse. Anbindung per LAN oder Mobilfunk.</p></div>
+      <div><h3>Daten und Schnittstellen</h3><p>Dashboard mit Grenzwerten, Trends und Alarmen per E-Mail oder SMS. Übergabe an die Gebäudeleittechnik über BACnet, Modbus oder MQTT. Netzwerkserver beim Betreiber oder in der EU gehostet.</p></div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div>
+        <h3>Typische Messpunkte an einer Schallhaube</h3>
+        <ul class="check">
+          <li><b>Δp</b> über dem Zuluft- und dem Abluftschalldämpfer</li>
+          <li><b>v</b> im Schalldämpferspalt oder am Luftaustritt über den Ventilatoren</li>
+          <li><b>T</b> an der Ansaugung, am Luftaustritt und als Referenz außerhalb der Haube</li>
+          <li><b>IR</b> bodennah an der geschlossenen Wand, wo sich Kältemittel am längsten halten würde</li>
+        </ul>
+      </div>
+      <div>
+        <div class="target">
+          <h3>Sicherheit hängt nie am Funk</h3>
+          <p style="color:var(--ink)">Sicherheitsfunktionen – Ventilatoren auf 100 %, Verdichter aus, Blitzleuchte und Hupe – laufen fest verdrahtet über die Gaswarnzentrale außerhalb der Ex-Zone. LoRaWAN überträgt zusätzlich Messwerte, Alarmzustände und Sensorstörungen, damit Betreiber und Service sofort Bescheid wissen und jeder Vorfall dokumentiert ist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pakete">
+  <div class="wrap">
+    <span class="kicker">Pakete</span>
+    <h2>Vom Basis-Monitoring bis zur ATEX-Lösung</h2>
+    <div class="dc-table iot-table" style="margin-top:20px">
+      <table>
+        <thead><tr><th>Paket</th><th>Messgrößen</th><th>Typischer Einsatz</th></tr></thead>
+        <tbody>
+          <tr><td><b>Basis</b></td><td>Temperatur Zuluft, Abluft, Umgebung; Differenzdruck Schalldämpfer</td><td>Wärmepumpen, VRF-Außengeräte, PV-Wechselrichter</td></tr>
+          <tr><td><b>Performance</b></td><td>wie Basis, dazu Luftgeschwindigkeit, Volumenstrom, Rezirkulationserkennung</td><td>Kaltwassersätze, Rückkühler, Rechenzentren</td></tr>
+          <tr><td><b>Kältemittel</b></td><td>wie Performance, dazu Infrarot-Leckagesensoren (NDIR) für HFKW/HFO und CO₂</td><td>Anlagen mit F-Gasen, Gewerbekälte, Batteriespeicher mit Kälteanlage</td></tr>
+          <tr class="hl"><td><b>ATEX</b></td><td>wie Kältemittel, mit Ex-Sensoren für R290, Anbindung an die Gaswarnzentrale und Alarmmeldung</td><td>R290-Wärmepumpen und -Kaltwassersätze in Schallhauben</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Alle Pakete auch zur Nachrüstung bestehender Schallhauben. Messkonzept, Zoneneinteilung und Alarmschwellen legen wir projektbezogen mit Betreiber und Kälteanlagenbauer fest. Preis mit dem Angebot.</p>
+  </div>
+</section>
+
+<section class="alt" id="ablauf">
+  <div class="wrap">
+    <h2>Von der Anfrage bis zum laufenden Monitoring</h2>
+    <ol class="steps iot-steps" style="margin-top:20px">
+      <li><h3>Anfrage</h3><p>Anlage, Haube, Kältemittel, Ziel</p></li>
+      <li><h3>Messkonzept</h3><p>Messpunkte, Zone, Schnittstellen</p></li>
+      <li><h3>Lieferung</h3><p>Sensoren und Gateway vorkonfiguriert</p></li>
+      <li><h3>Montage</h3><p>mit der Haube oder nachträglich</p></li>
+      <li><h3>Inbetriebnahme</h3><p>Grenzwerte, Alarmwege, Referenzwerte</p></li>
+      <li><h3>Betrieb</h3><p>Dashboard, Berichte, Wartung nach Zustand</p></li>
+    </ol>
+    <div class="need">
+      <h3>Mit diesen Angaben antworten wir am schnellsten</h3>
+      <div class="cl" style="padding:8px 0 0">
+        <ul class="check"><li>Hersteller, Gerätetyp, Anzahl</li><li>Kältemittel und Füllmenge</li><li>Neue Haube oder Nachrüstung</li></ul>
+        <ul class="check"><li>Gewünschte Messgrößen</li><li>Ex-Zone laut Explosionsschutzdokument</li><li>Vorhandene Gaswarnanlage</li></ul>
+        <ul class="check"><li>Gebäudeleittechnik und Protokoll</li><li>LAN oder Mobilfunk am Aufstellort</li><li>Alarmempfänger (Betreiber, Service)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="fragen">
+  <div class="wrap">
+    <h2>Häufige Fragen</h2>
+    <details><summary>Warum LoRaWAN und nicht WLAN oder Mobilfunk je Sensor?</summary><p>LoRaWAN-Sensoren senden mit sehr wenig Energie über große Entfernungen und laufen deshalb jahrelang mit einer Batterie. Das 868-MHz-Signal kommt aus Hauben mit Lüftungsöffnungen deutlich besser heraus als WLAN; bei Bedarf wird die Antenne außen geführt. Ein Gateway bedient viele Sensoren, das Netz ist unabhängig vom IT-Netz des Kunden.</p></details>
+    <details><summary>Ersetzt das IoT-Monitoring die Gaswarnanlage?</summary><p>Nein. Bei R290 und anderen Kältemitteln, für die eine Gaswarnung vorgeschrieben ist, bleibt die fest verdrahtete Gaswarnzentrale mit Abschaltung die Sicherheitsfunktion. Das Funk-Monitoring ergänzt sie um Fernmeldung, Trends und Dokumentation.</p></details>
+    <details><summary>Wem gehören die Messdaten?</summary><p>Dem Betreiber. Der Netzwerkserver kann beim Betreiber laufen oder in der EU gehostet werden. Die Funkübertragung ist nach LoRaWAN-Standard mit AES-128 verschlüsselt.</p></details>
+    <details><summary>Öffnet das ein Einfallstor für Cyberangriffe?</summary><p>Die Sensoren messen nur und greifen nicht in die Steuerung der Anlage ein; die Anbindung an die Gebäudeleittechnik erfolgt lesend. Hintergründe zu Risiken vernetzter Anlagen: <a href="/news/hvac-iot-cyberrisiken-waermepumpen/">Die Wärmepumpe als Einfallstor</a>.</p></details>
+    <details><summary>Hilft die Leckage-Erkennung bei der F-Gase-Verordnung?</summary><p>Die F-Gase-Verordnung (EU) 2024/573 schreibt ab bestimmten Füllmengen ein Leckage-Erkennungssystem vor und verlängert die Prüfintervalle, wenn eines installiert ist. Ob und wie unser System dafür angerechnet wird, stimmen wir projektbezogen mit dem Kälteanlagenbauer ab.</p></details>
+    <details><summary>Lassen sich bestehende Schallhauben nachrüsten?</summary><p>Ja. Die Sensoren sind batteriebetrieben und werden ohne Kabeldurchführungen in der Schallhülle montiert. Für Ex-Zonen kommen nur Geräte mit Zulassung für die festgelegte Zone zum Einsatz.</p></details>
+  </div>
+</section>
+
+<section id="anfrage">
+  <div class="wrap">
+    <div class="contact has-form">
+      <div>
+        <div class="intro"><h2>Projekt anfragen</h2><p>Gerät, Anzahl und Aufstellort genügen für den Anfang – mit Datenblatt prüfen wir Maße, Luftmenge und Schallleistung direkt. Ein verbindliches Angebot für komplexe Projekte erhalten Sie in der Regel in 2–3 Tagen; Sonderanfertigungen liefern wir meist 40–60 Tage nach Bestellung.</p></div>
+        <form class="qf" id="qf" novalidate>
+          <div class="row">
+            <label class="f">Name *<input id="q_name" required autocomplete="name"></label>
+            <label class="f">Firma<input id="q_company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label class="f">E-Mail *<input id="q_email" type="email" required autocomplete="email"></label>
+            <label class="f">Telefon<input id="q_phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="f">Anlagentyp<select id="q_typ"><option value="">bitte wählen</option><option value="wp">Wärmepumpe / Klimagerät</option><option value="gross">Kaltwassersatz / Großwärmepumpe / Rückkühler</option><option value="vrf">VRF/VRV-Außengerät</option><option value="pv">PV-Wechselrichter</option><option value="bess">Batteriespeicher (BESS)</option><option value="dc">Rechenzentrum</option><option value="wand">Schallwand</option><option value="iot">IoT-Monitoring / Sensorik</option><option value="sonst">Sonstiges</option></select></label>
+          <div class="row">
+            <label class="f">Anlage (Hersteller / Modell)<input id="q_unit" placeholder="z. B. York YMAE0260"></label>
+            <label class="f">Anzahl Geräte<input id="q_count" inputmode="numeric"></label>
+          </div>
+          <label class="f">Projektort (PLZ / Ort)<input id="q_place"></label>
+          <label class="f">Nachricht<textarea id="q_msg" rows="3" placeholder="z. B. Richtwert nachts, Abstand zum Nachbarn, Dachaufstellung, Termin …"></textarea></label>
+          <label class="f">Datenblatt, Plan oder Foto (optional · PDF oder Bild, max. 10 MB)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
+          <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
+          <details class="privacy"><summary>Datenschutzhinweise zu dieser Anfrage</summary><p><b>Verantwortlicher:</b> Silent Engineering di Romolo Vicari (Marke ForCoTech), Via Trento 22, 23875 Osnago (LC), Italien · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Zweck:</b> Ihre Angaben und ein ggf. beigefügtes Datenblatt verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage und zur Erstellung eines Angebots. Soweit dafür nötig, geben wir die technischen Projektangaben an unseren Fertigungspartner weiter; keine Weitergabe zu Werbezwecken.</p><p><b>Versand:</b> über den Formulardienst FormSubmit (formsubmit.co), der die Anfrage per E-Mail an info@forcotech.com weiterleitet; dabei ist eine Verarbeitung außerhalb der EU möglich. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Ihre Einwilligung (Art. 6 Abs. 1 lit. a, Art. 49 Abs. 1 lit. a DSGVO), jederzeit widerruflich. Alternativ erreichen Sie uns direkt per E-Mail.</p><p><b>Speicherdauer und Rechte:</b> Löschung nach Abschluss der Anfrage, bei Vertrag nach den gesetzlichen Fristen. Auskunft, Berichtigung, Löschung, Widerspruch und Widerruf formlos an info@forcotech.com. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p></details>
+          <label class="chk"><input type="checkbox" id="qConsent"><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert und verarbeitet und dafür über FormSubmit übermittelt werden (siehe <a href="/datenschutz/">Datenschutzerklärung</a>). Die Einwilligung kann ich jederzeit widerrufen. *</span></label>
+          <div class="err" id="qErr" role="alert"></div>
+          <div class="btns"><button class="btn" type="submit" id="qSend">Anfrage senden</button></div>
+        </form>
+        <div class="qthanks" id="qThanks" role="status"><b>Vielen Dank für Ihre Anfrage!</b><br>Wir melden uns in der Regel innerhalb von 2–3 Werktagen.</div>
+        <div class="qready" id="qReady" hidden>
+          <b id="qReadyMsg"></b>
+          <textarea id="qReadyText" rows="9" readonly></textarea>
+          <div class="btns"><button class="btn" type="button" id="qCopy">Text kopieren</button><a class="btn ghost" id="qMail" href="#">Im E-Mail-Programm öffnen</a></div>
+          <span class="hint" id="qCopyHint"></span>
+        </div>
+      </div>
+      <div>
+        <div class="qnext"><b>So geht es weiter</b><ol><li><b>Prüfung</b> Ihrer Angaben – bei Bedarf kurze Rückfrage</li><li><b>Pegelberechnung</b> am Immissionsort und Auslegung von Akustik und Luftführung</li><li><b>Verbindliches Angebot</b> mit Zeichnung – bei komplexen Projekten meist in 2–3 Tagen</li></ol></div>
+        <address><b>Silent Engineering di Romolo Vicari</b><br>Marken ForCoTech und Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italien<br>E-Mail: <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web: <a href="https://www.silent-mode.com">silent-mode.com</a></address>
+        <p style="margin-top:18px"><b>Lieber selbst vordimensionieren?</b></p>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/">Zum Konfigurator</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand"><img src="/img/forcotech-logo.png" width="415" height="231" alt="ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology" loading="lazy"><a href="mailto:info@forcotech.com">info@forcotech.com</a></div>
+    <span>© 2026 Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · Italien · P.IVA IT03833150133 · in Allianz mit ABSORA GmbH, Berlin</span>
+    <span><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="/en/iot/" lang="en">English</a> · <a href="/fr/iot/" lang="fr">Français</a></span>
+  </div>
+</footer>
+<script src="/anfrage.js" defer></script>
+</body>
+</html>

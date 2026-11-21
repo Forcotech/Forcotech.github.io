@@ -41,6 +41,12 @@ Seit 30.10.2026 nicht mehr im Hauptmenü; erreichbar über Lösungen und die Sta
 bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und französischen Zeichnungen
 (img/rechenzentren/*-en.svg, *-fr.svg) erzeugt das Skript aus den deutschen SVGs über die Tabelle SVG_TXT.
 
+## IoT-Services (LoRaWAN-Monitoring)
+
+/iot/, /en/iot/, /fr/iot/: Inhalt in iot/_src/de.html, en.html bzw. fr.html bearbeiten, dann
+`python3 tools/build_iot.py`. Das Systemschema img/iot/lorawan-system-<sprache>.svg erzeugt das Skript selbst
+(Texte in SVG_TXT). Anfrage-Vorauswahl „iot“ (Formularoption in tools/startseite_anfrage.py).
+
 ## Adiabatik-Modul
 
 /adiabatik/, /en/adiabatic-precooling/, /fr/pre-refroidissement-adiabatique/: Inhalt in adiabatik/_src/de.html, en.html bzw. fr.html

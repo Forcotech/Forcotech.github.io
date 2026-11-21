@@ -1,0 +1,114 @@
+<section class="alt" id="aufgabe">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">The task</span>
+      <h2>The enclosure is designed – operation shows whether it stays that way</h2>
+      <p class="sub">We design acoustics and air flow in advance by calculation and CFD. In operation, leaves, snow, dust, wind and part load change the conditions. Measuring reveals deviations before capacity, efficiency or safety suffer.</p>
+    </div>
+    <ul class="check">
+      <li><b>Fouling:</b> leaves, pollen and dust in the silencers increase the pressure drop – the fans work against their reserve.</li>
+      <li><b>Recirculation:</b> warm exhaust air drawn back in costs capacity. It shows up as a temperature difference between intake air and ambient.</li>
+      <li><b>Refrigerant loss:</b> small leaks go unnoticed for a long time – with consequences for efficiency, F-gas obligations and, with R290, for safety.</li>
+      <li><b>Evidence:</b> measured values show operators and consultants that the enclosure does not slow the unit down.</li>
+      <li><b>Condition-based maintenance:</b> cleaning and service when the data call for it – not by the calendar.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="messgroessen">
+  <div class="wrap">
+    <span class="kicker">Measured variables</span>
+    <h2>Four measured variables, one radio network</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">Differential pressure</span><h3>Pressure drop</h3><p>Differential pressure sensors across the intake and exhaust silencers measure the pressure drop in Pa and compare it with the design value and the unit’s pressure reserve. If it rises, cleaning is due.</p></div>
+      <div class="card"><span class="tag">Air flow</span><h3>Air velocity and air flow</h3><p>Measured in the silencer gap or at the air outlet. This gives the air flow per operating case – a check of the design velocity and an early warning of blocked cross-sections.</p></div>
+      <div class="card"><span class="tag">Temperature</span><h3>Intake, exhaust, interior</h3><p>Sensors at the intake, outlet and ambient. If the intake air is warmer than the outside air, the unit is drawing exhaust air back in. For inverters and battery storage: monitoring of the enclosure’s interior temperature.</p></div>
+      <div class="card"><span class="tag">Refrigerant</span><h3>Leak detection by infrared (NDIR)</h3><p>Infrared sensors detect refrigerant at low level, where it accumulates – for HFC/HFO (e.g. R32, R410A, R454B), CO₂ (R744) and propane (R290). Selective and stable over the long term, alarm thresholds in ppm or % LFL.</p></div>
+      <div class="card iot-atex"><span class="tag">Explosion protection</span><h3>ATEX design for R290</h3><p>For hazardous zones in and around the enclosure: sensors and radio nodes with ATEX/IECEx approval for the defined zone. Shutdown is hard-wired via the gas warning controller – LoRaWAN reports and documents.</p><a class="more" href="/en/technology/#r290-havarie">Two-stage ATEX concept →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="system">
+  <div class="wrap">
+    <span class="kicker">System architecture</span>
+    <h2>From the sensor to the building management system</h2>
+    <p class="sub">LoRaWAN is an open radio standard for sensors with long range and very low energy consumption (868 MHz band in Europe). A network of its own – independent of the customer’s IT network.</p>
+    <figure class="iot-fig"><img src="/img/iot/lorawan-system-en.svg" width="920" height="490" alt="" loading="lazy"><figcaption><b>System diagram:</b> measured values by radio, safety function by cable</figcaption></figure>
+    <div class="types" style="margin-top:20px">
+      <div><h3>Sensors</h3><p>Battery-powered, several years of operation depending on the transmission interval. No cables through the acoustic shell – no sound bridges, no additional penetrations.</p></div>
+      <div><h3>LoRaWAN gateway</h3><p>One gateway usually covers an entire roof or site – outdoors over long distances, indoors across several floors. Connected via LAN or cellular.</p></div>
+      <div><h3>Data and interfaces</h3><p>Dashboard with limits, trends and alarms by e-mail or SMS. Hand-over to the building management system via BACnet, Modbus or MQTT. Network server on premises or hosted in the EU.</p></div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div>
+        <h3>Typical measuring points on an enclosure</h3>
+        <ul class="check">
+          <li><b>Δp</b> across the intake and the exhaust silencer</li>
+          <li><b>v</b> in the silencer gap or at the air outlet above the fans</li>
+          <li><b>T</b> at the intake, at the air outlet and as a reference outside the enclosure</li>
+          <li><b>IR</b> at low level on the closed wall, where refrigerant would linger longest</li>
+        </ul>
+      </div>
+      <div>
+        <div class="target">
+          <h3>Safety never depends on radio</h3>
+          <p style="color:var(--ink)">Safety functions – fans at 100 %, compressors off, beacon and horn – run hard-wired via the gas warning controller outside the hazardous zone. LoRaWAN additionally transmits measured values, alarm states and sensor faults, so that operator and service know immediately and every incident is documented.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pakete">
+  <div class="wrap">
+    <span class="kicker">Packages</span>
+    <h2>From basic monitoring to the ATEX solution</h2>
+    <div class="dc-table iot-table" style="margin-top:20px">
+      <table>
+        <thead><tr><th>Package</th><th>Measured variables</th><th>Typical use</th></tr></thead>
+        <tbody>
+          <tr><td><b>Basic</b></td><td>Intake, exhaust and ambient temperature; silencer differential pressure</td><td>Heat pumps, VRF outdoor units, PV inverters</td></tr>
+          <tr><td><b>Performance</b></td><td>as Basic, plus air velocity, air flow, recirculation detection</td><td>Chillers, dry coolers, data centres</td></tr>
+          <tr><td><b>Refrigerant</b></td><td>as Performance, plus infrared leak sensors (NDIR) for HFC/HFO and CO₂</td><td>Units with F-gases, commercial refrigeration, battery storage with chiller</td></tr>
+          <tr class="hl"><td><b>ATEX</b></td><td>as Refrigerant, with Ex sensors for R290, connection to the gas warning controller and alarm reporting</td><td>R290 heat pumps and chillers in acoustic enclosures</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">All packages are also available as a retrofit for existing enclosures. Measuring concept, zoning and alarm thresholds are defined per project with the operator and the refrigeration contractor. Price with the quotation.</p>
+  </div>
+</section>
+
+<section class="alt" id="ablauf">
+  <div class="wrap">
+    <h2>From enquiry to ongoing monitoring</h2>
+    <ol class="steps iot-steps" style="margin-top:20px">
+      <li><h3>Enquiry</h3><p>Unit, enclosure, refrigerant, goal</p></li>
+      <li><h3>Measuring concept</h3><p>Measuring points, zone, interfaces</p></li>
+      <li><h3>Delivery</h3><p>Sensors and gateway pre-configured</p></li>
+      <li><h3>Installation</h3><p>With the enclosure or as a retrofit</p></li>
+      <li><h3>Commissioning</h3><p>Limits, alarm routes, reference values</p></li>
+      <li><h3>Operation</h3><p>Dashboard, reports, condition-based maintenance</p></li>
+    </ol>
+    <div class="need">
+      <h3>With this information we can answer fastest</h3>
+      <div class="cl" style="padding:8px 0 0">
+        <ul class="check"><li>Manufacturer, unit type, quantity</li><li>Refrigerant and charge</li><li>New enclosure or retrofit</li></ul>
+        <ul class="check"><li>Required measured variables</li><li>Hazardous zone per explosion protection document</li><li>Existing gas warning system</li></ul>
+        <ul class="check"><li>Building management system and protocol</li><li>LAN or cellular at the site</li><li>Alarm recipients (operator, service)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="fragen">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Why LoRaWAN rather than Wi-Fi or a cellular modem per sensor?</summary><p>LoRaWAN sensors transmit over long distances with very little energy and therefore run for years on one battery. The 868 MHz signal gets out of enclosures with ventilation openings much better than Wi-Fi; if necessary, the antenna is routed outside. One gateway serves many sensors, and the network is independent of the customer’s IT network.</p></details>
+    <details><summary>Does IoT monitoring replace the gas warning system?</summary><p>No. With R290 and other refrigerants for which gas detection is required, the hard-wired gas warning controller with shutdown remains the safety function. Radio monitoring adds remote reporting, trends and documentation.</p></details>
+    <details><summary>Who owns the measured data?</summary><p>The operator. The network server can run on the operator’s premises or be hosted in the EU. Radio transmission is encrypted with AES-128 according to the LoRaWAN standard.</p></details>
+    <details><summary>Does this open a door for cyber attacks?</summary><p>The sensors only measure and do not intervene in the unit’s controls; the connection to the building management system is read-only. Background on the risks of connected units: <a href="/en/news/hvac-iot-cyberrisiken-waermepumpen/">The heat pump as a gateway</a>.</p></details>
+    <details><summary>Does leak detection help with the F-gas Regulation?</summary><p>The F-gas Regulation (EU) 2024/573 requires a leak detection system above certain charges and extends the inspection intervals where one is installed. Whether and how our system counts towards this is agreed per project with the refrigeration contractor.</p></details>
+    <details><summary>Can existing enclosures be retrofitted?</summary><p>Yes. The sensors are battery-powered and are mounted without cable penetrations in the acoustic shell. In hazardous zones, only devices approved for the defined zone are used.</p></details>
+  </div>
+</section>

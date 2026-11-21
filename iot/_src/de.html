@@ -1,0 +1,114 @@
+<section class="alt" id="aufgabe">
+  <div class="wrap two">
+    <div>
+      <span class="kicker">Die Aufgabe</span>
+      <h2>Die Haube ist ausgelegt – der Betrieb zeigt, ob es so bleibt</h2>
+      <p class="sub">Akustik und Luftführung legen wir vorab per Berechnung und CFD aus. Im Betrieb verändern Laub, Schnee, Staub, Wind und Teillast die Bedingungen. Wer misst, erkennt Abweichungen, bevor Leistung, Effizienz oder Sicherheit leiden.</p>
+    </div>
+    <ul class="check">
+      <li><b>Verschmutzung:</b> Laub, Pollen und Staub in den Schalldämpfern erhöhen den Druckverlust – die Ventilatoren arbeiten gegen ihre Reserve.</li>
+      <li><b>Rezirkulation:</b> Warme Abluft, die wieder angesaugt wird, kostet Leistung. Sichtbar wird sie am Temperaturunterschied zwischen Zuluft und Umgebung.</li>
+      <li><b>Kältemittelverlust:</b> Kleine Leckagen bleiben lange unbemerkt – mit Folgen für Effizienz, F-Gase-Pflichten und bei R290 für die Sicherheit.</li>
+      <li><b>Nachweis:</b> Messwerte belegen gegenüber Betreiber und Planer, dass die Haube die Anlage nicht ausbremst.</li>
+      <li><b>Wartung nach Zustand:</b> Reinigung und Service dann, wenn die Messwerte es verlangen – nicht nach Kalender.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="messgroessen">
+  <div class="wrap">
+    <span class="kicker">Messgrößen</span>
+    <h2>Vier Messgrößen, ein Funknetz</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><span class="tag">Differenzdruck</span><h3>Druckverlust</h3><p>Differenzdrucksensoren über Zu- und Abluftschalldämpfer messen den Druckverlust in Pa und vergleichen ihn mit dem Auslegungswert und der Druckreserve des Geräts. Steigt er, ist eine Reinigung fällig.</p></div>
+      <div class="card"><span class="tag">Strömung</span><h3>Luftgeschwindigkeit und Volumenstrom</h3><p>Messung im Schalldämpferspalt bzw. am Luftaustritt. Daraus ergibt sich der Volumenstrom je Betriebsfall – Kontrolle der Auslegungsgeschwindigkeit und früher Hinweis auf blockierte Querschnitte.</p></div>
+      <div class="card"><span class="tag">Temperatur</span><h3>Zuluft, Abluft, Innenraum</h3><p>Fühler an Ansaugung, Austritt und Umgebung. Liegt die Zuluft über der Außentemperatur, saugt die Anlage Abluft zurück. Bei Wechselrichtern und Batteriespeichern: Überwachung der Haubeninnentemperatur.</p></div>
+      <div class="card"><span class="tag">Kältemittel</span><h3>Leckage per Infrarot (NDIR)</h3><p>Infrarotsensoren erkennen Kältemittel bodennah, wo es sich sammelt – für HFKW/HFO (z. B. R32, R410A, R454B), CO₂ (R744) und Propan (R290). Selektiv und langzeitstabil, Alarmschwellen in ppm bzw. % UEG.</p></div>
+      <div class="card iot-atex"><span class="tag">Explosionsschutz</span><h3>ATEX-Ausführung für R290</h3><p>Für Ex-Zonen in und an der Haube: Sensoren und Funkknoten mit ATEX-/IECEx-Zulassung für die festgelegte Zone. Die Abschaltung läuft fest verdrahtet über die Gaswarnzentrale – LoRaWAN meldet und dokumentiert.</p><a class="more" href="/technik/#r290-havarie">ATEX-Konzept in zwei Stufen →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="system">
+  <div class="wrap">
+    <span class="kicker">Systemaufbau</span>
+    <h2>Vom Sensor bis zur Gebäudeleittechnik</h2>
+    <p class="sub">LoRaWAN ist ein offener Funkstandard für Sensoren mit großer Reichweite und sehr geringem Energiebedarf (in Europa im 868-MHz-Band). Ein eigenes Funknetz – unabhängig vom IT-Netz des Kunden.</p>
+    <figure class="iot-fig"><img src="/img/iot/lorawan-system-de.svg" width="920" height="490" alt="" loading="lazy"><figcaption><b>Systemschema:</b> Messwerte per Funk, Sicherheitsfunktion per Kabel</figcaption></figure>
+    <div class="types" style="margin-top:20px">
+      <div><h3>Sensoren</h3><p>Batteriebetrieben, je nach Sendeintervall mehrere Jahre Laufzeit. Keine Kabel durch die Schallhülle – keine Schallbrücken, keine zusätzlichen Durchführungen.</p></div>
+      <div><h3>LoRaWAN-Gateway</h3><p>Ein Gateway deckt in der Regel ein ganzes Dach oder Gelände ab – im Freien über große Entfernungen, im Gebäude über mehrere Geschosse. Anbindung per LAN oder Mobilfunk.</p></div>
+      <div><h3>Daten und Schnittstellen</h3><p>Dashboard mit Grenzwerten, Trends und Alarmen per E-Mail oder SMS. Übergabe an die Gebäudeleittechnik über BACnet, Modbus oder MQTT. Netzwerkserver beim Betreiber oder in der EU gehostet.</p></div>
+    </div>
+    <div class="two" style="margin-top:26px">
+      <div>
+        <h3>Typische Messpunkte an einer Schallhaube</h3>
+        <ul class="check">
+          <li><b>Δp</b> über dem Zuluft- und dem Abluftschalldämpfer</li>
+          <li><b>v</b> im Schalldämpferspalt oder am Luftaustritt über den Ventilatoren</li>
+          <li><b>T</b> an der Ansaugung, am Luftaustritt und als Referenz außerhalb der Haube</li>
+          <li><b>IR</b> bodennah an der geschlossenen Wand, wo sich Kältemittel am längsten halten würde</li>
+        </ul>
+      </div>
+      <div>
+        <div class="target">
+          <h3>Sicherheit hängt nie am Funk</h3>
+          <p style="color:var(--ink)">Sicherheitsfunktionen – Ventilatoren auf 100 %, Verdichter aus, Blitzleuchte und Hupe – laufen fest verdrahtet über die Gaswarnzentrale außerhalb der Ex-Zone. LoRaWAN überträgt zusätzlich Messwerte, Alarmzustände und Sensorstörungen, damit Betreiber und Service sofort Bescheid wissen und jeder Vorfall dokumentiert ist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pakete">
+  <div class="wrap">
+    <span class="kicker">Pakete</span>
+    <h2>Vom Basis-Monitoring bis zur ATEX-Lösung</h2>
+    <div class="dc-table iot-table" style="margin-top:20px">
+      <table>
+        <thead><tr><th>Paket</th><th>Messgrößen</th><th>Typischer Einsatz</th></tr></thead>
+        <tbody>
+          <tr><td><b>Basis</b></td><td>Temperatur Zuluft, Abluft, Umgebung; Differenzdruck Schalldämpfer</td><td>Wärmepumpen, VRF-Außengeräte, PV-Wechselrichter</td></tr>
+          <tr><td><b>Performance</b></td><td>wie Basis, dazu Luftgeschwindigkeit, Volumenstrom, Rezirkulationserkennung</td><td>Kaltwassersätze, Rückkühler, Rechenzentren</td></tr>
+          <tr><td><b>Kältemittel</b></td><td>wie Performance, dazu Infrarot-Leckagesensoren (NDIR) für HFKW/HFO und CO₂</td><td>Anlagen mit F-Gasen, Gewerbekälte, Batteriespeicher mit Kälteanlage</td></tr>
+          <tr class="hl"><td><b>ATEX</b></td><td>wie Kältemittel, mit Ex-Sensoren für R290, Anbindung an die Gaswarnzentrale und Alarmmeldung</td><td>R290-Wärmepumpen und -Kaltwassersätze in Schallhauben</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Alle Pakete auch zur Nachrüstung bestehender Schallhauben. Messkonzept, Zoneneinteilung und Alarmschwellen legen wir projektbezogen mit Betreiber und Kälteanlagenbauer fest. Preis mit dem Angebot.</p>
+  </div>
+</section>
+
+<section class="alt" id="ablauf">
+  <div class="wrap">
+    <h2>Von der Anfrage bis zum laufenden Monitoring</h2>
+    <ol class="steps iot-steps" style="margin-top:20px">
+      <li><h3>Anfrage</h3><p>Anlage, Haube, Kältemittel, Ziel</p></li>
+      <li><h3>Messkonzept</h3><p>Messpunkte, Zone, Schnittstellen</p></li>
+      <li><h3>Lieferung</h3><p>Sensoren und Gateway vorkonfiguriert</p></li>
+      <li><h3>Montage</h3><p>mit der Haube oder nachträglich</p></li>
+      <li><h3>Inbetriebnahme</h3><p>Grenzwerte, Alarmwege, Referenzwerte</p></li>
+      <li><h3>Betrieb</h3><p>Dashboard, Berichte, Wartung nach Zustand</p></li>
+    </ol>
+    <div class="need">
+      <h3>Mit diesen Angaben antworten wir am schnellsten</h3>
+      <div class="cl" style="padding:8px 0 0">
+        <ul class="check"><li>Hersteller, Gerätetyp, Anzahl</li><li>Kältemittel und Füllmenge</li><li>Neue Haube oder Nachrüstung</li></ul>
+        <ul class="check"><li>Gewünschte Messgrößen</li><li>Ex-Zone laut Explosionsschutzdokument</li><li>Vorhandene Gaswarnanlage</li></ul>
+        <ul class="check"><li>Gebäudeleittechnik und Protokoll</li><li>LAN oder Mobilfunk am Aufstellort</li><li>Alarmempfänger (Betreiber, Service)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="fragen">
+  <div class="wrap">
+    <h2>Häufige Fragen</h2>
+    <details><summary>Warum LoRaWAN und nicht WLAN oder Mobilfunk je Sensor?</summary><p>LoRaWAN-Sensoren senden mit sehr wenig Energie über große Entfernungen und laufen deshalb jahrelang mit einer Batterie. Das 868-MHz-Signal kommt aus Hauben mit Lüftungsöffnungen deutlich besser heraus als WLAN; bei Bedarf wird die Antenne außen geführt. Ein Gateway bedient viele Sensoren, das Netz ist unabhängig vom IT-Netz des Kunden.</p></details>
+    <details><summary>Ersetzt das IoT-Monitoring die Gaswarnanlage?</summary><p>Nein. Bei R290 und anderen Kältemitteln, für die eine Gaswarnung vorgeschrieben ist, bleibt die fest verdrahtete Gaswarnzentrale mit Abschaltung die Sicherheitsfunktion. Das Funk-Monitoring ergänzt sie um Fernmeldung, Trends und Dokumentation.</p></details>
+    <details><summary>Wem gehören die Messdaten?</summary><p>Dem Betreiber. Der Netzwerkserver kann beim Betreiber laufen oder in der EU gehostet werden. Die Funkübertragung ist nach LoRaWAN-Standard mit AES-128 verschlüsselt.</p></details>
+    <details><summary>Öffnet das ein Einfallstor für Cyberangriffe?</summary><p>Die Sensoren messen nur und greifen nicht in die Steuerung der Anlage ein; die Anbindung an die Gebäudeleittechnik erfolgt lesend. Hintergründe zu Risiken vernetzter Anlagen: <a href="/news/hvac-iot-cyberrisiken-waermepumpen/">Die Wärmepumpe als Einfallstor</a>.</p></details>
+    <details><summary>Hilft die Leckage-Erkennung bei der F-Gase-Verordnung?</summary><p>Die F-Gase-Verordnung (EU) 2024/573 schreibt ab bestimmten Füllmengen ein Leckage-Erkennungssystem vor und verlängert die Prüfintervalle, wenn eines installiert ist. Ob und wie unser System dafür angerechnet wird, stimmen wir projektbezogen mit dem Kälteanlagenbauer ab.</p></details>
+    <details><summary>Lassen sich bestehende Schallhauben nachrüsten?</summary><p>Ja. Die Sensoren sind batteriebetrieben und werden ohne Kabeldurchführungen in der Schallhülle montiert. Für Ex-Zonen kommen nur Geräte mit Zulassung für die festgelegte Zone zum Einsatz.</p></details>
+  </div>
+</section>

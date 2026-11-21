@@ -685,3 +685,11 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 .card.iot-aud .more{margin-top:auto;padding-top:12px}
 .iot-table td.iot-preis,.iot-table th:last-child{white-space:nowrap;font-weight:700}
 .iot-table td.iot-preis{color:var(--accent)}
+.iot-roi-h{margin:30px 0 12px;font-size:20px}
+.iot-roi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.iot-roi>div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.iot-roi h4{margin:0 0 6px;font-size:15.5px}
+.iot-roi p{margin:8px 0 0;font-size:14.5px}
+@media (max-width:1000px){.iot-roi{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.iot-roi{grid-template-columns:1fr}}
+.iot-roi .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#fdecee;border-radius:6px;padding:3px 8px;white-space:nowrap}

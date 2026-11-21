@@ -666,3 +666,16 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 .cards.iot-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:900px){.cards.iot-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.cards.iot-cards{grid-template-columns:1fr}}
+.iot-ico{display:inline-flex;width:44px;height:44px;border-radius:12px;background:#fdecee;color:var(--accent);align-items:center;justify-content:center;margin:0 10px 10px 0;vertical-align:middle}
+.card[data-ico] .tag{vertical-align:middle;margin-bottom:10px}
+.card.iot-atex .iot-ico{float:left;margin:0 14px 6px 0}
+.iot-ex{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.iot-ex figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.iot-ex img{display:block;width:100%;height:auto}
+.iot-ex figcaption{margin-top:8px;font-size:14px;font-weight:600}
+.iot-calcs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.iot-calc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.iot-calc h3{margin:0 0 8px}
+.iot-res{margin-top:12px;padding:12px 14px;border-radius:10px;background:#fdecee;color:var(--ink);font-size:15px;line-height:1.6}
+.iot-res b{font-size:22px;color:var(--accent)}
+@media (max-width:860px){.iot-ex,.iot-calcs{grid-template-columns:1fr}}

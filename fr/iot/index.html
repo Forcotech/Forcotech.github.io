@@ -78,13 +78,13 @@
     <span class="kicker">Grandeurs mesurées</span>
     <h2>Six grandeurs mesurées, un réseau radio</h2>
     <div class="cards iot-cards" style="margin-top:20px">
-      <div class="card"><span class="tag">Pression différentielle</span><h3>Perte de charge</h3><p>Des capteurs de pression différentielle sur les silencieux d’air neuf et d’air rejeté mesurent la perte de charge en Pa et la comparent à la valeur de dimensionnement et à la réserve de pression de l’appareil. Si elle augmente, un nettoyage s’impose.</p></div>
-      <div class="card"><span class="tag">Écoulement</span><h3>Vitesse d’air et débit</h3><p>Mesure dans la fente du silencieux ou à la sortie d’air. On en déduit le débit pour chaque régime de fonctionnement – contrôle de la vitesse de dimensionnement et alerte précoce en cas de sections obstruées.</p></div>
-      <div class="card"><span class="tag">Température</span><h3>Air neuf, air rejeté, intérieur</h3><p>Sondes à l’aspiration, à la sortie et à l’extérieur. Si l’air neuf est plus chaud que l’air extérieur, l’installation réaspire son air rejeté. Pour onduleurs et stockage par batteries&nbsp;: surveillance de la température intérieure du caisson.</p></div>
-      <div class="card"><span class="tag">Fluide frigorigène</span><h3>Détection de fuites par infrarouge (NDIR)</h3><p>Des capteurs infrarouges détectent le fluide au ras du sol, là où il s’accumule – pour HFC/HFO (p. ex. R32, R410A, R454B), CO₂ (R744) et propane (R290). Sélectifs et stables dans le temps, seuils d’alarme en ppm ou en % LIE.</p></div>
-      <div class="card"><span class="tag">Acoustique</span><h3>Mesure sonore en continu</h3><p>Des sonomètres sur le caisson ou au point de réception déterminant transmettent LAeq et LAFmax par intervalle, séparément de jour et de nuit. L’effet du caisson reste ainsi visible pendant toute l’exploitation. Les capteurs calculent uniquement des niveaux – aucun son n’est enregistré.</p></div>
-      <div class="card"><span class="tag">Énergie</span><h3>Courbe de charge et consommation</h3><p>Les compteurs d’énergie existants sont lus via Modbus, M-Bus ou S0&nbsp;; sinon, des transformateurs de courant sont ajoutés. Courbe de charge au pas de 15 minutes par installation&nbsp;: consommation, pointes, heures de fonctionnement – et la preuve que le caisson n’entraîne pas de surconsommation.</p></div>
-      <div class="card iot-atex"><span class="tag">Protection contre les explosions</span><h3>Exécution ATEX pour le R290</h3><p>Pour les zones Ex dans et autour du caisson&nbsp;: capteurs et nœuds radio certifiés ATEX/IECEx pour la zone définie. L’arrêt est câblé via la centrale de détection gaz – le LoRaWAN signale et documente.</p><a class="more" href="/fr/technique/#r290-havarie">Concept ATEX en deux niveaux →</a></div>
+      <div class="card" data-ico="dp"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.4" fill="currentColor"/></svg></span><span class="tag">Pression différentielle</span><h3>Perte de charge</h3><p>Des capteurs de pression différentielle sur les silencieux d’air neuf et d’air rejeté mesurent la perte de charge en Pa et la comparent à la valeur de dimensionnement et à la réserve de pression de l’appareil. Si elle augmente, un nettoyage s’impose.</p></div>
+      <div class="card" data-ico="v"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></span><span class="tag">Écoulement</span><h3>Vitesse d’air et débit</h3><p>Mesure dans la fente du silencieux ou à la sortie d’air. On en déduit le débit pour chaque régime de fonctionnement – contrôle de la vitesse de dimensionnement et alerte précoce en cas de sections obstruées.</p></div>
+      <div class="card" data-ico="t"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg></span><span class="tag">Température</span><h3>Air neuf, air rejeté, intérieur</h3><p>Sondes à l’aspiration, à la sortie et à l’extérieur. Si l’air neuf est plus chaud que l’air extérieur, l’installation réaspire son air rejeté. Pour onduleurs et stockage par batteries&nbsp;: surveillance de la température intérieure du caisson.</p></div>
+      <div class="card" data-ico="ir"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/><path d="M9.5 14h5"/></svg></span><span class="tag">Fluide frigorigène</span><h3>Détection de fuites par infrarouge (NDIR)</h3><p>Des capteurs infrarouges détectent le fluide au ras du sol, là où il s’accumule – pour HFC/HFO (p. ex. R32, R410A, R454B), CO₂ (R744) et propane (R290). Sélectifs et stables dans le temps, seuils d’alarme en ppm ou en % LIE.</p></div>
+      <div class="card" data-ico="db"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></span><span class="tag">Acoustique</span><h3>Mesure sonore en continu</h3><p>Des sonomètres sur le caisson ou au point de réception déterminant transmettent LAeq et LAFmax par intervalle, séparément de jour et de nuit. L’effet du caisson reste ainsi visible pendant toute l’exploitation. Les capteurs calculent uniquement des niveaux – aucun son n’est enregistré.</p></div>
+      <div class="card" data-ico="kw"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span><span class="tag">Énergie</span><h3>Courbe de charge et consommation</h3><p>Les compteurs d’énergie existants sont lus via Modbus, M-Bus ou S0&nbsp;; sinon, des transformateurs de courant sont ajoutés. Courbe de charge au pas de 15 minutes par installation&nbsp;: consommation, pointes, heures de fonctionnement – et la preuve que le caisson n’entraîne pas de surconsommation.</p></div>
+      <div class="card iot-atex" data-ico="ex"><span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17h-19z"/><text x="12" y="17.2" text-anchor="middle" font-size="7" font-weight="800" fill="currentColor" stroke="none" font-family="Arial">Ex</text></svg></span><span class="tag">Protection contre les explosions</span><h3>Exécution ATEX pour le R290</h3><p>Pour les zones Ex dans et autour du caisson&nbsp;: capteurs et nœuds radio certifiés ATEX/IECEx pour la zone définie. L’arrêt est câblé via la centrale de détection gaz – le LoRaWAN signale et documente.</p><a class="more" href="/fr/technique/#r290-havarie">Concept ATEX en deux niveaux →</a></div>
     </div>
   </div>
 </section>
@@ -119,6 +119,22 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="alt" id="beispiele">
+  <div class="wrap">
+    <span class="kicker">En service</span>
+    <h2>À quoi cela ressemble dans le tableau de bord</h2>
+    <div class="iot-ex">
+      <figure><img src="/img/iot/beispiel-lastgang-fr.svg" width="640" height="330" alt="Courbe de charge et perte de charge sur quatre semaines" loading="lazy"><figcaption>Courbe de charge et perte de charge sur quatre semaines</figcaption></figure>
+      <figure><img src="/img/iot/beispiel-dashboard-fr.svg" width="640" height="330" alt="Alarme de recirculation dans le tableau de bord" loading="lazy"><figcaption>Alarme de recirculation dans le tableau de bord</figcaption></figure>
+    </div>
+    <p class="note">Illustrations d’exemple – pas de données mesurées sur une installation réelle.</p>
+    <span class="kicker" style="margin-top:34px;display:inline-block">Exemple de calcul</span>
+    <h2>Ce que coûtent une surpression et une recirculation non détectées</h2>
+    <div class="iot-calcs"><div class="iot-calc"><h3>Silencieux encrassés</h3><ul class="check"><li>Débit 60 000 m³/h, la perte de charge augmente de 40 Pa</li><li>Puissance aéraulique supplémentaire : 667 W</li><li>Avec un rendement global du ventilateur de 50 % : 1,33 kW électriques</li><li>3 000 heures de fonctionnement par an</li></ul><div class="iot-res"><b>≈ 4 000</b> kWh par an<br><b>≈ 1 000</b> € par an à 0,25 €/kWh</div></div><div class="iot-calc"><h3>Recirculation de l’air chaud rejeté</h3><ul class="check"><li>Puissance électrique de l’installation 100 kW, 3 000 heures de fonctionnement par an</li><li>Air neuf en moyenne 2 K plus chaud que l’extérieur</li><li>Valeur indicative : env. 2,5 % de perte d’efficacité par kelvin</li></ul><div class="iot-res"><b>≈ 15 000</b> kWh par an<br><b>≈ 3 750</b> € par an à 0,25 €/kWh</div></div></div>
+    <p class="note">Exemple de calcul avec des hypothèses typiques, pas de données de projet. Avec les données de votre installation, nous le chiffrons précisément.</p>
   </div>
 </section>
 
@@ -185,7 +201,7 @@
   <div class="wrap">
     <div class="contact has-form">
       <div>
-        <div class="intro"><h2>Demander un projet</h2><p>L’appareil, le nombre et le lieu d’implantation suffisent pour commencer – avec la fiche technique, nous vérifions directement dimensions, débit d’air et puissance acoustique. Pour les projets complexes, vous recevez en général une offre ferme sous 2 à 3 jours ; les caissons sur mesure sont livrés en général 40 à 60 jours après la commande.</p></div>
+        <div class="intro"><h2>Demander un monitoring IoT</h2><p>L’appareil, le fluide frigorigène et les grandeurs à mesurer suffisent pour commencer – également pour équiper des caissons existants. Vous recevez un concept de mesure avec une offre.</p></div>
         <form class="qf" id="qf" novalidate>
           <div class="row">
             <label class="f">Nom *<input id="q_name" required autocomplete="name"></label>
@@ -201,7 +217,7 @@
             <label class="f">Nombre d’appareils<input id="q_count" inputmode="numeric"></label>
           </div>
           <label class="f">Lieu du projet (code postal / ville)<input id="q_place"></label>
-          <label class="f">Message<textarea id="q_msg" rows="3" placeholder="p. ex. limite de nuit, distance aux voisins, installation en toiture, délai …"></textarea></label>
+          <label class="f">Message<textarea id="q_msg" rows="3" placeholder="p. ex. grandeurs à mesurer, nouveau caisson ou rétrofit, zone Ex, protocole GTB, compteur d’énergie existant …"></textarea></label>
           <label class="f">Fiche technique, plan ou photo (facultatif · PDF ou image, max. 10 Mo)<input id="q_file" type="file" accept=".pdf,application/pdf,image/png,image/jpeg"></label>
           <div class="hp" aria-hidden="true"><input id="qHp" tabindex="-1" autocomplete="off"></div>
           <details class="privacy"><summary>Informations sur la protection des données</summary><p><b>Responsable :</b> Silent Engineering di Romolo Vicari (marque ForCoTech), Via Trento 22, 23875 Osnago (LC), Italie · <a href="mailto:info@forcotech.com">info@forcotech.com</a></p><p><b>Finalité :</b> vos données et une éventuelle fiche technique servent uniquement au traitement de votre demande et à l’établissement d’une offre. Si nécessaire, nous transmettons les données techniques du projet à notre partenaire de fabrication ; aucune transmission à des fins publicitaires.</p><p><b>Transmission :</b> via le service de formulaires FormSubmit (formsubmit.co), qui transfère la demande par e-mail à info@forcotech.com ; un traitement en dehors de l’UE est possible. Base juridique : art. 6(1)(b) RGPD et votre consentement (art. 6(1)(a), art. 49(1)(a) RGPD), révocable à tout moment. Vous pouvez aussi nous écrire directement par e-mail.</p><p><b>Durée et droits :</b> suppression après clôture de la demande, ou à l’issue des délais légaux en cas de contrat. Accès, rectification, effacement, opposition et retrait sans formalité à info@forcotech.com. Plus d’informations dans la <a href="/fr/confidentialite/">politique de confidentialité</a>.</p></details>
@@ -218,7 +234,7 @@
         </div>
       </div>
       <div>
-        <div class="qnext"><b>Et ensuite ?</b><ol><li><b>Vérification</b> de vos données – avec une courte question si nécessaire</li><li><b>Calcul du niveau</b> au point de réception et conception acoustique et aéraulique</li><li><b>Offre ferme</b> avec plan – en général sous 2 à 3 jours pour les projets complexes</li></ol></div>
+        <div class="qnext"><b>Et ensuite ?</b><ol><li><b>Vérification</b> de vos données – avec une courte question sur les points de mesure, la zone Ex et la GTB si nécessaire</li><li><b>Concept de mesure</b> avec capteurs, passerelle, interfaces et chaînes d’alarme</li><li><b>Offre</b> pour la livraison, le montage et la mise en service – capteurs et passerelle préconfigurés</li></ol></div>
         <address><b>Silent Engineering di Romolo Vicari</b><br>Marques ForCoTech et Silent-Mode<br>Via Trento 22 · 23875 Osnago (LC) · Italie<br>E-mail : <a href="mailto:info@forcotech.com">info@forcotech.com</a><br>Web : <a href="https://www.silent-mode.com">silent-mode.com</a></address>
         <p style="margin-top:18px"><b>Vous préférez prédimensionner vous-même ?</b></p>
         <div class="btns" style="margin-top:10px"><a class="btn" href="https://www.forcotech.com/konfigurator/fr/">Ouvrir le configurateur</a></div>

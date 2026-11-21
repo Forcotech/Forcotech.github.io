@@ -22,13 +22,13 @@
     <span class="kicker">Messgrößen</span>
     <h2>Sechs Messgrößen, ein Funknetz</h2>
     <div class="cards iot-cards" style="margin-top:20px">
-      <div class="card"><span class="tag">Differenzdruck</span><h3>Druckverlust</h3><p>Differenzdrucksensoren über Zu- und Abluftschalldämpfer messen den Druckverlust in Pa und vergleichen ihn mit dem Auslegungswert und der Druckreserve des Geräts. Steigt er, ist eine Reinigung fällig.</p></div>
-      <div class="card"><span class="tag">Strömung</span><h3>Luftgeschwindigkeit und Volumenstrom</h3><p>Messung im Schalldämpferspalt bzw. am Luftaustritt. Daraus ergibt sich der Volumenstrom je Betriebsfall – Kontrolle der Auslegungsgeschwindigkeit und früher Hinweis auf blockierte Querschnitte.</p></div>
-      <div class="card"><span class="tag">Temperatur</span><h3>Zuluft, Abluft, Innenraum</h3><p>Fühler an Ansaugung, Austritt und Umgebung. Liegt die Zuluft über der Außentemperatur, saugt die Anlage Abluft zurück. Bei Wechselrichtern und Batteriespeichern: Überwachung der Haubeninnentemperatur.</p></div>
-      <div class="card"><span class="tag">Kältemittel</span><h3>Leckage per Infrarot (NDIR)</h3><p>Infrarotsensoren erkennen Kältemittel bodennah, wo es sich sammelt – für HFKW/HFO (z. B. R32, R410A, R454B), CO₂ (R744) und Propan (R290). Selektiv und langzeitstabil, Alarmschwellen in ppm bzw. % UEG.</p></div>
-      <div class="card"><span class="tag">Akustik</span><h3>Laufende Schallmessung</h3><p>Schallpegelsensoren an der Haube oder am maßgeblichen Immissionsort senden je Intervall LAeq und LAFmax, getrennt nach Tag und Nacht. So wird die Wirkung der Haube im Betrieb dauerhaft sichtbar. Die Sensoren berechnen nur Pegel – es wird kein Ton aufgezeichnet.</p></div>
-      <div class="card"><span class="tag">Energie</span><h3>Lastgang und Stromverbrauch</h3><p>Vorhandene Energiezähler werden über Modbus, M-Bus oder S0 ausgelesen, sonst Stromwandler nachgerüstet. 15-Minuten-Lastgang je Anlage: Verbrauch, Spitzen, Betriebszeiten – und der Beleg, dass die Haube keinen Mehrverbrauch verursacht.</p></div>
-      <div class="card iot-atex"><span class="tag">Explosionsschutz</span><h3>ATEX-Ausführung für R290</h3><p>Für Ex-Zonen in und an der Haube: Sensoren und Funkknoten mit ATEX-/IECEx-Zulassung für die festgelegte Zone. Die Abschaltung läuft fest verdrahtet über die Gaswarnzentrale – LoRaWAN meldet und dokumentiert.</p><a class="more" href="/technik/#r290-havarie">ATEX-Konzept in zwei Stufen →</a></div>
+      <div class="card" data-ico="dp"><span class="tag">Differenzdruck</span><h3>Druckverlust</h3><p>Differenzdrucksensoren über Zu- und Abluftschalldämpfer messen den Druckverlust in Pa und vergleichen ihn mit dem Auslegungswert und der Druckreserve des Geräts. Steigt er, ist eine Reinigung fällig.</p></div>
+      <div class="card" data-ico="v"><span class="tag">Strömung</span><h3>Luftgeschwindigkeit und Volumenstrom</h3><p>Messung im Schalldämpferspalt bzw. am Luftaustritt. Daraus ergibt sich der Volumenstrom je Betriebsfall – Kontrolle der Auslegungsgeschwindigkeit und früher Hinweis auf blockierte Querschnitte.</p></div>
+      <div class="card" data-ico="t"><span class="tag">Temperatur</span><h3>Zuluft, Abluft, Innenraum</h3><p>Fühler an Ansaugung, Austritt und Umgebung. Liegt die Zuluft über der Außentemperatur, saugt die Anlage Abluft zurück. Bei Wechselrichtern und Batteriespeichern: Überwachung der Haubeninnentemperatur.</p></div>
+      <div class="card" data-ico="ir"><span class="tag">Kältemittel</span><h3>Leckage per Infrarot (NDIR)</h3><p>Infrarotsensoren erkennen Kältemittel bodennah, wo es sich sammelt – für HFKW/HFO (z. B. R32, R410A, R454B), CO₂ (R744) und Propan (R290). Selektiv und langzeitstabil, Alarmschwellen in ppm bzw. % UEG.</p></div>
+      <div class="card" data-ico="db"><span class="tag">Akustik</span><h3>Laufende Schallmessung</h3><p>Schallpegelsensoren an der Haube oder am maßgeblichen Immissionsort senden je Intervall LAeq und LAFmax, getrennt nach Tag und Nacht. So wird die Wirkung der Haube im Betrieb dauerhaft sichtbar. Die Sensoren berechnen nur Pegel – es wird kein Ton aufgezeichnet.</p></div>
+      <div class="card" data-ico="kw"><span class="tag">Energie</span><h3>Lastgang und Stromverbrauch</h3><p>Vorhandene Energiezähler werden über Modbus, M-Bus oder S0 ausgelesen, sonst Stromwandler nachgerüstet. 15-Minuten-Lastgang je Anlage: Verbrauch, Spitzen, Betriebszeiten – und der Beleg, dass die Haube keinen Mehrverbrauch verursacht.</p></div>
+      <div class="card iot-atex" data-ico="ex"><span class="tag">Explosionsschutz</span><h3>ATEX-Ausführung für R290</h3><p>Für Ex-Zonen in und an der Haube: Sensoren und Funkknoten mit ATEX-/IECEx-Zulassung für die festgelegte Zone. Die Abschaltung läuft fest verdrahtet über die Gaswarnzentrale – LoRaWAN meldet und dokumentiert.</p><a class="more" href="/technik/#r290-havarie">ATEX-Konzept in zwei Stufen →</a></div>
     </div>
   </div>
 </section>
@@ -65,6 +65,8 @@
     </div>
   </div>
 </section>
+
+<!--BEISPIELE-->
 
 <section id="pakete">
   <div class="wrap">

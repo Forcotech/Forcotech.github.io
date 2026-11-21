@@ -141,11 +141,30 @@ SUBTXT = {
 }
 
 
-def form_section(lang, sec="anfrage"):
-    """Formular-Abschnitt für Unterseiten (tools/build_news.py → page())."""
+# Eigene Texte für IoT-Anfragen (Seite /iot/, typ="iot") – ohne Haubenauslegung und Lieferzeit Sonderanfertigung
+IOT = {
+ "de": dict(h2="IoT-Monitoring anfragen",
+            intro="Anlage, Kältemittel und gewünschte Messgrößen genügen für den Anfang – auch für die Nachrüstung bestehender Schallhauben. Sie erhalten ein Messkonzept mit Angebot.",
+            nx="<li><b>Prüfung</b> Ihrer Angaben – bei Bedarf kurze Rückfrage zu Messpunkten, Ex-Zone und Gebäudeleittechnik</li><li><b>Messkonzept</b> mit Sensoren, Gateway, Schnittstellen und Alarmwegen</li><li><b>Angebot</b> für Lieferung, Montage und Inbetriebnahme – Sensoren und Gateway vorkonfiguriert</li>",
+            msg_ph="z. B. Messgrößen, neue Haube oder Nachrüstung, Ex-Zone, GLT-Protokoll, vorhandener Energiezähler …"),
+ "en": dict(h2="Request IoT monitoring",
+            intro="Unit, refrigerant and the variables you want to measure are enough to start – also for retrofitting existing enclosures. You will receive a measuring concept with a quotation.",
+            nx="<li><b>Review</b> of your details – with a short question on measuring points, hazardous zone and BMS if needed</li><li><b>Measuring concept</b> with sensors, gateway, interfaces and alarm routes</li><li><b>Quotation</b> for delivery, installation and commissioning – sensors and gateway pre-configured</li>",
+            msg_ph="e.g. measured variables, new enclosure or retrofit, hazardous zone, BMS protocol, existing energy meter …"),
+ "fr": dict(h2="Demander un monitoring IoT",
+            intro="L’appareil, le fluide frigorigène et les grandeurs à mesurer suffisent pour commencer – également pour équiper des caissons existants. Vous recevez un concept de mesure avec une offre.",
+            nx="<li><b>Vérification</b> de vos données – avec une courte question sur les points de mesure, la zone Ex et la GTB si nécessaire</li><li><b>Concept de mesure</b> avec capteurs, passerelle, interfaces et chaînes d’alarme</li><li><b>Offre</b> pour la livraison, le montage et la mise en service – capteurs et passerelle préconfigurés</li>",
+            msg_ph="p. ex. grandeurs à mesurer, nouveau caisson ou rétrofit, zone Ex, protocole GTB, compteur d’énergie existant …"),
+}
+
+
+def form_section(lang, sec="anfrage", typ=None):
+    """Formular-Abschnitt für Unterseiten (tools/build_news.py → page()). typ="iot" → eigene IoT-Texte."""
     t = dict(L[LANGFILE[lang]])
     t["sec"] = sec
     t["h2"], t["intro"] = SUBTXT[lang]
+    if typ == "iot":
+        t.update(IOT[lang])
     return FORM.format(**t)
 
 

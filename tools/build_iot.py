@@ -10,6 +10,7 @@ Kopf, Navigation und Fuß kommen aus tools/build_news.py.
 Das Systemschema img/iot/lorawan-system-<sprache>.svg erzeugt dieses Skript selbst (Texte in SVG_TXT).
 """
 from pathlib import Path
+import re
 import build_news as bn
 from build_hserie import faq_ld
 
@@ -129,12 +130,210 @@ def svg(lang):
 """
 
 
+# ---------- Icons bei den Messgrößen (data-ico im Fragment) ----------
+_IP = {
+    "dp": '<path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.4" fill="currentColor"/>',
+    "v": '<path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/>',
+    "t": '<path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 9v7"/>',
+    "ir": '<path d="M12 3s5 6 5 10a5 5 0 0 1-10 0c0-4 5-10 5-10z"/><path d="M9.5 14h5"/>',
+    "db": '<path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a7.5 7.5 0 0 1 0 11"/>',
+    "kw": '<path d="M13 3L5 14h6l-1 7 8-11h-6z"/>',
+    "ex": '<path d="M12 3l9.5 17h-19z"/><text x="12" y="17.2" text-anchor="middle" font-size="7" font-weight="800" fill="currentColor" stroke="none" font-family="Arial">Ex</text>',
+}
+
+
+def icons(frag):
+    def rep(m):
+        k = m.group(2)
+        ic = (f'<span class="iot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" '
+              f'stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">{_IP[k]}</svg></span>')
+        return m.group(1) + ">" + ic
+    return re.sub(r'(<div class="card(?: iot-atex)?" data-ico="(\w+)")>', rep, frag)
+
+
+# ---------- Beispielgrafiken und Beispielrechnung (Abschnitt <!--BEISPIELE-->) ----------
+# Werte sind bewusst Beispielwerte (keine Messdaten, keine Projektdaten) und so gekennzeichnet.
+CALC = dict(V=60000, dp=40, eta=0.5, h=3000, price=0.25, P=100, dT=2, pk=2.5)
+
+
+def calc():
+    c = CALC
+    w_air = c["V"] / 3600 * c["dp"]                 # W Luftleistung
+    p_el = w_air / c["eta"] / 1000                  # kW elektrisch
+    e1 = p_el * c["h"]                              # kWh/a
+    e2 = c["P"] * c["h"] * c["dT"] * c["pk"] / 100  # kWh/a
+    return dict(w_air=w_air, p_el=p_el, e1=e1, eur1=e1 * c["price"], e2=e2, eur2=e2 * c["price"])
+
+
+def fmt(x, lang, d=0):
+    s = f"{x:,.{d}f}"
+    if lang == "en":
+        return s
+    sep = "." if lang == "de" else " "
+    return s.replace(",", "X").replace(".", ",").replace("X", sep)
+
+
+EX = {
+    "de": dict(k="Im Betrieb", h="So sieht das im Dashboard aus", note="Beispieldarstellungen – keine Messdaten einer realen Anlage.",
+               c1="Lastgang und Druckverlust über vier Wochen", c2="Rezirkulations-Alarm im Dashboard",
+               w="Woche", kw="Leistung kW", pa="Δp Pa", lim="Grenzwert Δp", clean="Reinigung", leg1="Leistung (Mittel aus 15-Minuten-Werten)", leg2="Druckverlust Schalldämpfer",
+               dash="Anlage 1 · Schallhaube Dach", alarm="Alarm: Rezirkulation", tout="Außen", tin="Zuluft", band="Zuluft > Außen + 3 K",
+               k1="Druckverlust", k2="LAeq Nacht", k3="Leistung", h24="Uhr",
+               rk="Beispielrechnung", rh="Was ein unbemerkter Mehrdruck und Rezirkulation kosten",
+               rnote="Beispielrechnung mit typischen Annahmen, keine Projektdaten. Mit Ihren Anlagendaten rechnen wir es konkret.",
+               r1h="Verschmutzte Schalldämpfer", r2h="Rezirkulation warmer Abluft",
+               r1=["Volumenstrom {V} m³/h, Druckverlust steigt um {dp} Pa", "Zusätzliche Luftleistung: {w_air} W", "Bei 50 % Ventilator-Gesamtwirkungsgrad: {p_el} kW elektrisch",
+                   "{h} Betriebsstunden pro Jahr"],
+               r2=["Elektrische Leistung der Anlage {P} kW, {h} Betriebsstunden pro Jahr", "Zuluft im Mittel {dT} K wärmer als außen",
+                   "Faustwert: ca. {pk} % Effizienzverlust je Kelvin"],
+               per="kWh pro Jahr", eur="€ pro Jahr bei {price} €/kWh"),
+    "en": dict(k="In operation", h="What it looks like in the dashboard", note="Example illustrations – not measured data from a real unit.",
+               c1="Load profile and pressure drop over four weeks", c2="Recirculation alarm in the dashboard",
+               w="Week", kw="Power kW", pa="Δp Pa", lim="Δp limit", clean="Cleaning", leg1="Power (mean of 15-minute values)", leg2="Silencer pressure drop",
+               dash="Unit 1 · rooftop enclosure", alarm="Alarm: recirculation", tout="Ambient", tin="Intake", band="Intake > ambient + 3 K",
+               k1="Pressure drop", k2="LAeq night", k3="Power", h24="h",
+               rk="Example calculation", rh="What unnoticed extra pressure and recirculation cost",
+               rnote="Example calculation with typical assumptions, not project data. With your unit data we calculate it specifically.",
+               r1h="Fouled silencers", r2h="Recirculation of warm exhaust air",
+               r1=["Air flow {V} m³/h, pressure drop rises by {dp} Pa", "Additional air power: {w_air} W", "At 50 % overall fan efficiency: {p_el} kW electrical",
+                   "{h} operating hours per year"],
+               r2=["Electrical power of the unit {P} kW, {h} operating hours per year", "Intake air on average {dT} K warmer than ambient",
+                   "Rule of thumb: approx. {pk} % efficiency loss per kelvin"],
+               per="kWh per year", eur="€ per year at €{price}/kWh"),
+    "fr": dict(k="En service", h="À quoi cela ressemble dans le tableau de bord", note="Illustrations d’exemple – pas de données mesurées sur une installation réelle.",
+               c1="Courbe de charge et perte de charge sur quatre semaines", c2="Alarme de recirculation dans le tableau de bord",
+               w="Semaine", kw="Puissance kW", pa="Δp Pa", lim="Seuil Δp", clean="Nettoyage", leg1="Puissance (moyenne pas de 15 min)", leg2="Perte de charge silencieux",
+               dash="Installation 1 · caisson en toiture", alarm="Alarme : recirculation", tout="Extérieur", tin="Air neuf", band="Air neuf > extérieur + 3 K",
+               k1="Perte de charge", k2="LAeq nuit", k3="Puissance", h24="h",
+               rk="Exemple de calcul", rh="Ce que coûtent une surpression et une recirculation non détectées",
+               rnote="Exemple de calcul avec des hypothèses typiques, pas de données de projet. Avec les données de votre installation, nous le chiffrons précisément.",
+               r1h="Silencieux encrassés", r2h="Recirculation de l’air chaud rejeté",
+               r1=["Débit {V} m³/h, la perte de charge augmente de {dp} Pa", "Puissance aéraulique supplémentaire : {w_air} W", "Avec un rendement global du ventilateur de 50 % : {p_el} kW électriques",
+                   "{h} heures de fonctionnement par an"],
+               r2=["Puissance électrique de l’installation {P} kW, {h} heures de fonctionnement par an", "Air neuf en moyenne {dT} K plus chaud que l’extérieur",
+                   "Valeur indicative : env. {pk} % de perte d’efficacité par kelvin"],
+               per="kWh par an", eur="€ par an à {price} €/kWh"),
+}
+
+
+def svg_lastgang(lang):
+    t = EX[lang]
+    import math
+    W, H, x0, x1, y0, y1 = 640, 330, 46, 594, 48, 262
+    n = 28 * 4
+    def X(i): return x0 + (x1 - x0) * i / (n - 1)
+    clean_i = int(n * 0.80)
+    pts_p, pts_d = [], []
+    for i in range(n):
+        day = i / 4
+        foul = min(day, 22.4) / 22.4 if i < clean_i else 0
+        base = 33 + 1.2 * math.sin(i * 0.9) + (2.5 if (day % 7) < 5 else -4)
+        p = base * (1 + 0.09 * foul)
+        d = 58 + 44 * foul + 1.2 * math.sin(i * 1.3)
+        pts_p.append((X(i), y1 - (p - 20) / 30 * (y1 - y0)))
+        pts_d.append((X(i), y1 - (d - 40) / 80 * (y1 - y0)))
+    pl = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts_p)
+    dl = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts_d)
+    ylim = y1 - (95 - 40) / 80 * (y1 - y0)
+    xc = X(clean_i)
+    ia = next(i for i in range(n) if 58 + 44 * (min(i / 4, 22.4) / 22.4) >= 95)
+    xa, ya = X(ia), ylim
+    grid = "".join(f'<line x1="{x0}" y1="{y0 + k * (y1 - y0) / 4:.0f}" x2="{x1}" y2="{y0 + k * (y1 - y0) / 4:.0f}" stroke="#ece8e8"/>' for k in range(5))
+    yl = "".join(f'<text x="{x0 - 8}" y="{y1 - k * (y1 - y0) / 3 + 5:.0f}" text-anchor="end" font-size="13" fill="#4a4a4a">{20 + 10 * k}</text>' for k in range(4))
+    yr = "".join(f'<text x="{x1 + 8}" y="{y1 - k * (y1 - y0) / 4 + 5:.0f}" font-size="13" fill="#c8202f">{40 + 20 * k}</text>' for k in range(5))
+    xl = "".join(f'<text x="{x0 + (x1 - x0) * (k + .5) / 4:.0f}" y="{y1 + 22}" text-anchor="middle" font-size="13.5" fill="#4a4a4a">{t["w"]} {k + 1}</text>' for k in range(4))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect width="{W}" height="{H}" fill="#fff"/>{grid}
+<text x="6" y="26" font-size="13" font-weight="700" fill="#1a1a1a">{t["kw"]}</text>
+<text x="{W - 6}" y="26" text-anchor="end" font-size="13" font-weight="700" fill="#c8202f">{t["pa"]}</text>{yl}{yr}{xl}
+<line x1="{x0}" y1="{ylim:.0f}" x2="{x1}" y2="{ylim:.0f}" stroke="#c8202f" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="{x0 + 6}" y="{ylim - 8:.0f}" font-size="13" font-weight="700" fill="#c8202f">{t["lim"]}</text>
+<polyline points="{pl}" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="{dl}" fill="none" stroke="#c8202f" stroke-width="3"/>
+<line x1="{xc:.0f}" y1="{y0}" x2="{xc:.0f}" y2="{y1}" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3 4"/>
+<text x="{xc + 6:.0f}" y="{y0 + 14}" font-size="13.5" font-weight="700" fill="#1a1a1a">{t["clean"]}</text>
+<circle cx="{xa:.0f}" cy="{ya:.0f}" r="9" fill="#c8202f"/><text x="{xa:.0f}" y="{ya + 5:.0f}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">!</text>
+<line x1="{x0}" y1="{y1}" x2="{x1}" y2="{y1}" stroke="#1a1a1a" stroke-width="1.4"/>
+<g font-size="13.5" fill="#1a1a1a"><line x1="{x0}" y1="{H - 18}" x2="{x0 + 26}" y2="{H - 18}" stroke="#1a1a1a" stroke-width="2"/><text x="{x0 + 34}" y="{H - 13}">{t["leg1"]}</text>
+<line x1="{x0 + 320}" y1="{H - 18}" x2="{x0 + 346}" y2="{H - 18}" stroke="#c8202f" stroke-width="3"/><text x="{x0 + 354}" y="{H - 13}">{t["leg2"]}</text></g>
+</svg>
+"""
+
+
+def svg_dashboard(lang):
+    t = EX[lang]
+    import math
+    W, H = 640, 330
+    gx0, gx1, gy0, gy1 = 40, 600, 92, 214
+    n = 97
+    def X(i): return gx0 + (gx1 - gx0) * i / (n - 1)
+    def Y(v): return gy1 - (v - 10) / 22 * (gy1 - gy0)
+    out, inn = [], []
+    for i in range(n):
+        hh = i / 4
+        to = 19 + 8 * math.sin((hh - 9) / 24 * 2 * math.pi)
+        rec = max(0.0, math.sin((hh - 11) / 8 * math.pi)) * 5.2 if 11 <= hh <= 19 else 0
+        out.append(to); inn.append(to + 0.6 + rec)
+    band = [i for i in range(n) if inn[i] - out[i] > 3]
+    bx0, bx1 = X(band[0]), X(band[-1])
+    po = " ".join(f"{X(i):.1f},{Y(v):.1f}" for i, v in enumerate(out))
+    pi_ = " ".join(f"{X(i):.1f},{Y(v):.1f}" for i, v in enumerate(inn))
+    xt = "".join(f'<text x="{X(k * 24):.0f}" y="{gy1 + 18}" text-anchor="middle" font-size="12.5" fill="#4a4a4a">{k * 6:02d}{"" if lang == "en" else ":00"}</text>' for k in range(5))
+    def kpi(x, a, b):
+        return (f'<rect x="{x}" y="250" width="176" height="62" rx="8" fill="#f6f3f3"/>'
+                f'<text x="{x + 12}" y="272" font-size="12.5" fill="#4a4a4a">{a}</text><text x="{x + 12}" y="300" font-size="22" font-weight="800" fill="#1a1a1a">{b}</text>')
+    dec = "," if lang != "en" else "."
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="#fff" stroke="#d9d4d4" stroke-width="1.5"/>
+<text x="24" y="38" font-size="16" font-weight="800" fill="#1a1a1a">{t["dash"]}</text>
+<rect x="{W - 24 - 196}" y="18" width="196" height="30" rx="15" fill="#c8202f"/>
+<text x="{W - 24 - 98}" y="38" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fff">⚠ {t["alarm"]}</text>
+<g font-size="13" fill="#1a1a1a"><line x1="24" y1="66" x2="46" y2="66" stroke="#8a8484" stroke-width="2.5"/><text x="52" y="71">{t["tout"]} °C</text>
+<line x1="150" y1="66" x2="172" y2="66" stroke="#c8202f" stroke-width="3"/><text x="178" y="71">{t["tin"]} °C</text>
+<rect x="290" y="58" width="22" height="14" fill="#c8202f" opacity=".14"/><text x="318" y="71">{t["band"]}</text></g>
+<rect x="{bx0:.0f}" y="{gy0}" width="{bx1 - bx0:.0f}" height="{gy1 - gy0}" fill="#c8202f" opacity=".12"/>
+<line x1="{gx0}" y1="{gy1}" x2="{gx1}" y2="{gy1}" stroke="#1a1a1a" stroke-width="1.2"/>
+<polyline points="{po}" fill="none" stroke="#8a8484" stroke-width="2.5"/>
+<polyline points="{pi_}" fill="none" stroke="#c8202f" stroke-width="3"/>{xt}
+{kpi(24, t["k1"], "62 Pa")}{kpi(232, t["k2"], "38 dB(A)")}{kpi(440, t["k3"], "41" + dec + "5 kW")}
+</svg>
+"""
+
+
+def beispiele(lang):
+    t, c, r = EX[lang], CALC, calc()
+    for nm, fn in (("lastgang", svg_lastgang), ("dashboard", svg_dashboard)):
+        bn.write(f"img/iot/beispiel-{nm}-{lang}.svg", fn(lang))
+    v = dict(V=fmt(c["V"], lang), dp=c["dp"], w_air=fmt(r["w_air"], lang), p_el=fmt(r["p_el"], lang, 2), h=fmt(c["h"], lang),
+             P=c["P"], dT=c["dT"], pk=fmt(c["pk"], lang, 1), price=fmt(c["price"], lang, 2))
+    def card(head, lines, e, eur):
+        li = "".join(f"<li>{x.format(**v)}</li>" for x in lines)
+        return (f'<div class="iot-calc"><h3>{head}</h3><ul class="check">{li}</ul>'
+                f'<div class="iot-res"><b>≈ {fmt(round(e, -2), lang)}</b> {t["per"]}<br><b>≈ {fmt(round(eur, -1), lang)}</b> {t["eur"].format(**v)}</div></div>')
+    return f"""<section class="alt" id="beispiele">
+  <div class="wrap">
+    <span class="kicker">{t["k"]}</span>
+    <h2>{t["h"]}</h2>
+    <div class="iot-ex">
+      <figure><img src="/img/iot/beispiel-lastgang-{lang}.svg" width="640" height="330" alt="{t["c1"]}" loading="lazy"><figcaption>{t["c1"]}</figcaption></figure>
+      <figure><img src="/img/iot/beispiel-dashboard-{lang}.svg" width="640" height="330" alt="{t["c2"]}" loading="lazy"><figcaption>{t["c2"]}</figcaption></figure>
+    </div>
+    <p class="note">{t["note"]}</p>
+    <span class="kicker" style="margin-top:34px;display:inline-block">{t["rk"]}</span>
+    <h2>{t["rh"]}</h2>
+    <div class="iot-calcs">{card(t["r1h"], t["r1"], r["e1"], r["eur1"])}{card(t["r2h"], t["r2"], r["e2"], r["eur2"])}</div>
+    <p class="note">{t["rnote"]}</p>
+  </div>
+</section>"""
+
+
 def build():
     for lang in URL:
         t = TXT[lang]
         name = f"img/iot/lorawan-system-{lang}.svg"
         bn.write(name, svg(lang))
         frag = (ROOT / "iot" / "_src" / f"{lang}.html").read_text(encoding="utf-8")
+        frag = icons(frag).replace("<!--BEISPIELE-->", beispiele(lang))
         main = f"""<div class="hero">
   <div class="wrap hg">
     <div>

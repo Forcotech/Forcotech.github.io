@@ -22,13 +22,13 @@
     <span class="kicker">Measured variables</span>
     <h2>Six measured variables, one radio network</h2>
     <div class="cards iot-cards" style="margin-top:20px">
-      <div class="card"><span class="tag">Differential pressure</span><h3>Pressure drop</h3><p>Differential pressure sensors across the intake and exhaust silencers measure the pressure drop in Pa and compare it with the design value and the unit’s pressure reserve. If it rises, cleaning is due.</p></div>
-      <div class="card"><span class="tag">Air flow</span><h3>Air velocity and air flow</h3><p>Measured in the silencer gap or at the air outlet. This gives the air flow per operating case – a check of the design velocity and an early warning of blocked cross-sections.</p></div>
-      <div class="card"><span class="tag">Temperature</span><h3>Intake, exhaust, interior</h3><p>Sensors at the intake, outlet and ambient. If the intake air is warmer than the outside air, the unit is drawing exhaust air back in. For inverters and battery storage: monitoring of the enclosure’s interior temperature.</p></div>
-      <div class="card"><span class="tag">Refrigerant</span><h3>Leak detection by infrared (NDIR)</h3><p>Infrared sensors detect refrigerant at low level, where it accumulates – for HFC/HFO (e.g. R32, R410A, R454B), CO₂ (R744) and propane (R290). Selective and stable over the long term, alarm thresholds in ppm or % LFL.</p></div>
-      <div class="card"><span class="tag">Acoustics</span><h3>Continuous sound monitoring</h3><p>Sound level sensors on the enclosure or at the relevant receiver point transmit LAeq and LAFmax per interval, separately for day and night. This keeps the effect of the enclosure visible throughout operation. The sensors only calculate levels – no audio is recorded.</p></div>
-      <div class="card"><span class="tag">Energy</span><h3>Load profile and power consumption</h3><p>Existing energy meters are read via Modbus, M-Bus or S0; otherwise current transformers are retrofitted. 15-minute load profile per unit: consumption, peaks, operating hours – and proof that the enclosure causes no extra consumption.</p></div>
-      <div class="card iot-atex"><span class="tag">Explosion protection</span><h3>ATEX design for R290</h3><p>For hazardous zones in and around the enclosure: sensors and radio nodes with ATEX/IECEx approval for the defined zone. Shutdown is hard-wired via the gas warning controller – LoRaWAN reports and documents.</p><a class="more" href="/en/technology/#r290-havarie">Two-stage ATEX concept →</a></div>
+      <div class="card" data-ico="dp"><span class="tag">Differential pressure</span><h3>Pressure drop</h3><p>Differential pressure sensors across the intake and exhaust silencers measure the pressure drop in Pa and compare it with the design value and the unit’s pressure reserve. If it rises, cleaning is due.</p></div>
+      <div class="card" data-ico="v"><span class="tag">Air flow</span><h3>Air velocity and air flow</h3><p>Measured in the silencer gap or at the air outlet. This gives the air flow per operating case – a check of the design velocity and an early warning of blocked cross-sections.</p></div>
+      <div class="card" data-ico="t"><span class="tag">Temperature</span><h3>Intake, exhaust, interior</h3><p>Sensors at the intake, outlet and ambient. If the intake air is warmer than the outside air, the unit is drawing exhaust air back in. For inverters and battery storage: monitoring of the enclosure’s interior temperature.</p></div>
+      <div class="card" data-ico="ir"><span class="tag">Refrigerant</span><h3>Leak detection by infrared (NDIR)</h3><p>Infrared sensors detect refrigerant at low level, where it accumulates – for HFC/HFO (e.g. R32, R410A, R454B), CO₂ (R744) and propane (R290). Selective and stable over the long term, alarm thresholds in ppm or % LFL.</p></div>
+      <div class="card" data-ico="db"><span class="tag">Acoustics</span><h3>Continuous sound monitoring</h3><p>Sound level sensors on the enclosure or at the relevant receiver point transmit LAeq and LAFmax per interval, separately for day and night. This keeps the effect of the enclosure visible throughout operation. The sensors only calculate levels – no audio is recorded.</p></div>
+      <div class="card" data-ico="kw"><span class="tag">Energy</span><h3>Load profile and power consumption</h3><p>Existing energy meters are read via Modbus, M-Bus or S0; otherwise current transformers are retrofitted. 15-minute load profile per unit: consumption, peaks, operating hours – and proof that the enclosure causes no extra consumption.</p></div>
+      <div class="card iot-atex" data-ico="ex"><span class="tag">Explosion protection</span><h3>ATEX design for R290</h3><p>For hazardous zones in and around the enclosure: sensors and radio nodes with ATEX/IECEx approval for the defined zone. Shutdown is hard-wired via the gas warning controller – LoRaWAN reports and documents.</p><a class="more" href="/en/technology/#r290-havarie">Two-stage ATEX concept →</a></div>
     </div>
   </div>
 </section>
@@ -65,6 +65,8 @@
     </div>
   </div>
 </section>
+
+<!--BEISPIELE-->
 
 <section id="pakete">
   <div class="wrap">

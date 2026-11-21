@@ -170,7 +170,7 @@ def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, 
         f'<a class="opt" href="{h if h.startswith("/") else L["home"] + h}">{n}</a>' for h, n in L["nav"])
     og = f'<meta property="og:image" content="{SITE}/{og_image}">' if og_image else ""
     it, al = COUNTRY[lang]
-    cta_html = (form_section(lang) + "\n" if cta else "")
+    cta_html = (form_section(lang, typ=typ) + "\n" if cta else "")
     body_typ = f' data-anfrage-typ="{typ}"' if typ else ""
     form_js = '<script src="/anfrage.js" defer></script>\n' if cta else ""
     return f"""<!doctype html>

@@ -21,14 +21,21 @@ Search Console, „Nicht gefunden (404)“) dort in `OLD` eintragen und das Skri
 
 Seit 22.11.2026 (Stufe 1): Startseite, Technik, IoT, Impressum, Datenschutz – /it/, /it/tecnologia/, /it/iot/,
 /it/note-legali/, /it/privacy/ bzw. /es/, /es/tecnologia/, /es/iot/, /es/aviso-legal/, /es/privacidad/.
+Stufe 2 (22.11.2026): Lösungen (/it/soluzioni/, /es/soluciones/ mit den sechs Lösungsseiten), HSA3 (/it/hsa3/,
+/es/hsa3/) und Rechenzentren (/it/data-center/, /es/centros-de-datos/). Seitenliste mit IT/ES-Pfaden in
+`IT_ES` (tools/build_news.py); page() und die Sitemap ergänzen IT/ES daraus automatisch, die DE/EN/FR-Fassungen
+bekommen IT/ES in Sprachumschalter und hreflang beim nächsten Lauf ihres Build-Skripts. Reine Zahlen in Tabellen
+werden ins Format 1.234,5 umgesetzt; „(EN)“ an Links verschwindet, sobald das Ziel übersetzt ist.
+Akustik-Texte nennen bei TA Lärm, Tonhaltigkeit und Wind zusätzlich die Regeln in Italien (Legge 447/1995,
+criterio differenziale, DM 16/03/1998, NTC 2018) bzw. Spanien (Ley 37/2003, RD 1367/2007, CTE DB SE-AE).
 Erzeugt aus den fertigen EN-Seiten mit `python3 tools/build_sprachen.py` (Wörterbücher `tools/sprachen/it.json`,
 `es.json`: englischer Text → Übersetzung). Kopf, Navigation, Formular und Fuß aus tools/build_news.py (`T["it"]`,
 `T["es"]`, Seitenliste `IT_ES`), Claim und Formular der Startseiten aus tools/startseite_anfrage.py. Die IT/ES-Seiten
 nicht von Hand ändern – Text im Wörterbuch korrigieren, Skript erneut ausführen. Neue englische Texte meldet
 `python3 tools/build_sprachen.py --report` (Datei `tools/sprachen/missing-<lang>.json`, nicht einchecken).
 News gibt es nicht auf IT/ES (`NEWS_LANGS`); Links auf noch nicht übersetzte Seiten führen mit „(EN)“ auf Englisch.
-Grafiken, Zeichnungen und Videos mit Text bleiben vorerst englisch. Reihenfolge: zuerst die EN-Builds, dann
-`build_sprachen.py`, zuletzt `build_news.py`.
+Noch englisch (Links mit „(EN)“): H-Serie, Adiabatik, Nachhaltigkeit, Projekte im Aufbau, News; Grafiken, Zeichnungen
+und Videos mit Text. Reihenfolge: zuerst die EN-Builds, dann `build_sprachen.py`, zuletzt `build_news.py`.
 
 ## Startseite und Technik-Seite
 

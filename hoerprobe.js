@@ -6,7 +6,9 @@
   var T = {
     de: { play: 'Abspielen', pause: 'Pause', seek: 'Springe zu Sekunde ' },
     en: { play: 'Play', pause: 'Pause', seek: 'Jump to second ' },
-    fr: { play: 'Lecture', pause: 'Pause', seek: 'Aller à la seconde ' }
+    fr: { play: 'Lecture', pause: 'Pause', seek: 'Aller à la seconde ' },
+    it: { play: 'Riproduci', pause: 'Pausa', seek: 'Vai al secondo ' },
+    es: { play: 'Reproducir', pause: 'Pausa', seek: 'Ir al segundo ' }
   }[lang] || { play: 'Play', pause: 'Pause', seek: '' };
   var ICON_PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
   var ICON_PAUSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>';

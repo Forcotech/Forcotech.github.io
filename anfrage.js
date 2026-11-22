@@ -1,4 +1,4 @@
-/* © Silent Engineering di Romolo Vicari – ForCoTech. Anfrageformular der Startseite (DE/EN/FR).
+/* © Silent Engineering di Romolo Vicari – ForCoTech. Anfrageformular der Startseite (DE/EN/FR/IT/ES).
    Versand über FormSubmit (gleicher Zugang wie der Konfigurator) an info@forcotech.com.
    Klappt der Versand nicht, wird der Text zum Kopieren bzw. als E-Mail angeboten. */
 (function () {
@@ -26,7 +26,21 @@
       fail: 'L’envoi automatique n’a pas fonctionné. Veuillez envoyer le texte suivant par e-mail à ' + MAIL + '.',
       attach: ' Merci de joindre le fichier à l’e-mail.', copied: 'Copié – collez-le maintenant dans un e-mail.', subj: 'Demande page d’accueil – ',
       none: 'non joint',
-      k: { typ: 'Type d’installation', name: 'Nom', company: 'Société', email: 'E-mail', phone: 'Téléphone', place: 'Lieu du projet', unit: 'Appareil (fabricant / modèle)', count: 'Nombre d’appareils', msg: 'Message', file: 'Fiche technique' } }
+      k: { typ: 'Type d’installation', name: 'Nom', company: 'Société', email: 'E-mail', phone: 'Téléphone', place: 'Lieu du projet', unit: 'Appareil (fabricant / modèle)', count: 'Nombre d’appareils', msg: 'Message', file: 'Fiche technique' } },
+    it: { consent: 'Acconsentite al trattamento dei vostri dati.', req: 'Indicate il vostro nome e un indirizzo e-mail valido.',
+      big: 'Il file è troppo grande (max. 10 MB). Scegliete un file più piccolo o inviatelo per e-mail dopo l’invio.',
+      type: 'Scegliete un PDF o un’immagine.', sending: 'Invio in corso …', send: 'Invia richiesta',
+      fail: 'L’invio automatico non è riuscito. Inviate il testo seguente per e-mail a ' + MAIL + '.',
+      attach: ' Allegate il file all’e-mail.', copied: 'Copiato – ora incollatelo in un’e-mail.', subj: '[IT] Richiesta sito – ',
+      none: 'non allegato',
+      k: { typ: 'Tipo di impianto', name: 'Nome', company: 'Azienda', email: 'E-mail', phone: 'Telefono', place: 'Luogo del progetto', unit: 'Apparecchio (costruttore / modello)', count: 'Numero di apparecchi', msg: 'Messaggio', file: 'Scheda tecnica' } },
+    es: { consent: 'Acepte el tratamiento de sus datos.', req: 'Indique su nombre y una dirección de correo válida.',
+      big: 'El archivo es demasiado grande (máx. 10 MB). Elija un archivo más pequeño o envíelo por correo después de enviar.',
+      type: 'Elija un PDF o una imagen.', sending: 'Enviando …', send: 'Enviar solicitud',
+      fail: 'El envío automático no ha funcionado. Envíe el siguiente texto por correo electrónico a ' + MAIL + '.',
+      attach: ' Adjunte el archivo al correo.', copied: 'Copiado – ahora péguelo en un correo.', subj: '[ES] Solicitud web – ',
+      none: 'no adjunto',
+      k: { typ: 'Tipo de equipo', name: 'Nombre', company: 'Empresa', email: 'Correo electrónico', phone: 'Teléfono', place: 'Ubicación del proyecto', unit: 'Equipo (fabricante / modelo)', count: 'Número de equipos', msg: 'Mensaje', file: 'Ficha técnica' } }
   };
   var L = T[(document.documentElement.lang || 'de').slice(0, 2)] || T.de;
   var $ = function (id) { return document.getElementById(id); };

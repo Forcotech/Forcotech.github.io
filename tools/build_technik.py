@@ -28,7 +28,7 @@ TXT = {
 
 
 def build():
-    for lang in bn.LANGS:
+    for lang in TXT:  # IT/ES entstehen mit tools/build_sprachen.py
         t = TXT[lang]
         frag = (ROOT / "technik" / "_src" / f"{lang}.html").read_text(encoding="utf-8")
         main = f"""<section class="nlist">

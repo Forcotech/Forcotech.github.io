@@ -441,6 +441,7 @@
     }
     function frame(now) {
       raf = 0;
+      if (!wrap.isConnected) return;  // Grafik wurde entfernt
       var tt = (now - t0) / 1000;
       if (mode === -1 && tt > SC[cur].d) { cur = (cur + 1) % SC.length; t0 = now; tt = 0; }
       if (mode >= 0) { cur = mode; if (tt > SC[cur].d + 2) { t0 = now; tt = 0; } }

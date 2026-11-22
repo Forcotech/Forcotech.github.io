@@ -7,7 +7,8 @@ python3 tools/build_iot.py  ausführen.
 Die FAQ-Daten (schema.org FAQPage) werden aus den <details>-Fragen im Fragment erzeugt.
 Kopf, Navigation und Fuß kommen aus tools/build_news.py.
 
-Das Systemschema img/iot/lorawan-system-<sprache>.svg erzeugt dieses Skript selbst (Texte in SVG_TXT).
+Das Systemschema img/iot/lorawan-system-<sprache>.svg erzeugt dieses Skript selbst (Texte in SVG_TXT). Auf der Seite
+ersetzt /iot-anim.js es durch eine interaktive Animation (Texte DE/EN/FR/IT/ES dort); das Bild bleibt ohne JavaScript.
 """
 from pathlib import Path
 import re
@@ -367,7 +368,8 @@ def build():
       <p class="lead">{t["lead"]}</p>
       <div class="btns"><a class="btn" href="#anfrage" data-typ="iot">{t["b1"]}</a><a class="btn ghost" href="{TECH[lang]}">{t["b2"]}</a></div>
     </div>
-    <figure class="dc-hero iot-hero"><img src="/{name}" width="920" height="540" alt="{t["alt"]}" fetchpriority="high"></figure>
+    <figure class="dc-hero iot-hero" data-iot-anim><img src="/{name}" width="920" height="540" alt="{t["alt"]}" fetchpriority="high"></figure>
+    <script src="/iot-anim.js" defer></script>
   </div>
 </div>
 {frag}"""

@@ -217,9 +217,10 @@
     if (opt.label) svg.setAttribute("aria-label", opt.label);
     el("rect", {width: 920, height: 540, fill: "#fff"}, svg);
     var defs = el("defs", {}, svg);
-    var mk = el("marker", {id: "fa" + (opt.post ? "p" : "w"), viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto"}, defs);
+    var uid = ++FCTIoTAnim.n;
+    var mk = el("marker", {id: "fa" + uid, viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto"}, defs);
     el("path", {d: "M0 0 10 5 0 10z", fill: INK}, mk);
-    var mkr = el("marker", {id: "fr" + (opt.post ? "p" : "w"), viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto"}, defs);
+    var mkr = el("marker", {id: "fr" + uid, viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto"}, defs);
     el("path", {d: "M0 0 10 5 0 10z", fill: RED}, mkr);
     var AR = "url(#" + mk.id + ")", ARR = "url(#" + mkr.id + ")";
 
@@ -430,7 +431,8 @@
     });
     var hint = document.createElement("span"); hint.className = "iot-anim-hint"; hint.textContent = t.hint; bar.appendChild(hint);
     wrap.appendChild(svg); wrap.appendChild(bar); wrap.appendChild(cap);
-    host.innerHTML = ""; host.appendChild(wrap);
+    var old = host.querySelector("img");  // Bildunterschrift (figcaption) bleibt stehen
+    if (old) old.parentNode.replaceChild(wrap, old); else { host.innerHTML = ""; host.appendChild(wrap); }
 
     var mode = -1, cur = 0, t0 = performance.now(), visible = true, raf = 0, lastCap = "";
     function press() { btns.forEach(function (b) { b.setAttribute("aria-pressed", String(+b.dataset.i === mode)); }); }
@@ -469,12 +471,14 @@
     return api;
   }
 
+  FCTIoTAnim.n = 0;
   window.FCTIoTAnim = FCTIoTAnim;
   function init() {
     var figs = document.querySelectorAll("[data-iot-anim]");
     for (var i = 0; i < figs.length; i++) {
       var img = figs[i].querySelector("img");
-      FCTIoTAnim(figs[i], {label: img ? img.alt : ""});
+      var fc = figs[i].querySelector("figcaption");
+      FCTIoTAnim(figs[i], {label: (img && img.alt) || (fc ? fc.textContent : "")});
     }
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();

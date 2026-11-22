@@ -7,7 +7,8 @@ Wie beim Konfigurator ist die englische Seite die Vorlage: Die fertig gebauten E
 tools/sprachen/it.json bzw. es.json übersetzt. Kopf, Navigation, Anfrageformular und Fuß kommen wie bei allen
 Unterseiten aus tools/build_news.py (page()), die Startseite zusätzlich aus tools/startseite_anfrage.py.
 
-Seiten (Stufe 1, 22.11.2026): Startseite, Technik, IoT, Impressum, Datenschutz. Weitere Seiten in PAGES ergänzen.
+Seiten: Stufe 1 (22.11.2026) Startseite, Technik, IoT, Impressum, Datenschutz; Stufe 2 Lösungen (Übersicht und sechs
+Lösungsseiten), HSA3, Rechenzentren. Weitere Seiten in build_news.IT_ES ergänzen (EN-Pfad → IT/ES-Pfad).
 Grafiken, Zeichnungen und Videos mit Text bleiben vorerst in der englischen Fassung.
 
 Aufruf (nach den Builds der EN-Seiten, vor tools/build_news.py):
@@ -31,15 +32,23 @@ LANGS = ("it", "es")
 
 # EN-Pfad → Pfad je Sprache (auch für das Umschreiben von Links)
 PATHS = bn.IT_ES
-# Alle Sprachfassungen je Seite (für hreflang und Sprachumschalter)
-ALTS = {
-    "/en/technology/": {"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"},
-    "/en/iot/": {"de": "/iot/", "en": "/en/iot/", "fr": "/fr/iot/"},
-    "/en/legal-notice/": {"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/"},
-    "/en/privacy/": {"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/"},
-}
-TYP = {"/en/iot/": "iot"}  # Vorauswahl im Anfrageformular
+# Alle Sprachfassungen je Seite (für hreflang und Sprachumschalter): aus den hreflang-Angaben der EN-Seite gelesen
+TYP = {"/en/iot/": "iot"}  # Vorauswahl im Anfrageformular (sonst aus data-anfrage-typ der EN-Seite)
 NO_CTA = {"/en/legal-notice/", "/en/privacy/"}
+
+
+def alts_of(en_path):
+    src = (ROOT / en_path[1:] / "index.html").read_text(encoding="utf-8").split("</head>")[0]
+    a = {k: v[len(bn.SITE):] for k, v in re.findall(r'<link rel="alternate" hreflang="(de|en|fr)" href="([^"]*)"', src)}
+    a["en"] = en_path
+    return a
+
+
+def strip_en_marks(s):
+    """„(EN)“ an Links entfernen, die jetzt auf eine übersetzte Seite zeigen."""
+    return re.sub(r'(<a [^>]*href="/(?:it|es)/[^"]*"[^>]*>)(.*?)(</a>)',
+                  lambda m: m.group(1) + m.group(2).replace(" (EN)", "") + m.group(3), s, flags=re.S)
+
 
 INLINE = {"a", "b", "i", "em", "strong", "sub", "sup", "br", "span", "small", "code", "abbr", "time", "u", "s", "mark"}
 ATTRS = ("alt", "title", "aria-label", "placeholder")
@@ -92,6 +101,20 @@ def tr_jsonld(s, d, page):
     return json.dumps(walk(json.loads(s)), ensure_ascii=False)
 
 
+NUM_FULL = re.compile(r"(?<![\w.,/#&-])(\d{1,3}(?:,\d{3})+)\.(\d+)(?![\w.])")
+NUM_THOU = re.compile(r"(?<![\w.,/#&-])(\d{1,3})((?:,\d{3})+)(?![\w,]|\.\d)")
+NUM_DEC = re.compile(r"(?<![\w.,/#&-])(\d+)\.(\d+)(?![\w.]|,\d)")
+
+
+def numbers(seg):
+    """Englisches Zahlenformat in Text ohne Wörter (Tabellenzellen) → 1.234,5. Tags bleiben unberührt."""
+    def conv(t):
+        t = NUM_FULL.sub(lambda m: m.group(1).replace(",", ".") + "," + m.group(2), t)
+        t = NUM_DEC.sub(r"\1,\2", t)
+        return NUM_THOU.sub(lambda m: m.group(1) + m.group(2).replace(",", "."), t)
+    return "".join(p if p.startswith("<") else conv(p) for p in re.split(r"(<[^>]+>)", seg))
+
+
 def translate(h, d, page):
     """Text-Abschnitte (Text mit Inline-Tags zwischen Block-Tags) und Attribute übersetzen."""
     out, run = [], []
@@ -102,7 +125,7 @@ def translate(h, d, page):
         seg = "".join(run)
         run.clear()
         if not re.search(r"[A-Za-z]{2}", re.sub(r"<[^>]+>", "", seg)):
-            out.append(seg)
+            out.append(numbers(seg))  # reine Zahlen (Tabellen): 92.6 → 92,6, 380,000 → 380.000
             return
         r = look(d, seg, page)
         if r is None:
@@ -157,11 +180,14 @@ def subpage(en_path, lang, d):
     head = "".join(re.findall(r'<script type="application/ld\+json">.*?</script>', src.split("</head>")[0], re.S))
     page = en_path
     t_title, t_desc = look(d, title, page) or title, look(d, desc, page) or desc
-    main = links(translate(main, d, page), lang)
-    head = translate(head, d, page) if head else ""
-    alts = dict(ALTS[en_path])
+    main = strip_en_marks(links(translate(main, d, page), lang))
+    head = links(translate(head, d, page), lang) if head else ""
+    alts = alts_of(en_path)
     alts.update({k: v for k, v in ((l, PATHS[en_path][l]) for l in LANGS)})
-    out = bn.page(lang, t_title, t_desc, alts, main, extra_head=head, cta=en_path not in NO_CTA, typ=TYP.get(en_path))
+    typ = TYP.get(en_path) or (re.search(r'<body[^>]*data-anfrage-typ="([^"]*)"', src) or [None, None])[1]
+    og = re.search(r'<meta property="og:image" content="' + re.escape(bn.SITE) + r'/([^"]*)"', src)
+    out = bn.page(lang, t_title, t_desc, alts, main, og_image=og.group(1) if og else None, extra_head=head,
+                  cta=en_path not in NO_CTA, typ=typ)
     bn.write(PATHS[en_path][lang][1:] + "index.html", out)
     print(f"{PATHS[en_path][lang]}index.html", len(out))
 
@@ -173,7 +199,7 @@ def home(lang, d):
     src = re.sub(r"<!-- NEWS:START.*?<!-- NEWS:END -->\n?", "", src, flags=re.S)
     src = re.sub(r'<section id="contact">.*?</section>', '<section id="contact"></section>', src, flags=re.S)
     src = re.sub(r'<h1>.*?</h1>\s*<p class="lead">.*?</p>', "<h1></h1>\n      <p class=\"lead\"></p>", src, count=1, flags=re.S)
-    s = links(translate(src, d, "/en/"), lang)
+    s = strip_en_marks(links(translate(src, d, "/en/"), lang))
     L = bn.T[lang]
     s = s.replace('<html lang="en">', f'<html lang="{lang}">', 1)
     s = s.replace('content="en_GB"', f'content="{L["locale"]}"')
@@ -226,8 +252,9 @@ def main():
         MISSING.clear()
         d = load(lang)
         home(lang, d)
-        for p in ALTS:
-            subpage(p, lang, d)
+        for p in PATHS:
+            if p != "/en/":
+                subpage(p, lang, d)
         if "--report" in sys.argv:
             (HERE / f"missing-{lang}.json").write_text(json.dumps(sorted(MISSING), ensure_ascii=False, indent=0), encoding="utf-8")
             print(f"{lang}: {len(MISSING)} Texte ohne Übersetzung → tools/sprachen/missing-{lang}.json")

@@ -86,7 +86,7 @@ T = {
         "lang": "it", "home": "/it/", "news": "/en/news/", "other": "en",
         "h_pre": "News e", "h_acc": "analisi",
         "sub": "", "all": "Tutti gli articoli (EN)", "back": "Tutti gli articoli", "skip": "Vai al contenuto",
-        "nav": [("#services", "Applicazioni"), ("#method", "Metodo"), ("#examples", "Esempi"), ("/it/tecnologia/", "Tecnologia"),
+        "nav": [("/it/soluzioni/", "Soluzioni"), ("#method", "Metodo"), ("#examples", "Esempi"), ("/it/tecnologia/", "Tecnologia"),
                 ("/it/iot/", "IoT"), ("#contact", "Contatto")],
         "cfg": ("https://www.forcotech.com/konfigurator/it/", "Configuratore"),
         "nav_label": "Navigazione principale", "home_label": "ForCoTech – home",
@@ -100,7 +100,7 @@ T = {
         "lang": "es", "home": "/es/", "news": "/en/news/", "other": "en",
         "h_pre": "Noticias y", "h_acc": "análisis",
         "sub": "", "all": "Todas las publicaciones (EN)", "back": "Todas las publicaciones", "skip": "Ir al contenido",
-        "nav": [("#services", "Aplicaciones"), ("#method", "Método"), ("#examples", "Ejemplos"), ("/es/tecnologia/", "Tecnología"),
+        "nav": [("/es/soluciones/", "Soluciones"), ("#method", "Método"), ("#examples", "Ejemplos"), ("/es/tecnologia/", "Tecnología"),
                 ("/es/iot/", "IoT"), ("#contact", "Contacto")],
         "cfg": ("https://www.forcotech.com/konfigurator/es/", "Configurador"),
         "nav_label": "Navegación principal", "home_label": "ForCoTech – inicio",
@@ -120,6 +120,19 @@ IT_ES = {
     "/en/iot/": {"it": "/it/iot/", "es": "/es/iot/"},
     "/en/legal-notice/": {"it": "/it/note-legali/", "es": "/es/aviso-legal/"},
     "/en/privacy/": {"it": "/it/privacy/", "es": "/es/privacidad/"},
+    # Stufe 2 (22.11.2026)
+    "/en/solutions/": {"it": "/it/soluzioni/", "es": "/es/soluciones/"},
+    "/en/solutions/heat-pumps-air-conditioning/": {"it": "/it/soluzioni/pompe-di-calore-climatizzazione/",
+                                                   "es": "/es/soluciones/bombas-de-calor-climatizacion/"},
+    "/en/solutions/chillers-large-heat-pumps/": {"it": "/it/soluzioni/refrigeratori-grandi-pompe-di-calore/",
+                                                 "es": "/es/soluciones/enfriadoras-grandes-bombas-de-calor/"},
+    "/en/solutions/vrf-vrv/": {"it": "/it/soluzioni/vrf-vrv/", "es": "/es/soluciones/vrf-vrv/"},
+    "/en/solutions/inverters-bess/": {"it": "/it/soluzioni/inverter-bess/", "es": "/es/soluciones/inversores-bess/"},
+    "/en/solutions/noise-barriers/": {"it": "/it/soluzioni/barriere-acustiche/", "es": "/es/soluciones/pantallas-acusticas/"},
+    "/en/solutions/noise-barrier-and-silencer/": {"it": "/it/soluzioni/barriera-acustica-e-silenziatore/",
+                                                  "es": "/es/soluciones/pantalla-acustica-y-silenciador/"},
+    "/en/hsa3/": {"it": "/it/hsa3/", "es": "/es/hsa3/"},
+    "/en/data-centres/": {"it": "/it/data-center/", "es": "/es/centros-de-datos/"},
 }
 LANG_NAME = {"de": "Deutsch", "en": "English", "fr": "Français", "it": "Italiano", "es": "Español"}
 COUNTRY = {"de": ("Italien", "in Allianz mit"), "en": ("Italy", "in alliance with"), "fr": ("Italie", "en alliance avec"),
@@ -345,6 +358,9 @@ def build():
     today = date.today().isoformat()
     def group(alts, lm, skip=()):
         out = []
+        alts = dict(alts)
+        for k, v in IT_ES.get(alts.get("en"), {}).items():  # IT/ES-Fassung vorhanden (tools/build_sprachen.py)
+            alts.setdefault(k, v)
         links = "".join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{SITE}{v}"/>' for k, v in alts.items())
         for k, v in alts.items():
             if k not in skip:

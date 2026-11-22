@@ -20,7 +20,7 @@
       cap: {
         n: "Normalbetrieb: Alle Messwerte gehen per Funk ans Dashboard – Grenzwerte und Trends im Blick.",
         p1: "Laub oder Schnee setzen den Schalldämpfer zu: Der Druckverlust Δp steigt.",
-        p2: "Δp über dem Grenzwert von 15 Pa → Alarm per E-Mail und SMS, bevor Leistung oder Pegel leiden.",
+        p2: "Δp über dem Grenzwert von 20 Pa → Alarm per E-Mail und SMS, bevor Leistung oder Pegel leiden.",
         k1: "Kältemittel-Leck (R290): Der Infrarot-Sensor misst 28 % UEG.",
         k2: "Sicherheitsfunktion per Kabel: Die Gaswarnzentrale schaltet die Ventilatoren auf 100 % und den Verdichter aus – auch ohne Funk.",
         k3: "Meldung an die Leittechnik, Alarm per Funk an den Betreiber."
@@ -47,7 +47,7 @@
       cap: {
         n: "Normal operation: all readings go to the dashboard by radio – limits and trends at a glance.",
         p1: "Leaves or snow clog the silencer: the pressure drop Δp rises.",
-        p2: "Δp above the 15 Pa limit → alarm by e-mail and SMS before capacity or noise level suffer.",
+        p2: "Δp above the 20 Pa limit → alarm by e-mail and SMS before capacity or noise level suffer.",
         k1: "Refrigerant leak (R290): the infrared sensor measures 28 % LEL.",
         k2: "Safety function by cable: the gas warning controller sets the fans to 100 % and switches the compressor off – even without radio.",
         k3: "Message to the BMS, alarm by radio to the operator."
@@ -74,7 +74,7 @@
       cap: {
         n: "Fonctionnement normal : toutes les mesures arrivent par radio au tableau de bord – seuils et tendances en vue.",
         p1: "Feuilles ou neige colmatent le silencieux : la perte de charge Δp augmente.",
-        p2: "Δp au-dessus du seuil de 15 Pa → alarme par e-mail et SMS avant que la puissance ou le niveau sonore n’en souffrent.",
+        p2: "Δp au-dessus du seuil de 20 Pa → alarme par e-mail et SMS avant que la puissance ou le niveau sonore n’en souffrent.",
         k1: "Fuite de fluide (R290) : le capteur infrarouge mesure 28 % LIE.",
         k2: "Fonction de sécurité par câble : la centrale gaz passe les ventilateurs à 100 % et arrête le compresseur – même sans radio.",
         k3: "Message à la GTB, alarme par radio à l’exploitant."
@@ -101,7 +101,7 @@
       cap: {
         n: "Funzionamento normale: tutti i valori arrivano via radio alla dashboard – limiti e andamenti sotto controllo.",
         p1: "Foglie o neve intasano il silenziatore: la perdita di carico Δp aumenta.",
-        p2: "Δp oltre il limite di 15 Pa → allarme via e-mail e SMS prima che potenza o livello sonoro ne risentano.",
+        p2: "Δp oltre il limite di 20 Pa → allarme via e-mail e SMS prima che potenza o livello sonoro ne risentano.",
         k1: "Perdita di refrigerante (R290): il sensore a infrarossi misura il 28 % LIE.",
         k2: "Funzione di sicurezza via cavo: la centralina gas porta i ventilatori al 100 % e spegne il compressore – anche senza radio.",
         k3: "Segnalazione al BMS, allarme via radio al gestore."
@@ -128,7 +128,7 @@
       cap: {
         n: "Funcionamiento normal: todas las mediciones llegan por radio al panel – límites y tendencias a la vista.",
         p1: "Hojas o nieve obstruyen el silenciador: la pérdida de carga Δp aumenta.",
-        p2: "Δp por encima del límite de 15 Pa → alarma por e-mail y SMS antes de que sufran la potencia o el nivel sonoro.",
+        p2: "Δp por encima del límite de 20 Pa → alarma por e-mail y SMS antes de que sufran la potencia o el nivel sonoro.",
         k1: "Fuga de refrigerante (R290): el sensor infrarrojo mide un 28 % LIE.",
         k2: "Función de seguridad por cable: la central de gas pone los ventiladores al 100 % y para el compresor – también sin radio.",
         k3: "Aviso al BMS, alarma por radio al explotador."
@@ -174,8 +174,8 @@
   // Szenarien: Dauer und Datenpakete {k, t0, x, to}
   var SC = [
     {d: 9, p: S.map(function (s, i) { return {k: s.k, t0: i * 1.5, x: BASE[s.k], to: "dash"}; })},
-    {d: 9, p: [{k: "dp", t0: 0, x: 9, to: "dash"}, {k: "dp", t0: 1.8, x: 12, to: "dash"}, {k: "dp", t0: 3.6, x: 16, to: "alarm"},
-               {k: "db", t0: 4.6, x: 39, to: "dash"}, {k: "dp", t0: 5.6, x: 18, to: "alarm"}]},
+    {d: 9, p: [{k: "dp", t0: 0, x: 11, to: "dash"}, {k: "dp", t0: 1.8, x: 16, to: "dash"}, {k: "dp", t0: 3.6, x: 22, to: "alarm"},
+               {k: "db", t0: 4.6, x: 39, to: "dash"}, {k: "dp", t0: 5.6, x: 25, to: "alarm"}]},
     {d: 10, p: [{k: "ir", t0: 0.3, x: 28, to: "alarm"}, {k: "kw", t0: 4.4, x: 1.8, to: "dash"}, {k: "ir", t0: 6, x: 31, to: "alarm"}]}
   ];
   var TRAVEL = 1.7;
@@ -402,7 +402,7 @@
       }
       if (alarmOn) {
         B.alarm.r.setAttribute("stroke", RED); B.alarm.r.setAttribute("stroke-width", 3.2); B.alarm.r.setAttribute("fill", blink ? PALE : "#fff");
-        B.alarm.subs[0].textContent = val(lang, alarmOn.k, alarmOn.x) + (alarmOn.k === "dp" ? " > 15 Pa" : "");
+        B.alarm.subs[0].textContent = val(lang, alarmOn.k, alarmOn.x) + (alarmOn.k === "dp" ? " > 20 Pa" : "");
         B.alarm.subs[0].setAttribute("fill", RED); B.alarm.subs[0].setAttribute("font-weight", 700);
         if (alarmOn.k === "dp") { SE.dp.ring.setAttribute("opacity", blink ? 1 : 0.2); SE.dp.ring.setAttribute("r", 28); }
       }

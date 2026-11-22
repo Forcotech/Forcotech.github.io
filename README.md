@@ -67,6 +67,10 @@ bearbeiten, dann `python3 tools/build_rechenzentren.py`. Die englischen und fran
 /iot/, /en/iot/, /fr/iot/: Inhalt in iot/_src/de.html, en.html bzw. fr.html bearbeiten, dann
 `python3 tools/build_iot.py`. Das Systemschema img/iot/lorawan-system-<sprache>.svg erzeugt das Skript selbst
 (Texte in SVG_TXT). Anfrage-Vorauswahl „iot“ (Formularoption in tools/startseite_anfrage.py).
+Auf der Seite ersetzt `iot-anim.js` das Schema durch eine interaktive Animation (Szenarien Normalbetrieb,
+Schalldämpfer zugesetzt, Kältemittel-Leck; Sensoren anklickbar; Texte DE/EN/FR/IT/ES im Skript, Beispielwerte).
+Ohne JavaScript bleibt das SVG-Bild; bei „Bewegung reduzieren“ steht die Animation still. Lage der Elemente wie in
+`svg()` – bei Änderungen am Schema beide anpassen.
 
 ## Adiabatik-Modul
 

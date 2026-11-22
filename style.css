@@ -653,6 +653,16 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 /* IoT-Services (tools/build_iot.py) */
 .card.mini.wide{grid-column:1/-1}
 .iot-hero img{display:block;width:100%;height:auto}
+/* IoT-Schema als Animation (iot-anim.js) */
+.iot-anim svg{display:block;width:100%;height:auto}
+.iot-anim-sensor,.iot-anim-leg{cursor:pointer}
+.iot-anim-sensor:focus{outline:none}.iot-anim-sensor:focus-visible circle:last-of-type{stroke:var(--ink);stroke-width:3}
+.iot-anim-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 12px 0}
+.iot-anim-bar button{font:inherit;font-size:13px;font-weight:600;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
+.iot-anim-bar button:hover{border-color:var(--red)}
+.iot-anim-bar button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.iot-anim-hint{font-size:12.5px;color:var(--muted);margin-left:auto}
+.iot-anim-cap{margin:6px 12px 10px;min-height:3.2em;font-size:14.5px;line-height:1.45;color:var(--ink)}
 .iot-fig{max-width:1040px;margin:22px auto 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px}
 .iot-fig img{display:block;width:100%;height:auto}
 .iot-fig figcaption{margin-top:8px;font-size:14px;color:var(--muted)}

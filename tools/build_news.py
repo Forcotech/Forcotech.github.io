@@ -82,10 +82,48 @@ T = {
         "empty": "Nos premières publications apparaîtront ici prochainement.",
         "months": None, "locale": "fr_FR", "zoom": "Ouvrir le graphique en taille réelle",
     },
+    "it": {
+        "lang": "it", "home": "/it/", "news": "/en/news/", "other": "en",
+        "h_pre": "News e", "h_acc": "analisi",
+        "sub": "", "all": "Tutti gli articoli (EN)", "back": "Tutti gli articoli", "skip": "Vai al contenuto",
+        "nav": [("#services", "Applicazioni"), ("#method", "Metodo"), ("#examples", "Esempi"), ("/it/tecnologia/", "Tecnologia"),
+                ("/it/iot/", "IoT"), ("#contact", "Contatto")],
+        "cfg": ("https://www.forcotech.com/konfigurator/it/", "Configuratore"),
+        "nav_label": "Navigazione principale", "home_label": "ForCoTech – home",
+        "title_list": "", "desc_list": "",
+        "cta_h": "Richiedete un progetto",
+        "cta_p": "Inviateci tipo di apparecchio, numero e luogo di installazione – oppure predimensionate subito la cabina nel configuratore.",
+        "cta_b": "Apri il configuratore", "privacy": "Privacy", "privacy_url": "/it/privacy/", "imprint": "Note legali", "imprint_url": "/it/note-legali/", "other_name": "English",
+        "empty": "", "months": None, "locale": "it_IT", "zoom": "Apri l’immagine a grandezza intera",
+    },
+    "es": {
+        "lang": "es", "home": "/es/", "news": "/en/news/", "other": "en",
+        "h_pre": "Noticias y", "h_acc": "análisis",
+        "sub": "", "all": "Todas las publicaciones (EN)", "back": "Todas las publicaciones", "skip": "Ir al contenido",
+        "nav": [("#services", "Aplicaciones"), ("#method", "Método"), ("#examples", "Ejemplos"), ("/es/tecnologia/", "Tecnología"),
+                ("/es/iot/", "IoT"), ("#contact", "Contacto")],
+        "cfg": ("https://www.forcotech.com/konfigurator/es/", "Configurador"),
+        "nav_label": "Navegación principal", "home_label": "ForCoTech – inicio",
+        "title_list": "", "desc_list": "",
+        "cta_h": "Solicite un proyecto",
+        "cta_p": "Envíenos el tipo de equipo, la cantidad y la ubicación – o predimensione su cabina directamente en el configurador.",
+        "cta_b": "Abrir el configurador", "privacy": "Privacidad", "privacy_url": "/es/privacidad/", "imprint": "Aviso legal", "imprint_url": "/es/aviso-legal/", "other_name": "English",
+        "empty": "", "months": None, "locale": "es_ES", "zoom": "Abrir la imagen a tamaño completo",
+    },
 }
-LANGS = ("de", "en", "fr")
-LANG_NAME = {"de": "Deutsch", "en": "English", "fr": "Français"}
-COUNTRY = {"de": ("Italien", "in Allianz mit"), "en": ("Italy", "in alliance with"), "fr": ("Italie", "en alliance avec")}
+LANGS = ("de", "en", "fr", "it", "es")
+NEWS_LANGS = ("de", "en", "fr")  # News-Beiträge gibt es (noch) nicht auf IT/ES
+# Seiten mit italienischer/spanischer Fassung (tools/build_sprachen.py): EN-Pfad → Pfad je Sprache
+IT_ES = {
+    "/en/": {"it": "/it/", "es": "/es/"},
+    "/en/technology/": {"it": "/it/tecnologia/", "es": "/es/tecnologia/"},
+    "/en/iot/": {"it": "/it/iot/", "es": "/es/iot/"},
+    "/en/legal-notice/": {"it": "/it/note-legali/", "es": "/es/aviso-legal/"},
+    "/en/privacy/": {"it": "/it/privacy/", "es": "/es/privacidad/"},
+}
+LANG_NAME = {"de": "Deutsch", "en": "English", "fr": "Français", "it": "Italiano", "es": "Español"}
+COUNTRY = {"de": ("Italien", "in Allianz mit"), "en": ("Italy", "in alliance with"), "fr": ("Italie", "en alliance avec"),
+           "it": ("Italia", "in alleanza con"), "es": ("Italia", "en alianza con")}
 LOGO_ALT = "ForCoTech – Stop Noise · Enjoy Silence · Improve Efficiency – Engineered with Absora Technology"
 FOOT = "© {y} Silent Engineering di Romolo Vicari · Via Trento 22 · 23875 Osnago (LC) · {it} · P.IVA IT03833150133 · {al} ABSORA GmbH, Berlin"
 
@@ -156,6 +194,10 @@ def teaser_section(posts, lang):
 def page(lang, title, desc, alts, main, og_image=None, extra_head="", cta=True, canon_abs=None, typ=None):
     """alts: {Sprache: Pfad} aller Fassungen dieser Seite, inkl. der eigenen."""
     L = T[lang]
+    alts = dict(alts)
+    if alts.get("en") in IT_ES:  # IT/ES-Fassung dieser Seite vorhanden
+        for k, v in IT_ES[alts["en"]].items():
+            alts.setdefault(k, v)
     canon = alts[lang]
     others = [k for k in LANGS if k != lang]
     hreflang = "\n".join(f'<link rel="alternate" hreflang="{k}" href="{SITE}{alts[k]}">' for k in LANGS if k in alts)
@@ -233,7 +275,7 @@ def write(rel, text):
 
 def build():
     posts = load()
-    for lang in LANGS:
+    for lang in NEWS_LANGS:
         L = T[lang]
         lposts = [p for p in posts if lang in p]  # Beiträge ohne Übersetzung fehlen in dieser Sprache
         # Übersicht
@@ -250,7 +292,7 @@ def build():
   </div>
 </section>"""
         write(url(lang)[1:] + "index.html",
-              page(lang, L["title_list"], L["desc_list"], {k: url(k) for k in LANGS}, main))
+              page(lang, L["title_list"], L["desc_list"], {k: url(k) for k in NEWS_LANGS}, main))
 
         # Beitragsseiten
         for p in lposts:
@@ -287,7 +329,7 @@ def build():
 </article>"""
             write(url(lang, p["slug"])[1:] + "index.html",
                   page(lang, f'{t["title"]} – ForCoTech', desc,
-                       {k: url(k, p["slug"]) for k in LANGS if k in p}, main, og_image=t.get("image", p["image"]), canon_abs=orig,
+                       {k: url(k, p["slug"]) for k in NEWS_LANGS if k in p}, main, og_image=t.get("image", p["image"]), canon_abs=orig,
                        extra_head=f'<script type="application/ld+json">{ld}</script>'))
 
         # Startseite
@@ -309,11 +351,11 @@ def build():
                 out.append(f'  <url><loc>{SITE}{v}</loc><lastmod>{lm}</lastmod>{links}</url>')
         return out
     lines = []
-    lines += group({"de": "/", "en": "/en/", "fr": "/fr/"}, today)
-    lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/"}, today)
+    lines += group({"de": "/", "en": "/en/", "fr": "/fr/", "it": "/it/", "es": "/es/"}, today)
+    lines += group({"de": "/technik/", "en": "/en/technology/", "fr": "/fr/technique/", "it": "/it/tecnologia/", "es": "/es/tecnologia/"}, today)
     lines += group({"de": "/h-serie/", "en": "/en/h-series/"}, today)
     lines += group({"de": "/rechenzentren/", "en": "/en/data-centres/", "fr": "/fr/centres-de-donnees/"}, today)
-    lines += group({"de": "/iot/", "en": "/en/iot/", "fr": "/fr/iot/"}, today)  # tools/build_iot.py
+    lines += group({"de": "/iot/", "en": "/en/iot/", "fr": "/fr/iot/", "it": "/it/iot/", "es": "/es/iot/"}, today)  # tools/build_iot.py
     lines += group({"de": "/adiabatik/", "en": "/en/adiabatic-precooling/", "fr": "/fr/pre-refroidissement-adiabatique/"}, today)
     lines += group({"de": "/nachhaltigkeit/", "en": "/en/sustainability/", "fr": "/fr/durabilite/"}, today)  # tools/build_nachhaltigkeit.py
     lines += group({"de": "/loesungen/schallwand-kulisse/", "en": "/en/solutions/noise-barrier-and-silencer/", "fr": "/fr/ecran-et-silencieux/"}, today)  # tools/build_schallwand_kulisse.py
@@ -325,12 +367,12 @@ def build():
     for p in bl.PAGES.values():
         lines += group(dict(p["url"]), today)
     lines += group(dict(bl.HSA3["url"]), today)
-    lines += group({k: url(k) for k in LANGS}, today)
-    lines += group({"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/"}, today)
-    lines += group({"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/"}, today)
+    lines += group({k: url(k) for k in NEWS_LANGS}, today)
+    lines += group({"de": "/impressum/", "en": "/en/legal-notice/", "fr": "/fr/mentions-legales/", "it": "/it/note-legali/", "es": "/es/aviso-legal/"}, today)
+    lines += group({"de": "/datenschutz/", "en": "/en/privacy/", "fr": "/fr/confidentialite/", "it": "/it/privacy/", "es": "/es/privacidad/"}, today)
     for p in posts:
         # DE-Kopien von silent-mode.com verweisen per canonical auf das Original -> nicht in die Sitemap
-        lines += group({k: url(k, p["slug"]) for k in LANGS if k in p}, p.get("updated", p["date"]),
+        lines += group({k: url(k, p["slug"]) for k in NEWS_LANGS if k in p}, p.get("updated", p["date"]),
                        skip=("de",) if p.get("original") else ())
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'

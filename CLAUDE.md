@@ -11,7 +11,7 @@ Konten, Notfälle) liegt im privaten Repository `Forcotech/konfigurator` im Ordn
 ## Was das ist
 
 Statische Firmenseite von ForCoTech (Silent Engineering di Romolo Vicari, Osnago; Fertigung und Montage mit
-ABSORA GmbH, Berlin) auf GitHub Pages unter www.forcotech.com, Deutsch, `en/` Englisch, `fr/` Französisch.
+ABSORA GmbH, Berlin) auf GitHub Pages unter www.forcotech.com, Deutsch, `en/` Englisch, `fr/` Französisch, `it/` Italienisch, `es/` Spanisch (IT/ES aus EN erzeugt mit `tools/build_sprachen.py`).
 Der Konfigurator unter `/konfigurator/` ist ein eigenes Repository.
 
 ## Feste Regeln
@@ -31,7 +31,7 @@ Der Konfigurator unter `/konfigurator/` ist ein eigenes Repository.
 - **B2B:** Ansprache von Planern, Anlagenbauern, Fachbetrieben und Betreibern – nicht von Privatkunden.
 - **Datenschutz:** Kommt ein neuer Dienst hinzu (Video, Karte, Schrift, Formular), Datenschutzerklärung in
   `tools/build_legal.py` ergänzen und ausführen. Keine Cookies, kein Tracking.
-- **Gestaltung:** ForCoTech-Rot als Akzent, Schrift Schwarz, Logo `img/forcotech-logo.png`; DE/EN/FR gleichwertig.
+- **Gestaltung:** ForCoTech-Rot als Akzent, Schrift Schwarz, Logo `img/forcotech-logo.png`; DE/EN/FR/IT/ES gleichwertig.
 
 ## Ablauf einer Änderung
 

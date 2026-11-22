@@ -4,7 +4,8 @@
 
 Firmenseite (Visitenkarte) von ForCoTech / Silent-Mode – Silent Engineering di Romolo Vicari, Osnago (LC), Italien.
 Live (eigene Domain, seit 14.10.2026): https://www.forcotech.com/ – Repository forcotech.github.io mit CNAME-Datei.
-Deutsch: https://www.forcotech.com/ · English: https://www.forcotech.com/en/ · Français: https://www.forcotech.com/fr/
+Deutsch: https://www.forcotech.com/ · English: https://www.forcotech.com/en/ · Français: https://www.forcotech.com/fr/ ·
+Italiano: https://www.forcotech.com/it/ · Español: https://www.forcotech.com/es/
 Konfigurator: https://www.forcotech.com/konfigurator/
 
 © Silent Engineering di Romolo Vicari. Alle Rechte vorbehalten. Texte, Bilder und Gestaltung dürfen ohne
@@ -15,6 +16,19 @@ schriftliche Genehmigung nicht vervielfältigt oder weiterverwendet werden.
 Weiterleitungsseiten für bekannte alte Adressen (z. B. /contact.html, /blog/…) und die 404-Seite mit
 Muster-Weiterleitungen erzeugt `python3 tools/build_redirects.py`. Neue alte Adressen (z. B. aus der Google
 Search Console, „Nicht gefunden (404)“) dort in `OLD` eintragen und das Skript erneut ausführen.
+
+## Italienisch und Spanisch (it/, es/)
+
+Seit 22.11.2026 (Stufe 1): Startseite, Technik, IoT, Impressum, Datenschutz – /it/, /it/tecnologia/, /it/iot/,
+/it/note-legali/, /it/privacy/ bzw. /es/, /es/tecnologia/, /es/iot/, /es/aviso-legal/, /es/privacidad/.
+Erzeugt aus den fertigen EN-Seiten mit `python3 tools/build_sprachen.py` (Wörterbücher `tools/sprachen/it.json`,
+`es.json`: englischer Text → Übersetzung). Kopf, Navigation, Formular und Fuß aus tools/build_news.py (`T["it"]`,
+`T["es"]`, Seitenliste `IT_ES`), Claim und Formular der Startseiten aus tools/startseite_anfrage.py. Die IT/ES-Seiten
+nicht von Hand ändern – Text im Wörterbuch korrigieren, Skript erneut ausführen. Neue englische Texte meldet
+`python3 tools/build_sprachen.py --report` (Datei `tools/sprachen/missing-<lang>.json`, nicht einchecken).
+News gibt es nicht auf IT/ES (`NEWS_LANGS`); Links auf noch nicht übersetzte Seiten führen mit „(EN)“ auf Englisch.
+Grafiken, Zeichnungen und Videos mit Text bleiben vorerst englisch. Reihenfolge: zuerst die EN-Builds, dann
+`build_sprachen.py`, zuletzt `build_news.py`.
 
 ## Startseite und Technik-Seite
 

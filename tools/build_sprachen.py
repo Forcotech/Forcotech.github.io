@@ -44,6 +44,14 @@ def alts_of(en_path):
     return a
 
 
+def local_images(s, lang):
+    """Bilder mit Sprachkennung (…-en.svg) durch die IT/ES-Fassung ersetzen, wo es sie gibt (z. B. img/iot/)."""
+    def sub(m):
+        cand = m.group(1) + "-" + lang + m.group(2)
+        return 'src="' + cand + '"' if (ROOT / cand.lstrip("/")).exists() else m.group(0)
+    return re.sub(r'src="(/img/[^"]*?)-en(\.(?:svg|webp|png|jpg))"', sub, s)
+
+
 def strip_en_marks(s):
     """„(EN)“ an Links entfernen, die jetzt auf eine übersetzte Seite zeigen."""
     return re.sub(r'(<a [^>]*href="/(?:it|es)/[^"]*"[^>]*>)(.*?)(</a>)',
@@ -180,7 +188,7 @@ def subpage(en_path, lang, d):
     head = "".join(re.findall(r'<script type="application/ld\+json">.*?</script>', src.split("</head>")[0], re.S))
     page = en_path
     t_title, t_desc = look(d, title, page) or title, look(d, desc, page) or desc
-    main = strip_en_marks(links(translate(main, d, page), lang))
+    main = local_images(strip_en_marks(links(translate(main, d, page), lang)), lang)
     head = links(translate(head, d, page), lang) if head else ""
     alts = alts_of(en_path)
     alts.update({k: v for k, v in ((l, PATHS[en_path][l]) for l in LANGS)})

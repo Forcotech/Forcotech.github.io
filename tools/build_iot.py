@@ -74,6 +74,26 @@ SVG_TXT = {
            "d3": "GTB", "d3b": "BACnet · Modbus|MQTT",
            "gwz": "Centrale détection gaz", "gwz2": "câblée :", "gwz3": "ventil. 100 %, compresseurs arrêt",
            "radio": "Radio 868 MHz", "wire": "Câble – fonction de sécurité"},
+    "it": {"hood": "Cabina insonorizzata", "unit": "Pompa di calore / refrigeratore", "sil": "Silenziatore",
+           "l1": "Δp  perdita di carico silenziatore", "l2": "v  velocità dell’aria / portata",
+           "l3": "T  temp. aspirazione, espulsione, ambiente", "l4": "IR  refrigerante (NDIR), Ex", "l5": "dB  livello sonoro (LAeq, LAFmax)", "l6": "kW  curva di carico (contatore)",
+           "gw": "Gateway LoRaWAN", "gw2": "LAN o rete mobile",
+           "ns": "Network server", "ns2": "presso il gestore|o nell’UE",
+           "d1": "Dashboard", "d1b": "limiti, andamenti",
+           "d2": "Allarmi", "d2b": "e-mail · SMS",
+           "d3": "BMS", "d3b": "BACnet · Modbus|MQTT",
+           "gwz": "Centralina rilevazione gas", "gwz2": "cablata:", "gwz3": "ventilatori 100 %, compressori spenti",
+           "radio": "Radio 868 MHz", "wire": "Cavo – funzione di sicurezza"},
+    "es": {"hood": "Cerramiento acústico", "unit": "Bomba de calor / enfriadora", "sil": "Silenciador",
+           "l1": "Δp  pérdida de carga del silenciador", "l2": "v  velocidad del aire / caudal",
+           "l3": "T  temp. de entrada, salida, ambiente", "l4": "IR  refrigerante (NDIR), Ex", "l5": "dB  nivel sonoro (LAeq, LAFmax)", "l6": "kW  curva de carga (contador)",
+           "gw": "Gateway LoRaWAN", "gw2": "LAN o red móvil",
+           "ns": "Servidor de red", "ns2": "en el explotador|o en la UE",
+           "d1": "Panel", "d1b": "límites, tendencias",
+           "d2": "Alarmas", "d2b": "e-mail · SMS",
+           "d3": "BMS", "d3b": "BACnet · Modbus|MQTT",
+           "gwz": "Central de detección de gas", "gwz2": "cableada:", "gwz3": "ventiladores 100 %, compresores parados",
+           "radio": "Radio 868 MHz", "wire": "Cable – función de seguridad"},
 }
 
 
@@ -104,7 +124,7 @@ def svg(lang):
 <rect x="38" y="84" width="294" height="40" rx="4" fill="#fff" stroke="{line}" stroke-width="1.5"/>{tubes}
 <text x="185" y="76" text-anchor="middle" font-size="15" fill="{mut}">{t["sil"]}</text>
 <rect x="82" y="168" width="216" height="104" rx="6" fill="#e8e2e2" stroke="{line}" stroke-width="1.5"/>
-<text x="190" y="226" text-anchor="middle" font-size="17" fill="{ink}">{t["unit"]}</text>
+<text x="190" y="226" text-anchor="middle" font-size="{min(17, 17 * 24 / len(t["unit"])):.1f}" fill="{ink}">{t["unit"]}</text>
 {sensor(52, 158, "Δp")}{sensor(318, 158, "v")}{sensor(52, 230, "T")}{sensor(110, 296, "IR")}{sensor(318, 228, "dB")}{sensor(318, 296, "kW")}
 {arcs}
 <text x="364" y="112" font-size="15" fill="{mut}">{t["radio"]}</text>
@@ -218,6 +238,18 @@ EX = {
                    "Valeur indicative : env. {pk} % de perte d’efficacité par kelvin"],
                per="kWh par an", eur="€ par an à {price} €/kWh"),
 }
+
+
+# Texte der Beispielgrafiken für IT/ES (die Seiten /it/iot/, /es/iot/ entstehen mit tools/build_sprachen.py aus EN)
+EX_SVG = {
+    "it": dict(w="Settimana", kw="Potenza kW", pa="Δp Pa", lim="Limite Δp", clean="Pulizia", leg1="Potenza (media 15 min)", leg2="Perdita di carico silenziatore",
+               dash="Impianto 1 · cabina sul tetto", alarm="Allarme: ricircolo", tout="Esterno", tin="Aspirazione", band="Aspirazione > esterno + 3 K",
+               k1="Perdita di carico", k2="LAeq notte", k3="Potenza"),
+    "es": dict(w="Semana", kw="Potencia kW", pa="Δp Pa", lim="Límite Δp", clean="Limpieza", leg1="Potencia (media 15 min)", leg2="Pérdida de carga silenciador",
+               dash="Instalación 1 · cerramiento en cubierta", alarm="Alarma: recirculación", tout="Exterior", tin="Entrada de aire", band="Entrada > exterior + 3 K",
+               k1="Pérdida de carga", k2="LAeq noche", k3="Potencia"),
+}
+EX.update({k: v for k, v in EX_SVG.items() if k not in EX})
 
 
 # Einordnung der Wirtschaftlichkeit (unter der Beispielrechnung); Preise passend zur Richtpreistabelle in iot/_src
@@ -376,7 +408,11 @@ def build():
         head = f'<script type="application/ld+json">{faq_ld(frag, lang)}</script>'
         bn.write(URL[lang][1:] + "index.html",
                  bn.page(lang, t["title"], t["desc"], dict(URL), main, extra_head=head, typ="iot"))
-    print("IoT-Seiten gebaut (de, en, fr)")
+    for lang in ("it", "es"):  # nur Bilder; Seiten aus EN mit tools/build_sprachen.py
+        bn.write(f"img/iot/lorawan-system-{lang}.svg", svg(lang))
+        bn.write(f"img/iot/beispiel-lastgang-{lang}.svg", svg_lastgang(lang))
+        bn.write(f"img/iot/beispiel-dashboard-{lang}.svg", svg_dashboard(lang))
+    print("IoT-Seiten gebaut (de, en, fr), Bilder auch it, es")
 
 
 if __name__ == "__main__":

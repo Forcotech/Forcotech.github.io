@@ -99,6 +99,9 @@ schallwand-kulisse/_src/de.html, en.html bzw. fr.html bearbeiten, dann `python3 
 (Schallwand mit Option RK-200, Rechenstand 28.10.2026) – bei Änderungen am Rechenkern nachziehen. Link „Beispiel im
 Konfigurator öffnen“ übergibt Gerät und L_WA (`?sd=1&L=…`). Karte auf den Startseiten, Hinweis auf der Seite Schallwände,
 Sitemap-Eintrag in tools/build_news.py.
+Im Abschnitt „Zwei Schallwege“ (#rk280) steht die Animation zum Abluft-Schalldämpfer RK-280 auf einem Rückkühler (Musterauslegung ohne
+Kundenbezug): je Sprache `img/schallhaube-aufbau/abluft-schalldaempfer-rk280-<de|en|fr>.mp4` (1280 × 720, 53 s, ohne Ton, startet erst auf
+Klick) mit Poster `.webp`; IT/ES zeigen die englische Fassung. Dämpfungs- und L_WA-Werte im Video sind als Schätzung gekennzeichnet.
 
 ## Lösungsseiten und HSA3-Seite
 

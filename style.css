@@ -703,3 +703,26 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 @media (max-width:1000px){.iot-roi{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.iot-roi{grid-template-columns:1fr}}
 .iot-roi .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#fdecee;border-radius:6px;padding:3px 8px;white-space:nowrap}
+
+/* Startseite: Schnellstart Konfigurator (#schnellstart) */
+.qs{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.qs-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;margin-top:22px;align-items:stretch}
+@media (max-width:900px){.qs-grid{grid-template-columns:1fr}}
+.qs-preview{display:flex;flex-direction:column;gap:14px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:14px;color:var(--ink);text-decoration:none;transition:box-shadow .2s,border-color .2s}
+.qs-preview:hover{border-color:var(--accent);box-shadow:0 14px 32px -18px rgba(158,23,36,.45)}
+.qs-preview img{border-radius:8px;border:1px solid var(--line)}
+.qs-preview ul{margin:0;padding-left:18px;font-size:15px}
+.qs-preview li{margin:4px 0}
+.qs-preview .btn{align-self:flex-start}
+.qs-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
+@media (max-width:520px){.qs-tiles{grid-template-columns:1fr}}
+.qs-tile{position:relative;display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 40px 14px 14px;color:var(--ink);text-decoration:none;min-height:92px;transition:background .2s,transform .2s}
+.qs-tile b{font-size:16px;line-height:1.3}
+.qs-tile span{font-size:13.5px;color:var(--muted);line-height:1.4}
+.qs-tile:hover{background:var(--accent-l);transform:translateY(-2px)}
+.qs-tile:focus-visible,.qs-preview:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.qs-arr{position:absolute;right:12px;top:50%;width:20px;height:20px;margin-top:-10px;color:var(--accent)}
+.qs-main{grid-column:1/-1;background:var(--accent);border-left-color:var(--accent-d);color:#fff}
+.qs-main span{color:#fde3e6}.qs-main .qs-arr{color:#fff}
+.qs-main:hover{background:var(--accent-d)}
+@media (max-width:900px){.qs-tiles{order:-1}}

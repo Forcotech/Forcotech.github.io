@@ -703,3 +703,13 @@ section.dark a.more:hover,.tech-peek.dark a.more:hover{background:var(--d-link);
 @media (max-width:1000px){.iot-roi{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.iot-roi{grid-template-columns:1fr}}
 .iot-roi .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--accent);background:#fdecee;border-radius:6px;padding:3px 8px;white-space:nowrap}
+
+/* Startseite: Kachelzeile Konfigurator im Hero (.kz) */
+.kz{margin:26px 0 0}
+.kz-l{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.kz-t{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.kz-t a{display:flex;align-items:center;justify-content:space-between;gap:6px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:9px 10px;font-size:14px;font-weight:600;line-height:1.25;color:var(--ink);text-decoration:none;transition:background .2s,border-color .2s}
+.kz-t a::after{content:"→";color:var(--accent);flex:none}
+.kz-t a:hover{background:var(--accent-l);border-color:var(--accent)}
+.kz-t a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (max-width:900px){.kz-t{display:flex;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}.kz-t a{flex:none;white-space:nowrap}}
